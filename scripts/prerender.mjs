@@ -430,7 +430,7 @@ const routes = [
   },
   {
     path: "/products/dc/spider-fast",
-    title: "Spider Fast — 30 kW DC Fast EV Charger | SpiderEV",
+    title: "Spider Fast — 30 kW DC Fast EV Charger India | SpiderEV",
     description: "30 kW rapid DC fast EV charger with CCS2 and CHAdeMO connectors for public 4-wheeler charging in Andhra Pradesh and Telangana.",
     keywords: "Spider Fast, 30 kW DC charger, CCS2 charger, CHAdeMO charger India, public EV charger, fast charger AP Telangana",
     subtopics: ["Spider Fast — 30 kW DC Fast EV Charger", "Spider Fast Technical Specifications — 30 kW DC Fast Charger", "CCS2 & CHAdeMO — Charging All 4-Wheeler EVs in India", "Why Spider Fast Is the Right Entry-Level DC Charger for India", "Public Charging Use Case — Malls, Offices & Neighbourhood Hubs"],
@@ -555,7 +555,7 @@ const routes = [
   },
   {
     path: "/ev-charging-epc-services",
-    title: "EV Charging Station EPC & Installation | AP & TG",
+    title: "EV Charging Station EPC & Installation Services | AP & TG",
     description: "EV charging station installation in AP & Telangana — EPC services, construction support & infrastructure solutions for commercial and public spaces.",
     keywords: "EV charging EPC, EV station installation, charging station construction, EPC services Hyderabad, DISCOM approval, EV infrastructure setup, turnkey EV station",
     subtopics: ["End-to-End EV Charging Station EPC & Installation Services Across AP & TG", "What Is EPC for EV Charging Stations? — Civil, Electrical & Commissioning", "DISCOM Liaison & Approval — How SpiderEV Handles the Paperwork", "Site Survey & Design — Planning Your EV Charging Infrastructure", "Timeline — How Long Does an EV Charging Station Installation Take?", "EPC Services for Apartments, Malls, Highways & Industrial Sites"],
@@ -577,7 +577,7 @@ const routes = [
   },
   {
     path: "/contact-us",
-    title: "Contact SpiderEV — EV Charging Experts in AP & TG",
+    title: "Contact SpiderEV — EV Charging Experts in AP & TG India",
     description: "Contact Spider Energy for EV charger installation, franchise enquiries, CPMS support or SpiderVault BESS consultation in Andhra Pradesh & Telangana.",
     keywords: "contact Spider Energy, SpiderEV phone number, EV charger enquiry Hyderabad, EV charging support AP, franchise contact, CPMS support",
     subtopics: ["Contact Spider Energy — EV Charging Experts in Telangana & Andhra Pradesh", "Spider Energy Office Location — Hyderabad, Telangana", "Contact Us for EV Charger Installation in AP & Telangana", "Franchise & Partnership Enquiries — Spider Energy India", "SpiderVault BESS & Technical Support Contact"],
@@ -639,7 +639,7 @@ const routes = [
   },
   {
     path: "/blog",
-    title: "EV Charging Blog — Tips, Guides & News | SpiderEV",
+    title: "EV Charging Blog — Tips, Guides & Industry News | SpiderEV",
     description: "Read the latest EV charging guides, industry news and business insights from SpiderEV — your expert resource for electric vehicle charging in India.",
     keywords: "EV charging blog, electric vehicle guides India, EV business blog, OCPP guide, AC vs DC charging, EV charging investment guide",
     subtopics: ["SpiderEV Blog — EV Charging Guides, News & Insights for India", "Latest EV Charging Guides & How-To Articles", "EV Charging Industry News — India, AP & Telangana", "Franchise & Business Insights for EV Charging Entrepreneurs", "SpiderVault BESS — Energy Storage Guides & Updates"],
