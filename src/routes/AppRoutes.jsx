@@ -70,7 +70,8 @@ const AppRoutes = () => {
         <Route path="/ev-charging-station-roi-calculator" element={<ROIPage />} />
 
         {/* ── Other (new SEO URLs) ── */}
-        <Route path="/bess-battery-backup-for-ev-charging-stations" element={<BESSPage />} />
+        <Route path="/spidervault-bess-battery-energy-storage" element={<BESSPage />} />
+        <Route path="/bess-battery-backup-for-ev-charging-stations" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
         <Route path="/ev-charging-station-locator" element={<ChargeLocatorPage />} />
         <Route path="/news" element={<NewsPage />} />
 
@@ -96,7 +97,7 @@ const AppRoutes = () => {
         <Route path="/company/contact" element={<Navigate to="/contact-us" replace />} />
         <Route path="/franchise" element={<Navigate to="/ev-charging-station-franchise" replace />} />
         <Route path="/roi" element={<Navigate to="/ev-charging-station-roi-calculator" replace />} />
-        <Route path="/bess" element={<Navigate to="/bess-battery-backup-for-ev-charging-stations" replace />} />
+        <Route path="/bess" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
         <Route path="/charge-locator" element={<Navigate to="/ev-charging-station-locator" replace />} />
 
         {/* 404 */}

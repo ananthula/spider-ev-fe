@@ -138,7 +138,7 @@ const NAV_LINKS = [
   { href: "/contact-us", text: "Contact Us" },
   { href: "/ev-charging-station-franchise", text: "Franchise" },
   { href: "/ev-charging-station-roi-calculator", text: "ROI Calculator" },
-  { href: "/bess-battery-backup-for-ev-charging-stations", text: "BESS" },
+  { href: "/spidervault-bess-battery-energy-storage", text: "BESS" },
   { href: "/ev-charging-station-locator", text: "Station Locator" },
   { href: "/news", text: "News" },
   { href: "/blog", text: "Blog" },
@@ -264,7 +264,7 @@ const SERVICE_PAGE_FAQS = {
     { question: "Can I earn money from my home EV charger?", answer: "Yes. Through the SpiderEV app, you can share your home charger with nearby EV owners when you're not using it and earn per-session revenue with automatic billing." },
     { question: "What home charger models are available under this initiative?", answer: "The program primarily uses Spider Mini (3.3 kW) and Spider Lite (3.3 kW) AC chargers — compact, affordable single-phase chargers that work with any standard home electrical connection." },
   ],
-  "/bess-battery-backup-for-ev-charging-stations": [
+  "/spidervault-bess-battery-energy-storage": [
     { question: "What is SpiderVault and how is it different from a regular inverter?", answer: "SpiderVault is an all-in-one Solar Hybrid Inverter + Battery + BMS. Unlike regular inverters that simply switch between grid and battery, SpiderVault integrates solar charging, a 5th Gen battery management system, and AI cloud monitoring — all automatically managed from one unit." },
     { question: "How long does SpiderVault back up my home?", answer: "It depends on your load. SpiderVault 3.0 backs up 1 AC + geyser + regular appliances for up to 6 hours. SpiderVault 5.0 runs 2 ACs + all home appliances for up to 8 hours. SpiderVault 12.0 handles large homes for up to 12 hours." },
     { question: "Can it connect to my existing solar panels?", answer: "Yes. All SpiderVault models have a built-in MPPT solar charger that directly connects to your rooftop solar system. It stores excess energy during the day for use at night or on cloudy days — no extra inverter or equipment needed." },
@@ -330,7 +330,7 @@ const routes = [
   {
     path: "/products/ac/spider-mini",
     title: "Spider Mini — 3.3 kW Home AC EV Charger | SpiderEV",
-    description: "Compact single-phase 3.3 kW AC EV home charger with IP67, RFID and all-weather durability for homes in AP & Telangana.",
+    description: "Compact 3.3 kW single-phase AC EV home charger with IP67, RFID and all-weather durability. Best home EV charger in AP & Telangana.",
     keywords: "Spider Mini, 3.3 kW EV charger, home EV charger India, single phase EV charger, compact AC charger, IP67 EV charger, RFID charger",
     subtopics: ["Spider Mini — Compact 3.3 kW Single-Phase AC Home EV Charger", "Key Features", "Technical Specifications"],
     bodyText: "The Spider Mini is SpiderEV's most compact home EV charger, delivering 3.3 kW of single-phase AC charging. Designed for Indian homes with standard electrical connections, it features IP67 weather protection for outdoor installation, RFID authentication for secure access, and OCPP 1.6J connectivity for remote monitoring via SpiderConnect. Ideal for overnight charging of all passenger EVs including Tata Nexon EV, MG ZS EV, Hyundai Ioniq 5, and BYD Atto 3. Installation takes under 2 hours with no structural modifications needed.",
@@ -386,7 +386,7 @@ const routes = [
   {
     path: "/products/dc/spider-base",
     title: "Spider Base 3–12 kW DC Charger for 2-Wheelers | SpiderEV",
-    description: "Modular 3–12 kW DC EV charger with IS 17017-2-6 for 2-wheelers and light EVs. BIS certified, OCPP 1.6J, IP67 rated.",
+    description: "Modular 3–12 kW DC EV charger with IS 17017-2-6 for 2-wheelers and light EVs. BIS certified, OCPP 1.6J, IP67 rated in AP & TG.",
     keywords: "Spider Base, 3 kW DC charger, 2 wheeler EV charger, electric scooter charger, light EV charger India, IS 17017, BIS DC charger",
     subtopics: ["Spider Base — 3–12 kW DC EV Charger for Two-Wheelers & Light EVs", "Key Features", "Technical Specifications"],
     bodyText: "The Spider Base is a modular 3-12 kW DC charger purpose-built for India's booming 2-wheeler and light EV market. Compliant with IS 17017-2-6 standards, it supports electric scooters like Ola S1 Pro, Ather 450X, TVS iQube, and Bajaj Chetak along with e-rickshaws and light commercial EVs. Features include BIS certification, OCPP 1.6J cloud connectivity, IP67 weather protection, modular power scaling from 3 kW to 12 kW, and integrated billing via SpiderConnect. Ideal for public charging spots near metro stations, markets, and residential areas.",
@@ -571,15 +571,15 @@ const routes = [
     schema: { "@context": "https://schema.org", "@type": "WebApplication", "name": "EV Charging Station ROI Calculator", "description": "Calculate EV charging station profits in Telangana & AP. Free ROI calculator for accurate investment planning.", "url": `${BASE_URL}/ev-charging-station-roi-calculator`, "applicationCategory": "FinanceApplication", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" } },
   },
   {
-    path: "/bess-battery-backup-for-ev-charging-stations",
+    path: "/spidervault-bess-battery-energy-storage",
     title: "SpiderVault BESS — Battery Energy Storage | AP & TG",
     description: "SpiderVault BESS by Spider Energy provides battery energy storage for EV stations, solar projects & industrial backup in Andhra Pradesh & Telangana.",
     keywords: "SpiderVault BESS, battery energy storage, EV station battery backup, solar storage India, hybrid inverter, home battery backup Hyderabad, grid independence",
     subtopics: ["SpiderVault — Battery Energy Storage System (BESS) for EV Stations & Industry", "Solar + EV Charging", "Grid Independence", "Product Range", "Use Cases"],
     bodyText: "Combine Battery Energy Storage Systems (BESS) with your EV charging station to reduce demand charges, enable solar integration, and ensure uninterrupted charging even during grid outages. SpiderVault is an all-in-one Solar Hybrid Inverter + Battery + BMS unit that integrates solar charging, a 5th generation battery management system, and AI cloud monitoring — all managed from a single unit. Product range: SpiderVault 3.0 — backs up 1 AC + geyser + regular appliances for up to 6 hours, ideal for apartments and small homes; SpiderVault 5.0 — runs 2 ACs + all home appliances for up to 8 hours, perfect for villas and medium homes; SpiderVault 12.0 — handles large homes and small businesses for up to 12 hours of backup. All models feature built-in MPPT solar charger for direct rooftop solar connection, storing excess daytime energy for nighttime use. For EV charging stations, BESS reduces peak demand charges by 40-60%, enables solar-powered charging, and provides uninterrupted service during grid outages — critical for maintaining uptime and customer satisfaction.",
     schemas: [
-      { "@context": "https://schema.org", "@type": "Service", "name": "BESS — Battery Energy Storage for EV Charging Stations", "description": "Smart EV charging energy storage solutions with solar powered station setups, renewable charging and battery backup systems in Andhra Pradesh and Telangana.", "url": `${BASE_URL}/bess-battery-backup-for-ev-charging-stations`, "serviceType": "Battery Energy Storage System (BESS)", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
-      { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": SERVICE_PAGE_FAQS["/bess-battery-backup-for-ev-charging-stations"].map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) },
+      { "@context": "https://schema.org", "@type": "Service", "name": "BESS — Battery Energy Storage for EV Charging Stations", "description": "Smart EV charging energy storage solutions with solar powered station setups, renewable charging and battery backup systems in Andhra Pradesh and Telangana.", "url": `${BASE_URL}/spidervault-bess-battery-energy-storage`, "serviceType": "Battery Energy Storage System (BESS)", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
+      { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": SERVICE_PAGE_FAQS["/spidervault-bess-battery-energy-storage"].map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) },
     ],
   },
   {
