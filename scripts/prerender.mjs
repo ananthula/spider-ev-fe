@@ -322,7 +322,7 @@ const routes = [
     title: "DC Fast EV Charging Stations in Telangana & Andhra Pradesh",
     description: "Top DC Fast EV Chargers in Andhra Pradesh & Telangana. Spider Energy provides reliable CCS2 & CHAdeMO fast charging for all electric vehicles.",
     keywords: "DC fast charger, DC EV charger Hyderabad, CCS2 charger India, CHAdeMO charger, 60 kW charger, 120 kW charger, 240 kW charger, highway EV charger, SpiderEV DC",
-    subtopics: ["DC Fast Charger Range", "CCS2 & CHAdeMO Support", "Commercial & Highway Charging", "Models: Spider Base, Spider Fast, Spider Spark, Spider Falcon, Spider Ultra, Spider Surge, Spider Hulk"],
+    subtopics: ["DC Fast EV Chargers — 30 kW to 240 kW for Public Networks in AP & TG", "CCS2 & CHAdeMO Support", "Commercial & Highway Charging", "Models: Spider Base, Spider Fast, Spider Spark, Spider Falcon, Spider Ultra, Spider Surge, Spider Hulk"],
     bodyText: "SpiderEV DC fast chargers deliver 30 kW to 240 kW power output with CCS2 and CHAdeMO connectors. Designed for public charging networks, highways, and fleet depots, our DC chargers provide 20-80% charge in as little as 15 minutes. Our DC charger lineup includes: Spider Base (3-12 kW) — modular DC charger for 2-wheelers and light EVs with IS 17017-2-6 compliance; Spider Fast (30 kW) — rapid DC charger for public 4-wheeler charging with dual connectors; Spider Spark (60 kW) — dual-connector fast charger for commercial stations; Spider Falcon (60 kW) — high-speed CCS2 charger for public networks; Spider Ultra (120 kW) — high-power charger for highways and fleet depots; Spider Surge (180 kW) — rapid charger for high-throughput highway charging; Spider Hulk (240 kW) — India's most powerful ultra-rapid charger for heavy-duty EV applications. All DC chargers feature OCPP 1.6J connectivity, IP67 protection, and integrate with SpiderConnect CPMS for remote monitoring and revenue management.",
   },
 
@@ -453,7 +453,7 @@ const routes = [
     title: "Park and Charge EV Stations in Telangana & Andhra Pradesh",
     description: "Park & Charge EV Stations in Andhra Pradesh & Telangana. Easy installation and smart parking-based EV charging solutions by Spider Energy.",
     keywords: "park and charge EV station, parking EV charger, mall EV charging, office EV charging, commercial complex charger, EV charging Hyderabad, parking lot charger",
-    subtopics: ["Park & Charge Solutions", "How It Works", "Benefits for Site Owners", "Revenue Model", "Supported Locations"],
+    subtopics: ["Park & Charge EV Stations for Parking Lots in Telangana & AP", "How It Works", "Benefits for Site Owners", "Revenue Model", "Supported Locations"],
     bodyText: "Transform your parking space into a revenue-generating EV charging hub. Spider Energy's Park & Charge solution covers site assessment, charger installation, software integration, and ongoing maintenance for malls, offices, and commercial complexes. Our turnkey solution includes: comprehensive site evaluation and traffic analysis; charger selection based on dwell time and vehicle profiles; electrical infrastructure assessment and DISCOM coordination; professional installation with minimal disruption; SpiderConnect CPMS integration for automated billing, payment processing, and real-time monitoring; ongoing maintenance and 24/7 remote support. Park & Charge is ideal for shopping malls, corporate offices, co-working spaces, hospitals, hotels, and any commercial property with dedicated parking. Site owners earn passive revenue from every charging session while increasing property value and attracting EV-driving customers.",
     schemas: [
       { "@context": "https://schema.org", "@type": "Service", "name": "Park and Charge EV Stations", "description": "Smart parking-based EV charging solutions for malls, offices and commercial complexes in AP & Telangana", "url": `${BASE_URL}/park-and-charge-electric-vehicle-ev-charging-station`, "serviceType": "EV Charging Station Installation", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
@@ -465,7 +465,7 @@ const routes = [
     title: "Community EV Charging Stations in Telangana & Andhra Pradesh",
     description: "Community EV Charging Stations in Andhra Pradesh & Telangana for apartments and housing societies. Shared residential charging solutions.",
     keywords: "community EV charging, apartment EV charger, housing society charger, shared EV charger, residential EV charging India, gated community charger Hyderabad",
-    subtopics: ["Apartment & Society Charging", "Shared Charging Infrastructure", "Billing & Management", "Load Management", "Resident App Access"],
+    subtopics: ["Community EV Charging Stations for Apartments & Societies in AP & TG", "Shared Charging Infrastructure", "Billing & Management", "Load Management", "Resident App Access"],
     bodyText: "Enable EV charging in your apartment complex or gated community. Our community charging solution supports shared usage with individual billing, load management, and resident-friendly mobile app access. SpiderEV's community charging addresses the unique challenges of multi-dwelling units: shared electrical infrastructure, multiple stakeholders, parking allocation, and fair billing. Our solution includes intelligent load management that prevents circuit overloads by distributing power across active chargers, per-user billing through the SpiderEV app with UPI/card/wallet payment options, RFID-based authentication for secure resident-only access, real-time usage tracking for society management, and DISCOM coordination for power infrastructure upgrades. Suitable for apartments with 50+ units, gated villa communities, senior living complexes, and co-operative housing societies across Hyderabad, Vizag, and other cities in AP and Telangana.",
     schemas: [
       { "@context": "https://schema.org", "@type": "Service", "name": "Community EV Charging Stations", "description": "Shared EV charging solutions for apartments, housing societies and gated communities in AP & Telangana", "url": `${BASE_URL}/community-ev-charging-stations`, "serviceType": "Community EV Charging", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
@@ -477,7 +477,7 @@ const routes = [
     title: "Public EV Charging Stations in Telangana & Andhra Pradesh",
     description: "Public EV Charging Stations in Andhra Pradesh & Telangana. Fast charging for cars with a strong, connected EV charging network by Spider Energy.",
     keywords: "public EV charging station, public fast charger, EV charging network AP, charging station Telangana, fuel station EV charger, retail EV charging",
-    subtopics: ["Public Charging Network", "Fast Charging Stations", "Network Coverage", "Revenue Model", "Station Management"],
+    subtopics: ["Public EV Charging Stations Across Telangana & Andhra Pradesh", "Fast Charging Stations", "Network Coverage", "Revenue Model", "Station Management"],
     bodyText: "Build a public EV charging network with SpiderEV's turnkey solutions. From AC destination chargers to DC fast chargers, we provide the complete infrastructure for fuel stations, retail locations, and public parking areas. SpiderEV's public charging network solution includes site selection advisory based on traffic data and EV density, a mix of AC (7.4-80 kW) and DC (30-240 kW) chargers based on location type, complete EPC services including civil works and electrical infrastructure, SpiderConnect CPMS for remote operations and dynamic pricing, SpiderEV app listing for driver discovery, and payment integration supporting UPI, credit/debit cards, RFID, and wallets. Revenue model supports operator-owned, revenue-share, and CAPEX-free deployment options. Currently operational across 15+ cities in Telangana and Andhra Pradesh with 5,000+ chargers deployed.",
     schemas: [
       { "@context": "https://schema.org", "@type": "Service", "name": "Public EV Charging Stations", "description": "Public EV fast charging network for cars across fuel stations, retail locations and parking areas in AP & Telangana", "url": `${BASE_URL}/public-ev-charging-stations`, "serviceType": "Public EV Charging Network", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
@@ -501,7 +501,7 @@ const routes = [
     title: "EV Charging Management System in Andhra Pradesh & Telangana",
     description: "Explore Smart EV Charging Solutions in Andhra Pradesh and Telangana with Advanced Platforms and Efficient Network Management for Seamless Charging Operations.",
     keywords: "CPMS, charging point management system, EV charger software, OCPP platform, EV station management, SpiderConnect, remote charger monitoring",
-    subtopics: ["SpiderConnect CPMS", "Remote Monitoring & Control", "Revenue Management", "OCPP Compatibility", "Analytics & Reporting"],
+    subtopics: ["CPMS — Smart EV Charge Point Management System for Telangana & AP", "Remote Monitoring & Control", "Revenue Management", "OCPP Compatibility", "Analytics & Reporting"],
     bodyText: "SpiderConnect is our cloud-based Charging Point Management System. Monitor charger health, manage user access, process payments, configure dynamic pricing, and view analytics from a unified dashboard. SpiderConnect CPMS is compatible with any OCPP 1.6J compliant charger regardless of manufacturer, giving operators the freedom to manage mixed-brand networks from a single platform. Key features include: real-time charger status monitoring with instant fault alerts; remote start/stop, restart, and firmware update capabilities; dynamic pricing based on time-of-day, demand, and occupancy; comprehensive session analytics with revenue reporting; user management with RFID, app, and guest access modes; multi-site dashboard for operators managing stations across cities; API integration with payment gateways, fleet systems, and energy management platforms. SpiderConnect currently manages 5,000+ charge points across India for operators ranging from single-site businesses to national charging networks.",
     schemas: [
       { "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SpiderConnect CPMS", "description": "Cloud-based Charging Point Management System for monitoring, controlling and managing EV charging networks across India", "url": `${BASE_URL}/cpms-ev-charging-point-management-system`, "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }, "provider": { "@id": `${BASE_URL}/#organization` } },
@@ -513,13 +513,13 @@ const routes = [
     title: "EV Charging Station App in Andhra Pradesh & Telangana",
     description: "Smart EV Charging App in AP & Telangana — locate nearby stations, access charging networks and manage your EV charging anytime, anywhere.",
     keywords: "SpiderEV app, EV charging app India, find EV charger app, EV station locator app, charging session app, EV payment app, Android iOS charger app",
-    subtopics: ["Find Nearby Chargers", "Start & Pay via App", "Charging History & Wallet", "Real-Time Availability", "Route Planning"],
+    subtopics: ["SpiderEV App — Find & Manage EV Charging Stations in AP & Telangana", "Start & Pay via App", "Charging History & Wallet", "Real-Time Availability", "Route Planning"],
     bodyText: "The SpiderEV mobile app helps EV drivers find nearby charging stations, start sessions remotely, pay digitally, and track charging history. Available on Android and iOS with real-time station availability. Key features include: interactive map with real-time charger availability showing occupied, available, and out-of-service status; one-tap session start with automatic connector detection; multiple payment options including UPI, credit/debit cards, and in-app wallet; detailed session history with energy consumed, cost breakdown, and carbon saved; favourite stations for quick access; route planning with charging stops for long-distance trips; push notifications for session completion and promotional offers; and community features for rating and reviewing stations. The SpiderEV app connects to all SpiderConnect-managed stations across India, giving drivers access to 5,000+ charging points in 15+ cities.",
     schema: { "@context": "https://schema.org", "@type": "MobileApplication", "name": "SpiderEV Charging App", "description": "Find nearby EV charging stations, start sessions, pay digitally and track charging history across India", "url": `${BASE_URL}/ev-charging-station-app`, "applicationCategory": "UtilitiesApplication", "operatingSystem": "Android, iOS", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }, "provider": { "@id": `${BASE_URL}/#organization` } },
   },
   {
     path: "/ev-charging-epc-services",
-    title: "EV Station EPC & Installation Services | AP & TG",
+    title: "EV Charging Station EPC & Installation | AP & TG",
     description: "EV charging station installation in AP & Telangana — EPC services, construction support & infrastructure solutions for commercial and public spaces.",
     keywords: "EV charging EPC, EV station installation, charging station construction, EPC services Hyderabad, DISCOM approval, EV infrastructure setup, turnkey EV station",
     subtopics: ["End-to-End EV Charging Station EPC & Installation Services Across AP & TG", "Site Survey & Design", "Installation & Commissioning", "DISCOM & Permits", "Post-Installation Support"],
@@ -563,7 +563,7 @@ const routes = [
   },
   {
     path: "/ev-charging-station-roi-calculator",
-    title: "EV Charging ROI Calculator | AP & TG | SpiderEV",
+    title: "EV Charging Station ROI Calculator | Telangana & AP",
     description: "Estimate EV charging business profits in AP & Telangana. Smart ROI calculator for accurate charging station investment planning.",
     keywords: "EV charging ROI calculator, EV station profit calculator, charging business investment, EV charging revenue estimate, ROI EV charger India",
     subtopics: ["Calculate Your EV Charging Station ROI & Profits in Telangana & AP", "Revenue Projections", "Investment Planning", "Cost Breakdown"],
@@ -587,7 +587,7 @@ const routes = [
     title: "EV Charging Station Locator in Andhra Pradesh & Telangana",
     description: "Find Nearby EV Fast Charging Stations in Andhra Pradesh and Telangana using a Smart EV Charge Zone Locator and Real-time EV Charging Locator Tools.",
     keywords: "EV charging station locator, find EV charger near me, EV station map Hyderabad, charging point locator AP, nearest EV charger Telangana",
-    subtopics: ["Find Charging Stations", "Real-Time Availability", "Navigation", "Filter by Charger Type"],
+    subtopics: ["Find EV Charging Stations Near You in Telangana & Andhra Pradesh", "Real-Time Availability", "Navigation", "Filter by Charger Type"],
     bodyText: "Find SpiderEV charging stations near you across Andhra Pradesh and Telangana. Our interactive map shows real-time availability of all charger types — AC slow charging (3.3-80 kW) and DC fast charging (30-240 kW). Filter by connector type (CCS2, CHAdeMO, Type 2), power level, and availability status. Get turn-by-turn navigation to any station. View pricing, amenities, and user ratings before you drive. The SpiderEV network spans 15+ cities including Hyderabad, Vijayawada, Vizag, Tirupati, Warangal, and Guntur with 5,000+ active charging points.",
     schema: { "@context": "https://schema.org", "@type": "LocalBusiness", "@id": `${BASE_URL}/#localbusiness`, "name": "Spider Energy", "url": BASE_URL, "telephone": "+91-9997776080", "email": "connect@spiderenergy.in", "address": { "@type": "PostalAddress", "streetAddress": "THub, Raidurgam", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "postalCode": "500081", "addressCountry": "IN" }, "geo": { "@type": "GeoCoordinates", "latitude": "17.4435", "longitude": "78.3772" }, "image": `${BASE_URL}/spider-ev-logo.png`, "priceRange": "$$" },
   },
@@ -606,7 +606,7 @@ const routes = [
     title: "EV Charging Blog — Tips, Guides & News | SpiderEV",
     description: "Read the latest EV charging guides, industry news and business insights from SpiderEV — your expert resource for electric vehicle charging in India.",
     keywords: "EV charging blog, electric vehicle guides India, EV business blog, OCPP guide, AC vs DC charging, EV charging investment guide",
-    subtopics: ["EV Charging Guides", "Business Insights", "Technology Explained", "Investment Guides"],
+    subtopics: ["SpiderEV Blog — EV Charging Guides, News & Insights for India", "Business Insights", "Technology Explained", "Investment Guides"],
     bodyText: "The SpiderEV blog covers everything about electric vehicle charging in India — from choosing the right charger for your home to starting an EV charging business, understanding OCPP protocols, and industry analysis. Featured topics include: How EV Chargers Work — understanding AC, DC, and ultra-rapid charging technology; AC vs DC Charging — speed, cost, and use case comparison; Starting an EV Charging Business — step-by-step guide with ROI calculations; EV Charging Franchise Investment — costs, returns, and how to get started; What is OCPP — the open protocol that enables charger interoperability; EV-Ready Homes — smart charging, solar, and BESS integration for Indian homes. New articles published weekly by the Spider Energy team.",
   },
   {
@@ -622,7 +622,7 @@ const routes = [
     title: "Har Ghar Charger — Affordable Home EV Charging India",
     description: "Har Ghar Charger — affordable home EV charging for every Indian household. Register and earn from your own EV charging station.",
     keywords: "Har Ghar Charger, home EV charger India, earn from EV charger, affordable home charger, passive income EV charging, SpiderAtHome",
-    subtopics: ["Har Ghar Charger Initiative", "How It Works", "Register Now", "Earning Potential", "Who Can Apply"],
+    subtopics: ["Har Ghar Charger — Affordable Home EV Charging for Every Indian Household", "How It Works", "Register Now", "Earning Potential", "Who Can Apply"],
     bodyText: "Har Ghar Charger makes EV charging accessible to every Indian household. Install a SpiderEV home charger, charge your own vehicle, and earn by sharing it with neighbours through our app-based platform. The initiative works in 3 simple steps: Register your interest with name, location, and property type; our team visits for site verification and charger recommendation; professional installation within 60 days and your station goes live on the SpiderEV app. Investment starts from under ₹8,000 for a compact charger with potential monthly earnings of ₹8,000-₹16,000. Who can apply: homeowners, shop owners, offices, restaurants, small businesses, parking lots, and apartment residents. The program uses Spider Mini (3.3 kW) and Spider Lite (3.3 kW) chargers — compact single-phase units that work with any standard Indian home electrical connection.",
     schemas: [
       { "@context": "https://schema.org", "@type": "Service", "name": "Har Ghar Charger — Home EV Charging for Every Indian", "description": "SpiderEV's Har Ghar Charger initiative brings affordable home EV charging to every Indian household. Register your interest and earn from your own charging station.", "url": `${BASE_URL}/har-ghar`, "serviceType": "Home EV Charging Program", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": "IN" },
@@ -630,7 +630,7 @@ const routes = [
     ],
   },
   {
-    path: "/partner-withus",
+    path: "/partner-with-us",
     title: "Partner With SpiderEV — EV Charging Opportunities India",
     description: "Partner with SpiderEV as a site owner, fleet operator, fuel station or real estate developer. Build India's EV charging future together.",
     keywords: "partner SpiderEV, EV charging partnership, site owner EV revenue, fuel station EV charger, real estate EV charging, fleet operator partnership",

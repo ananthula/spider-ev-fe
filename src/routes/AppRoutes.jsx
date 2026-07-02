@@ -79,7 +79,8 @@ const AppRoutes = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/partner-withus" element={<PartnerWithUsPage />} />
+        <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
+        <Route path="/partner-withus" element={<Navigate to="/partner-with-us" replace />} />
 
         {/* ── Legacy redirects (old URLs → new SEO URLs) ── */}
         <Route path="/products/ac-chargers" element={<Navigate to="/electric-vehicle-ev-ac-charger" replace />} />
