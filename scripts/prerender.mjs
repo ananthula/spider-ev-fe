@@ -125,8 +125,25 @@ function buildJsonLd(route) {
 
 // Internal navigation links injected into pre-rendered HTML for crawlers
 const NAV_LINKS = [
+  // Product categories
   { href: "/electric-vehicle-ev-ac-charger", text: "AC Chargers" },
   { href: "/electric-vehicle-ev-dc-charger", text: "DC Chargers" },
+  // AC product detail pages
+  { href: "/products/ac/spider-mini", text: "Spider Mini 3.3 kW" },
+  { href: "/products/ac/spider-lite", text: "Spider Lite 3.3 kW" },
+  { href: "/products/ac/spider-smart", text: "Spider Smart 7.4 kW" },
+  { href: "/products/ac/spider-blaze", text: "Spider Blaze 22 kW" },
+  { href: "/products/ac/spider-strike", text: "Spider Strike 40 kW" },
+  { href: "/products/ac/spider-dash", text: "Spider Dash 80 kW" },
+  // DC product detail pages
+  { href: "/products/dc/spider-base", text: "Spider Base 3-12 kW" },
+  { href: "/products/dc/spider-fast", text: "Spider Fast 30 kW" },
+  { href: "/products/dc/spider-spark", text: "Spider Spark 60 kW" },
+  { href: "/products/dc/spider-falcon", text: "Spider Falcon 60 kW" },
+  { href: "/products/dc/spider-ultra", text: "Spider Ultra 120 kW" },
+  { href: "/products/dc/spider-surge", text: "Spider Surge 180 kW" },
+  { href: "/products/dc/spider-hulk", text: "Spider Hulk 240 kW" },
+  // Solutions
   { href: "/park-and-charge-electric-vehicle-ev-charging-station", text: "Park & Charge" },
   { href: "/community-ev-charging-stations", text: "Community Charging" },
   { href: "/public-ev-charging-stations", text: "Public Charging" },
@@ -134,14 +151,20 @@ const NAV_LINKS = [
   { href: "/cpms-ev-charging-point-management-system", text: "CPMS" },
   { href: "/ev-charging-station-app", text: "SpiderEV App" },
   { href: "/ev-charging-epc-services", text: "EPC Services" },
+  // Company
   { href: "/about-us", text: "About Us" },
   { href: "/contact-us", text: "Contact Us" },
+  // Standalone
   { href: "/ev-charging-station-franchise", text: "Franchise" },
   { href: "/ev-charging-station-roi-calculator", text: "ROI Calculator" },
-  { href: "/spidervault-bess-battery-energy-storage", text: "BESS" },
+  { href: "/spidervault-bess-battery-energy-storage", text: "SpiderVault BESS" },
   { href: "/ev-charging-station-locator", text: "Station Locator" },
+  { href: "/har-ghar", text: "Har Ghar Charger" },
+  { href: "/partner-with-us", text: "Partner With Us" },
+  // Content
   { href: "/news", text: "News" },
   { href: "/blog", text: "Blog" },
+  { href: "/gallery", text: "Gallery" },
 ];
 
 function buildNoscrollContent(route) {
@@ -186,6 +209,19 @@ function buildNoscrollContent(route) {
         html += `<h3>${e(faq.question)}</h3><p>${e(faq.answer)}</p>`;
       }
       html += `</section>`;
+    }
+  }
+
+  // For the /blog listing page, also add links to individual blog posts
+  if (path === "/blog") {
+    const blogPostsPath = join(ROOT, "src", "data", "blog-posts.json");
+    if (existsSync(blogPostsPath)) {
+      const posts = JSON.parse(readFileSync(blogPostsPath, "utf-8")).filter(p => p.published);
+      html += `<section><h2>All Articles</h2><ul>`;
+      for (const post of posts) {
+        html += `<li><a href="/blog/${post.slug}">${e(post.title)}</a></li>`;
+      }
+      html += `</ul></section>`;
     }
   }
 
@@ -737,4 +773,30 @@ for (const route of routes) {
   console.log(`  ✓ ${route.path}`);
 }
 
-console.log(`\nPre-rendered ${count} routes into dist/`);
+// ─── Pre-render redirect pages (so static crawlers get a redirect, not a 404) ─
+
+const redirects = [
+  { from: "/bess-battery-backup-for-ev-charging-stations", to: `${BASE_URL}/spidervault-bess-battery-energy-storage` },
+  { from: "/partner-withus", to: `${BASE_URL}/partner-with-us` },
+];
+
+for (const { from, to } of redirects) {
+  const redirectHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=${to}" />
+  <link rel="canonical" href="${to}" />
+  <title>Redirecting…</title>
+</head>
+<body>
+  <p>This page has moved. <a href="${to}">Click here</a> if you are not redirected.</p>
+</body>
+</html>`;
+  const redirectDir = join(distDir, from);
+  mkdirSync(redirectDir, { recursive: true });
+  writeFileSync(join(redirectDir, "index.html"), redirectHtml, "utf-8");
+  console.log(`  ↳ redirect: ${from} → ${to}`);
+}
+
+console.log(`\nPre-rendered ${count} routes + ${redirects.length} redirects into dist/`);
