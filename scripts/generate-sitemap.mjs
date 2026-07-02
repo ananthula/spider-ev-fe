@@ -62,11 +62,11 @@ const staticRoutes = [
 
   // Standalone
   { path: "/ev-charging-station-franchise", priority: "0.8", changefreq: "monthly" },
-  { path: "/bess-battery-backup-for-ev-charging-stations", priority: "0.8", changefreq: "monthly" },
+  { path: "/spidervault-bess-battery-energy-storage", priority: "0.8", changefreq: "monthly" },
   { path: "/ev-charging-station-roi-calculator", priority: "0.7", changefreq: "monthly" },
   { path: "/ev-charging-station-locator", priority: "0.7", changefreq: "weekly" },
   { path: "/har-ghar", priority: "0.7", changefreq: "monthly" },
-  { path: "/partner-withus", priority: "0.7", changefreq: "monthly" },
+  { path: "/partner-with-us", priority: "0.7", changefreq: "monthly" },
 
   // Content
   { path: "/news", priority: "0.6", changefreq: "weekly" },

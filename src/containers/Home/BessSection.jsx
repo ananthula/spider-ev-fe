@@ -70,7 +70,7 @@ const BessSection = () => {
           </div>
           <motion.div variants={fadeUp} className="shrink-0">
             <Link
-              to="/bess-battery-backup-for-ev-charging-stations"
+              to="/spidervault-bess-battery-energy-storage"
               className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:text-primary/80 transition-colors group"
             >
               Explore All Products
@@ -118,7 +118,7 @@ const BessSection = () => {
                 <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
                   <span className="text-xs text-gray-400 font-medium">{product.power}</span>
                   <Link
-                    to="/bess-battery-backup-for-ev-charging-stations"
+                    to="/spidervault-bess-battery-energy-storage"
                     className="text-xs font-semibold text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1 group"
                   >
                     View
@@ -157,7 +157,7 @@ const BessSection = () => {
           className="mt-8 text-center sm:hidden"
         >
           <Link
-            to="/bess-battery-backup-for-ev-charging-stations"
+            to="/spidervault-bess-battery-energy-storage"
             className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-primary/90 transition-colors"
           >
             Explore SpiderVault

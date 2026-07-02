@@ -18,7 +18,7 @@ const heroSlides = [
     subtitleAccent: "EV Charging Infrastructure",
     subtitleSuffix: "for Businesses That Want to Lead the Future",
     cta: "Partner With Us",
-    ctaHref: "/partner-withus",
+    ctaHref: "/partner-with-us",
     image: heroImage1,
   },
   {

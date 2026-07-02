@@ -28,7 +28,7 @@ const whyPoints = [
 const partnerServiceSchema = getServiceSchema({
   name: "Partner With SpiderEV",
   description: "Partner with Spider Energy as a site owner, fleet operator, fuel station or real estate developer to deploy EV charging",
-  url: "/partner-withus",
+  url: "/partner-with-us",
   serviceType: "EV Charging Partnership",
 });
 const partnerBreadcrumbs = getBreadcrumbSchema([

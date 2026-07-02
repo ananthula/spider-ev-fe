@@ -20,7 +20,7 @@ import BessHowItWorks from "../containers/Bess/BessHowItWorks";
 const bessSchema = getServiceSchema({
   name: "BESS — Battery Energy Storage for EV Charging Stations",
   description: "Smart EV charging energy storage solutions with solar powered station setups, renewable charging and battery backup systems in Andhra Pradesh and Telangana.",
-  url: "/bess-battery-backup-for-ev-charging-stations",
+  url: "/spidervault-bess-battery-energy-storage",
   serviceType: "Battery Energy Storage System (BESS)",
 });
 const bessBreadcrumbs = getBreadcrumbSchema([

@@ -1,5 +1,5 @@
 ---
-title: "What is OCPP? EV Charging Protocol Explained India"
+title: "What is OCPP? Open Charge Point Protocol for EV Charging Explained"
 slug: "what-is-ocpp-ev-charging"
 description: "OCPP (Open Charge Point Protocol) explained for Indian EV operators — why it ensures interoperability and what to look for when buying a charger."
 date: "2026-01-01"
