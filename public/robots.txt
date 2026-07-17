@@ -1,6 +1,67 @@
 # robots.txt for spiderenergy.in
+# Spider Energy — SpiderEV (EV Charging) & SpiderVault (BESS)
+# Last updated: 2026-07-17 (added explicit AI crawler allow rules)
+
+# ── Default: allow all standard crawlers ──
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*utm_
+Disallow: /*?*session
 
-# Sitemap
+# ── Google ──
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# ── Bing ──
+User-agent: Bingbot
+Allow: /
+
+# ── AI crawlers — explicitly allowed for LLM citation & GEO visibility ──
+# Blocking these defeats the purpose of the GEO work already done on this site.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# ── Sitemap ──
 Sitemap: https://spiderenergy.in/sitemap.xml
