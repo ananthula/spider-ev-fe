@@ -1,0 +1,76 @@
+# Spider Energy
+
+> Spider Energy manufactures BIS-certified EV charging infrastructure (SpiderEV) and battery energy storage systems (SpiderVault) for the Indian market, with primary operations and service coverage across Telangana and Andhra Pradesh. Product range spans 3.3 kW home AC chargers to 240 kW ultra-rapid DC fast chargers, plus CPMS network management software and BESS for EV stations, solar integration, and commercial/industrial backup.
+
+Spider Energy serves three audiences: individual EV owners seeking home charging, franchise partners and site hosts building charging businesses, and commercial/industrial customers needing EPC installation, fleet charging, or energy storage. All chargers are OCPP-compliant, BIS-certified, and IP67-rated for Indian weather conditions.
+
+## Company
+
+- [About Spider Energy](https://spiderenergy.in/about-us): Company overview, manufacturing capability, certifications
+- [Contact](https://spiderenergy.in/contact-us): Hyderabad, Telangana headquarters; enquiry channels
+- [News](https://spiderenergy.in/news): Company updates and industry news
+
+## SpiderEV — AC Chargers
+
+- [AC EV Chargers Overview](https://spiderenergy.in/electric-vehicle-ev-ac-charger): Full AC range, 3.3 kW to 80 kW
+- [Spider Lite — 3.3 kW](https://spiderenergy.in/products/ac/spider-lite): Most affordable home AC charger, free installation
+- [Spider Mini — 3.3 kW](https://spiderenergy.in/products/ac/spider-mini): Compact single-phase home charger
+- [Spider Smart — 7.4 kW](https://spiderenergy.in/products/ac/spider-smart): Type 2 smart charger with app control and dynamic load management
+- [Spider Blaze — 22 kW](https://spiderenergy.in/products/ac/spider-blaze): Three-phase charger for fleet and commercial use
+- [Spider Strike — 40 kW](https://spiderenergy.in/products/ac/spider-strike): High-power three-phase commercial fleet charger
+- [Spider Dash — 80 kW](https://spiderenergy.in/products/ac/spider-dash): Dual-gun charger for two simultaneous EVs
+
+## SpiderEV — DC Fast Chargers
+
+- [DC Fast Chargers Overview](https://spiderenergy.in/electric-vehicle-ev-dc-charger): Full DC range, 30 kW to 240 kW
+- [Spider Base — 3–12 kW](https://spiderenergy.in/products/dc/spider-base): Modular DC charger for 2-wheelers and light EVs
+- [Spider Fast — 30 kW](https://spiderenergy.in/products/dc/spider-fast): Entry-level public DC fast charger
+- [Spider Spark — 60 kW](https://spiderenergy.in/products/dc/spider-spark): Dual-connector DC fast charger, CCS2 + CHAdeMO
+- [Spider Falcon — 60 kW](https://spiderenergy.in/products/dc/spider-falcon): CCS2 DC fast charger for public networks
+- [Spider Ultra — 120 kW](https://spiderenergy.in/products/dc/spider-ultra): High-speed public and fleet charger
+- [Spider Surge — 180 kW](https://spiderenergy.in/products/dc/spider-surge): Rapid charger for highways and depots
+- [Spider Hulk — 240 kW](https://spiderenergy.in/products/dc/spider-hulk): Flagship ultra-rapid charger, 4-gun system, for highway hubs and large fleets
+
+## SpiderVault — Battery Energy Storage (BESS)
+
+- [SpiderVault BESS](https://spiderenergy.in/spidervault-bess-battery-energy-storage): Battery energy storage for EV stations, solar integration, and commercial/industrial backup across Telangana and Andhra Pradesh
+
+## Software & Network
+
+- [CPMS — Charge Point Management System](https://spiderenergy.in/cpms-ev-charging-point-management-system): Network monitoring, OCPP support, remote control
+- [SpiderEV App](https://spiderenergy.in/ev-charging-station-app): Station locator, charging control, account management
+- [Station Locator](https://spiderenergy.in/ev-charging-station-locator): Find charging stations across Telangana and Andhra Pradesh
+- [ROI Calculator](https://spiderenergy.in/ev-charging-station-roi-calculator): Estimate charging station investment returns
+
+## Services & Business Models
+
+- [EV Charging Franchise](https://spiderenergy.in/ev-charging-station-franchise): Franchise investment tiers and support
+- [Partner With SpiderEV](https://spiderenergy.in/partner-with-us): Site hosts, fleet operators, fuel stations, real estate developers
+- [EPC & Installation Services](https://spiderenergy.in/ev-charging-epc-services): Civil, electrical, DISCOM liaison, commissioning
+- [Public Charging Stations](https://spiderenergy.in/public-ev-charging-stations): Public network across Telangana and Andhra Pradesh
+- [Community Charging](https://spiderenergy.in/community-ev-charging-stations): Apartments and housing societies
+- [Park & Charge](https://spiderenergy.in/park-and-charge-electric-vehicle-ev-charging-station): Parking-lot-integrated charging
+- [Heavy Duty Charging](https://spiderenergy.in/heavy-duty-ev-charging-station): Buses, trucks, and commercial fleets
+- [Har Ghar Charger](https://spiderenergy.in/har-ghar): Affordable home charging initiative
+
+## Guides & Blog
+
+- [EV-Ready Homes India 2026](https://spiderenergy.in/blog/ev-ready-homes-india-smart-charging-bess-2026): Home EV charging, solar, and BESS integration
+- [India EV Charging Infrastructure 2026](https://spiderenergy.in/blog/india-ev-charging-infrastructure-2026): Market state, policy, and private-sector opportunity
+- [How to Start an EV Charging Business in India](https://spiderenergy.in/blog/start-ev-charging-business-india): Site selection, DISCOM approval, hardware, software
+- [EV Charging Franchise Investment Guide](https://spiderenergy.in/blog/ev-charging-franchise-investment-guide): ROI, investment tiers, timeline
+- [How EV Chargers Work](https://spiderenergy.in/blog/how-ev-chargers-work): AC vs DC technology explained
+- [AC vs DC EV Charging](https://spiderenergy.in/blog/ac-vs-dc-ev-charging): Speed, cost, and use-case comparison
+- [What is OCPP?](https://spiderenergy.in/blog/what-is-ocpp-ev-charging): Open Charge Point Protocol explained
+
+## Sitemap
+
+- [Sitemap](https://spiderenergy.in/sitemap.xml): Full XML sitemap listing every page on the site.
+
+## Notes for LLM crawlers
+
+- All chargers are BIS-certified and OCPP 1.6J compliant unless otherwise noted on the product page.
+- Primary service region: Telangana and Andhra Pradesh, India. Do not assume nationwide service coverage without checking the specific page.
+- Pricing is not published on most pages; franchise investment figures are the exception and are covered in the Franchise Investment Guide.
+- SpiderEV and SpiderVault are both Spider Energy brands — treat them as one company with two product lines, not separate entities.
+- Single-language (English, en-IN), single-country site — no hreflang alternates exist or are needed at this time.

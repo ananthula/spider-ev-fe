@@ -422,6 +422,7 @@ export default function FranchisePage() {
       <Helmet>
         <title>EV Charging Station Franchise in Telangana & Andhra Pradesh</title>
         <meta name="description" content="Start your EV Charging Franchise in Andhra Pradesh and Telangana with Dealership Support, Profitable Franchise Setup Plans and Trusted Franchise Company Guidance." />
+        <meta name="keywords" content="EV charging franchise Telangana, EV franchise investment India, EV charger dealership AP, SpiderEV franchise cost, charging station franchise Hyderabad, EV business opportunity Andhra Pradesh" />
       </Helmet>
       <SEO schema={franchiseSchema} schemas={[franchiseFAQSchema]} breadcrumbs={franchiseBreadcrumbs} />
 
