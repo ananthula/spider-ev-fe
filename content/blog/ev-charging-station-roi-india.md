@@ -10,6 +10,7 @@ image: "/blog/ev-charging-station-roi-india.webp"
 tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
 published: true
 publishDate: "2026-07-18"
+
 ---
 
 ## Introduction: The EV Charging Gold Rush in India

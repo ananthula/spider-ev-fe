@@ -10,6 +10,7 @@ image: "/blog/why-south-india-ev-growth-hub.webp"
 tags: ["EV Charging Infrastructure", "South India EV Market", "Electric Vehicle Growth", "Hyderabad EV", "Bangalore EV", "Chennai EV", "BIS Certified Chargers", "OCPP Compliant"]
 published: true
 publishDate: "2026-07-18"
+
 ---
 
 # Why South India Is Becoming an EV Growth Hub in India

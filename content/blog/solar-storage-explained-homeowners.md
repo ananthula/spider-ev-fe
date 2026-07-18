@@ -10,6 +10,7 @@ image: "/blog/solar-storage-explained-homeowners.webp"
 tags: ["solar storage", "battery storage", "BESS", "solar power", "home backup", "power backup", "energy independence", "SpiderVault"]
 published: true
 publishDate: "2026-07-18"
+
 ---
 
 # Solar Storage Explained for Modern Homeowners: How to Use the Sun After Sunset

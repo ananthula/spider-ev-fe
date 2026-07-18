@@ -10,6 +10,7 @@ image: "/blog/bess-vs-inverter-indian-homes-businesses.webp"
 tags: ["BESS", "inverter", "battery storage", "home backup", "solar energy", "power backup", "energy storage systems", "SpiderVault"]
 published: true
 publishDate: "2026-07-18"
+
 ---
 
 # BESS vs Inverter: Understanding the Difference for Indian Homes and Businesses
