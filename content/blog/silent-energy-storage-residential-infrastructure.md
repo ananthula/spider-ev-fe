@@ -4,7 +4,8 @@ description: "Silent battery energy storage is revolutionizing Indian homes with
 slug: "silent-energy-storage-residential-infrastructure"
 category: "Energy Storage"
 tags: ["BESS", "Battery Storage", "Home Backup", "Solar Storage", "Silent Power", "Smart Homes", "Grid Independence", "SpiderVault"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 # How Silent Energy Storage Is Changing Residential Infrastructure

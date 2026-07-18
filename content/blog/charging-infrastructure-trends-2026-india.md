@@ -4,7 +4,8 @@ description: "Discover the top EV charging infrastructure trends shaping India's
 slug: "charging-infrastructure-trends-2026-india"
 category: "EV Charging"
 tags: ["EV charging trends", "charging infrastructure", "OCPP compliance", "ultra-fast charging", "BIS certification", "EV India 2026", "smart charging", "energy storage"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 # Charging Infrastructure Trends To Watch In 2026

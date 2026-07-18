@@ -8,6 +8,7 @@ category: "Technology"
 readTime: "6 min read"
 image: "/blog/ac-vs-dc-ev-charging.jpg"
 published: true
+
 ---
 
 ## The Fundamental Difference

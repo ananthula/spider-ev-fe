@@ -4,7 +4,8 @@ description: "Discover why EV home charging in 2026 India requires rethinking yo
 slug: "ev-ready-homes-india-whole-energy-decision-2026"
 category: "EV Charging"
 tags: ["EV charging infrastructure", "home EV charging India", "BIS certified chargers", "OCPP compliance", "solar EV charging", "energy management", "SpiderEV products", "electric vehicle India"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 # EV-Ready Homes in India: Why Charging Is Becoming a Whole Energy Decision in 2026

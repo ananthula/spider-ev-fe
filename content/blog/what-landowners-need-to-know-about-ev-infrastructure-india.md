@@ -1,10 +1,11 @@
 ---
 title: What Landowners Need to Know About EV Infrastructure in India
-description: Complete guide for Indian landowners on installing EV charging infrastructure. Learn about regulations, ROI, BIS certification, revenue opportunities, and how to get started.
-slug: what-landowners-need-to-know-about-ev-infrastructure-india
+description: "Complete guide for Indian landowners on installing EV charging infrastructure. Learn about regulations, ROI, BIS certification, revenue opportunities, and how to get started."
+slug: "what-landowners-need-to-know-about-ev-infrastructure-india"
 category: "EV Charging"
 tags: ["EV charging infrastructure", "landowner opportunities", "BIS certification", "OCPP compliant chargers", "EV business India", "charging station investment", "SpiderEV", "renewable energy"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 # What Landowners Need to Know About EV Infrastructure in India

@@ -8,6 +8,7 @@ category: "Infrastructure"
 readTime: "10 min read"
 image: "/blog/india-ev-charging-infrastructure-2026.jpg"
 published: true
+
 ---
 
 ## The Current State of EV Charging in India

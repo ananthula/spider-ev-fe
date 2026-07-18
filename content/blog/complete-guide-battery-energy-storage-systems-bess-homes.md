@@ -4,7 +4,8 @@ description: "Discover how Battery Energy Storage Systems (BESS) revolutionize h
 slug: "complete-guide-battery-energy-storage-systems-bess-homes"
 category: "Energy Storage"
 tags: ["BESS", "Battery Storage", "Home Backup Power", "Solar Energy Storage", "Power Backup India", "SpiderVault", "Lithium Battery", "Smart Home Energy"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 # Complete Guide to Battery Energy Storage Systems (BESS) for Homes

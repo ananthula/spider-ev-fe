@@ -4,7 +4,8 @@ description: "Discover why luxury homeowners in India are replacing generators a
 slug: "premium-homes-beyond-traditional-backup-systems"
 category: "Energy Storage"
 tags: ["BESS", "home energy storage", "premium homes", "solar integration", "backup power", "smart homes", "SpiderVault", "battery backup"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 ## Introduction: The Evolution of Home Power Backup in India

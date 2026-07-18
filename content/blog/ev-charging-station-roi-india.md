@@ -4,7 +4,8 @@ description: "Complete guide to EV charging station ROI in India. Learn what dri
 slug: "ev-charging-station-roi-india"
 category: "EV Charging"
 tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 ## Introduction: The EV Charging Gold Rush in India

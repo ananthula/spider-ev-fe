@@ -4,7 +4,8 @@ description: "Discover why South India leads India's EV revolution. Explore gove
 slug: "why-south-india-ev-growth-hub"
 category: "EV Charging"
 tags: ["EV Charging Infrastructure", "South India EV Market", "Electric Vehicle Growth", "Hyderabad EV", "Bangalore EV", "Chennai EV", "BIS Certified Chargers", "OCPP Compliant"]
-publishDate: 2026-07-18
+publishDate: "2026-07-18"
+
 ---
 
 # Why South India Is Becoming an EV Growth Hub in India

@@ -8,6 +8,7 @@ category: "Business"
 readTime: "15 min read"
 image: "/blog/ev-charging-franchise-investment-guide.jpg"
 published: true
+
 ---
 
 ## Why Choose a Franchise Model?
