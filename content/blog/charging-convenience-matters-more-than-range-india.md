@@ -5,7 +5,11 @@ slug: "charging-convenience-matters-more-than-range-india"
 category: EV Charging
 tags: ["EV charging infrastructure", "range anxiety", "OCPP compliant chargers", "BIS certified chargers", "EV adoption India", "fast charging stations", "public charging network", "SpiderEV products"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/charging-convenience-matters-more-than-range-india.webp"
+published: true
 ---
 
 # Why Charging Convenience Matters More Than Range in India

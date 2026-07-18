@@ -5,7 +5,11 @@ slug: "ev-charging-station-roi-india"
 category: "EV Charging"
 tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/ev-charging-station-roi-india.webp"
+published: true
 ---
 
 ## Introduction: The EV Charging Gold Rush in India

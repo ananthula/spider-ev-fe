@@ -5,7 +5,11 @@ slug: "hotels-ev-charging-infrastructure-india"
 category: EV Charging
 tags: ["hotel EV charging", "EV infrastructure India", "SpiderEV", "hotel amenities", "EV charging business", "OCPP chargers", "BIS certified chargers", "hospitality industry"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/hotels-ev-charging-infrastructure-india.webp"
+published: true
 ---
 
 # How Hotels Benefit From EV Charging Infrastructure in India

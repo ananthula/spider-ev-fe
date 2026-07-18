@@ -5,7 +5,11 @@ slug: "energy-independence-premium-lifestyle-feature-india"
 category: "Energy Storage"
 tags: ["energy independence", "BESS India", "battery storage systems", "solar hybrid", "home energy backup", "smart homes India", "SpiderVault", "premium lifestyle"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/energy-independence-premium-lifestyle-feature-india.webp"
+published: true
 ---
 
 ## Introduction: The New Definition of Luxury in India

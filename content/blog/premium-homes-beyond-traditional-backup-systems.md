@@ -5,7 +5,11 @@ slug: "premium-homes-beyond-traditional-backup-systems"
 category: "Energy Storage"
 tags: ["BESS", "home energy storage", "premium homes", "solar integration", "backup power", "smart homes", "SpiderVault", "battery backup"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/premium-homes-beyond-traditional-backup-systems.webp"
+published: true
 ---
 
 ## Introduction: The Evolution of Home Power Backup in India

@@ -5,7 +5,11 @@ slug: "silent-energy-storage-residential-infrastructure"
 category: "Energy Storage"
 tags: ["BESS", "Battery Storage", "Home Backup", "Solar Storage", "Silent Power", "Smart Homes", "Grid Independence", "SpiderVault"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/silent-energy-storage-residential-infrastructure.webp"
+published: true
 ---
 
 # How Silent Energy Storage Is Changing Residential Infrastructure

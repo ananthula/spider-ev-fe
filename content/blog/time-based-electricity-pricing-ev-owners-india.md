@@ -5,7 +5,11 @@ slug: "time-based-electricity-pricing-ev-owners-india"
 category: EV Charging
 tags: ["Time of Day Tariff", "EV Charging Costs", "Smart EV Charging", "ToD Pricing India", "EV Cost Savings", "OCPP Chargers", "Home EV Charging", "SpiderEV"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/time-based-electricity-pricing-ev-owners-india.webp"
+published: true
 ---
 
 Electric vehicle adoption in India is accelerating at an unprecedented pace, with over 1.5 million EVs on Indian roads and growing rapidly. As more Indians transition to electric mobility, understanding electricity pricing structures becomes critical to maximizing the economic benefits of EV ownership. Time-based electricity pricing, also known as Time-of-Day (ToD) tariffs, is reshaping how EV owners charge their vehicles and manage energy costs across the country.

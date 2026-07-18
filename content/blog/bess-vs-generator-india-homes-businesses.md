@@ -5,7 +5,11 @@ slug: "bess-vs-generator-india-homes-businesses"
 category: "Energy Storage"
 tags: ["BESS", "battery storage", "generator comparison", "home backup power", "solar energy", "power backup India", "SpiderVault", "energy independence"]
 publishDate: "2026-07-18"
-
+date: "2026-07-18"
+author: "Spider Energy Team"
+readTime: "12 min read"
+image: "/blog/bess-vs-generator-india-homes-businesses.webp"
+published: true
 ---
 
 # BESS vs Generator: Which Future Makes More Sense for Indian Homes and Businesses?
