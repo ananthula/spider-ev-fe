@@ -5,7 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import PageLayout from "../components/layout/PageLayout";
 import SEO from "../components/SEO";
 import { getBreadcrumbSchema } from "../seo/schemas";
-import { fadeUp, staggerFast, viewport } from "../utils/animationConfig";
+import { fadeUp, staggerFast } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import allBlogPosts from "../data/blog-posts.json";
 
@@ -114,8 +114,7 @@ const BlogPage = () => {
           <motion.div
             variants={staggerFast}
             initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
+            animate="visible"
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {blogPosts.map((post) => (
