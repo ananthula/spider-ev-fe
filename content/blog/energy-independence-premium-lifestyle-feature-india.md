@@ -1,15 +1,16 @@
 ---
 title: "Energy Independence: A Premium Lifestyle Feature for India"
-description: "Discover how Battery Energy Storage Systems (BESS) are transforming energy independence from backup solution to premium lifestyle feature for Indian homes and businesses."
 slug: "energy-independence-premium-lifestyle-feature-india"
-category: "Energy Storage"
-tags: ["energy independence", "BESS India", "battery storage systems", "solar hybrid", "home energy backup", "smart homes India", "SpiderVault", "premium lifestyle"]
-publishDate: "2026-07-18"
+description: "Discover how Battery Energy Storage Systems (BESS) are transforming energy independence from backup solution to premium lifestyle feature for Indian homes and businesses."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "Energy Storage"
 readTime: "12 min read"
 image: "/blog/energy-independence-premium-lifestyle-feature-india.webp"
+tags: ["energy independence", "BESS India", "battery storage systems", "solar hybrid", "home energy backup", "smart homes India", "SpiderVault", "premium lifestyle"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 ## Introduction: The New Definition of Luxury in India

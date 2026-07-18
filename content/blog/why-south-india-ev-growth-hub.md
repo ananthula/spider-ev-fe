@@ -1,15 +1,16 @@
 ---
 title: "Why South India Is Becoming an EV Growth Hub in India"
-description: "Discover why South India leads India's EV revolution. Explore government policies, infrastructure growth, and charging opportunities in Hyderabad, Bangalore, and Chennai."
 slug: "why-south-india-ev-growth-hub"
-category: "EV Charging"
-tags: ["EV Charging Infrastructure", "South India EV Market", "Electric Vehicle Growth", "Hyderabad EV", "Bangalore EV", "Chennai EV", "BIS Certified Chargers", "OCPP Compliant"]
-publishDate: "2026-07-18"
+description: "Discover why South India leads India's EV revolution. Explore government policies, infrastructure growth, and charging opportunities in Hyderabad, Bangalore, and Chennai."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "EV Charging"
 readTime: "12 min read"
 image: "/blog/why-south-india-ev-growth-hub.webp"
+tags: ["EV Charging Infrastructure", "South India EV Market", "Electric Vehicle Growth", "Hyderabad EV", "Bangalore EV", "Chennai EV", "BIS Certified Chargers", "OCPP Compliant"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # Why South India Is Becoming an EV Growth Hub in India

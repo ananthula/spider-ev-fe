@@ -1,15 +1,16 @@
 ---
 title: "What Is Whole-Home Backup & Why It Matters in 2026"
-description: "Discover why whole-home backup systems are essential for premium homes in India. Learn about BESS technology, ROI calculations, and how to choose the right solution."
 slug: "whole-home-backup-premium-homes-india-2026"
-category: "Energy Storage"
-tags: ["whole-home backup", "BESS", "battery energy storage", "home backup systems", "SpiderVault", "power backup India", "premium homes", "solar storage"]
-publishDate: "2026-07-18"
+description: "Discover why whole-home backup systems are essential for premium homes in India. Learn about BESS technology, ROI calculations, and how to choose the right solution."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "Energy Storage"
 readTime: "12 min read"
 image: "/blog/whole-home-backup-premium-homes-india-2026.webp"
+tags: ["whole-home backup", "BESS", "battery energy storage", "home backup systems", "SpiderVault", "power backup India", "premium homes", "solar storage"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # What Is Whole-Home Backup and Why It Matters for Premium Homes in 2026

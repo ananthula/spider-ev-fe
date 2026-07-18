@@ -1,15 +1,16 @@
 ---
 title: "Is Highway EV Charging a Good Investment in India?"
-description: "Explore ROI, regulations, and growth potential of highway EV charging stations in India. Learn about infrastructure costs, profitability, and technical requirements."
 slug: "highway-ev-charging-investment-india"
-category: EV Charging
-tags: ["highway charging", "EV infrastructure investment", "charging station ROI", "OCPP compliance", "BIS certification", "highway business India", "EV charging profitability", "fast charging stations"]
-publishDate: "2026-07-18"
+description: "Explore ROI, regulations, and growth potential of highway EV charging stations in India. Learn about infrastructure costs, profitability, and technical requirements."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: EV Charging
 readTime: "12 min read"
 image: "/blog/highway-ev-charging-investment-india.webp"
+tags: ["highway charging", "EV infrastructure investment", "charging station ROI", "OCPP compliance", "BIS certification", "highway business India", "EV charging profitability", "fast charging stations"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 India's electric vehicle revolution is rapidly transforming from urban centers to intercity highways. With EV sales crossing 1.5 million units annually and the government's ambitious target of 30% EV penetration by 2030, highway charging infrastructure has emerged as a critical investment opportunity. But is setting up a highway EV charging station truly profitable in India's evolving market?

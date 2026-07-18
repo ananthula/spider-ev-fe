@@ -1,15 +1,16 @@
 ---
 title: How Hotels Benefit From EV Charging Infrastructure in India
-description: "Discover how Indian hotels can boost revenue, attract premium guests, and future-proof operations with EV charging infrastructure. Learn about ROI, technical specs, and SpiderEV solutions."
 slug: "hotels-ev-charging-infrastructure-india"
-category: EV Charging
-tags: ["hotel EV charging", "EV infrastructure India", "SpiderEV", "hotel amenities", "EV charging business", "OCPP chargers", "BIS certified chargers", "hospitality industry"]
-publishDate: "2026-07-18"
+description: "Discover how Indian hotels can boost revenue, attract premium guests, and future-proof operations with EV charging infrastructure. Learn about ROI, technical specs, and SpiderEV solutions."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: EV Charging
 readTime: "12 min read"
 image: "/blog/hotels-ev-charging-infrastructure-india.webp"
+tags: ["hotel EV charging", "EV infrastructure India", "SpiderEV", "hotel amenities", "EV charging business", "OCPP chargers", "BIS certified chargers", "hospitality industry"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # How Hotels Benefit From EV Charging Infrastructure in India

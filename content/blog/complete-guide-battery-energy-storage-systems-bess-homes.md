@@ -1,15 +1,16 @@
 ---
 title: "Complete Guide to Battery Energy Storage Systems (BESS)"
-description: "Discover how Battery Energy Storage Systems (BESS) revolutionize home power backup in India. Compare costs, ROI, and find the right system size for your home."
 slug: "complete-guide-battery-energy-storage-systems-bess-homes"
-category: "Energy Storage"
-tags: ["BESS", "Battery Storage", "Home Backup Power", "Solar Energy Storage", "Power Backup India", "SpiderVault", "Lithium Battery", "Smart Home Energy"]
-publishDate: "2026-07-18"
+description: "Discover how Battery Energy Storage Systems (BESS) revolutionize home power backup in India. Compare costs, ROI, and find the right system size for your home."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "Energy Storage"
 readTime: "12 min read"
 image: "/blog/complete-guide-battery-energy-storage-systems-bess-homes.webp"
+tags: ["BESS", "Battery Storage", "Home Backup Power", "Solar Energy Storage", "Power Backup India", "SpiderVault", "Lithium Battery", "Smart Home Energy"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # Complete Guide to Battery Energy Storage Systems (BESS) for Homes

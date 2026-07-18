@@ -7,12 +7,7 @@ author: "Spider Energy Team"
 category: "Infrastructure"
 readTime: "15 min read"
 image: "/blog/ev-ready-homes-india-smart-charging-bess-2026.webp"
-tags:
-  - "EV-Ready Homes"
-  - "Smart EV Charging"
-  - "BESS"
-  - "Solar Storage"
-  - "EV Charging Infrastructure"
+tags: [ - "EV-Ready Homes" - "Smart EV Charging" - "BESS" - "Solar Storage" - "EV Charging Infrastructure"
 published: true
 
 ---

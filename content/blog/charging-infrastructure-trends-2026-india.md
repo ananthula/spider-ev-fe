@@ -1,15 +1,16 @@
 ---
 title: "Charging Infrastructure Trends To Watch In 2026"
-description: "Discover the top EV charging infrastructure trends shaping India's electric mobility landscape in 2026. From ultra-fast charging to OCPP compliance and grid integration."
 slug: "charging-infrastructure-trends-2026-india"
-category: "EV Charging"
-tags: ["EV charging trends", "charging infrastructure", "OCPP compliance", "ultra-fast charging", "BIS certification", "EV India 2026", "smart charging", "energy storage"]
-publishDate: "2026-07-18"
+description: "Discover the top EV charging infrastructure trends shaping India's electric mobility landscape in 2026. From ultra-fast charging to OCPP compliance and grid integration."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "EV Charging"
 readTime: "12 min read"
 image: "/blog/charging-infrastructure-trends-2026-india.webp"
+tags: ["EV charging trends", "charging infrastructure", "OCPP compliance", "ultra-fast charging", "BIS certification", "EV India 2026", "smart charging", "energy storage"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # Charging Infrastructure Trends To Watch In 2026

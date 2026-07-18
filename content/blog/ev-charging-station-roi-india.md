@@ -1,15 +1,16 @@
 ---
 title: "EV Charging Station ROI Explained: What Drives Returns in India"
-description: "Complete guide to EV charging station ROI in India. Learn what drives returns, revenue streams, government incentives, and how to maximize profits with BIS-certified infrastructure."
 slug: "ev-charging-station-roi-india"
-category: "EV Charging"
-tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
-publishDate: "2026-07-18"
+description: "Complete guide to EV charging station ROI in India. Learn what drives returns, revenue streams, government incentives, and how to maximize profits with BIS-certified infrastructure."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "EV Charging"
 readTime: "12 min read"
 image: "/blog/ev-charging-station-roi-india.webp"
+tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 ## Introduction: The EV Charging Gold Rush in India

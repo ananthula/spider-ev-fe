@@ -1,15 +1,16 @@
 ---
 title: "How Silent Energy Storage Is Changing Homes in India"
-description: "Silent battery energy storage is revolutionizing Indian homes with instant backup, zero noise, and smart solar integration. Learn how BESS works."
 slug: "silent-energy-storage-residential-infrastructure"
-category: "Energy Storage"
-tags: ["BESS", "Battery Storage", "Home Backup", "Solar Storage", "Silent Power", "Smart Homes", "Grid Independence", "SpiderVault"]
-publishDate: "2026-07-18"
+description: "Silent battery energy storage is revolutionizing Indian homes with instant backup, zero noise, and smart solar integration. Learn how BESS works."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "Energy Storage"
 readTime: "12 min read"
 image: "/blog/silent-energy-storage-residential-infrastructure.webp"
+tags: ["BESS", "Battery Storage", "Home Backup", "Solar Storage", "Silent Power", "Smart Homes", "Grid Independence", "SpiderVault"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # How Silent Energy Storage Is Changing Residential Infrastructure

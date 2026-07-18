@@ -1,15 +1,16 @@
 ---
 title: "Solar Storage Explained: How to Use the Sun After Sunset"
-description: "Learn how battery storage systems let you use solar power 24/7. Complete guide to technology, costs, ROI, and choosing the right BESS for your Indian home."
 slug: "solar-storage-explained-homeowners"
-category: "Energy Storage"
-tags: ["solar storage", "battery storage", "BESS", "solar power", "home backup", "power backup", "energy independence", "SpiderVault"]
-publishDate: "2026-07-18"
+description: "Learn how battery storage systems let you use solar power 24/7. Complete guide to technology, costs, ROI, and choosing the right BESS for your Indian home."
 date: "2026-07-18"
 author: "Spider Energy Team"
+category: "Energy Storage"
 readTime: "12 min read"
 image: "/blog/solar-storage-explained-homeowners.webp"
+tags: ["solar storage", "battery storage", "BESS", "solar power", "home backup", "power backup", "energy independence", "SpiderVault"]
 published: true
+publishDate: "2026-07-18"
+
 ---
 
 # Solar Storage Explained for Modern Homeowners: How to Use the Sun After Sunset
