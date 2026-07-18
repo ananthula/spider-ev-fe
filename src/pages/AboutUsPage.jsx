@@ -39,7 +39,8 @@ const AboutUsPage = () => {
     <PageLayout>
       <Helmet>
         <title>EV Charger Manufacturer in Telangana & AP | SpiderEV</title>
-        <meta name="description" content="Discover EV Charging Systems Manufacturers in Andhra Pradesh and Telangana Offering Electric Car Chargers, EV Home Charger Installation & EV Charging Equipment." />
+        <meta name="description" content="EV Charging Systems Manufacturer in Andhra Pradesh & Telangana. Electric car chargers, home charger installation & charging equipment." />
+        <meta name="keywords" content="EV charger manufacturer Telangana, electric vehicle manufacturer AP, BIS certified charger India, SpiderEV company Hyderabad, EVSE manufacturer India" />
       </Helmet>
       <SEO schema={organizationSchema} breadcrumbs={aboutBreadcrumbs} />
       <HeroBanner
@@ -47,50 +48,89 @@ const AboutUsPage = () => {
         bgImage={heroBg}
       />
 
-      {/* Company Story */}
+      {/* Main Content */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewport}
-            >
-              <motion.span variants={fadeUp} className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Story</motion.span>
-              <motion.h2 variants={fadeUp} className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-                Charging the Future, One Connection at a Time
-              </motion.h2>
-              <motion.p variants={fadeUp} className="mt-5 text-gray-600 text-lg leading-relaxed">
-                At SpiderEV, we aren't just keeping up with the electric vehicle revolution — we're leading it.
-                Backed by 30 years of expertise in power electronics, SpiderEV is shaping the EV landscape
-                in India with innovation, precision, and an eye on the future.
-              </motion.p>
-              <motion.p variants={fadeUp} className="mt-4 text-gray-600 leading-relaxed">
-                From homes to highways, our EV charging solutions are designed to empower a cleaner,
-                smarter, and more connected tomorrow. We are a vertically integrated manufacturer —
-                designing, manufacturing, deploying, and managing every aspect of EV charging infrastructure.
-              </motion.p>
-              <motion.p variants={fadeUp} className="mt-4 text-gray-600 leading-relaxed">
-                Our team has built India's largest charging networks, partnering with India Post, Indian
-                Railways, Delhi Metro, Tata Motors, and 20+ other industry leaders to accelerate the
-                transition to electric mobility.
-              </motion.p>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            className="max-w-4xl mx-auto"
+          >
+            {/* Introduction */}
+            <motion.p variants={fadeUp} className="text-gray-600 text-lg leading-relaxed mb-12">
+              Spider Energy was started on a simple premise. India's transition to EVs needs charging infrastructure made for Indian conditions, not repurposed from elsewhere. That means locally built and serviced chargers rated for monsoon humidity and grid voltage fluctuation, not imported.
+            </motion.p>
+
+            {/* Section 1: Our Mission */}
+            <motion.div variants={fadeUp} className="mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Our Mission — Making EV Charging Accessible Across India
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Our mission is to be the most sought after Charging Partner in the country — completely annihilating charge anxiety through innovative solutions that empower every EV driver, business, and community across India. We envision a future where every Indian can charge their EV as easily as they charge their phone.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                From homes to highways, our EV charging solutions are designed to empower a cleaner, smarter, and more connected tomorrow. We are a vertically integrated manufacturer — designing, manufacturing, deploying, and managing every aspect of EV charging infrastructure.
+              </p>
             </motion.div>
-            <motion.div
-              variants={fadeRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewport}
-              className="bg-gray-50 rounded-2xl p-10 flex items-center justify-center"
-            >
-              <img
-                src={spiderEvLogo}
-                alt="SpiderEV"
-                className="max-h-32 w-auto object-contain"
-              />
+
+            {/* Section 2: Manufacturing Capabilities */}
+            <motion.div variants={fadeUp} className="mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Manufacturing Capabilities — BIS-Certified AC & DC EV Chargers
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We build everything in-house—from 3.3 kW AC chargers for homes to 80 kW dual-gun commercial chargers, and from 30 kW to our flagship 240 kW DC fast chargers for highways and fleet depots. Each unit is BIS certified and OCPP 1.6J enabled, and the latest models are OCPP 2.0 compatible. Our manufacturing facility is equipped with state-of-the-art testing equipment to ensure every charger that leaves our facility meets the highest quality standards.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Backed by 30 years of expertise in power electronics, we design, manufacture, deploy, and manage every aspect of EV charging infrastructure. Our team has built India's largest charging networks, partnering with India Post, Indian Railways, Delhi Metro, Tata Motors, and 20+ other industry leaders to accelerate the transition to electric mobility.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                We have deployed over 5,000 AC and DC chargers across India, with a focus on reliability, performance, and seamless integration with existing power infrastructure. Our engineering team continuously innovates to address the unique challenges of the Indian market, including power fluctuations, extreme weather conditions, and diverse usage patterns.
+              </p>
             </motion.div>
-          </div>
+
+            {/* Section 3: Product Brands */}
+            <motion.div variants={fadeUp} className="mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                SpiderEV & SpiderVault — Our Two Product Brands Explained
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Our product line is split into two lines. SpiderEV is the charging hardware and network software, the chargers themselves plus SpiderConnect, our charge point management platform. SpiderConnect enables real-time monitoring, remote diagnostics, and seamless payment integration, giving charge point operators complete control over their charging infrastructure.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                SpiderVault is our battery energy storage line, designed to be used in conjunction with EV stations to reduce peak demands, or deployed independently for home and commercial backup power. This dual-brand approach allows us to address both immediate charging needs and long-term energy management solutions for our customers.
+              </p>
+            </motion.div>
+
+            {/* Section 4: Regional Presence */}
+            <motion.div variants={fadeUp} className="mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Our Presence in Telangana & Andhra Pradesh
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We are located in Hyderabad, Telangana and we provide services across Telangana and Andhra Pradesh. That's an intentional regional focus — we'd rather have fast, accountable support in two states, than thin coverage across the country. As demand increases, we expand that reach through our franchise and partner network without diluting service quality.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Our installation and maintenance services now cover 15+ cities across India, ensuring that wherever you deploy our chargers, you have reliable local support backed by our engineering team in Hyderabad.
+              </p>
+            </motion.div>
+
+            {/* Section 5: Certifications */}
+            <motion.div variants={fadeUp} className="mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Certifications & Compliance — BIS, OCPP, IP67, IS 17017
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We don't take certification lightly. BIS certification means our hardware meets India's electrical safety standards. OCPP compliance means our chargers are interoperable with the wider EV charging ecosystem, not just our own network. The hardware is IP67 protected, which means it can withstand the Indian outdoor environment - heat, dust and monsoon exposure - without any drop in performance.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Our commitment to quality and compliance extends across every product line, ensuring that whether you're installing a home charger or a high-power DC fast charger, you're getting a product that meets or exceeds all relevant Indian and international standards.
+              </p>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -119,43 +159,21 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16 sm:py-20 bg-white">
+      {/* Company Logo Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10">
           <motion.div
-            variants={staggerContainer}
+            variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="grid md:grid-cols-2 gap-8"
+            className="bg-white rounded-2xl p-10 flex items-center justify-center shadow-sm"
           >
-            <motion.div variants={fadeLeft} className="bg-primary rounded-2xl p-10">
-              <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-              <p className="text-white/80 leading-relaxed">
-                "To be the most sought after Charging Partner in the country — completely annihilating
-                charge anxiety through innovative solutions that empower every EV driver, business,
-                and community across India."
-              </p>
-            </motion.div>
-            <motion.div variants={fadeRight} className="bg-gray-50 rounded-2xl p-10 border border-gray-100">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                "To be India's no.1 fully vertically integrated charging company — from manufacturing
-                to being the Charge Point Operator. We envision a future where every Indian can charge
-                their EV as easily as they charge their phone."
-              </p>
-            </motion.div>
+            <img
+              src={spiderEvLogo}
+              alt="SpiderEV - EV Charger Manufacturer in Telangana and Andhra Pradesh"
+              className="max-h-32 w-auto object-contain"
+            />
           </motion.div>
         </div>
       </section>

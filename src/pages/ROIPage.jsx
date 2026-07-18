@@ -252,6 +252,44 @@ const ROIPage = () => {
             </Link>
           </motion.div>
         </div>
+
+        {/* Methodology Section */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="mt-16 max-w-4xl mx-auto"
+        >
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">How This Calculator Works</h2>
+            <div className="prose prose-sm text-gray-600 space-y-4">
+              <p>
+                Use this calculator to estimate your potential EV charging station revenue by charger type, expected number of daily sessions and your local electricity tariff. Figures are projections based on typical usage in Telangana and Andhra Pradesh – actual returns depend on location, footfall and local competition. Use this as a planning tool, not a guarantee.
+              </p>
+
+              <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">The calculator factors in:</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li><strong>Units charged per day</strong> (based on your footfall projections)</li>
+                <li><strong>Local tariff</strong> (your DISCOM electricity rate)</li>
+                <li><strong>Charger type</strong> (AC vs DC, power output affects charging speed and session turnover)</li>
+                <li><strong>Footfall assumptions</strong> (location type influences utilization rate)</li>
+              </ul>
+
+              <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">ROI estimates are calculated assuming:</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>70-85% uptime for properly maintained equipment</li>
+                <li>Conservative utilization rates for new installations ramping up over 6-12 months</li>
+                <li>Operating costs including electricity, maintenance, and network fees</li>
+                <li>Revenue sharing if applicable to your franchise model</li>
+              </ul>
+
+              <p className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-sm">
+                <strong className="text-amber-900">Important Disclaimer:</strong> These are estimates only. Actual performance varies by site selection, local competition, EV adoption rates in your area, and operational efficiency. Contact our team for a detailed feasibility study specific to your location.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* PDF Modal */}

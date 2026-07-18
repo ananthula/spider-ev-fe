@@ -146,20 +146,14 @@ const brandPartners = [
 ];
 
 const faqItems = [
-  { question: "What are the investment options and who is this for?",
-    answer: "We offer two models: Fast Charging (₹30L+) for passenger EVs, and Super Charging (₹1Cr+) for high-throughput sites. Ideal for landowners, retail entrepreneurs, and institutional investors." },
-  { question: "What kind of space and power connection do I need?",
-    answer: "Fast Charging: ~1,000 sq. ft. with 50–150 kVA sanctioned load. Super Charging: larger footprint for commercial EVs with 250–1200 kVA load. We assist with site layout, DISCOM approvals, and Solar + BESS integration." },
-  { question: "How much can I earn and what's the ROI timeline?",
-    answer: "Typical ROI is 2–4 years for Fast Charging and 3–5 years for Super Charging. Earnings depend on location, footfall, and tariff. Live revenue tracking available via Spider Connect CMS." },
-  { question: "How does SpiderEV support me after setup?",
-    answer: "End-to-end installation, 24×7 tech support, marketing campaigns, Spider Connect software, remote monitoring, and on-site service through our maintenance network." },
-  { question: "I have land but no power connection — can I still start?",
-    answer: "Yes. SpiderEV's EPC team will assess your site and arrange the power connection as part of the project, including all DISCOM approvals." },
-  { question: "What is the setup timeline?",
-    answer: "From agreement to commissioning: 12–20 weeks for Fast Charging, 20–24 weeks for Super Charging, subject to permits and grid readiness." },
-  { question: "Why choose SpiderEV over others?",
-    answer: "SpiderEV is vertically integrated — we manufacture chargers, operate our own software (Spider Connect), and deploy our own stations. No third-party dependencies means better pricing, faster resolution, and higher uptime." },
+  { question: "How much does an EV charging franchise cost with SpiderEV in India?",
+    answer: "Investment will vary depending on the charger type and site. The lowest tier is AC-only installations in a home or office. Full DC fast-charge stations for public or highway locations have a higher upfront cost but can make more revenue per session. Use the ROI Calculator on this site for a figure specific to your location." },
+  { question: "What support does SpiderEV provide to franchise partners?",
+    answer: "All hardware is developed in-house. SpiderEV also offers ongoing technical support, SpiderConnect software for remote monitoring and takes care of DISCOM liaison and electrical approvals during the onboarding process." },
+  { question: "How long does it take to break even on an EV charging franchise?",
+    answer: "How long it takes to pay back depends on charger type and traffic at the location. Public DC fast-charging stations along heavily travelled corridors sometimes fail even faster than residential AC installations. Model your specific site with the ROI Calculator." },
+  { question: "Do I need prior experience to run an EV charging franchise?",
+    answer: "No. Franchise package includes training and continual support. SpiderEV will help with DISCOM approvals, installation, and daily operations via the SpiderConnect platform." },
 ];
 
 const STATES = [
@@ -729,6 +723,36 @@ export default function FranchisePage() {
             </motion.div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          FRANCHISE VISION & DETAILS — white bg
+      ═══════════════════════════════════════════ */}
+      <section className="bg-white py-20 sm:py-28">
+        <div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={vp} className="max-w-4xl mx-auto">
+            <motion.div variants={fadeUp} className="text-center mb-10">
+              <span className="text-secondary font-bold text-xs uppercase tracking-widest">Our Franchise Vision</span>
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                Own a Business, Not Just a Lease
+              </h2>
+            </motion.div>
+            <motion.div variants={fadeUp} className="prose prose-lg max-w-none">
+              <p className="text-gray-600 leading-relaxed mb-5">
+                SpiderEV's vision of an EV charging franchise is not simply to lease a location on a network, but to own a business that is driven by hardware we manufacture ourselves. That difference counts when something needs servicing, we're not waiting on an overseas supplier, neither are you. The size of your franchise investment depends on the type of charger you install. The AC-only configuration for a home or office starts at a lower entry point, while a full DC fast-charging station for a public or highway location requires more upfront capital but earns faster per session. We'll talk you through the numbers for your site before you make any commitments.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-5">
+                All our franchise partners are provided with our charge point management software, SpiderConnect, allowing you to remotely monitor usage, revenue and uptime from day one. Onboarding also involves dealing with DISCOM liaison and electrical approvals, which is often where new operators get stuck, and that's something we take care of directly. Payback depends on location and charger mix, but public DC stations in high-traffic corridors tend to have better returns per unit than residential AC installs. Before applying, use the ROI Calculator on this site to model your specific scenario.
+              </p>
+            </motion.div>
+            <motion.div variants={fadeUp} className="text-center mt-10">
+              <a href="#register-form"
+                className="inline-flex items-center gap-2.5 bg-primary text-white px-8 py-4 rounded-2xl font-bold text-sm hover:bg-primary/90 transition-all hover:gap-3.5">
+                Start Your Application <ArrowIcon />
+              </a>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 

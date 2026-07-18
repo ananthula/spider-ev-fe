@@ -72,7 +72,7 @@ const GalleryPage = () => {
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="flex flex-wrap gap-2 mb-10"
+            className="flex flex-wrap gap-2 mb-6"
           >
             {galleryCategories.map((c) => (
               <motion.button
@@ -84,6 +84,31 @@ const GalleryPage = () => {
                 {c}
               </motion.button>
             ))}
+          </motion.div>
+
+          {/* Category Description */}
+          <motion.div
+            key={`desc-${activeCategory}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="mb-8 text-gray-600 text-sm sm:text-base leading-relaxed"
+          >
+            {activeCategory === "All" && (
+              <p>Explore SpiderEV's complete portfolio — from installations across Hyderabad to franchise events and product deployments in Telangana and Andhra Pradesh.</p>
+            )}
+            {activeCategory === "Installations" && (
+              <p>SpiderEV's installations across Hyderabad — home, commercial and public charging locations. Our charging infrastructure serves residential complexes, highways, and commercial hubs throughout the region.</p>
+            )}
+            {activeCategory === "Products" && (
+              <p>SpiderEV product range in the field — AC & DC chargers deployed across our service area. From 7.4 kW home chargers to 240 kW ultra-fast DC units, our products power India's EV transition.</p>
+            )}
+            {activeCategory === "Events" && (
+              <p>Franchise Launch Events in Telangana and Andhra Pradesh. Showcasing SpiderEV's participation in industry expos, partner training sessions, and milestone celebrations across the region.</p>
+            )}
+            {activeCategory === "Partnerships" && (
+              <p>Strategic collaborations driving EV adoption — partnerships with India Post, Delhi Metro, logistics fleets, and municipal bodies. Together we're building India's charging backbone.</p>
+            )}
           </motion.div>
 
           {/* Grid */}

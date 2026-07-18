@@ -166,6 +166,38 @@ export function getProductSchema(product, category, productId) {
     });
   }
 
+  if (product.chargingSpeed) {
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name: "Charging Speed",
+      value: product.chargingSpeed,
+    });
+  }
+
+  if (product.cooling) {
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name: "Cooling",
+      value: product.cooling,
+    });
+  }
+
+  if (product.management) {
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name: "Management",
+      value: product.management,
+    });
+  }
+
+  if (product.protocol) {
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name: "Protocol Support",
+      value: product.protocol,
+    });
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
