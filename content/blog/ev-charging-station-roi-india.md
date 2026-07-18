@@ -1,3 +1,12 @@
+---
+title: "EV Charging Station ROI Explained: What Drives Returns in India"
+description: "Complete guide to EV charging station ROI in India. Learn what drives returns, revenue streams, government incentives, and how to maximize profits with BIS-certified infrastructure."
+slug: "ev-charging-station-roi-india"
+category: "EV Charging"
+tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
+publishDate: 2026-07-18
+---
+
 ## Introduction: The EV Charging Gold Rush in India
 
 India's electric vehicle market is experiencing explosive growth, with EV sales growing at over 200% year-on-year in key segments. As major cities like Hyderabad, Bangalore, and Chennai witness thousands of new EVs hitting the roads monthly, a critical question emerges for entrepreneurs and businesses: **What's the real return on investment for EV charging stations?**
