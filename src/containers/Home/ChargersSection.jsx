@@ -43,6 +43,22 @@ const ChargersSection = () => {
   return (
     <section className="w-full bg-[#EEF1F6] py-16 lg:py-20">
       <div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10">
+        {/* Section Header */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-center mb-12"
+        >
+          <motion.h2
+            variants={fadeUp}
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2f3236] leading-tight"
+          >
+            AC & DC EV Chargers for Every Need — <span className="text-secondary">Home to Highway</span>
+          </motion.h2>
+        </motion.div>
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"

@@ -53,17 +53,37 @@ const StatsSection = () => {
             variants={fadeUp}
             className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2f3236] leading-tight"
           >
-            <span className="text-secondary">Charging the Future,</span> One Connection at a Time
+            <span className="text-secondary">SpiderEV —</span> India&apos;s Smart EV Charging Infrastructure
           </motion.h2>
-          <motion.p
+          <motion.div
             variants={fadeUp}
-            className="mt-5 text-lg text-[#8A96A8] leading-9 max-w-6xl mx-auto"
+            className="mt-5 text-base sm:text-lg text-[#4a5568] leading-relaxed max-w-5xl mx-auto text-left space-y-4"
           >
-            At Spider EV, we aren&apos;t just keeping up with the electric vehicle revolution-we&apos;re leading it.
-            Backed by decades of expertise in power electronics, we are shaping the EV landscape with
-            innovation, precision, and an eye on the future. From homes to highways, our EV charging
-            solutions are designed to empower a cleaner, smarter, and more connected tomorrow.
-          </motion.p>
+            <p>
+              Spider Energy is developing and installing EV charging infrastructure in Telangana and Andhra Pradesh,
+              ranging from 3.3 kW home AC chargers to 240 kW ultra-rapid DC fast chargers. All our chargers are
+              BIS-certified, OCPP compliant and designed for Indian grid conditions and weather.
+            </p>
+            <p>
+              We have two lines of products. <strong>SpiderEV</strong> offers the full range of charging hardware –
+              AC and DC chargers for homes, apartments, commercial fleets and highway corridors – as well as SpiderConnect,
+              our charge point management software. Our battery energy storage line is <strong>SpiderVault</strong>,
+              made to go with EV stations, solar installations and standalone home or commercial backup.
+            </p>
+            <p>
+              Businesses have two options to get in: a direct EV charging franchise with support from our dealerships
+              and guidance on how to set up, or a partner model for site hosts, fleet operators and fuel station owners
+              who want to add EV charging without managing the operation themselves. Homeowners can avail affordable
+              home charging through our <strong>Har Ghar Charger</strong> initiative and earn from your own station.
+            </p>
+            <p>
+              Everything that we make is made in India. This is important in two ways: you&apos;ll get local support
+              faster if something needs servicing, and you won&apos;t have to pay the overhead costs of imported hardware.
+              If you&apos;re considering EV charging infrastructure in Telangana or Andhra Pradesh – whether for your
+              home, your business or as an investment – start with what you&apos;re trying to solve, and we&apos;ll
+              point you to the right product line.
+            </p>
+          </motion.div>
           <motion.div variants={fadeUp} className="mt-8">
             <Link
               to="/about-us"

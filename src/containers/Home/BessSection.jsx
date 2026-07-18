@@ -62,7 +62,7 @@ const BessSection = () => {
               Battery Energy Storage Systems
             </motion.p>
             <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#2f3236] leading-tight">
-              Introducing <span className="text-primary">SpiderVault</span>
+              <span className="text-primary">SpiderVault</span> — Battery Energy Storage for Modern India
             </motion.h2>
             <motion.p variants={fadeUp} className="mt-3 text-gray-500 text-sm sm:text-base max-w-xl">
               One intelligent unit — inverter, battery, and solar combined. Power your home or business with clean, reliable energy, round the clock.
