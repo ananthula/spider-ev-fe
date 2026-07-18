@@ -9,7 +9,6 @@ readTime: "15 min read"
 image: "/blog/ev-ready-homes-india-smart-charging-bess-2026.webp"
 tags: [ - "EV-Ready Homes" - "Smart EV Charging" - "BESS" - "Solar Storage" - "EV Charging Infrastructure"
 published: true
-
 ---
 
 The next chapter of India's EV story will not only be written on highways or at public charging stations. It'll happen in homes, apartment basements, villa driveways, office campuses and mixed-use buildings. In 2026, EV charging is not just a mobility decision any more. It is becoming a decision about energy architecture.

@@ -10,7 +10,6 @@ image: "/blog/what-landowners-need-to-know-about-ev-infrastructure-india.webp"
 tags: ["EV charging infrastructure", "landowner opportunities", "BIS certification", "OCPP compliant chargers", "EV business India", "charging station investment", "SpiderEV", "renewable energy"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 # What Landowners Need to Know About EV Infrastructure in India

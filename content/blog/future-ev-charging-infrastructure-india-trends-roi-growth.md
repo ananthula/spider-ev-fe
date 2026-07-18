@@ -10,7 +10,6 @@ image: "/blog/future-ev-charging-infrastructure-india-trends-roi-growth.webp"
 tags: ["EV charging infrastructure", "India EV market", "ROI analysis", "BIS certification", "OCPP compliance", "EV charging business", "FAME II", "electric vehicle trends"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 India's electric vehicle revolution is accelerating at an unprecedented pace, and the charging infrastructure landscape is evolving to meet this surge in demand. As the country targets 30% electric vehicle penetration by 2030, the EV charging infrastructure sector presents significant opportunities for entrepreneurs, investors, and established businesses. This comprehensive analysis explores the future trajectory of India's EV charging ecosystem, examining market trends, return on investment potential, and strategic growth opportunities.
@@ -171,7 +170,6 @@ A: High-potential locations include: (1) Highway corridors connecting major citi
 **Q: What is the difference between AC and DC charging, and which should I install?**
 
 A: AC chargers (3.3kW to 22kW) deliver alternating current and rely on the vehicle's onboard charger for conversion, resulting in slower charging speeds of 3-8 hours for full charge. DC fast chargers (30kW to 240kW) convert power externally and deliver DC directly to the battery, enabling 20-60 minute charging times. AC chargers (Spider Mini, Lite, Base) suit destination charging at offices, malls, and residential locations where vehicles park for extended periods. DC chargers (Spider Falcon, Surge, Hulk) are essential for highway locations, fleet operations, and commercial hubs requiring rapid turnover. Optimal installations typically deploy both types based on customer needs and expected usage patterns.
-
 ---
 
 **Ready to Lead India's EV Charging Revolution?**

@@ -10,7 +10,6 @@ image: "/blog/ev-ready-homes-india-whole-energy-decision-2026.webp"
 tags: ["EV charging infrastructure", "home EV charging India", "BIS certified chargers", "OCPP compliance", "solar EV charging", "energy management", "SpiderEV products", "electric vehicle India"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 # EV-Ready Homes in India: Why Charging Is Becoming a Whole Energy Decision in 2026
@@ -184,7 +183,6 @@ During reduced solar generation (June-September in most of India), your SpiderEV
 **Q4: What happens to my home charger during power cuts?**
 
 During grid outages, SpiderEV chargers with battery backup (SpiderVault integration) can continue operating. More excitingly, emerging V2G (vehicle-to-grid) and V2H (vehicle-to-home) technologies—supported by OCPP-compliant SpiderEV chargers—will allow you to use your EV's battery to power home essentials during cuts. This is particularly valuable in areas with unreliable grids, effectively turning your EV into a mobile power backup system.
-
 ---
 
 ## Ready to Make Your Home EV-Ready?

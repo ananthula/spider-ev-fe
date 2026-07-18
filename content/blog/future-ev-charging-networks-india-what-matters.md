@@ -10,7 +10,6 @@ image: "/blog/future-ev-charging-networks-india-what-matters.webp"
 tags: ["EV charging infrastructure", "OCPP compliance", "BIS certification", "EV charging business", "India EV market", "grid integration", "EV charging ROI", "charging network"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 India's electric vehicle revolution is accelerating at an unprecedented pace. With over 1.5 million EVs on Indian roads and government targets pushing for 30% EV penetration by 2030, the spotlight has shifted from vehicles themselves to the infrastructure that powers them. But here's the reality: not all aspects of EV charging networks matter equally. As someone investing in or operating charging infrastructure, understanding what will truly drive success in the coming years can mean the difference between a thriving business and a stranded asset.
@@ -153,7 +152,6 @@ Highly dependent on model and location. Destination charging (malls, offices): 2
 **Should I install 60kW or 120kW+ chargers for a highway location?**
 
 Start with 60kW (Spider Fast) unless you have confirmed high-volume fleet commitments. Here's why: Most EVs in India currently accept 30-60kW maximum charge rates. A 120kW charger (Spider Falcon/Surge) costs 60-70% more but won't charge most vehicles any faster. The exceptions: commercial vehicle corridors and locations near metro cities where premium EVs are common. A better strategy: Install 2x60kW units instead of 1x120kW. You get redundancy, can serve two vehicles simultaneously, and lower per-charger grid load. Upgrade to higher capacity when utilization consistently exceeds 70% and vehicle populations support it.
-
 ---
 
 ## Ready to Build Future-Proof Charging Infrastructure?

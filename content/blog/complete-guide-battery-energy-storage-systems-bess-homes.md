@@ -10,7 +10,6 @@ image: "/blog/complete-guide-battery-energy-storage-systems-bess-homes.webp"
 tags: ["BESS", "Battery Storage", "Home Backup Power", "Solar Energy Storage", "Power Backup India", "SpiderVault", "Lithium Battery", "Smart Home Energy"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 # Complete Guide to Battery Energy Storage Systems (BESS) for Homes

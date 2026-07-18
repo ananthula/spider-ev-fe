@@ -10,7 +10,6 @@ image: "/blog/whole-home-backup-premium-homes-india-2026.webp"
 tags: ["whole-home backup", "BESS", "battery energy storage", "home backup systems", "SpiderVault", "power backup India", "premium homes", "solar storage"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 # What Is Whole-Home Backup and Why It Matters for Premium Homes in 2026

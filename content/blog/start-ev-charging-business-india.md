@@ -8,7 +8,6 @@ category: "Business"
 readTime: "12 min read"
 image: "/blog/start-ev-charging-business-india.jpg"
 published: true
-
 ---
 
 ## Why Start an EV Charging Business in 2026?

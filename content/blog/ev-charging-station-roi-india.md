@@ -10,7 +10,6 @@ image: "/blog/ev-charging-station-roi-india.webp"
 tags: ["EV charging ROI", "charging station investment", "FAME II subsidy", "BIS certification", "OCPP compliance", "EV infrastructure India", "charging station business", "electric vehicle charging"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 ## Introduction: The EV Charging Gold Rush in India
@@ -144,7 +143,6 @@ A: The FAME II scheme provides capital subsidies up to 50% of project costs for 
 **Q: What technical specifications should I prioritize for maximum ROI?**
 
 A: Prioritize BIS certification (mandatory for compliance and safety), OCPP compliance (enables interoperability and advanced features like remote monitoring, dynamic pricing, and smart energy management), adequate power capacity matching anticipated demand (avoid both under and over-sizing), and reliable connectivity (4G/WiFi for payment processing and monitoring). For DC fast chargers, power sharing capability across multiple charging points optimizes infrastructure costs. Integration capability with solar and battery storage (like SpiderVault) provides future-proofing for energy cost reduction and grid stability services.
-
 ---
 
 ## Ready to Enter India's EV Charging Market?

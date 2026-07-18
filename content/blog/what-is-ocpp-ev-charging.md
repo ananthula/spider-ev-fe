@@ -8,7 +8,6 @@ category: "Technology"
 readTime: "7 min read"
 image: "/blog/what-is-ocpp-ev-charging.jpg"
 published: true
-
 ---
 
 ## What is OCPP?

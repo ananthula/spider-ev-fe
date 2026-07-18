@@ -8,7 +8,6 @@ category: "Technology"
 readTime: "8 min read"
 image: "/blog/how-ev-chargers-work.jpg"
 published: true
-
 ---
 
 ## Understanding EV Charging Technology

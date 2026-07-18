@@ -10,7 +10,6 @@ image: "/blog/solar-storage-explained-homeowners.webp"
 tags: ["solar storage", "battery storage", "BESS", "solar power", "home backup", "power backup", "energy independence", "SpiderVault"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 # Solar Storage Explained for Modern Homeowners: How to Use the Sun After Sunset
@@ -229,7 +228,6 @@ More than just backup power, a properly sized BESS transforms your home into an 
 SpiderEnergy's team of experts can assess your home's energy requirements, recommend the right SpiderVault configuration, and handle everything from installation to grid connectivity. With flexible financing options and comprehensive warranties, energy independence is more accessible than ever.
 
 **Contact SpiderEnergy today for a free energy audit and customized solar storage proposal for your home.**
-
 ---
 
 ## Frequently Asked Questions

@@ -10,7 +10,6 @@ image: "/blog/highway-ev-charging-investment-india.webp"
 tags: ["highway charging", "EV infrastructure investment", "charging station ROI", "OCPP compliance", "BIS certification", "highway business India", "EV charging profitability", "fast charging stations"]
 published: true
 publishDate: "2026-07-18"
-
 ---
 
 India's electric vehicle revolution is rapidly transforming from urban centers to intercity highways. With EV sales crossing 1.5 million units annually and the government's ambitious target of 30% EV penetration by 2030, highway charging infrastructure has emerged as a critical investment opportunity. But is setting up a highway EV charging station truly profitable in India's evolving market?
@@ -196,7 +195,6 @@ A: For most highway locations, a capacity of 120-240 kW is optimal, combining 2-
 **Q: How can I ensure reliable power supply in remote highway locations?**
 
 A: Remote locations benefit from hybrid solutions combining grid power with battery energy storage systems (like SpiderVault) and solar installations. A 50 kWh battery storage system can buffer grid fluctuations and enable off-peak charging, reducing electricity costs by 15-25%. Additionally, negotiate dedicated feeders with your electricity provider and include backup generators for critical operations.
-
 ---
 
 ## Ready to Invest in India's EV Charging Future?
