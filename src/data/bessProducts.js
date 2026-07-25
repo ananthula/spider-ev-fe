@@ -90,7 +90,7 @@ export const bessProducts = [
       topology: 'High Frequency Isolation', standardWarranty: '5 Years', extendedWarranty: '12 Years',
       certifications: 'BIS Certified (R-63005436), IS 16221, IS 16169, IS 17980',
     },
-    downloads: { dataSheet: '/assets/bess/spidervault-12-datasheet.pdf' },
+    downloads: { dataSheet: '/assets/bess/spidervault-12-datasheet.pdf', comparisonSheet: '/assets/bess/spidervault-12-comparison.pdf' },
   },
   {
     id: 'spidervault-20',
@@ -178,7 +178,7 @@ export const bessProducts = [
       commInterface: 'Ethernet, RS485, CAN', standardWarranty: '5 Years', extendedWarranty: '12 Years',
       certifications: 'CEI 0-21, IEC 61727, VDE, IEC/EN 62109-1/2',
     },
-    downloads: { dataSheet: '/assets/bess/spidervault-60-datasheet.pdf' },
+    downloads: { dataSheet: '/assets/bess/spidervault-60-datasheet.pdf', comparisonSheet: '/assets/bess/spidervault-60-comparison.pdf' },
   },
   {
     id: 'spidervault-120',
@@ -204,7 +204,7 @@ export const bessProducts = [
       commInterface: 'Ethernet, RS485, CAN', standardWarranty: '5 Years', extendedWarranty: '12 Years',
       certifications: 'CEI 0-21, IEC 61727, VDE, IEC/EN 62109-1/2',
     },
-    downloads: { dataSheet: '/assets/bess/spidervault-120-datasheet.pdf' },
+    downloads: { dataSheet: '/assets/bess/spidervault-120-datasheet.pdf', comparisonSheet: '/assets/bess/spidervault-120-comparison.pdf' },
   },
 ];
 

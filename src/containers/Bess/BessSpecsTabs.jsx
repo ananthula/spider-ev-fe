@@ -210,14 +210,14 @@ const BessSpecsTabs = ({ activeProduct, onTabChange }) => {
                 <div className="text-white/60 text-sm">Official documents for your reference or installer</div>
               </div>
               <div className="flex flex-wrap gap-3 shrink-0">
-                <a href={product.downloads.dataSheet} className="flex items-center gap-2 bg-white text-primary px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors">
+                <a href={product.downloads.dataSheet} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-primary px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h4a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
                   </svg>
                   Data Sheet
                 </a>
                 {product.downloads.comparisonSheet && (
-                  <a href={product.downloads.comparisonSheet} className="flex items-center gap-2 border-2 border-white/40 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-white/10 transition-colors">
+                  <a href={product.downloads.comparisonSheet} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-2 border-white/40 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-white/10 transition-colors">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
