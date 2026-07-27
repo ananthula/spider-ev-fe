@@ -106,9 +106,7 @@ const Footer = () => {
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/40">
           <span>© {new Date().getFullYear()} SpiderEV. All rights reserved.</span>
           <div className="flex flex-wrap gap-6 justify-center">
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/cancellation-policy" className="hover:text-white transition-colors">Cancellation Policy</Link>
           </div>
         </div>
       </div>
