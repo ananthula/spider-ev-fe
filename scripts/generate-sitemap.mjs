@@ -72,6 +72,9 @@ const staticRoutes = [
   { path: "/news", priority: "0.6", changefreq: "weekly" },
   { path: "/blog", priority: "0.6", changefreq: "weekly" },
   { path: "/gallery", priority: "0.5", changefreq: "monthly" },
+
+  // Legal
+  { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
 ];
 
 // ─── Blog Posts ─────────────────────────────────────────────────────────────

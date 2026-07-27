@@ -32,6 +32,7 @@ const BlogPage = lazy(() => import("../pages/BlogPage"));
 const BlogDetailPage = lazy(() => import("../pages/BlogDetailPage"));
 const GalleryPage = lazy(() => import("../pages/GalleryPage"));
 const PartnerWithUsPage = lazy(() => import("../pages/PartnerWithUsPage"));
+const PrivacyPolicyPage = lazy(() => import("../pages/PrivacyPolicyPage"));
 
 // Minimal loading fallback (no layout shift)
 const PageLoader = () => (
@@ -82,6 +83,9 @@ const AppRoutes = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
         <Route path="/partner-withus" element={<Navigate to="/partner-with-us" replace />} />
+
+        {/* ── Legal ── */}
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
         {/* ── Legacy redirects (old URLs → new SEO URLs) ── */}
         <Route path="/products/ac-chargers" element={<Navigate to="/electric-vehicle-ev-ac-charger" replace />} />
