@@ -162,6 +162,18 @@ Solar-plus-storage systems achieve ROI in 6-7 years while providing energy indep
 
 **Solar Integration**: If planning solar installation, size your BESS to store daytime solar generation for evening use, typically requiring 1-1.5 kWh storage per kW of solar capacity.
 
+## **A simple comparison**
+
+| **Feature** | **Basic inverter** | **BESS** |
+| --- | --- | --- |
+| Backup scope | Essential loads | Higher load / whole-home support |
+| Startup | Reactive | Seamless |
+| Solar storage | Limited | Strong |
+| EV readiness | Weak | Strong |
+| Noise | Low | Silent |
+| Energy strategy | Backup only | Backup + storage + optimization |
+| Future fit | Basic | Future-ready |
+
 ## Why SpiderVault BESS Stands Out
 
 ### 10ms Transfer Time

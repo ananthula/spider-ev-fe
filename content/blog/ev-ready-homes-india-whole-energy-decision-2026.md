@@ -121,6 +121,16 @@ When paired with **SpiderVault** battery energy storage systems, SpiderEV charge
 
 This integrated approach is transforming homes in Hyderabad and Bangalore into mini microgrids, reducing grid dependency by 60-80%.
 
+### **A simple comparison**
+
+| **Traditional setup** | **EV-ready energy ecosystem** |
+| --- | --- |
+| Charger only | Charger + storage + solar + backup |
+| Utility is separate | Energy is managed as a system |
+| Tariff sensitivity is reactive | Tariff timing is planned |
+| Backup is noisy or limited | Backup is silent and seamless |
+| Solar may be underused | Solar can be stored and used later |
+
 ## ROI and Long-Term Energy Strategy
 
 Installing home EV charging infrastructure is a significant investment, but the numbers work strongly in your favor in India's 2026 energy landscape.
@@ -200,8 +210,6 @@ SpiderEnergy offers end-to-end solutions for residential EV charging infrastruct
 
 **Interested in the EV charging business?** Explore SpiderEnergy's franchise opportunities and be part of India's electric mobility revolution.
 
-📞 **Call**: [Your Contact Number]  
-📧 **Email**: [Your Email]  
 🌐 **Visit**: www.spiderenergy.in
 
 *Making India's energy future, one home at a time.*

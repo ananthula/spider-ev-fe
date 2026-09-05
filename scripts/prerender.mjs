@@ -5,7 +5,7 @@
  *  - Injects the correct <title>, <meta name="description">, Open Graph tags,
  *    and <link rel="canonical"> into dist/index.html
  *  - Injects JSON-LD structured data (Organization + page-specific schemas)
- *  - Injects enriched noscript content (H1, H2s, body text, nav) for crawlers
+ *  - Injects enriched no-JavaScript fallback content (H1, H2s, body text, nav)
  *  - Writes the result to dist/<route>/index.html
  *
  * This ensures crawlers that don't run JavaScript (social media bots, Bing,
@@ -40,7 +40,7 @@ const ORG_JSONLD = JSON.stringify({
       "@id": `${BASE_URL}/#organization`,
       "name": "Spider Energy",
       "url": BASE_URL,
-      "logo": { "@type": "ImageObject", "url": `${BASE_URL}/spider-ev-logo.png`, "width": 200, "height": 60 },
+      "logo": { "@type": "ImageObject", "url": `${BASE_URL}/spider-ev-logo.png`, "width": 417, "height": 188 },
       "description": "India's trusted EV charging infrastructure company — manufacturing and deploying AC & DC chargers across homes, businesses, and highways.",
       "address": { "@type": "PostalAddress", "streetAddress": "THub, Raidurgam", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "postalCode": "500081", "addressCountry": "IN" },
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9997776080", "contactType": "sales", "availableLanguage": ["English", "Hindi", "Telugu"], "areaServed": "IN" }],
@@ -63,6 +63,7 @@ function buildProductSchema({ name, description, power, connector, category, pro
   return {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${BASE_URL}/products/${category}/${productId}#product`,
     "name": name,
     "description": description,
     "brand": { "@type": "Brand", "name": "SpiderEV" },
@@ -70,7 +71,6 @@ function buildProductSchema({ name, description, power, connector, category, pro
     "category": `EV Charger > ${chargerType}`,
     "url": `${BASE_URL}/products/${category}/${productId}`,
     "image": `${BASE_URL}/spider-ev-logo.png`,
-    "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "areaServed": "IN" },
     "additionalProperty": [
       { "@type": "PropertyValue", "name": "Power Output", "value": power },
       { "@type": "PropertyValue", "name": "Connector", "value": connector },
@@ -79,15 +79,19 @@ function buildProductSchema({ name, description, power, connector, category, pro
   };
 }
 
-function buildMeta({ path, title, description, keywords, ogImage, ogType }) {
+function absoluteImageUrl(image) {
+  if (!image) return OG_IMAGE;
+  if (/^https?:\/\//i.test(image)) return image;
+  return `${BASE_URL}${image.startsWith("/") ? image : `/${image}`}`;
+}
+
+function buildMeta({ path, title, description, ogImage, ogType }) {
   const url = `${BASE_URL}${path}`;
-  const image = ogImage ? `${BASE_URL}${ogImage}` : OG_IMAGE;
+  const image = ogImage ? absoluteImageUrl(ogImage) : OG_IMAGE;
   const type = ogType || "website";
-  const kw = keywords || "EV charger, electric vehicle charging station, Spider Energy, SpiderEV";
   return [
     `  <title>${e(title)}</title>`,
     `  <meta name="description" content="${e(description)}" />`,
-    `  <meta name="keywords" content="${e(kw)}" />`,
     `  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />`,
     `  <meta property="og:title" content="${e(title)}" />`,
     `  <meta property="og:description" content="${e(description)}" />`,
@@ -165,6 +169,7 @@ const NAV_LINKS = [
   { href: "/news", text: "News" },
   { href: "/blog", text: "Blog" },
   { href: "/gallery", text: "Gallery" },
+  { href: "/privacy-policy", text: "Privacy Policy" },
 ];
 
 function buildNoscrollContent(route) {
@@ -230,9 +235,9 @@ function buildNoscrollContent(route) {
 }
 
 function inject(template, meta, jsonLd, noscrollContent) {
-  // Wrap noscroll content in a visually-hidden container that crawlers can read
-  // but users never see (prevents FOUC before React hydrates)
-  const hiddenContent = `<div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">${noscrollContent}</div>`;
+  // A legitimate no-JavaScript fallback avoids hidden crawler-only content.
+  // JavaScript users receive the React-rendered page in #root.
+  const fallbackContent = `<noscript><main>${noscrollContent}</main></noscript>`;
 
   return template
     .replace(/<title>[^<]*<\/title>/, "")
@@ -243,8 +248,10 @@ function inject(template, meta, jsonLd, noscrollContent) {
     .replace(/<meta property="og:[^"]*"[^>]*\/?>[\s]*/g, "")
     .replace(/<meta name="twitter:[^"]*"[^>]*\/?>[\s]*/g, "")
     .replace("</head>", `${meta}\n${jsonLd}\n</head>`)
-    .replace('<div id="root"></div>', `<div id="root">${hiddenContent}</div>`)
-    .replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${hiddenContent}</div>`);
+    .replace(
+      /<div id="root">[\s\S]*?(?=<!-- Google Analytics)/,
+      `<div id="root"></div>${fallbackContent}\n    `,
+    );
 }
 
 function write(html, path) {
@@ -343,21 +350,6 @@ const routes = [
         "geo": { "@type": "GeoCoordinates", "latitude": "17.4435", "longitude": "78.3772" },
         "image": `${BASE_URL}/spider-ev-logo.png`,
         "priceRange": "$$",
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Spider Energy",
-        "url": BASE_URL,
-        "logo": `${BASE_URL}/spider-ev-logo.png`,
-        "sameAs": [],
-        "contactPoint": { "@type": "ContactPoint", "telephone": "+91-9997776080", "contactType": "customer service", "areaServed": "IN" },
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Spider Energy",
-        "url": BASE_URL,
       },
     ],
   },
@@ -828,6 +820,38 @@ const BLOG_DATA_PATH = join(ROOT, "src", "data", "blog-posts.json");
 const BLOG_CONTENT_DIR = join(ROOT, "src", "data", "blog-content");
 if (existsSync(BLOG_DATA_PATH)) {
   const blogPosts = JSON.parse(readFileSync(BLOG_DATA_PATH, "utf-8"));
+  const publishedBlogPosts = blogPosts.filter((post) => post.published);
+  const blogRoute = routes.find((route) => route.path === "/blog");
+  if (blogRoute) {
+    blogRoute.schemas = [
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": `${BASE_URL}/blog#blog`,
+        "name": "SpiderEV Blog",
+        "description": blogRoute.description,
+        "url": `${BASE_URL}/blog`,
+        "publisher": { "@id": `${BASE_URL}/#organization` },
+        "inLanguage": "en-IN",
+        "blogPost": publishedBlogPosts.map((post) => ({
+          "@type": "BlogPosting",
+          "@id": `${BASE_URL}/blog/${post.slug}#article`,
+          "headline": post.title,
+          "url": `${BASE_URL}/blog/${post.slug}`,
+          "datePublished": post.date,
+          "image": absoluteImageUrl(post.image),
+        })),
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${BASE_URL}/blog` },
+        ],
+      },
+    ];
+  }
   for (const post of blogPosts) {
     if (!post.published) continue;
 
@@ -847,15 +871,19 @@ if (existsSync(BLOG_DATA_PATH)) {
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
+        "@id": `${BASE_URL}/blog/${post.slug}#article`,
         "headline": post.title,
         "description": post.description,
-        "image": `${BASE_URL}${post.image}`,
+        "image": absoluteImageUrl(post.image),
         "datePublished": post.date,
-        "dateModified": post.date,
+        "dateModified": post.modifiedDate || post.date,
         "author": { "@type": "Person", "name": post.author },
         "publisher": { "@id": `${BASE_URL}/#organization` },
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BASE_URL}/blog/${post.slug}` },
+        "url": `${BASE_URL}/blog/${post.slug}`,
         "articleSection": post.category,
+        ...((post.tags || []).length > 0 ? { "keywords": post.tags.join(", ") } : {}),
+        "inLanguage": "en-IN",
       },
       {
         "@context": "https://schema.org",
@@ -911,8 +939,26 @@ for (const route of routes) {
 // ─── Pre-render redirect pages (so static crawlers get a redirect, not a 404) ─
 
 const redirects = [
+  { from: "/ac-ev-chargers", to: `${BASE_URL}/electric-vehicle-ev-ac-charger` },
+  { from: "/dc-ev-chargers", to: `${BASE_URL}/electric-vehicle-ev-dc-charger` },
   { from: "/bess-battery-backup-for-ev-charging-stations", to: `${BASE_URL}/spidervault-bess-battery-energy-storage` },
   { from: "/partner-withus", to: `${BASE_URL}/partner-with-us` },
+  { from: "/cpms-charge-point-management-system", to: `${BASE_URL}/cpms-ev-charging-point-management-system` },
+  { from: "/products/ac-chargers", to: `${BASE_URL}/electric-vehicle-ev-ac-charger` },
+  { from: "/products/dc-chargers", to: `${BASE_URL}/electric-vehicle-ev-dc-charger` },
+  { from: "/solutions/park-and-charge", to: `${BASE_URL}/park-and-charge-electric-vehicle-ev-charging-station` },
+  { from: "/solutions/community-charging", to: `${BASE_URL}/community-ev-charging-stations` },
+  { from: "/solutions/public-charging", to: `${BASE_URL}/public-ev-charging-stations` },
+  { from: "/solutions/heavy-vehicles", to: `${BASE_URL}/heavy-duty-ev-charging-station` },
+  { from: "/solutions/spider-connect", to: `${BASE_URL}/cpms-ev-charging-point-management-system` },
+  { from: "/solutions/spiderev-app", to: `${BASE_URL}/ev-charging-station-app` },
+  { from: "/solutions/epc-works", to: `${BASE_URL}/ev-charging-epc-services` },
+  { from: "/company/about", to: `${BASE_URL}/about-us` },
+  { from: "/company/contact", to: `${BASE_URL}/contact-us` },
+  { from: "/franchise", to: `${BASE_URL}/ev-charging-station-franchise` },
+  { from: "/roi", to: `${BASE_URL}/ev-charging-station-roi-calculator` },
+  { from: "/bess", to: `${BASE_URL}/spidervault-bess-battery-energy-storage` },
+  { from: "/charge-locator", to: `${BASE_URL}/ev-charging-station-locator` },
 ];
 
 for (const { from, to } of redirects) {
@@ -934,4 +980,18 @@ for (const { from, to } of redirects) {
   console.log(`  ↳ redirect: ${from} → ${to}`);
 }
 
-console.log(`\nPre-rendered ${count} routes + ${redirects.length} redirects into dist/`);
+const notFoundHtml = `<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Page Not Found | Spider Energy</title>
+</head>
+<body>
+  <main><h1>Page not found</h1><p>The requested page does not exist.</p><a href="/">Go to the Spider Energy homepage</a></main>
+</body>
+</html>`;
+writeFileSync(join(distDir, "404.html"), notFoundHtml, "utf-8");
+
+console.log(`\nPre-rendered ${count} routes + ${redirects.length} redirects + 404 page into dist/`);

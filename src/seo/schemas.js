@@ -20,8 +20,8 @@ export const organizationSchema = {
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/spider-ev-logo.png`,
-        width: 200,
-        height: 60,
+        width: 417,
+        height: 188,
       },
       description:
         "India's trusted EV charging infrastructure company — manufacturing and deploying AC & DC chargers across homes, businesses, and highways.",
@@ -120,7 +120,7 @@ export const organizationSchema = {
  * @param {string} category - "ac" or "dc"
  * @param {string} productId - slug like "spider-smart"
  */
-export function getProductSchema(product, category, productId) {
+export function getProductSchema(product, category, productId, image) {
   const typeLabel = category === "ac" ? "AC EV Charger" : "DC Fast EV Charger";
   const categoryLabel =
     category === "ac"
@@ -201,20 +201,21 @@ export function getProductSchema(product, category, productId) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${url}#product`,
     name: `${product.name} — ${product.power} ${typeLabel}`,
     description: product.tagline,
     brand: { "@type": "Brand", name: "SpiderEV" },
     manufacturer: { "@id": `${BASE_URL}/#organization` },
     category: categoryLabel,
     url,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-      seller: { "@id": `${BASE_URL}/#organization` },
-    },
+    ...(image ? { image: absoluteUrl(image) } : {}),
     additionalProperty,
   };
+}
+
+function absoluteUrl(value) {
+  if (/^https?:\/\//i.test(value)) return value;
+  return `${BASE_URL}${value.startsWith("/") ? value : `/${value}`}`;
 }
 
 // ─── FAQ Schema ──────────────────────────────────────────────────────────────
@@ -368,6 +369,16 @@ export const localBusinessSchema = {
 // ─── Article / BlogPosting Schema ───────────────────────────────────────────
 
 /**
+ * Resolve image to an absolute URL (supports CMS absolute URLs and local paths).
+ * @param {string} image
+ */
+function absoluteImageUrl(image) {
+  if (!image) return `${BASE_URL}/og-image.jpg`;
+  if (/^https?:\/\//i.test(image)) return image;
+  return `${BASE_URL}${image.startsWith("/") ? image : `/${image}`}`;
+}
+
+/**
  * Generate BlogPosting schema for blog detail pages.
  * @param {object} opts
  * @param {string} opts.title - Post headline
@@ -376,7 +387,7 @@ export const localBusinessSchema = {
  * @param {string} opts.datePublished - ISO date string
  * @param {string} [opts.dateModified] - ISO date string (defaults to datePublished)
  * @param {string} opts.author - Author name
- * @param {string} opts.image - Image path (relative, e.g. "/blog/my-post.jpg")
+ * @param {string} opts.image - Image path or absolute URL (CMS / local)
  * @param {string} opts.category - Article section/category
  */
 export function getArticleSchema({
@@ -388,13 +399,15 @@ export function getArticleSchema({
   author,
   image,
   category,
+  tags = [],
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${BASE_URL}/blog/${slug}#article`,
     headline: title,
     description,
-    image: `${BASE_URL}${image}`,
+    image: absoluteImageUrl(image),
     datePublished,
     dateModified: dateModified || datePublished,
     author: { "@type": "Person", name: author },
@@ -403,7 +416,37 @@ export function getArticleSchema({
       "@type": "WebPage",
       "@id": `${BASE_URL}/blog/${slug}`,
     },
+    url: `${BASE_URL}/blog/${slug}`,
     articleSection: category,
+    ...(tags.length > 0 ? { keywords: tags.join(", ") } : {}),
+    inLanguage: "en-IN",
+  };
+}
+
+/**
+ * Generate Blog schema for the blog listing page.
+ * @param {Array<{title: string, slug: string, description: string, date: string, image: string}>} posts
+ */
+export function getBlogSchema(posts) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${BASE_URL}/blog#blog`,
+    name: "SpiderEV Blog",
+    description:
+      "EV charging guides, industry news and business insights for electric vehicle charging in India.",
+    url: `${BASE_URL}/blog`,
+    publisher: { "@id": `${BASE_URL}/#organization` },
+    inLanguage: "en-IN",
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      "@id": `${BASE_URL}/blog/${post.slug}#article`,
+      headline: post.title,
+      description: post.description,
+      url: `${BASE_URL}/blog/${post.slug}`,
+      datePublished: post.date,
+      image: absoluteImageUrl(post.image),
+    })),
   };
 }
 

@@ -6,10 +6,22 @@
     { "source": "/dc-ev-chargers", "destination": "/electric-vehicle-ev-dc-charger", "statusCode": 301 },
     { "source": "/bess-battery-backup-for-ev-charging-stations", "destination": "/spidervault-bess-battery-energy-storage", "statusCode": 301 },
     { "source": "/partner-withus", "destination": "/partner-with-us", "statusCode": 301 },
-    { "source": "/cpms-charge-point-management-system", "destination": "/cpms-ev-charging-point-management-system", "statusCode": 301 }
-  ],
-  "rewrites": [
-    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+    { "source": "/cpms-charge-point-management-system", "destination": "/cpms-ev-charging-point-management-system", "statusCode": 301 },
+    { "source": "/products/ac-chargers", "destination": "/electric-vehicle-ev-ac-charger", "statusCode": 301 },
+    { "source": "/products/dc-chargers", "destination": "/electric-vehicle-ev-dc-charger", "statusCode": 301 },
+    { "source": "/solutions/park-and-charge", "destination": "/park-and-charge-electric-vehicle-ev-charging-station", "statusCode": 301 },
+    { "source": "/solutions/community-charging", "destination": "/community-ev-charging-stations", "statusCode": 301 },
+    { "source": "/solutions/public-charging", "destination": "/public-ev-charging-stations", "statusCode": 301 },
+    { "source": "/solutions/heavy-vehicles", "destination": "/heavy-duty-ev-charging-station", "statusCode": 301 },
+    { "source": "/solutions/spider-connect", "destination": "/cpms-ev-charging-point-management-system", "statusCode": 301 },
+    { "source": "/solutions/spiderev-app", "destination": "/ev-charging-station-app", "statusCode": 301 },
+    { "source": "/solutions/epc-works", "destination": "/ev-charging-epc-services", "statusCode": 301 },
+    { "source": "/company/about", "destination": "/about-us", "statusCode": 301 },
+    { "source": "/company/contact", "destination": "/contact-us", "statusCode": 301 },
+    { "source": "/franchise", "destination": "/ev-charging-station-franchise", "statusCode": 301 },
+    { "source": "/roi", "destination": "/ev-charging-station-roi-calculator", "statusCode": 301 },
+    { "source": "/bess", "destination": "/spidervault-bess-battery-energy-storage", "statusCode": 301 },
+    { "source": "/charge-locator", "destination": "/ev-charging-station-locator", "statusCode": 301 }
   ],
   "headers": [
     {

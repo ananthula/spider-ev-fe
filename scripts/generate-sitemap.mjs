@@ -19,9 +19,6 @@ const DIST_DIR = join(ROOT, "dist");
 const BLOG_DATA = join(ROOT, "src", "data", "blog-posts.json");
 const BASE_URL = "https://spiderenergy.in";
 
-// Today's date in YYYY-MM-DD format for lastmod
-const TODAY = new Date().toISOString().split("T")[0];
-
 // ─── Static Routes ──────────────────────────────────────────────────────────
 
 const staticRoutes = [
@@ -89,7 +86,7 @@ if (existsSync(BLOG_DATA)) {
       path: `/blog/${post.slug}`,
       priority: "0.6",
       changefreq: "monthly",
-      lastmod: post.date,
+      lastmod: post.modifiedDate || post.date,
     }));
 }
 
@@ -97,11 +94,9 @@ if (existsSync(BLOG_DATA)) {
 
 function buildUrlEntry({ path, priority, changefreq, lastmod }) {
   const loc = `${BASE_URL}${path}`;
-  const mod = lastmod || TODAY;
   return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${mod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
+${lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : ""}    <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
 }

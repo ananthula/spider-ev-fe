@@ -120,15 +120,26 @@
   margin: 1.5rem 0;
 }
 
-/* Table — horizontally scrollable on mobile */
-.blog-content table {
+/* Tables retain the source document's rows/columns and scroll independently. */
+.blog-content .blog-table-scroll {
+  width: 100%;
   margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-content .blog-table-scroll:focus-visible {
+  outline: 3px solid rgba(41, 49, 128, 0.3);
+  outline-offset: 3px;
+}
+
+.blog-content table {
+  margin: 0;
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9375rem;
-  border-radius: 0.75rem;
-  border: 1px solid #e5e7eb;
-  overflow: hidden;
 }
 
 .blog-content thead th {
@@ -174,9 +185,6 @@
 
 /* Mobile: allow table to scroll horizontally without breaking column alignment */
 @media (max-width: 640px) {
-  .blog-content {
-    overflow-x: auto;
-  }
   .blog-content table {
     min-width: 500px;
   }

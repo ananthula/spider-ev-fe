@@ -11,6 +11,14 @@ import "../styles/blog-content.css";
 
 // Use import.meta.glob to lazy-load blog content by slug
 const blogContentModules = import.meta.glob("../data/blog-content/*.json");
+const BASE_URL = "https://spiderenergy.in";
+
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(`${date}T00:00:00`));
 
 const BlogDetailPage = () => {
   const { slug } = useParams();
@@ -63,9 +71,11 @@ const BlogDetailPage = () => {
     description: postMeta.description,
     slug: postMeta.slug,
     datePublished: postMeta.date,
+    dateModified: postMeta.modifiedDate,
     author: postMeta.author,
     image: postMeta.image,
     category: postMeta.category,
+    tags: postMeta.tags,
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -94,30 +104,42 @@ const BlogDetailPage = () => {
       <Helmet>
         <title>{postMeta.title}</title>
         <meta name="description" content={postMeta.description} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta property="og:type" content="article" />
+        <meta property="og:title" content={postMeta.title} />
+        <meta property="og:description" content={postMeta.description} />
+        <meta property="og:url" content={`${BASE_URL}/blog/${slug}`} />
         <meta property="article:published_time" content={postMeta.date} />
+        <meta property="article:modified_time" content={postMeta.modifiedDate || postMeta.date} />
         <meta property="article:section" content={postMeta.category} />
         <meta property="article:author" content={postMeta.author} />
-        <link rel="canonical" href={`https://spiderenergy.in/blog/${slug}`} />
+        {(postMeta.tags || []).map((tag) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+        <meta name="twitter:title" content={postMeta.title} />
+        <meta name="twitter:description" content={postMeta.description} />
+        <link rel="canonical" href={`${BASE_URL}/blog/${slug}`} />
       </Helmet>
       <SEO schema={articleSchema} schemas={additionalSchemas.length > 0 ? additionalSchemas : undefined} breadcrumbs={breadcrumbSchema} ogImage={postMeta.image} />
 
       {/* Article */}
       <article className="bg-white">
-        {/* Breadcrumb — hidden visually, present for SEO crawlers */}
-        <nav className="sr-only" aria-label="Breadcrumb">
-          <Link to="/">Home</Link>
-          <span>/</span>
-          <Link to="/blog">Blog</Link>
-          <span>/</span>
-          <span>{postMeta.title}</span>
+        <nav className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 text-sm text-gray-500" aria-label="Breadcrumb">
+          <ol className="flex items-center gap-2 min-w-0">
+            <li><Link to="/" className="hover:text-primary">Home</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link to="/blog" className="hover:text-primary">Blog</Link></li>
+            <li aria-hidden="true">/</li>
+            <li className="truncate" aria-current="page">{postMeta.title}</li>
+          </ol>
         </nav>
 
         {/* Hero Banner Image */}
         <div className="w-full overflow-hidden bg-[#0f1423]">
           <img
             src={postMeta.image}
-            alt={postMeta.title}
+            alt={`${postMeta.title} — SpiderEV`}
+            fetchPriority="high"
             className="w-full h-auto object-contain"
           />
         </div>
@@ -143,7 +165,7 @@ const BlogDetailPage = () => {
             <div className="flex items-center gap-4 text-gray-500 text-sm">
               <span>By {postMeta.author}</span>
               <span className="text-gray-300">|</span>
-              <time dateTime={postMeta.date}>{postMeta.date}</time>
+              <time dateTime={postMeta.date}>{formatDate(postMeta.date)}</time>
             </div>
           </motion.div>
         </header>
@@ -202,7 +224,7 @@ const BlogDetailPage = () => {
                       {post.title}
                     </h3>
                     <p className="text-gray-500 text-sm mt-2 line-clamp-2">{post.description}</p>
-                    <span className="text-gray-400 text-xs mt-3 block">{post.date}</span>
+                    <time dateTime={post.date} className="text-gray-400 text-xs mt-3 block">{formatDate(post.date)}</time>
                   </Link>
                 ))}
               </div>

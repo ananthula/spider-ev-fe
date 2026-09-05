@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useSearchParams } from "react-router-dom";
 import PageLayout from "../components/layout/PageLayout";
 import SEO from "../components/SEO";
-import { getBreadcrumbSchema } from "../seo/schemas";
+import { getBlogSchema, getBreadcrumbSchema } from "../seo/schemas";
 import { fadeUp, staggerFast } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import allBlogPosts from "../data/blog-posts.json";
@@ -14,16 +14,32 @@ const publishedPosts = allBlogPosts
   .filter((post) => post.published)
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 
+const BASE_URL = "https://spiderenergy.in";
+const BLOG_TITLE = "EV Charging Blog — Tips, Guides & News | SpiderEV";
+const BLOG_DESCRIPTION =
+  "Read the latest EV charging guides, industry news and business insights from SpiderEV — your expert resource for electric vehicle charging in India.";
+
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(`${date}T00:00:00`));
+
 const BlogCard = ({ post }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
-  <motion.div
+  <motion.article
     variants={fadeUp}
     whileHover={{ y: -6, transition: { duration: 0.2 } }}
     className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
   >
-    <div className="bg-gray-50 h-48 overflow-hidden">
+    <Link
+      to={`/blog/${post.slug}`}
+      aria-label={`Read ${post.title}`}
+      className="block bg-gray-50 h-48 overflow-hidden"
+    >
       {!imgError ? (
         <img
           src={post.image}
@@ -40,21 +56,25 @@ const BlogCard = ({ post }) => {
           </div>
         </div>
       )}
-    </div>
+    </Link>
     <div className="p-6 flex flex-col flex-1">
       <div className="flex items-center gap-3 mb-3">
         <span className="text-secondary text-xs font-semibold uppercase tracking-wider">{post.category}</span>
         <span className="text-gray-300">•</span>
         <span className="text-gray-400 text-xs">{post.readTime}</span>
       </div>
-      <h3 className="text-gray-900 font-bold leading-snug mb-3 flex-1">{post.title}</h3>
+      <h2 className="text-gray-900 font-bold leading-snug mb-3 flex-1">
+        <Link to={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+          {post.title}
+        </Link>
+      </h2>
       <p className="text-gray-500 text-sm leading-relaxed mb-4">{post.description}</p>
       <div className="flex items-center justify-between mt-auto">
-        <span className="text-gray-400 text-xs">{post.date}</span>
+        <time dateTime={post.date} className="text-gray-400 text-xs">{formatDate(post.date)}</time>
         <Link to={`/blog/${post.slug}`} className="text-primary text-sm font-semibold hover:underline">Read More →</Link>
       </div>
     </div>
-  </motion.div>
+  </motion.article>
   );
 };
 
@@ -67,13 +87,27 @@ const BlogPage = () => {
     ? publishedPosts.filter((p) => (p.tags || []).includes(activeTag))
     : publishedPosts;
 
+  const pageTitle = activeTag ? `${activeTag} Articles | SpiderEV Blog` : BLOG_TITLE;
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: `${BASE_URL}/` },
+    { name: "Blog", url: `${BASE_URL}/blog` },
+  ]);
+
   return (
     <PageLayout>
       <Helmet>
-        <title>{activeTag ? `${activeTag} — SpiderEV Blog` : "EV Charging Blog — Tips, Guides & News | SpiderEV"}</title>
-        <meta name="description" content="Read the latest EV charging guides, industry news and business insights from SpiderEV — your expert resource for electric vehicle charging in India." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={BLOG_DESCRIPTION} />
+        <meta name="robots" content={activeTag ? "noindex, follow" : "index, follow, max-image-preview:large"} />
+        <link rel="canonical" href={`${BASE_URL}/blog`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={BLOG_DESCRIPTION} />
+        <meta property="og:url" content={`${BASE_URL}/blog`} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={BLOG_DESCRIPTION} />
       </Helmet>
-      <SEO breadcrumbs={getBreadcrumbSchema([{name: "Home", url: "https://spiderenergy.in/"}, {name: "Blog"}])} />
+      <SEO schema={getBlogSchema(publishedPosts)} breadcrumbs={breadcrumbSchema} />
       <section className="relative overflow-hidden py-16 sm:py-20" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative max-w-330 mx-auto px-4 sm:px-6 lg:px-10">

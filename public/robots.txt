@@ -1,14 +1,12 @@
 # robots.txt for spiderenergy.in
 # Spider Energy — SpiderEV (EV Charging) & SpiderVault (BESS)
-# Last updated: 2026-07-17 (added explicit AI crawler allow rules)
+# Last updated: 2026-08-29
 
 # ── Default: allow all standard crawlers ──
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Disallow: /*?*utm_
-Disallow: /*?*session
 
 # ── Google ──
 User-agent: Googlebot

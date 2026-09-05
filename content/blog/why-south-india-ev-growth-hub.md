@@ -100,6 +100,16 @@ The diversity of use cases in South India's growing EV market requires flexible 
 
 This product diversity allows entrepreneurs to match infrastructure investment precisely to location demand, optimizing capital deployment and ROI.
 
+## **A simple comparison**
+
+| **South India state** | **Main EV strength** | **Why it matters** |
+| --- | --- | --- |
+| Tamil Nadu | Manufacturing and EV infrastructure | Builds the supply side |
+| Karnataka | Charging density and PPP scale | Builds user confidence |
+| Andhra Pradesh | Fleet and corridor charging | Supports commercial mobility |
+| Telangana | Urban PPP and O&M activity | Supports city-scale rollout |
+| Kerala | Solarized charging direction | Connects EVs with clean energy |
+
 ## The Road Ahead: Future Growth Projections
 
 Industry analysts project that South India will account for over 50% of India's EV charging infrastructure by 2028. Government targets include establishing one charging station every 3 kilometers in urban areas and every 25 kilometers on highways. This translates to tens of thousands of charging points required across the region.

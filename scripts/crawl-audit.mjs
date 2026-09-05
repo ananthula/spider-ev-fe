@@ -4,9 +4,7 @@
  * A standards-compliant SEO crawler for spiderenergy.in
  * Respects robots.txt, follows internal links, and audits every page for:
  *   - Status code
- *   - Title tag (presence + length)
- *   - Meta description (presence + length)
- *   - Meta keywords
+ *   - Title tag and meta description (presence + uniqueness)
  *   - H1 tag (presence + length)
  *   - H2 tags (first H2 + count)
  *   - Word count (visible text)
@@ -34,6 +32,7 @@ function getArg(flag, fallback) {
 }
 
 const BASE_URL = getArg("--url", "https://spiderenergy.in").replace(/\/$/, "");
+const CANONICAL_ORIGIN = getArg("--canonical-origin", "https://spiderenergy.in").replace(/\/$/, "");
 const MAX_PAGES = parseInt(getArg("--max", "100"), 10);
 const OUTPUT_FILE = getArg("--output", "crawl-report.json");
 const DELAY_MS = parseInt(getArg("--delay", "500"), 10); // polite crawl delay
@@ -163,14 +162,16 @@ function auditPage(html, url, statusCode, depth) {
   const keywords = kwMatch ? decodeEntities(kwMatch[1]) : null;
 
   // H1
-  const h1s = extractAll(html, /<h1[^>]*>([^<]*)<\/h1>/i);
-  const h1 = h1s.length > 0 ? decodeEntities(h1s[0]) : null;
+  const h1s = extractAll(html, /<h1[^>]*>([\s\S]*?)<\/h1>/gi)
+    .map((value) => decodeEntities(stripTags(value)));
+  const h1 = h1s.length > 0 ? h1s[0] : null;
   const h1Length = h1 ? h1.length : 0;
   const h1Count = h1s.length;
 
   // H2s
-  const h2s = extractAll(html, /<h2[^>]*>([^<]*)<\/h2>/gi);
-  const h2First = h2s.length > 0 ? decodeEntities(h2s[0]) : null;
+  const h2s = extractAll(html, /<h2[^>]*>([\s\S]*?)<\/h2>/gi)
+    .map((value) => decodeEntities(stripTags(value)));
+  const h2First = h2s.length > 0 ? h2s[0] : null;
   const h2Count = h2s.length;
 
   // Word count (strip all HTML, count words)
@@ -363,27 +364,48 @@ async function crawl() {
   for (const page of okPages) {
     const pageIssues = [];
     if (!page.title) pageIssues.push("❌ Missing title");
-    else if (page.titleLength < 50) pageIssues.push(`⚠ Title short (${page.titleLength}c)`);
-    else if (page.titleLength > 60) pageIssues.push(`⚠ Title long (${page.titleLength}c)`);
 
     if (!page.description) pageIssues.push("❌ Missing description");
-    else if (page.descLength < 120) pageIssues.push(`⚠ Desc short (${page.descLength}c)`);
-    else if (page.descLength > 160) pageIssues.push(`⚠ Desc long (${page.descLength}c)`);
 
-    if (page.keywords === "No") pageIssues.push("⚠ No meta keywords");
     if (!page.h1) pageIssues.push("❌ Missing H1");
     else if (page.h1Count > 1) pageIssues.push(`⚠ Multiple H1s (${page.h1Count})`);
     if (page.h2Count === 0) pageIssues.push("⚠ No H2 tags");
-    if (page.wordCount < 100) pageIssues.push(`⚠ Low word count (${page.wordCount})`);
     if (page.hasSchema === "No") pageIssues.push("⚠ No JSON-LD schema");
     if (page.hasOG === "No") pageIssues.push("⚠ No Open Graph tags");
     if (!page.canonical) pageIssues.push("⚠ No canonical URL");
+    else {
+      const expectedCanonical = page.pathname === "/"
+        ? `${CANONICAL_ORIGIN}/`
+        : `${CANONICAL_ORIGIN}${page.pathname}`;
+      if (page.canonical !== expectedCanonical) pageIssues.push(`⚠ Canonical mismatch (${page.canonical})`);
+    }
 
     if (pageIssues.length > 0) {
       issues.push({ pathname: page.pathname, issues: pageIssues });
       console.log(`  ${page.pathname}`);
       for (const issue of pageIssues) {
         console.log(`    ${issue}`);
+      }
+    }
+  }
+
+  const duplicateFields = [
+    { key: "title", label: "title" },
+    { key: "description", label: "meta description" },
+  ];
+  for (const { key, label } of duplicateFields) {
+    const groups = new Map();
+    for (const page of okPages) {
+      if (!page[key]) continue;
+      const paths = groups.get(page[key]) || [];
+      paths.push(page.pathname);
+      groups.set(page[key], paths);
+    }
+    for (const paths of groups.values()) {
+      if (paths.length > 1) {
+        const duplicateIssue = { pathname: paths.join(", "), issues: [`⚠ Duplicate ${label}`] };
+        issues.push(duplicateIssue);
+        console.log(`  ${paths.join(", ")}\n    ⚠ Duplicate ${label}`);
       }
     }
   }

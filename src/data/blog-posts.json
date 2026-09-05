@@ -1,9 +1,795 @@
 [
   {
+    "title": "Why EV Charging at Fleet Depots Is a Scheduling Problem, Not Just an Infrastructure Problem",
+    "slug": "ev-charging-fleet-depots-scheduling-problem-not-just-infrastructure",
+    "description": "Fleet depot EV charging fails when every vehicle plugs in at once. How Indian operators use schedules, load limits and the right charger mix to keep routes on…",
+    "date": "2026-09-02",
+    "modifiedDate": "2026-09-02",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "10 min read",
+    "image": "/blog/ev-charging-fleet-depots-scheduling-problem-not-just-infrastructure.webp",
+    "tags": [
+      "fleet depot",
+      "scheduling",
+      "load management",
+      "demand charges",
+      "e-bus",
+      "last mile",
+      "India guidelines",
+      "Telangana",
+      "Hyderabad",
+      "AC DC mix"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "What Happens to Energy Costs When a Factory Adds a New High-Power Production Line?",
+    "slug": "factory-energy-costs-new-high-power-production-line",
+    "description": "Adding a high-power production line raises energy kWh and demand charges. How Indian factories contain the bill with load data, ToD tariffs and storage.",
+    "date": "2026-09-02",
+    "modifiedDate": "2026-09-02",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "10 min read",
+    "image": "/blog/factory-energy-costs-new-high-power-production-line.webp",
+    "tags": [
+      "production line",
+      "demand charges",
+      "HT tariff",
+      "kWh",
+      "manufacturing",
+      "BESS",
+      "peak shaving",
+      "diesel",
+      "Telangana",
+      "factory energy"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "How EV Charging Supports ESG Goals for Businesses",
+    "slug": "how-ev-charging-supports-esg-goals-for-businesses",
+    "description": "How workplace and fleet EV charging helps enterprises meet ESG goals. Scope 1–3 emissions, BRSR reporting, social benefits and governance evidence for Indian…",
+    "date": "2026-08-29",
+    "modifiedDate": "2026-08-29",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "10 min read",
+    "image": "/blog/how-ev-charging-supports-esg-goals-for-businesses.webp",
+    "tags": [
+      "ESG goals",
+      "EV charging",
+      "Scope 3",
+      "BRSR",
+      "workplace charging",
+      "fleet electrification",
+      "sustainability",
+      "corporate India",
+      "Hyderabad",
+      "Telangana"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Why Fast Charging Alone Isn't Enough: Building a Reliable Charging Network",
+    "slug": "why-fast-charging-alone-isnt-enough-building-reliable-charging-network",
+    "description": "Fast chargers do not make a network. How operators in India build reliable EV charging with site mix, uptime, software, costs and the Telangana application…",
+    "date": "2026-08-29",
+    "modifiedDate": "2026-08-29",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "10 min read",
+    "image": "/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network.webp",
+    "tags": [
+      "charging network",
+      "CPO",
+      "fast charging",
+      "uptime",
+      "AC DC mix",
+      "Telangana",
+      "TGREDCO",
+      "TGSPDCL",
+      "setup cost",
+      "utilisation"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Public vs Private EV Charging: Which Makes More Business Sense?",
+    "slug": "public-vs-private-ev-charging-which-makes-more-business-sense",
+    "description": "Public vs private EV charging in India compared for investors. Differences, pros and cons, utilisation, costs and which model makes more business sense.",
+    "date": "2026-08-26",
+    "modifiedDate": "2026-08-26",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "11 min read",
+    "image": "/blog/public-vs-private-ev-charging-which-makes-more-business-sense.webp",
+    "tags": [
+      "public EV charging",
+      "private EV charging",
+      "captive charging",
+      "CPO",
+      "franchise",
+      "utilisation",
+      "ROI",
+      "investors",
+      "workplace charging",
+      "fleet depot"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Understanding EV Charger Maintenance: What Every Business Should Know",
+    "slug": "understanding-ev-charger-maintenance-what-every-business-should-know",
+    "description": "EV charger maintenance costs, checklists and replacement intervals for businesses. Learn what happens after years of use and how to keep commercial chargers…",
+    "date": "2026-08-26",
+    "modifiedDate": "2026-08-26",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "11 min read",
+    "image": "/blog/understanding-ev-charger-maintenance-what-every-business-should-know.webp",
+    "tags": [
+      "EV charger maintenance",
+      "AMC",
+      "checklist",
+      "uptime",
+      "OCPP",
+      "connector wear",
+      "DC coolant",
+      "commercial charging",
+      "workplace chargers",
+      "fleet depot"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Common Mistakes First-Time EV Charging Station Investors Make",
+    "slug": "common-mistakes-first-time-ev-charging-investors",
+    "description": "The most common mistakes first-time EV charging station investors make in India, from cheap land and wrong chargers to grid costs, low utilisation, and…",
+    "date": "2026-08-24",
+    "modifiedDate": "2026-08-24",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "11 min read",
+    "image": "/blog/common-mistakes-first-time-ev-charging-investors.webp",
+    "tags": [
+      "EV charging investor mistakes",
+      "first-time CPO",
+      "utilisation",
+      "uptime",
+      "DISCOM",
+      "transformer cost",
+      "dwell time",
+      "highway DC",
+      "destination AC",
+      "franchise"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "How Businesses Can Prepare for India's Next Wave of EV Adoption",
+    "slug": "prepare-business-india-next-wave-ev-adoption",
+    "description": "How commercial businesses can prepare for India's next wave of EV adoption, including current penetration, charging gaps, profitable models, and a practical…",
+    "date": "2026-08-24",
+    "modifiedDate": "2026-08-24",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "11 min read",
+    "image": "/blog/future-ev-charging-networks-india-what-matters.webp",
+    "tags": [
+      "EV adoption India",
+      "commercial EV strategy",
+      "fleet electrification",
+      "charging business models",
+      "PM E-DRIVE",
+      "public charging gap",
+      "e-3W",
+      "e-2W",
+      "destination charging",
+      "workplace charging"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "How EV Charging Can Increase Footfall for Shopping Centres",
+    "slug": "how-ev-charging-increase-footfall-shopping-centres",
+    "description": "How EV charging can increase footfall for shopping centres, including Hyderabad and Telangana malls, dwell-time economics, paid vs free charging, and a…",
+    "date": "2026-08-22",
+    "modifiedDate": "2026-08-22",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "12 min read",
+    "image": "/blog/why-south-india-ev-growth-hub.webp",
+    "tags": [
+      "EV charging shopping centres",
+      "mall footfall",
+      "dwell time",
+      "Hyderabad malls",
+      "Telangana EV",
+      "free EV charging malls",
+      "destination charging",
+      "Tata Power EZ Charge",
+      "ChargeZone",
+      "Zeon"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "What Makes a Great EV Charging Location?",
+    "slug": "what-makes-a-great-ev-charging-location",
+    "description": "Investor guide to what makes a great EV charging location in India, how to select sites, match charger speed to dwell time, and how to set up a public…",
+    "date": "2026-08-22",
+    "modifiedDate": "2026-08-22",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "11 min read",
+    "image": "/blog/what-landowners-need-to-know-about-ev-infrastructure-india.webp",
+    "tags": [
+      "EV charging location",
+      "site selection India",
+      "public charging station setup",
+      "DISCOM connection",
+      "PM E-Drive",
+      "highway charging hub",
+      "destination charging",
+      "utilisation",
+      "CCS2",
+      "Tata Power"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "EV Charging for Apartment Communities: What RWAs Should Know",
+    "slug": "ev-charging-for-apartment-communities-what-rwas-should-know",
+    "description": "RWAs and apartment residents need clear guidance on EV charging rights, basement rules, load management and shared vs private chargers under Indian regulations.",
+    "date": "2026-08-19",
+    "modifiedDate": "2026-08-19",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "10 min read",
+    "image": "/blog/ev-ready-homes-india-smart-charging-bess-2026.webp",
+    "tags": [
+      "EV charging apartments",
+      "RWA guidelines",
+      "basement parking EV",
+      "society charging",
+      "residential EV",
+      "Model Building Bye-Laws",
+      "private charger",
+      "community charging",
+      "load management",
+      "Telangana apartments"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Setting Up EV Charging at Corporate Offices: A Complete Guide",
+    "slug": "setting-up-ev-charging-at-corporate-offices-complete-guide",
+    "description": "Complete guide to setting up EV charging at corporate offices and IT parks. Costs, steps, load management, Hyderabad process and what businesses need to know.",
+    "date": "2026-08-19",
+    "modifiedDate": "2026-08-19",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "9 min read",
+    "image": "/blog/charging-convenience-matters-more-than-range-india.webp",
+    "tags": [
+      "corporate EV charging",
+      "workplace charging",
+      "IT park EV",
+      "office chargers",
+      "commercial EV setup",
+      "Hyderabad EV",
+      "Telangana charging",
+      "load management",
+      "employee amenity",
+      "ESG"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Battery Energy Storage for Industries: Which Businesses Benefit the Most?",
+    "slug": "battery-energy-storage-for-industries-which-businesses-benefit",
+    "description": "Which industrial businesses gain the most from battery energy storage? Manufacturing, cold chain, process plants and high-demand-charge sites see the…",
+    "date": "2026-08-17",
+    "modifiedDate": "2026-08-17",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "9 min read",
+    "image": "/blog/charging-infrastructure-trends-2026-india.webp",
+    "tags": [
+      "battery energy storage for industries",
+      "industrial BESS",
+      "manufacturing peak shaving",
+      "process industries",
+      "cold storage backup",
+      "factory energy costs",
+      "demand charge reduction",
+      "Telangana industry",
+      "Andhra Pradesh manufacturing",
+      "diesel displacement"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "The Hidden Costs of Frequent Power Interruptions for Businesses",
+    "slug": "hidden-costs-frequent-power-interruptions-businesses",
+    "description": "Frequent power interruptions cost Indian businesses far more than the electricity bill. Discover downtime costs, lost production and how battery storage…",
+    "date": "2026-08-17",
+    "modifiedDate": "2026-08-17",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "10 min read",
+    "image": "/blog/whole-home-backup-premium-homes-india-2026.webp",
+    "tags": [
+      "power outage costs",
+      "downtime costs",
+      "economic impact",
+      "MSME losses",
+      "industrial continuity",
+      "hidden costs",
+      "business continuity",
+      "Telangana industry",
+      "Andhra Pradesh MSME",
+      "battery backup"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "How BESS Supports Reliable EV Charging Infrastructure",
+    "slug": "how-bess-supports-reliable-ev-charging-infrastructure",
+    "description": "Battery energy storage makes EV charging stations reliable and cost-effective for businesses. Learn how BESS manages demand charges, ensures uptime and…",
+    "date": "2026-08-15",
+    "modifiedDate": "2026-08-15",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "9 min read",
+    "image": "/blog/future-ev-charging-infrastructure-india-trends-roi-growth.webp",
+    "tags": [
+      "BESS for EV charging",
+      "EV charging infrastructure",
+      "demand charges",
+      "reliable charging",
+      "commercial EV",
+      "fleet charging",
+      "solar BESS EV",
+      "Telangana EV",
+      "Andhra Pradesh charging",
+      "peak shaving chargers"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Understanding Peak Load Management Using Battery Energy Storage",
+    "slug": "understanding-peak-load-management-battery-energy-storage",
+    "description": "Industries cut demand charges with peak load management using BESS. Learn peak shaving, load shifting, efficiency calculation and how battery storage flattens…",
+    "date": "2026-08-15",
+    "modifiedDate": "2026-08-15",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "11 min read",
+    "image": "/blog/energy-independence-premium-lifestyle-feature-india.webp",
+    "tags": [
+      "peak load management",
+      "peak shaving",
+      "BESS peak shaving",
+      "demand charges",
+      "load shifting",
+      "industrial BESS",
+      "ESS peak shaving",
+      "Telangana industry",
+      "Andhra Pradesh manufacturing",
+      "HT tariff"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Can Battery Storage Help Reduce Diesel Generator Usage?",
+    "slug": "can-battery-storage-reduce-diesel-generator-usage",
+    "description": "Industries can cut diesel generator runtime by 40-80% with battery storage. Learn hybrid and pure BESS strategies to lower fuel cost, emissions and maintenance.",
+    "date": "2026-08-12",
+    "modifiedDate": "2026-08-12",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "9 min read",
+    "image": "/blog/bess-vs-generator-india-homes-businesses.webp",
+    "tags": [
+      "reduce diesel usage",
+      "BESS vs DG",
+      "hybrid battery diesel",
+      "diesel generator replacement",
+      "industrial energy transition",
+      "LFP lifespan",
+      "alternatives to DG",
+      "silent backup",
+      "Telangana industry",
+      "Andhra Pradesh manufacturing"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Common Mistakes Businesses Make When Buying Energy Storage Systems",
+    "slug": "common-mistakes-buying-energy-storage-systems-businesses",
+    "description": "Avoid costly errors when buying commercial energy storage. Learn the most frequent mistakes on sizing, data, chemistry, safety and total cost before you invest.",
+    "date": "2026-08-12",
+    "modifiedDate": "2026-08-12",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "10 min read",
+    "image": "/blog/property-owners-prepare-ev-adoption-india.webp",
+    "tags": [
+      "buying energy storage",
+      "BESS mistakes",
+      "commercial battery procurement",
+      "sizing errors",
+      "interval data",
+      "LFP chemistry",
+      "safety standards",
+      "TCO underestimation",
+      "modular design",
+      "pumped storage disadvantages"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Choosing the Right Battery Capacity for Businesses",
+    "slug": "choosing-the-right-battery-capacity-businesses",
+    "description": "Bigger is not always better for commercial BESS. Learn how to size battery capacity correctly using load data, C-rate and duty cycle for maximum savings in…",
+    "date": "2026-08-10",
+    "modifiedDate": "2026-08-10",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "9 min read",
+    "image": "/blog/complete-guide-battery-energy-storage-systems-bess-homes.webp",
+    "tags": [
+      "battery sizing",
+      "right battery capacity",
+      "commercial BESS",
+      "C-rate",
+      "kWh vs kW",
+      "peak shaving sizing",
+      "industrial battery",
+      "MSME energy storage",
+      "load data analysis",
+      "Telangana commercial power"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Is Lithium Battery Storage Worth the Investment Compared to Traditional Backup?",
+    "slug": "lithium-battery-storage-vs-traditional-backup-businesses",
+    "description": "Think beyond backup. Compare lithium battery storage with diesel generators on total cost, speed, emissions and demand-charge savings for commercial sites in…",
+    "date": "2026-08-10",
+    "modifiedDate": "2026-08-10",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "9 min read",
+    "image": "/blog/bess-vs-inverter-indian-homes-businesses.webp",
+    "tags": [
+      "lithium battery storage",
+      "LFP vs DG",
+      "diesel generator replacement",
+      "commercial backup",
+      "battery TCO",
+      "silent backup",
+      "demand charge reduction",
+      "Telangana industry",
+      "Andhra Pradesh commercial",
+      "lithium iron phosphate"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "How Battery Energy Storage Reduces Demand Charges for Businesses",
+    "slug": "how-battery-energy-storage-reduces-demand-charges-businesses",
+    "description": "Industries and MSMEs lose lakhs monthly to HT demand charges. Learn the exact mechanism of peak shaving with battery energy storage and the real savings…",
+    "date": "2026-08-05",
+    "modifiedDate": "2026-08-05",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "12 min read",
+    "image": "/blog/ev-charging-station-roi-india.webp",
+    "tags": [
+      "demand charge reduction",
+      "peak shaving",
+      "HT demand charges",
+      "industrial BESS",
+      "MSME energy costs",
+      "peak demand management",
+      "battery storage savings",
+      "Telangana industry tariff",
+      "Andhra Pradesh MSME power",
+      "LFP peak shaving"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Why Commercial Buildings Need Battery Energy Storage Even Without Solar",
+    "slug": "why-commercial-buildings-need-battery-storage-without-solar",
+    "description": "Commercial property owners face rising HT peak demand charges and DG costs. Discover how battery energy storage delivers tariff savings and reliability…",
+    "date": "2026-08-05",
+    "modifiedDate": "2026-08-05",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "12 min read",
+    "image": "/blog/hotels-ev-charging-infrastructure-india.webp",
+    "tags": [
+      "commercial BESS",
+      "benefits of BESS",
+      "BESS cost",
+      "commercial buildings India",
+      "peak demand shaving",
+      "HT tariff",
+      "demand charge management",
+      "BESS without solar",
+      "Telangana energy",
+      "Andhra Pradesh commercial power"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "How Battery-Backed Solar Carports Can Reduce EV Charging Costs in Hyderabad, Vijayawada, and Visakhapatnam",
+    "slug": "battery-backed-solar-carports-reduce-ev-charging-costs-hyderabad-vijayawada-visakhapatnam",
+    "description": "See how battery-backed solar carports can cut EV charging costs in Hyderabad, Vijayawada, and Visakhapatnam. Learn the policy support, site economics, and why…",
+    "date": "2026-07-31",
+    "modifiedDate": "2026-07-31",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "18 min read",
+    "image": "/blog/highway-ev-charging-investment-india.webp",
+    "tags": [
+      "battery-backed solar carports for EV charging in Hyderabad, Vijayawada, and Visakhapatnam",
+      "solar carport EV charging",
+      "BESS for EV charging",
+      "solar plus storage charging",
+      "Hyderabad EV charging cost",
+      "Vijayawada EV charging cost",
+      "Visakhapatnam EV charging cost",
+      "solar carport battery storage",
+      "EV charging savings India"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Why Locally Manufactured Battery Storage Systems Make Sense in South India Today",
+    "slug": "locally-manufactured-battery-storage-systems-south-india",
+    "description": "A hard-nosed look at why locally manufactured battery storage systems make commercial sense in South India today: shorter lead times, Indian-condition design,…",
+    "date": "2026-07-29",
+    "modifiedDate": "2026-07-29",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "18 min read",
+    "image": "/blog/bess-vs-inverter-indian-homes-businesses.webp",
+    "tags": [
+      "locally manufactured battery storage systems in South India",
+      "battery storage manufacturing India",
+      "BESS South India",
+      "Telangana battery manufacturing",
+      "Andhra Pradesh battery storage",
+      "Indian-condition battery packs",
+      "BESS supply chain",
+      "local EV charging support"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Future of BESS in India: How It Supports EV Growth in Telangana and AP",
+    "slug": "future-of-bess-in-india-supports-ev-growth-telangana-and-ap",
+    "description": "See how the future of BESS in India is shaping EV growth in Telangana and Andhra Pradesh. Learn the policy signals, grid logic, solar-carport use cases, and…",
+    "date": "2026-07-28",
+    "modifiedDate": "2026-07-28",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "17 min read",
+    "image": "/blog/complete-guide-battery-energy-storage-systems-bess-homes.webp",
+    "tags": [
+      "future of BESS in India",
+      "BESS India 2026",
+      "EV growth Telangana",
+      "EV growth Andhra Pradesh",
+      "battery storage for EV charging",
+      "solar carport BESS",
+      "fast charging infrastructure",
+      "grid flexibility India",
+      "energy storage policy India"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Best Home EV Chargers for Popular Models in Telangana & AP – Buying & Installation Tips 2026",
+    "slug": "best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026",
+    "description": "A practical guide to the best home EV chargers for popular models in Telangana and Andhra Pradesh. Compare 3.3 kW vs 7.4 kW home charging, model-by-model fit,…",
+    "date": "2026-07-27",
+    "modifiedDate": "2026-07-27",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "13 min read",
+    "image": "/blog/ev-ready-homes-india-smart-charging-bess-2026.webp",
+    "tags": [
+      "best home EV chargers for popular models in Telangana & AP",
+      "home EV charger Telangana",
+      "home EV charger Andhra Pradesh",
+      "3.3 kW EV charger",
+      "7.4 kW EV charger",
+      "Spider Mini",
+      "Spider Lite",
+      "Spider Smart",
+      "home charging tips 2026"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Best EVs to Replace E20 Vehicles for Commercial Use in Hyderabad & Telangana",
+    "slug": "best-evs-replace-e20-vehicles-commercial-use-hyderabad-telangana",
+    "description": "A practical guide to the best EVs to replace E20 vehicles for commercial use in Hyderabad & Telangana. Compare city-fleet, taxi, shuttle, and executive…",
+    "date": "2026-07-26",
+    "modifiedDate": "2026-07-26",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "17 min read",
+    "image": "/blog/future-ev-charging-networks-india-what-matters.webp",
+    "tags": [
+      "best EVs to replace E20 vehicles for commercial use in Hyderabad & Telangana",
+      "commercial EVs Hyderabad",
+      "Telangana fleet EVs",
+      "EV taxis Hyderabad",
+      "EVs for commercial use India",
+      "EV fleet replacement",
+      "Hyderabad EV charging network",
+      "Telangana EV charging stations"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Maintenance & Cost Benefits of Switching from E20 to EV in Andhra Pradesh",
+    "slug": "maintenance-cost-benefits-switching-e20-to-ev-andhra-pradesh",
+    "description": "A practical breakdown of the maintenance and cost benefits of switching from E20 to EV in Andhra Pradesh. See the running-cost math, service savings,…",
+    "date": "2026-07-25",
+    "modifiedDate": "2026-07-25",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "16 min read",
+    "image": "/blog/property-owners-prepare-ev-adoption-india.webp",
+    "tags": [
+      "maintenance and cost benefits of switching from E20 to EV in Andhra Pradesh",
+      "E20 vs EV Andhra Pradesh",
+      "EV running cost AP",
+      "EV maintenance savings",
+      "E20 fuel economy reduction",
+      "home charging cost AP",
+      "EV break-even mileage",
+      "electric car savings Andhra Pradesh"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "E20 Fuel vs EV for Daily Commute in Telangana & AP: Which Saves More in 2026?",
+    "slug": "e20-fuel-vs-ev-daily-commute-telangana-andhra-pradesh",
+    "description": "A practical E20 fuel vs EV cost comparison for daily commuters in Telangana & Andhra Pradesh. See the per-km math, monthly savings, and break-even distance…",
+    "date": "2026-07-23",
+    "modifiedDate": "2026-07-23",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "15 min read",
+    "image": "/blog/why-south-india-ev-growth-hub.webp",
+    "tags": [
+      "E20 fuel vs EV for daily commute in Telangana & AP",
+      "E20 petrol mileage",
+      "EV running cost India",
+      "daily commute savings",
+      "Telangana EV cost",
+      "Andhra Pradesh EV cost",
+      "home charging savings",
+      "E20 vs electric car",
+      "fuel cost comparison 2026"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Best EV Chargers in Telangana: Top Brands & Fast DC Options in Hyderabad",
+    "slug": "best-ev-chargers-telangana-hyderabad-fast-dc-options",
+    "description": "A practical guide to the best EV chargers in Telangana. Compare top brands, what each one does well, and the strongest fast DC charging options in Hyderabad…",
+    "date": "2026-07-22",
+    "modifiedDate": "2026-07-22",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "15 min read",
+    "image": "/blog/ac-vs-dc-ev-charging.jpg",
+    "tags": [
+      "best EV chargers in Telangana",
+      "fast DC charging Hyderabad",
+      "EV charger brands India",
+      "Telangana EV charging",
+      "Hyderabad EV chargers",
+      "DC fast charger Hyderabad",
+      "EV charging station brands",
+      "home EV charger Telangana"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "EV vs Petrol Cost Comparison India 2026: Is Switching Worth It Amid Rising Fuel Prices?",
+    "slug": "ev-vs-petrol-cost-comparison-india-2026",
+    "description": "A practical EV vs petrol cost comparison for India in 2026. See the running-cost math, how rising fuel prices change the equation, and when switching actually…",
+    "date": "2026-07-22",
+    "modifiedDate": "2026-07-22",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "15 min read",
+    "image": "/blog/charging-convenience-matters-more-than-range-india.webp",
+    "tags": [
+      "EV vs petrol cost comparison India 2026",
+      "EV running cost India",
+      "petrol car cost per km",
+      "EV savings India",
+      "petrol price 2026",
+      "home charging savings",
+      "EV ROI India",
+      "running cost comparison",
+      "fuel price impact"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "EV Franchise Support in South India",
+    "slug": "ev-franchise-support-south-india",
+    "description": "See how EV franchise support in South India actually works in 2026. Learn why the verifiable operating base is Telangana and Andhra Pradesh, what support is…",
+    "date": "2026-07-19",
+    "modifiedDate": "2026-07-19",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "17 min read",
+    "image": "/blog/ev-charging-franchise-investment-guide.jpg",
+    "tags": [
+      "EV franchise support in South India",
+      "EV charging franchise Telangana",
+      "EV charging franchise Andhra Pradesh",
+      "SpiderEV franchise",
+      "EV charging business support",
+      "EV charger ROI calculator",
+      "fleet charging franchise",
+      "public charging partner model"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
     "title": "BESS vs Generator: Which Future for Indian Homes?",
     "slug": "bess-vs-generator-india-homes-businesses",
-    "description": "Compare Battery Energy Storage Systems (BESS) with traditional generators for Indian homes and businesses. Learn about costs, ROI, and why SpiderVault BESS is the smarter choice.",
+    "description": "Compare Battery Energy Storage Systems (BESS) with traditional generators for Indian homes and businesses. Learn about costs, ROI, and why SpiderVault BESS is…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -18,13 +804,15 @@
       "SpiderVault",
       "energy independence"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "BESS vs Inverter: Understanding the Difference for Indian Homes",
     "slug": "bess-vs-inverter-indian-homes-businesses",
-    "description": "Discover the key differences between BESS and traditional inverters for Indian homes and businesses. Learn which energy storage solution offers better ROI, efficiency, and reliability.",
+    "description": "Discover the key differences between BESS and traditional inverters for Indian homes and businesses. Learn which energy storage solution offers better ROI,…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -39,13 +827,15 @@
       "energy storage systems",
       "SpiderVault"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Best EV Charging Station Franchise Opportunities in Hyderabad",
     "slug": "best-ev-charging-franchise-opportunities-hyderabad",
-    "description": "Discover lucrative EV charging station franchise opportunities in Hyderabad. Learn about ROI, BIS-certified infrastructure, OCPP compliance, and SpiderEV products.",
+    "description": "Discover lucrative EV charging station franchise opportunities in Hyderabad. Learn about ROI, BIS-certified infrastructure, OCPP compliance, and SpiderEV…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Franchise",
     "readTime": "12 min read",
@@ -60,13 +850,15 @@
       "EV infrastructure India",
       "Telangana EV policy"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Why Charging Convenience Matters More Than Range in India",
     "slug": "charging-convenience-matters-more-than-range-india",
-    "description": "Discover why accessible EV charging infrastructure is more critical than battery range for Indian EV adoption. Learn how SpiderEV's charging solutions address real-world needs.",
+    "description": "Discover why accessible EV charging infrastructure is more critical than battery range for Indian EV adoption. Learn how SpiderEV's charging solutions address…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -81,13 +873,15 @@
       "public charging network",
       "SpiderEV products"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Charging Infrastructure Trends To Watch In 2026",
     "slug": "charging-infrastructure-trends-2026-india",
-    "description": "Discover the top EV charging infrastructure trends shaping India's electric mobility landscape in 2026. From ultra-fast charging to OCPP compliance and grid integration.",
+    "description": "Discover the top EV charging infrastructure trends shaping India's electric mobility landscape in 2026. From ultra-fast charging to OCPP compliance and grid…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -102,13 +896,15 @@
       "smart charging",
       "energy storage"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Complete Guide to Battery Energy Storage Systems (BESS)",
     "slug": "complete-guide-battery-energy-storage-systems-bess-homes",
     "description": "Discover how Battery Energy Storage Systems (BESS) revolutionize home power backup in India. Compare costs, ROI, and find the right system size for your home.",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -123,13 +919,15 @@
       "Lithium Battery",
       "Smart Home Energy"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Energy Independence: A Premium Lifestyle Feature for India",
     "slug": "energy-independence-premium-lifestyle-feature-india",
-    "description": "Discover how Battery Energy Storage Systems (BESS) are transforming energy independence from backup solution to premium lifestyle feature for Indian homes and businesses.",
+    "description": "Discover how Battery Energy Storage Systems (BESS) are transforming energy independence from backup solution to premium lifestyle feature for Indian homes and…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -144,13 +942,15 @@
       "SpiderVault",
       "premium lifestyle"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "EV Charging Station ROI Explained: What Drives Returns in India",
     "slug": "ev-charging-station-roi-india",
-    "description": "Complete guide to EV charging station ROI in India. Learn what drives returns, revenue streams, government incentives, and how to maximize profits with BIS-certified infrastructure.",
+    "description": "Complete guide to EV charging station ROI in India. Learn what drives returns, revenue streams, government incentives, and how to maximize profits with…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -165,13 +965,15 @@
       "charging station business",
       "electric vehicle charging"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "EV-Ready Homes in India: Why Charging Is an Energy Decision",
     "slug": "ev-ready-homes-india-whole-energy-decision-2026",
     "description": "Discover why EV home charging in 2026 India requires rethinking your entire energy setup. Learn about BIS-certified solutions, grid integration, and ROI.",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -186,13 +988,15 @@
       "SpiderEV products",
       "electric vehicle India"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Future of EV Charging Infrastructure in India: 2026 Trends & ROI",
     "slug": "future-ev-charging-infrastructure-india-trends-roi-growth",
-    "description": "Explore India's EV charging infrastructure future with market trends, ROI analysis, growth projections, and BIS-certified solutions. Guide for investors and entrepreneurs.",
+    "description": "Explore India's EV charging infrastructure future with market trends, ROI analysis, growth projections, and BIS-certified solutions. Guide for investors and…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -207,13 +1011,15 @@
       "FAME II",
       "electric vehicle trends"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "The Future of EV Charging Networks in India: What Will Actually Matter",
     "slug": "future-ev-charging-networks-india-what-matters",
-    "description": "Discover the critical factors shaping India's EV charging infrastructure future. From OCPP standards to grid integration, learn what will drive success in 2026 and beyond.",
+    "description": "Discover the critical factors shaping India's EV charging infrastructure future. From OCPP standards to grid integration, learn what will drive success in…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -228,13 +1034,15 @@
       "EV charging ROI",
       "charging network"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Is Highway EV Charging a Good Investment in India?",
     "slug": "highway-ev-charging-investment-india",
-    "description": "Explore ROI, regulations, and growth potential of highway EV charging stations in India. Learn about infrastructure costs, profitability, and technical requirements.",
+    "description": "Explore ROI, regulations, and growth potential of highway EV charging stations in India. Learn about infrastructure costs, profitability, and technical…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -249,13 +1057,15 @@
       "EV charging profitability",
       "fast charging stations"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "How Hotels Benefit From EV Charging Infrastructure in India",
     "slug": "hotels-ev-charging-infrastructure-india",
-    "description": "Discover how Indian hotels can boost revenue, attract premium guests, and future-proof operations with EV charging infrastructure. Learn about ROI, technical specs, and SpiderEV solutions.",
+    "description": "Discover how Indian hotels can boost revenue, attract premium guests, and future-proof operations with EV charging infrastructure. Learn about ROI, technical…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -270,13 +1080,15 @@
       "BIS certified chargers",
       "hospitality industry"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Why Premium Homes Are Moving Beyond Traditional Backup",
     "slug": "premium-homes-beyond-traditional-backup-systems",
-    "description": "Discover why luxury homeowners in India are replacing generators and inverters with advanced Battery Energy Storage Systems for reliable, clean, and smart power backup.",
+    "description": "Discover why luxury homeowners in India are replacing generators and inverters with advanced Battery Energy Storage Systems for reliable, clean, and smart…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -291,13 +1103,15 @@
       "SpiderVault",
       "battery backup"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "How Property Owners Can Prepare for EV Adoption in India",
     "slug": "property-owners-prepare-ev-adoption-india",
-    "description": "A complete guide for property owners in India to prepare for electric vehicle adoption. Learn about EV charging infrastructure, BIS certification, OCPP compliance, and ROI.",
+    "description": "A complete guide for property owners in India to prepare for electric vehicle adoption. Learn about EV charging infrastructure, BIS certification, OCPP…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -312,13 +1126,15 @@
       "residential EV charging",
       "SpiderEV chargers"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "How Silent Energy Storage Is Changing Homes in India",
     "slug": "silent-energy-storage-residential-infrastructure",
     "description": "Silent battery energy storage is revolutionizing Indian homes with instant backup, zero noise, and smart solar integration. Learn how BESS works.",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -333,13 +1149,15 @@
       "Grid Independence",
       "SpiderVault"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Solar Storage Explained: How to Use the Sun After Sunset",
     "slug": "solar-storage-explained-homeowners",
     "description": "Learn how battery storage systems let you use solar power 24/7. Complete guide to technology, costs, ROI, and choosing the right BESS for your Indian home.",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -354,13 +1172,38 @@
       "energy independence",
       "SpiderVault"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Subsidized Home EV Charger in Vijayawada & Visakhapatnam: What the Official Support Actually Covers in 2026",
+    "slug": "subsidized-home-ev-charger-vijayawada-visakhapatnam",
+    "description": "A blunt guide to the subsidized home EV charger in Vijayawada & Visakhapatnam question. The official support I found is for public charging infrastructure,…",
+    "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "13 min read",
+    "image": "/blog/how-ev-chargers-work.jpg",
+    "tags": [
+      "subsidized home EV charger in Vijayawada & Visakhapatnam",
+      "home EV charger subsidy Andhra Pradesh",
+      "Vijayawada EV charger installation",
+      "Visakhapatnam EV charger installation",
+      "AP EV charging subsidy",
+      "public charging station subsidy",
+      "PM E-DRIVE EVPCS",
+      "charging infrastructure Andhra Pradesh"
+    ],
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "How Time-Based Electricity Pricing Impacts EV Owners in India",
     "slug": "time-based-electricity-pricing-ev-owners-india",
     "description": "Discover how Time-of-Day electricity tariffs affect EV charging costs in India. Learn smart charging strategies and save up to 60% on your EV charging bills.",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -375,13 +1218,15 @@
       "Home EV Charging",
       "SpiderEV"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "What Landowners Need to Know About EV Infrastructure in India",
     "slug": "what-landowners-need-to-know-about-ev-infrastructure-india",
-    "description": "Complete guide for Indian landowners on installing EV charging infrastructure. Learn about regulations, ROI, BIS certification, revenue opportunities, and how to get started.",
+    "description": "Complete guide for Indian landowners on installing EV charging infrastructure. Learn about regulations, ROI, BIS certification, revenue opportunities, and how…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -396,13 +1241,15 @@
       "SpiderEV",
       "renewable energy"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "What Is Whole-Home Backup & Why It Matters in 2026",
     "slug": "whole-home-backup-premium-homes-india-2026",
-    "description": "Discover why whole-home backup systems are essential for premium homes in India. Learn about BESS technology, ROI calculations, and how to choose the right solution.",
+    "description": "Discover why whole-home backup systems are essential for premium homes in India. Learn about BESS technology, ROI calculations, and how to choose the right…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -417,13 +1264,15 @@
       "premium homes",
       "solar storage"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Why Future Homes Will Store Energy: India's Path Forward",
     "slug": "why-future-homes-will-store-energy",
-    "description": "Discover why battery energy storage systems are becoming essential for Indian homes. Learn about BESS technology, cost savings, and how SpiderVault solutions future-proof your home.",
+    "description": "Discover why battery energy storage systems are becoming essential for Indian homes. Learn about BESS technology, cost savings, and how SpiderVault solutions…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "Energy Storage",
     "readTime": "12 min read",
@@ -438,13 +1287,15 @@
       "renewable energy",
       "smart homes"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "Why South India Is Becoming an EV Growth Hub in India",
     "slug": "why-south-india-ev-growth-hub",
-    "description": "Discover why South India leads India's EV revolution. Explore government policies, infrastructure growth, and charging opportunities in Hyderabad, Bangalore, and Chennai.",
+    "description": "Discover why South India leads India's EV revolution. Explore government policies, infrastructure growth, and charging opportunities in Hyderabad, Bangalore,…",
     "date": "2026-07-18",
+    "modifiedDate": "2026-07-18",
     "author": "Spider Energy Team",
     "category": "EV Charging",
     "readTime": "12 min read",
@@ -459,13 +1310,228 @@
       "BIS Certified Chargers",
       "OCPP Compliant"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "PM E-DRIVE Scheme 2026: Complete Guide to EV Charger Subsidies, Har Ghar Benefits & How to Apply Before Deadline",
+    "slug": "pm-e-drive-scheme-2026-ev-charger-subsidies-home-benefits-apply-before-deadline",
+    "description": "A practical guide to the PM E-DRIVE Scheme 2026: EV charger subsidies, public charging categories, what households actually gain, who can apply, how the…",
+    "date": "2026-07-15",
+    "modifiedDate": "2026-07-15",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "17 min read",
+    "image": "/blog/india-ev-charging-infrastructure-2026.jpg",
+    "tags": [
+      "PM E-DRIVE Scheme 2026",
+      "EV charger subsidy India",
+      "PM E-DRIVE EV PCS",
+      "public charging subsidy",
+      "Unified Bharat E-Charge",
+      "home charging benefits",
+      "charging infrastructure subsidy",
+      "EV PCS application",
+      "PM E-DRIVE deadline"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Which EVs Qualify for Har Ghar EV Charger Installation in India",
+    "slug": "which-evs-qualify-for-har-ghar-ev-charger-installation",
+    "description": "Learn which EVs qualify for Har Ghar EV charger installation. See the charger types, compatible EV models, home electrical requirements, and the cases that do…",
+    "date": "2026-07-15",
+    "modifiedDate": "2026-07-15",
+    "author": "Spider Energy Team",
+    "category": "EV Charging",
+    "readTime": "16 min read",
+    "image": "/blog/ev-ready-homes-india-whole-energy-decision-2026.webp",
+    "tags": [
+      "which EVs qualify for Har Ghar EV charger installation",
+      "home EV charger compatibility",
+      "Type 2 EV charging",
+      "3.3kW home charger",
+      "AC home charging",
+      "SpiderEV Har Ghar Charger",
+      "EV home installation",
+      "Indian EV charger compatibility"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Battery Energy Storage for Renewable Integration in Andhra Pradesh",
+    "slug": "battery-energy-storage-renewable-integration-andhra-pradesh",
+    "description": "See how Battery Energy Storage Systems (BESS) are helping Andhra Pradesh integrate solar and wind more reliably in 2026. Learn the grid logic, technical…",
+    "date": "2026-07-12",
+    "modifiedDate": "2026-07-12",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "18 min read",
+    "image": "/blog/future-ev-charging-infrastructure-india-trends-roi-growth.webp",
+    "tags": [
+      "battery energy storage for renewable integration in Andhra Pradesh",
+      "BESS Andhra Pradesh",
+      "renewable integration AP",
+      "solar plus storage Andhra Pradesh",
+      "grid flexibility",
+      "energy storage projects AP",
+      "BESS grid stability",
+      "hybrid renewable projects",
+      "storage for solar and wind"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Energy Storage Trends in India 2026: What Is Actually Driving the Market",
+    "slug": "energy-storage-trends-india-2026",
+    "description": "See the biggest energy storage trends in India 2026: policy, procurement, battery technology, grid use cases, and the technical factors that will decide which…",
+    "date": "2026-07-11",
+    "modifiedDate": "2026-07-11",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "15 min read",
+    "image": "/blog/charging-infrastructure-trends-2026-india.webp",
+    "tags": [
+      "energy storage trends in India 2026",
+      "BESS India",
+      "battery energy storage system India",
+      "storage market India",
+      "grid-scale storage",
+      "solar plus storage",
+      "peak shaving",
+      "ancillary services",
+      "storage policy India"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Solar Battery Storage vs Diesel Generator: ROI Comparison",
+    "slug": "solar-battery-storage-vs-diesel-generator-roi-comparison",
+    "description": "Compare solar battery storage vs diesel generators on ROI, capex, opex, maintenance, emissions, and uptime. See which option wins for homes, apartments,…",
+    "date": "2026-07-09",
+    "modifiedDate": "2026-07-09",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "19 min read",
+    "image": "/blog/bess-vs-generator-india-homes-businesses.webp",
+    "tags": [
+      "solar battery storage vs diesel generator ROI",
+      "BESS ROI",
+      "diesel generator ROI",
+      "solar plus storage payback",
+      "backup power comparison",
+      "battery storage vs generator",
+      "LFP storage",
+      "grid backup India"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Government Subsidies & Incentives for Battery Energy Storage in Telangana",
+    "slug": "government-subsidies-incentives-bess-telangana",
+    "description": "See the real government subsidies and incentives for battery energy storage in Telangana. Learn what the policy actually gives, who qualifies, what is…",
+    "date": "2026-07-08",
+    "modifiedDate": "2026-07-08",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "18 min read",
+    "image": "/blog/energy-independence-premium-lifestyle-feature-india.webp",
+    "tags": [
+      "battery energy storage incentives Telangana",
+      "Telangana BESS subsidy",
+      "battery storage subsidy Telangana",
+      "BESS project incentives",
+      "stamp duty reimbursement",
+      "Net SGST reimbursement",
+      "storage as a service",
+      "TGDISCOM BESS",
+      "battery manufacturing incentives Telangana"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Home Battery Storage for Solar: Benefits, Cost & Installation Guide for Telangana",
+    "slug": "home-battery-storage-for-solar-telangana",
+    "description": "Learn how home battery storage for solar works in Telangana, what it costs, what the best battery chemistry is, and how to install it with net metering,…",
+    "date": "2026-07-05",
+    "modifiedDate": "2026-07-05",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "19 min read",
+    "image": "/blog/solar-storage-explained-homeowners.webp",
+    "tags": [
+      "home battery storage for solar Telangana",
+      "solar battery storage Telangana",
+      "home BESS",
+      "rooftop solar plus storage",
+      "LFP battery backup",
+      "Telangana net metering",
+      "PM Surya Ghar",
+      "solar backup system",
+      "whole-home backup"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Best Battery Storage Solutions for Power Backup During Monsoons in Andhra Pradesh",
+    "slug": "battery-storage-solutions-monsoon-backup-andhra-pradesh",
+    "description": "See which battery storage solutions work best for power backup during monsoons in Andhra Pradesh. Learn the right chemistry, enclosure, safety stack, and…",
+    "date": "2026-07-04",
+    "modifiedDate": "2026-07-04",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "17 min read",
+    "image": "/blog/whole-home-backup-premium-homes-india-2026.webp",
+    "tags": [
+      "battery storage solutions for monsoon backup Andhra Pradesh",
+      "BESS backup Andhra Pradesh",
+      "LFP battery storage",
+      "monsoon power backup",
+      "home battery storage AP",
+      "commercial battery backup",
+      "solar plus storage",
+      "power cut backup",
+      "Andhra Pradesh monsoon backup"
+    ],
+    "published": true,
+    "source": "markdown"
+  },
+  {
+    "title": "Battery Energy Storage (BESS) Boom in India 2026",
+    "slug": "bess-boom-in-india-2026",
+    "description": "See why the Battery Energy Storage (BESS) market is booming in India in 2026. Learn the policy drivers, technical stack, project pipeline, and where the money…",
+    "date": "2026-07-04",
+    "modifiedDate": "2026-07-04",
+    "author": "Spider Energy Team",
+    "category": "Energy Storage",
+    "readTime": "17 min read",
+    "image": "/blog/why-future-homes-will-store-energy.webp",
+    "tags": [
+      "BESS boom in India 2026",
+      "battery energy storage system India",
+      "BESS projects India",
+      "grid-scale storage India",
+      "solar plus storage India",
+      "peak shaving",
+      "frequency support",
+      "storage policy India"
+    ],
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "EV-Ready Homes India: Smart Charging & BESS Guide 2026",
     "slug": "ev-ready-homes-india-smart-charging-bess-2026",
     "description": "Indian homes in 2026 need integrated EV charging, solar and BESS. Here's why smart energy decisions matter more than ever for villas, apartments and new builds.",
     "date": "2026-06-23",
+    "modifiedDate": "2026-06-23",
     "author": "Spider Energy Team",
     "category": "Infrastructure",
     "readTime": "15 min read",
@@ -477,78 +1543,91 @@
       "Solar Storage",
       "EV Charging Infrastructure"
     ],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "How EV Chargers Work — Complete Guide for India 2026",
     "slug": "how-ev-chargers-work",
     "description": "From 3.3 kW home AC chargers to 240 kW DC ultra-rapid stations — understand the full technology behind every charger type available in India.",
     "date": "2026-02-28",
+    "modifiedDate": "2026-02-28",
     "author": "Spider Energy Team",
     "category": "Technology",
     "readTime": "8 min read",
     "image": "/blog/how-ev-chargers-work.jpg",
     "tags": [],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "How to Start an EV Charging Business in India 2026",
     "slug": "start-ev-charging-business-india",
     "description": "Step-by-step guide to launching a profitable EV charging station in India — site selection, DISCOM approval, hardware, software and revenue strategies.",
     "date": "2026-02-15",
+    "modifiedDate": "2026-02-15",
     "author": "Spider Energy Team",
     "category": "Business",
     "readTime": "12 min read",
     "image": "/blog/start-ev-charging-business-india.jpg",
     "tags": [],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "AC vs DC EV Charging — Which is Right for You India",
     "slug": "ac-vs-dc-ev-charging",
     "description": "Comparing AC Level 2 and DC fast charging — speeds, costs, and the best use cases for Indian EV drivers, fleet operators and charging businesses.",
     "date": "2026-02-01",
+    "modifiedDate": "2026-02-01",
     "author": "Spider Energy Team",
     "category": "Technology",
     "readTime": "6 min read",
     "image": "/blog/ac-vs-dc-ev-charging.jpg",
     "tags": [],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "India EV Charging Infrastructure 2026 — Complete Guide",
     "slug": "india-ev-charging-infrastructure-2026",
     "description": "India needs 400,000+ charging stations by 2030. Analysing the current state, policy landscape, and private sector opportunities for EV charging.",
     "date": "2026-01-20",
+    "modifiedDate": "2026-01-20",
     "author": "Spider Energy Team",
     "category": "Infrastructure",
     "readTime": "10 min read",
     "image": "/blog/india-ev-charging-infrastructure-2026.jpg",
     "tags": [],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "EV Charging Franchise Investment Guide India 2025-26",
     "slug": "ev-charging-franchise-investment-guide",
     "description": "ROI calculations, investment tiers, timeline, and everything you need to know before investing in an EV charging franchise in India.",
     "date": "2026-01-10",
+    "modifiedDate": "2026-01-10",
     "author": "Spider Energy Team",
     "category": "Business",
     "readTime": "15 min read",
     "image": "/blog/ev-charging-franchise-investment-guide.jpg",
     "tags": [],
-    "published": true
+    "published": true,
+    "source": "markdown"
   },
   {
     "title": "What is OCPP? Open Charge Point Protocol Explained",
     "slug": "what-is-ocpp-ev-charging",
     "description": "OCPP (Open Charge Point Protocol) explained for Indian EV operators — why it ensures interoperability and what to look for when buying a charger.",
     "date": "2026-01-01",
+    "modifiedDate": "2026-01-01",
     "author": "Spider Energy Team",
     "category": "Technology",
     "readTime": "7 min read",
     "image": "/blog/what-is-ocpp-ev-charging.jpg",
     "tags": [],
-    "published": true
+    "published": true,
+    "source": "markdown"
   }
 ]

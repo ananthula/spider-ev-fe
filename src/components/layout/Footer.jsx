@@ -12,11 +12,12 @@ const acProducts = [
 
 const dcProducts = [
   { label: "Spider Base", href: "/products/dc/spider-base" },
-  { label: "Spider Spark", href: "/products/dc/spider-spark" },
   { label: "Spider Fast", href: "/products/dc/spider-fast" },
+  { label: "Spider Spark", href: "/products/dc/spider-spark" },
   { label: "Spider Falcon", href: "/products/dc/spider-falcon" },
-  { label: "Spider Hulk", href: "/products/dc/spider-hulk" },
   { label: "Spider Ultra", href: "/products/dc/spider-ultra" },
+  { label: "Spider Surge", href: "/products/dc/spider-surge" },
+  { label: "Spider Hulk", href: "/products/dc/spider-hulk" },
 ];
 
 const solutions = [

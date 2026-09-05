@@ -111,6 +111,17 @@ Based on operational data from installations across India, here are realistic RO
 
 These scenarios assume realistic utilization, proper location selection, efficient operations, and maximization of available subsidies. Underperforming installations often suffer from poor location choice or operational neglect rather than fundamental business model issues.
 
+## **A simple comparison**
+
+| **Factor** | **Weak ROI setup** | **Strong ROI setup** |
+| --- | --- | --- |
+| Site type | Low traffic, poor fit | Traffic-rich, dwell-based or corridor-based |
+| Charger type | Wrong for the use case | Matched to the site |
+| Uptime | Frequent failures | Reliable operations |
+| Payments | Friction and confusion | Easy and integrated |
+| Load planning | Weak or reactive | Managed and optimized |
+| Utilization | Inconsistent | Recurring and predictable |
+
 ## Conclusion: The Fundamentals of Charging Station ROI
 
 The EV charging station business in India offers compelling returns when fundamentals are right. Unlike many infrastructure businesses requiring 5-7 year payback periods, well-executed charging stations can achieve 18-30 month payback with post-payback returns exceeding 40-60%.

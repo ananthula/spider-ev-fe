@@ -155,6 +155,16 @@ Selecting appropriate capacity ensures optimal ROI:
 
 **SpiderVault 20.0** (20 kWh): Premium solution for large homes, small commercial establishments, or homes with EV charging requirements. Provides genuine energy independence with multi-day backup when paired with solar.
 
+## **A simple comparison**
+
+| **Traditional home** | **Future home** |
+| --- | --- |
+| Consumes grid power only | Generates, stores, and uses energy intelligently |
+| Backup is reactive | Backup is seamless |
+| Solar can be underused | Solar is stored and used later |
+| EV charging is a cost surprise | EV charging is planned |
+| Power cuts create compromise | Energy continues quietly in the background |
+
 ## Conclusion: The Inevitable Future
 
 Energy storage in homes isn't a question of if, but when. As grid infrastructure strains under growing demand, renewable energy mandates accelerate, and smart home technology proliferates, battery energy storage systems will become as fundamental to homes as WiFi routers are today.

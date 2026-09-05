@@ -290,8 +290,6 @@ The IP67-rated enclosure is built for outdoor installation without additional we
       ],
     },
     "spider-dash": {
-      name: "Spider Dash",    },
-    "spider-dash": {
       name: "Spider Dash",
       tagline: "80 kW dual-gun three-phase AC charger for high-throughput commercial sites",
       metaTitle: "Spider Dash — 80 kW Dual-Gun AC EV Charger | SpiderEV",
@@ -783,6 +781,10 @@ const ProductDetailPage = () => {
   if (!product) {
     return (
       <PageLayout>
+        <Helmet>
+          <title>Product Not Found | Spider Energy</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Product Not Found</h1>
           <Link to={`${category === "ac" ? "/electric-vehicle-ev-ac-charger" : "/electric-vehicle-ev-dc-charger"}`} className="bg-primary text-white px-6 py-3 rounded-xl font-semibold">
@@ -794,7 +796,7 @@ const ProductDetailPage = () => {
   }
 
   const typeLabel = category === "ac" ? "AC EV Charger" : "DC Fast EV Charger";
-  const productSchema = getProductSchema(product, category, productId);
+  const productSchema = getProductSchema(product, category, productId, productImg);
   const breadcrumbs = getBreadcrumbSchema([
     { name: "Home", url: "https://spiderenergy.in" },
     {
@@ -808,19 +810,19 @@ const ProductDetailPage = () => {
   // Enhanced meta tags for products with custom meta fields
   const pageTitle = product.metaTitle || `${product.name} — ${product.power} ${typeLabel} | SpiderEV`;
   const pageDescription = product.metaDescription || product.tagline;
-  const pageKeywords = product.metaKeywords || "";
-
   return (
     <PageLayout>
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        {pageKeywords && <meta name="keywords" content={pageKeywords} />}
       </Helmet>
       <SEO
         schema={productSchema}
         breadcrumbs={breadcrumbs}
         schemas={faqSchema ? [faqSchema] : []}
+        title={pageTitle}
+        description={pageDescription}
+        ogImage={productImg}
       />
       {/* Hero */}
       <section className="relative overflow-hidden py-16 sm:py-24" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>

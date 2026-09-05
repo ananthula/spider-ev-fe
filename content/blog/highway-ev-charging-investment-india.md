@@ -158,6 +158,17 @@ As more players enter highway charging, differentiation becomes critical:
 - Offer value-added services (vehicle health checks, tire pressure stations)
 - Build brand loyalty through subscription programs and quality service
 
+## **Highway Charging vs Petrol Pump Investment**
+
+| **Factor** | **Petrol Pump** | **Highway EV Charging** |
+| --- | --- | --- |
+| Fuel Storage | Required | Not Required |
+| Environmental Risk | Higher | Lower |
+| Digital Operations | Limited | High |
+| Future Growth | Mature Market | Growth Market |
+| EV Compatibility | None | Core Business |
+| Energy Ecosystem Potential | Low | High |
+
 ## The Verdict: Is It a Good Investment?
 
 Highway EV charging infrastructure represents a compelling investment opportunity in India for well-capitalized entrepreneurs and businesses with a 3-5 year investment horizon. The sector benefits from strong tailwinds:

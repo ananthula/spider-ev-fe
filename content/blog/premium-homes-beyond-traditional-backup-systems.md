@@ -180,6 +180,17 @@ While BESS systems require higher upfront investment than traditional alternativ
 
 These calculations include solar savings, grid arbitrage, elimination of generator fuel/maintenance, and extended battery life compared to traditional systems.
 
+## **A simple comparison**
+
+| **Traditional backup systems** | **Premium BESS-based systems** |
+| --- | --- |
+| Limited appliance support | Higher load support |
+| Startup delay | Fast seamless transition |
+| Noise and vibration | Silent operation |
+| Fuel dependency | Clean stored energy |
+| Solar underuse | Solar storage and usage |
+| Backup-only thinking | Energy ecosystem thinking |
+
 ## The Future of Residential Energy Management
 
 The transition to BESS represents more than a technology upgrade—it signals a fundamental shift in how premium homes relate to energy infrastructure.

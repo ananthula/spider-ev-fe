@@ -20,7 +20,10 @@ const cardImages = {
 };
 
 const dcProducts = [
+  { id: "spider-base",   name: "Spider Base",   power: "3–12 kW",   connector: "IS 17017-2-6",         outputVoltage: "20 – 120 V DC",   outputCurrent: "Up to 100 A" },
+  { id: "spider-fast",   name: "Spider Fast",   power: "30 kW",     connector: "CCS2 / CHAdeMO",        outputVoltage: "200 – 1000 V DC", outputCurrent: "0 – 100 A" },
   { id: "spider-spark",  name: "Spider Spark",  power: "60 kW",     connector: "CCS2 / CHAdeMO",        outputVoltage: "200 – 1000 V DC", outputCurrent: "0 – 150 A" },
+  { id: "spider-falcon", name: "Spider Falcon", power: "60 kW",     connector: "Dual CCS2",             outputVoltage: "200 – 1000 V DC", outputCurrent: "0 – 150 A" },
   { id: "spider-ultra",  name: "Spider Ultra",  power: "120 kW",    connector: "CCS2 / CHAdeMO",        outputVoltage: "200 – 1000 V DC", outputCurrent: "0 – 200 A" },
   { id: "spider-surge",  name: "Spider Surge",  power: "180 kW",    connector: "CCS2 / CHAdeMO",        outputVoltage: "200 – 1000 V DC", outputCurrent: "0 – 250 A" },
   { id: "spider-hulk",   name: "Spider Hulk",   power: "240 kW",    connector: "CCS2 / CHAdeMO",        outputVoltage: "200 – 1000 V DC", outputCurrent: "0 – 350 A" },
@@ -34,7 +37,7 @@ const faqItems = [
   },
   {
     question: "What is the difference between Level 1 and Level 2 DC Chargers?",
-    answer: "Level 1 DC chargers (3–15 kW) are suitable for 2-wheelers and smaller EVs. Level 2 DC chargers (30 kW and above) are designed for 4-wheelers, commercial vehicles, buses, and trucks. SpiderEV's DC range spans from the Spider Base (3–12 kW) all the way up to the Spider Ultra (240 kW).",
+    answer: "Lower-power DC chargers (3–15 kW) are suitable for 2-wheelers and smaller EVs. Higher-power DC chargers (30 kW and above) are designed for 4-wheelers, commercial vehicles, buses, and trucks. SpiderEV's DC range spans from the Spider Base (3–12 kW) to the Spider Hulk (240 kW).",
   },
   {
     question: "What DC plug connector types are provided?",
@@ -169,7 +172,7 @@ const DCChargersPage = () => {
             className="mb-10 text-center"
           >
             <motion.h2 variants={fadeUp} className="text-3xl font-bold text-gray-900">Our DC Charger Range</motion.h2>
-            <motion.p variants={fadeUp} className="text-gray-500 mt-2">4 models — from 60 kW to 240 kW</motion.p>
+            <motion.p variants={fadeUp} className="text-gray-500 mt-2">7 models — from 3 kW to 240 kW</motion.p>
           </motion.div>
           <motion.div
             variants={staggerFast}

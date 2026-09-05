@@ -93,6 +93,16 @@ Larger batteries mean heavier vehicles, requiring more energy per kilometer. A 3
 
 India's push toward renewable energy integration makes this efficiency consideration more relevant. SpiderEnergy's SpiderVault battery energy storage systems paired with charging infrastructure enable solar-powered charging, reducing grid dependency and operational costs.
 
+## **A simple comparison**
+
+| **Factor** | **Range-first thinking** | **Convenience-first thinking** |
+| --- | --- | --- |
+| Purchase focus | Bigger battery | Easier charging access |
+| Daily use | Constant range planning | Normalized charging behavior |
+| Travel stress | High if charger access is weak | Lower if network is reliable |
+| Business logic | Battery specs | Network reliability |
+| Ownership experience | Anxiety-prone | Low friction |
+
 ## SpiderEV's Comprehensive Solution to Charging Convenience
 
 ### Tailored Products for Every Use Case
