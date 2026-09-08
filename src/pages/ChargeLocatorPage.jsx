@@ -126,6 +126,15 @@ const STATIONS = [
     mapsUrl: "https://maps.app.goo.gl/9a1gagfYw5L3Jk8W8",
     type: "Public",
   },
+  {
+    id: 14,
+    name: "Spider Irrum Manzil Mall",
+    address: "Irrum Manzil Mall, Irram Manzil Colony, Punjagutta, Hyderabad, Telangana 500082",
+    lat: 17.4209138,
+    lng: 78.4551236,
+    mapsUrl: "https://maps.app.goo.gl/CrLMyiPtMBkeBZeC6",
+    type: "Public",
+  },
 ];
 
 // ---------------------------------------------------------------------------
