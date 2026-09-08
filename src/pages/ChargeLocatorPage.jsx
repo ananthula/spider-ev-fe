@@ -17,26 +17,29 @@ import { localBusinessSchema, getBreadcrumbSchema } from "../seo/schemas";
 const STATIONS = [
   {
     id: 1,
-    name: "Primark Destature_Spider",
+    name: "Spider Primark DeStature",
     address: "Sy No: 188, HC5M+QMV and 189, Bachupally-Kompally Main Road, Sundar Rao Nagar, Bahadurpally",
-    lat: 17.5596,
-    lng: 78.4395,
+    lat: 17.5593304,
+    lng: 78.4342206,
+    mapsUrl: "https://maps.app.goo.gl/CrGK3Y57XPs6Juwo8",
     type: "Public",
   },
   {
     id: 2,
-    name: "Primark Econest_Spider",
+    name: "Spider Primark Econest",
     address: "Sy.No 509, opposite to Apparel Export Park, Kompally, Gundlapochampalli",
-    lat: 17.5665,
-    lng: 78.4813,
+    lat: 17.5637824,
+    lng: 78.4694127,
+    mapsUrl: "https://maps.app.goo.gl/o2q448UBRmuFtc6XA",
     type: "Public",
   },
   {
     id: 3,
-    name: "Spider_Lansum Eden Gardens",
-    address: "Masjid Banda Rd, Kondapur",
-    lat: 17.4599,
-    lng: 78.3706,
+    name: "Spider Lansum Eden Gardens",
+    address: "Masjid Banda Rd, Kondapur, CMC Enclave, Gachibowli, Hyderabad, Telangana 500084",
+    lat: 17.4620485,
+    lng: 78.3446028,
+    mapsUrl: "https://maps.app.goo.gl/4kpSSuAUT9ZLjPfy9",
     type: "Public",
   },
   {
@@ -87,6 +90,42 @@ const STATIONS = [
     lng: 78.7232,
     type: "Public",
   },
+  {
+    id: 10,
+    name: "Spider SRR River View",
+    address: "Survey No. 136, Narsingi Village, Gandipet Mandal, Rangareddy, Telangana 500075",
+    lat: 17.3836261,
+    lng: 78.3404227,
+    mapsUrl: "https://maps.app.goo.gl/DA94EH1FEXaKcXBw7",
+    type: "Public",
+  },
+  {
+    id: 11,
+    name: "Spider SLN Gachibowli",
+    address: "SLN Terminus, Gachibowli–Miyapur Rd, Jayabheri Enclave, Hyderabad, Telangana 500032",
+    lat: 17.4525755,
+    lng: 78.363253,
+    mapsUrl: "https://maps.app.goo.gl/8vox9rVnuS9Mjm8t8",
+    type: "Public",
+  },
+  {
+    id: 12,
+    name: "Spider Alair",
+    address: "Speed EV Charging Station, Alair, Telangana",
+    lat: 17.6280271,
+    lng: 79.0228054,
+    mapsUrl: "https://maps.app.goo.gl/Re28r7ndxjkenjHr7",
+    type: "Public",
+  },
+  {
+    id: 13,
+    name: "Spider Bapatla",
+    address: "Golden Sands - By The Bay, Golden Sands Rd, Sy No. 517, near Pandurangapuram, Bapatla, Andhra Pradesh 522101",
+    lat: 15.8150832,
+    lng: 80.4439833,
+    mapsUrl: "https://maps.app.goo.gl/9a1gagfYw5L3Jk8W8",
+    type: "Public",
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -104,11 +143,11 @@ function haversineKm(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-function directionsUrl(userLat, userLng, stationLat, stationLng) {
+function directionsUrl(userLat, userLng, station) {
   if (userLat && userLng) {
-    return `https://www.google.com/maps/dir/${userLat},${userLng}/${stationLat},${stationLng}`;
+    return `https://www.google.com/maps/dir/${userLat},${userLng}/${station.lat},${station.lng}`;
   }
-  return `https://www.google.com/maps/dir//${stationLat},${stationLng}`;
+  return station.mapsUrl || `https://www.google.com/maps/dir//${station.lat},${station.lng}`;
 }
 
 // Custom SVG marker icon
@@ -142,6 +181,23 @@ function MapFlyTo({ station }) {
   useEffect(() => {
     if (station) map.flyTo([station.lat, station.lng], 15, { duration: 0.9 });
   }, [station, map]);
+  return null;
+}
+
+// Keeps all matching stations visible until a user selects a specific station.
+function MapFitBounds({ stations, selected }) {
+  const map = useMap();
+  useEffect(() => {
+    if (selected || stations.length === 0) return;
+    if (stations.length === 1) {
+      map.setView([stations[0].lat, stations[0].lng], 15);
+      return;
+    }
+    map.fitBounds(
+      L.latLngBounds(stations.map((station) => [station.lat, station.lng])),
+      { padding: [32, 32], maxZoom: 13 },
+    );
+  }, [stations, selected, map]);
   return null;
 }
 
@@ -226,7 +282,7 @@ const ChargeLocatorPage = () => {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="mt-3 text-white/80 text-lg"
           >
-            Locate SpiderEV charging stations near you across Hyderabad.
+            Locate SpiderEV charging stations across Telangana and Andhra Pradesh.
           </motion.p>
           {locationError && (
             <p className="mt-2 text-yellow-300 text-sm">{locationError}</p>
@@ -242,7 +298,10 @@ const ChargeLocatorPage = () => {
               type="text"
               placeholder="Search by station name or area..."
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setSelected(null);
+              }}
               className="w-full sm:max-w-md border border-gray-200 rounded-xl px-5 py-3 text-sm outline-none focus:border-primary transition-colors bg-white shadow-sm"
             />
           </div>
@@ -275,7 +334,7 @@ const ChargeLocatorPage = () => {
                     </div>
                     {/* Direction icon */}
                     <a
-                      href={directionsUrl(userPos?.lat, userPos?.lng, s.lat, s.lng)}
+                      href={directionsUrl(userPos?.lat, userPos?.lng, s)}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
@@ -321,6 +380,7 @@ const ChargeLocatorPage = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   />
                   <MapFlyTo station={selected} />
+                  <MapFitBounds stations={filtered} selected={selected} />
 
                   {/* User location marker */}
                   {userPos && (
@@ -348,7 +408,7 @@ const ChargeLocatorPage = () => {
                             <p className="text-gray-400 text-xs">{s.distanceKm.toFixed(1)} km away</p>
                           )}
                           <a
-                            href={directionsUrl(userPos?.lat, userPos?.lng, s.lat, s.lng)}
+                            href={directionsUrl(userPos?.lat, userPos?.lng, s)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-2 inline-block bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-primary/90"
@@ -389,7 +449,7 @@ const ChargeLocatorPage = () => {
                     </p>
                   )}
                   <a
-                    href={directionsUrl(userPos?.lat, userPos?.lng, selected.lat, selected.lng)}
+                    href={directionsUrl(userPos?.lat, userPos?.lng, selected)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-2 bg-primary text-white px-6 py-2.5 rounded-xl font-semibold text-sm hover:bg-primary/90 transition-colors"
