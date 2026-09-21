@@ -31,11 +31,16 @@ const NewsCard = ({ item }) => (
     whileHover={{ y: -5, transition: { duration: 0.2 } }}
     className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
   >
-    <div className="bg-gray-50 h-48 flex items-center justify-center">
-      <div className="text-center text-gray-400">
-        <div className="text-3xl mb-1">📰</div>
-        <p className="text-xs">News Image</p>
-      </div>
+    <div className="bg-gray-100 h-48 overflow-hidden">
+      <img
+        src={item.image}
+        alt={`${item.title} — SpiderEV news`}
+        width="960"
+        height="540"
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.03]"
+      />
     </div>
     <div className="p-5 flex flex-col flex-1">
       <span className="text-secondary text-xs font-semibold uppercase tracking-wider mb-2">{item.category}</span>

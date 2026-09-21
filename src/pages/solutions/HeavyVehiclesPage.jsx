@@ -7,6 +7,7 @@ import SpiderConnectCTA from "../../components/ui/SpiderConnectCTA";
 import { fadeUp, fadeLeft, fadeRight, scaleUp, staggerContainer, staggerFast, viewport } from "../../utils/animationConfig";
 import fleetImg from "../../assets/solutions/FleetCharging.webp";
 import dcImg from "../../assets/home/DcCharger.webp";
+import ultraImg from "../../assets/chargers/ultra.webp";
 import SEO from "../../components/SEO";
 import { getServiceSchema, getFAQSchema, getBreadcrumbSchema } from "../../seo/schemas";
 
@@ -17,8 +18,24 @@ const vehicles = [
 ];
 
 const featuredProducts = [
-  { name: "Spider Hulk", power: "120 kW", id: "spider-hulk", desc: "Dual-gun DC charger for simultaneous high-power charging of large commercial vehicles." },
-  { name: "Spider Ultra", power: "240 kW", id: "spider-ultra", desc: "India's most powerful charger — 4-gun system for ultra-rapid fleet depot charging." },
+  {
+    name: "Spider Ultra",
+    power: "120 kW",
+    id: "spider-ultra",
+    desc: "Dual-gun DC charger for simultaneous high-power charging of large commercial vehicles.",
+    image: ultraImg,
+    imageWidth: 853,
+    imageHeight: 1280,
+  },
+  {
+    name: "Spider Hulk",
+    power: "240 kW",
+    id: "spider-hulk",
+    desc: "Our most powerful charger, built for ultra-rapid fleet and heavy-vehicle charging.",
+    image: dcImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
+  },
 ];
 
 const serviceSchema = getServiceSchema({
@@ -142,18 +159,28 @@ const HeavyVehiclesPage = () => {
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto"
+            className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto"
           >
             {featuredProducts.map((p) => (
               <motion.div
                 key={p.id}
                 variants={fadeUp}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex gap-6 items-start"
+                className="bg-gray-50 rounded-2xl p-6 sm:p-8 border border-gray-100 flex flex-col sm:flex-row gap-6 items-center"
               >
-                <img loading="lazy" decoding="async" width="1536" height="1024" src={dcImg} alt={p.name} className="h-24 object-contain flex-shrink-0" />
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
+                <div className="w-32 h-32 flex-shrink-0 flex items-center justify-center">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    width={p.imageWidth}
+                    height={p.imageHeight}
+                    src={p.image}
+                    alt={p.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="min-w-0 flex-1 text-center sm:text-left">
+                  <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 mb-2">
                     <h3 className="text-xl font-bold text-gray-900">{p.name}</h3>
                     <span className="bg-primary text-white text-xs font-semibold px-2.5 py-1 rounded-full">{p.power}</span>
                   </div>
