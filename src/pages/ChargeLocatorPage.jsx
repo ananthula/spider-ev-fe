@@ -9,7 +9,7 @@ import AppStoreButtons from "../components/ui/AppStoreButtons";
 import { fadeUp, staggerContainer, viewport } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import SEO from "../components/SEO";
-import { localBusinessSchema, getBreadcrumbSchema } from "../seo/schemas";
+import { getBreadcrumbSchema } from "../seo/schemas";
 
 // ---------------------------------------------------------------------------
 // Station data (extracted from SpiderEV app screenshots)
@@ -210,7 +210,6 @@ function MapFitBounds({ stations, selected }) {
   return null;
 }
 
-const locatorSchema = localBusinessSchema;
 const locatorBreadcrumbs = getBreadcrumbSchema([
   { name: "Home", url: "https://spiderenergy.in" },
   { name: "Station Locator" },
@@ -269,7 +268,7 @@ const ChargeLocatorPage = () => {
         <title>EV Charging Station Locator in Andhra Pradesh & Telangana</title>
         <meta name="description" content="Find Nearby EV Fast Charging Stations in Andhra Pradesh and Telangana using a Smart EV Charge Zone Locator and Real-time EV Charging Locator Tools." />
       </Helmet>
-      <SEO schema={locatorSchema} breadcrumbs={locatorBreadcrumbs} />
+      <SEO breadcrumbs={locatorBreadcrumbs} />
       {/* Header */}
       <section
         className="relative overflow-hidden py-16 sm:py-20"

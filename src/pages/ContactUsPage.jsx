@@ -5,12 +5,12 @@ import PageLayout from "../components/layout/PageLayout";
 import { fadeUp, fadeLeft, fadeRight, staggerContainer, staggerFast, viewport } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import SEO from "../components/SEO";
-import { localBusinessSchema, getBreadcrumbSchema } from "../seo/schemas";
+import { getBreadcrumbSchema } from "../seo/schemas";
 
 const contactDetails = [
   { icon: "✉️", label: "Email", value: "connect@spiderenergy.in", href: "mailto:connect@spiderenergy.in" },
   { icon: "💬", label: "WhatsApp", value: "+91 9997776080", href: "https://wa.me/919997776080" },
-  { icon: "📍", label: "Address", value: "THub, Raidurgam, Hyderabad, India" },
+  { icon: "📍", label: "Address", value: "T-Hub, Raidurgam, Hyderabad, Telangana 500081" },
   { icon: "🕐", label: "Support Hours", value: "Mon–Sun: 24x7" },
 ];
 
@@ -29,7 +29,7 @@ const ContactUsPage = () => {
         <title>Contact SpiderEV | EV Charging Experts in AP & TG</title>
         <meta name="description" content="Contact Spider Energy for EV charger installation, franchise enquiries, CPMS support or SpiderVault BESS consultation in Andhra Pradesh & Telangana." />
       </Helmet>
-      <SEO schema={localBusinessSchema} breadcrumbs={contactBreadcrumbs} />
+      <SEO breadcrumbs={contactBreadcrumbs} />
       {/* Hero */}
       <section className="relative overflow-hidden py-20 sm:py-28" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-primary/80" />

@@ -24,17 +24,32 @@ const appFeatures = [
 const appSchema = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
+  "@id": "https://spiderenergy.in/ev-charging-station-app#app",
   "name": "SpiderEV Charging App",
   "description": "Find nearby EV charging stations, start sessions, pay digitally and track charging history across India",
   "url": "https://spiderenergy.in/ev-charging-station-app",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Android, iOS",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "brand": { "@id": "https://spiderenergy.in/#brand-spiderev" },
   "provider": { "@id": "https://spiderenergy.in/#organization" },
+};
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://spiderenergy.in/ev-charging-station-app#howto",
+  "name": "How to start a charging session with the SpiderEV App",
+  "description": "Find a station, start an EV charging session, and pay in the SpiderEV app.",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Open the SpiderEV App", "text": "Install the app and sign in to your account." },
+    { "@type": "HowToStep", "position": 2, "name": "Locate a station", "text": "Use the station map and live availability filters to choose a compatible charger." },
+    { "@type": "HowToStep", "position": 3, "name": "Start and pay", "text": "Select the connector, start the session, monitor charging, and complete digital payment in the app." },
+  ],
 };
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: "Home", url: "https://spiderenergy.in/" },
-  { name: "SpiderEV App" },
+  { name: "SpiderEV", url: "/spiderev" },
+  { name: "SpiderEV App", url: "/ev-charging-station-app" },
 ]);
 
 const SpiderEVAppPage = () => {
@@ -44,7 +59,7 @@ const SpiderEVAppPage = () => {
         <title>EV Charging Station App in Andhra Pradesh & Telangana</title>
         <meta name="description" content="Discover a Smart EV Charging App in Andhra Pradesh and Telangana to Locate Nearby Stations, Access Charging Networks and Manage Your EV Charging Anytime, Anywhere." />
       </Helmet>
-      <SEO schema={appSchema} breadcrumbs={breadcrumbSchema} />
+      <SEO schema={appSchema} schemas={[howToSchema]} breadcrumbs={breadcrumbSchema} />
       <HeroBanner
         title="EV Charging Station App in Andhra Pradesh & Telangana"
         subtitle="Find EV charging stations near you. A seamless experience that lets you power up quickly and pay effortlessly."

@@ -26,6 +26,7 @@ const staticRoutes = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
 
   // Products: AC Chargers
+  { path: "/spiderev", priority: "0.9", changefreq: "monthly" },
   { path: "/electric-vehicle-ev-ac-charger", priority: "0.9", changefreq: "monthly" },
   { path: "/products/ac/spider-mini", priority: "0.8", changefreq: "monthly" },
   { path: "/products/ac/spider-lite", priority: "0.8", changefreq: "monthly" },

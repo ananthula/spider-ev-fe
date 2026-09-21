@@ -8,6 +8,7 @@ const HERO_HEIGHT = 100;
 
 const navDropdowns = {
   Products: [
+    { label: "SpiderEV Overview", href: "/spiderev" },
     { label: "AC Chargers", href: "/electric-vehicle-ev-ac-charger" },
     { label: "DC Chargers", href: "/electric-vehicle-ev-dc-charger" },
   ],
@@ -29,7 +30,7 @@ const navDropdowns = {
 const directLinks = [
   { label: "SpiderAtHome", href: "/har-ghar" },
   { label: "Franchise", href: "/ev-charging-station-franchise" },
-  { label: "BESS", href: "/spidervault-bess-battery-energy-storage" },
+  { label: "SpiderVault", href: "/spidervault-bess-battery-energy-storage" },
   { label: "ROI", href: "/ev-charging-station-roi-calculator" },
   { label: "Stations", href: "/ev-charging-station-locator" },
   // { label: "News", href: "/news" },

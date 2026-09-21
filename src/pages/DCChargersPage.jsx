@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 import HeroBanner from "../components/ui/HeroBanner";
 import Accordion from "../components/ui/Accordion";
 import SpiderConnectCTA from "../components/ui/SpiderConnectCTA";
-import { getFAQSchema, getItemListSchema, getBreadcrumbSchema } from "../seo/schemas";
+import { getFAQSchema, getCollectionPageSchema, getBreadcrumbSchema } from "../seo/schemas";
 import { fadeUp, fadeLeft, staggerContainer, staggerFast, viewport } from "../utils/animationConfig";
 import dcChargerImg from "../assets/home/DcCharger.webp";
 import sparkDcImg from "../assets/chargers/spark.webp";
@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
       className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
     >
       <div className="bg-gray-50 p-5 sm:p-8 flex items-center justify-center h-40 sm:h-52">
-        <img loading="lazy" src={img} alt={product.name} className="h-full object-contain" />
+        <img loading="lazy" src={img} alt={`${product.name} ${product.power} DC EV charger by SpiderEV`} className="h-full object-contain" />
       </div>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-4">
@@ -99,10 +99,16 @@ const dcProductList = [
 ];
 
 const dcFAQSchema = getFAQSchema(faqItems);
-const dcItemListSchema = getItemListSchema(dcProductList, "SpiderEV DC Fast Charger Range");
+const dcCollectionSchema = getCollectionPageSchema({
+  name: "DC Fast EV Chargers | SpiderEV",
+  description: "SpiderEV DC fast chargers from 3 kW to 240 kW for public networks, highways, and fleet depots.",
+  url: "/electric-vehicle-ev-dc-charger",
+  items: dcProductList,
+});
 const dcBreadcrumbs = getBreadcrumbSchema([
   { name: "Home", url: "https://spiderenergy.in" },
-  { name: "DC Chargers" },
+  { name: "SpiderEV", url: "/spiderev" },
+  { name: "DC Chargers", url: "/electric-vehicle-ev-dc-charger" },
 ]);
 
 const DCChargersPage = () => {
@@ -112,12 +118,14 @@ const DCChargersPage = () => {
         <title>DC Fast EV Charging Stations in Telangana & Andhra Pradesh</title>
         <meta name="description" content="Explore top DC Fast Electric Vehicle Chargers in Andhra Pradesh (AP) & Telangana (TG). Spider Energy Provides Reliable and Smart EV Charging Solutions for Vehicles." />
       </Helmet>
-      <SEO schema={dcFAQSchema} breadcrumbs={dcBreadcrumbs} />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(dcItemListSchema)}
-        </script>
-      </Helmet>
+      <SEO
+        schema={dcCollectionSchema}
+        schemas={[dcFAQSchema]}
+        breadcrumbs={dcBreadcrumbs}
+        title="DC Fast EV Charging Stations in Telangana & Andhra Pradesh"
+        description="Explore SpiderEV DC fast chargers from 3 kW to 240 kW for public stations, highways and fleets across Telangana and Andhra Pradesh."
+        ogImage={dcChargerImg}
+      />
       <HeroBanner
         title="DC Fast EV Charging Stations in Telangana & Andhra Pradesh"
         subtitle="Deliver exceptional power and energy efficiency — rapid charging for personal EVs and heavy-duty vehicles."

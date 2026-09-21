@@ -13,6 +13,7 @@
  */
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { organizationSchema } from "../seo/schemas";
 
 const BASE_URL = "https://spiderenergy.in";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
@@ -65,6 +66,10 @@ export function SEO({
       {description && <meta name="twitter:description" content={description} />}
 
       {/* Primary JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+
       {schema && (
         <script type="application/ld+json">
           {JSON.stringify(schema)}

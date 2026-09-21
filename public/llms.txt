@@ -12,6 +12,7 @@ Spider Energy serves three audiences: individual EV owners seeking home charging
 
 ## SpiderEV — AC Chargers
 
+- [SpiderEV Brand Hub](https://spiderenergy.in/spiderev): Spider Energy's EV chargers, SpiderConnect CPMS, and driver app
 - [AC EV Chargers Overview](https://spiderenergy.in/electric-vehicle-ev-ac-charger): Full AC range, 3.3 kW to 80 kW
 - [Spider Lite — 3.3 kW](https://spiderenergy.in/products/ac/spider-lite): Most affordable home AC charger, free installation
 - [Spider Mini — 3.3 kW](https://spiderenergy.in/products/ac/spider-mini): Compact single-phase home charger
@@ -33,6 +34,7 @@ Spider Energy serves three audiences: individual EV owners seeking home charging
 
 ## SpiderVault — Battery Energy Storage (BESS)
 
+- Short brand URLs `/spidervault` and `/spider-vault` permanently redirect to the canonical SpiderVault BESS page below.
 - [SpiderVault BESS](https://spiderenergy.in/spidervault-bess-battery-energy-storage): Battery energy storage for EV stations, solar integration, and commercial/industrial backup across Telangana and Andhra Pradesh
 
 ## Software & Network

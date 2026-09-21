@@ -11,12 +11,12 @@ const AUTO_SLIDE_INTERVAL_MS = 8000;
 
 const heroSlides = [
   {
-    preTitle: "Powering India's EV Revolution",
-    accent: "#LEAD",
-    title: "THE CHARGE",
-    subtitlePrefix: "Ultra-Fast",
-    subtitleAccent: "EV Charging Infrastructure",
-    subtitleSuffix: "for Businesses That Want to Lead the Future",
+    preTitle: "Spider Energy",
+    accent: "EV Charging",
+    title: "AND ENERGY STORAGE",
+    subtitlePrefix: "SpiderEV chargers and",
+    subtitleAccent: "SpiderVault BESS",
+    subtitleSuffix: "for homes, businesses, fleets, and highways",
     cta: "Partner With Us",
     ctaHref: "/partner-with-us",
     image: heroImage1,
@@ -85,7 +85,8 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src={activeSlide.image}
-                alt="Spider EV Hero"
+                alt="Spider Energy EV charging infrastructure"
+                fetchPriority={currentSlide === 0 ? "high" : "auto"}
                 className="w-full aspect-[4/3] object-cover rounded-3xl"
               />
             </div>

@@ -33,7 +33,8 @@ const cpmsSchema = getSoftwareAppSchema({
 });
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: "Home", url: "https://spiderenergy.in/" },
-  { name: "SpiderConnect CPMS" },
+  { name: "SpiderEV", url: "/spiderev" },
+  { name: "SpiderConnect CPMS", url: "/cpms-ev-charging-point-management-system" },
 ]);
 const faqSchema = getFAQSchema([
   { question: "What is a Charging Point Management System (CPMS)?", answer: "A CPMS is cloud-based software that monitors, manages, and optimises EV charging stations. SpiderConnect CPMS handles remote diagnostics, user access, payment processing, dynamic pricing, and analytics." },

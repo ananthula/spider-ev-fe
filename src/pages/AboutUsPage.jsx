@@ -5,7 +5,7 @@ import HeroBanner from "../components/ui/HeroBanner";
 import { fadeUp, fadeLeft, fadeRight, scaleUp, staggerContainer, staggerFast, viewport } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import SEO from "../components/SEO";
-import { organizationSchema, getBreadcrumbSchema } from "../seo/schemas";
+import { getBreadcrumbSchema } from "../seo/schemas";
 import spiderEvLogo from "../assets/home/spider-ev-logo.webp";
 import tataMotorsLogo from "../assets/brand-logos/Tata-Motors.webp";
 import indianRailwayLogo from "../assets/brand-logos/Indian-Railway.webp";
@@ -38,11 +38,11 @@ const AboutUsPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>EV Charger Manufacturer in Telangana & AP | SpiderEV</title>
+        <title>About Spider Energy | EV Charging & Energy Storage</title>
         <meta name="description" content="EV Charging Systems Manufacturer in Andhra Pradesh & Telangana. Electric car chargers, home charger installation & charging equipment." />
         <meta name="keywords" content="EV charger manufacturer Telangana, electric vehicle manufacturer AP, BIS certified charger India, SpiderEV company Hyderabad, EVSE manufacturer India" />
       </Helmet>
-      <SEO schema={organizationSchema} breadcrumbs={aboutBreadcrumbs} />
+      <SEO breadcrumbs={aboutBreadcrumbs} />
       <HeroBanner
         title="About Spider Energy — EV Charger Manufacturer in Telangana & Andhra Pradesh"
         bgImage={heroBg}

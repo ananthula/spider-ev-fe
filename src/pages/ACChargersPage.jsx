@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 import HeroBanner from "../components/ui/HeroBanner";
 import Accordion from "../components/ui/Accordion";
 import AppDownloadCTA from "../components/ui/AppDownloadCTA";
-import { getFAQSchema, getItemListSchema, getBreadcrumbSchema } from "../seo/schemas";
+import { getFAQSchema, getCollectionPageSchema, getBreadcrumbSchema } from "../seo/schemas";
 import { fadeUp, fadeLeft, fadeRight, scaleUp, staggerContainer, staggerFast, viewport } from "../utils/animationConfig";
 import acChargerImg from "../assets/home/AcCharger.webp";
 
@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => (
     className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
   >
     <div className="bg-gray-50 p-5 sm:p-8 flex items-center justify-center h-40 sm:h-52">
-      <img loading="lazy" src={acChargerImg} alt={product.name} className="h-full object-contain" />
+      <img loading="lazy" src={acChargerImg} alt={`${product.name} ${product.power} AC EV charger by SpiderEV`} className="h-full object-contain" />
     </div>
     <div className="p-6 flex flex-col flex-1">
       <div className="flex items-start justify-between gap-2 mb-4">
@@ -84,10 +84,16 @@ const acProductList = [
 ];
 
 const acFAQSchema = getFAQSchema(faqItems);
-const acItemListSchema = getItemListSchema(acProductList, "SpiderEV AC Charger Range");
+const acCollectionSchema = getCollectionPageSchema({
+  name: "AC EV Chargers | SpiderEV",
+  description: "SpiderEV AC chargers from 3.3 kW to 80 kW for homes, offices, and commercial fleets.",
+  url: "/electric-vehicle-ev-ac-charger",
+  items: acProductList,
+});
 const acBreadcrumbs = getBreadcrumbSchema([
   { name: "Home", url: "https://spiderenergy.in" },
-  { name: "AC Chargers" },
+  { name: "SpiderEV", url: "/spiderev" },
+  { name: "AC Chargers", url: "/electric-vehicle-ev-ac-charger" },
 ]);
 
 const ACChargersPage = () => {
@@ -97,12 +103,14 @@ const ACChargersPage = () => {
         <title>AC EV Chargers in Telangana & Andhra Pradesh | SpiderEV</title>
         <meta name="description" content="SpiderEV BIS-certified AC EV chargers from 3.3 kW to 80 kW for homes, offices and commercial fleet charging in AP & Telangana. OCPP 1.6J, IP67, RFID enabled." />
       </Helmet>
-      <SEO schema={acFAQSchema} breadcrumbs={acBreadcrumbs} />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(acItemListSchema)}
-        </script>
-      </Helmet>
+      <SEO
+        schema={acCollectionSchema}
+        schemas={[acFAQSchema]}
+        breadcrumbs={acBreadcrumbs}
+        title="AC EV Chargers in Telangana & Andhra Pradesh | SpiderEV"
+        description="SpiderEV BIS-certified AC EV chargers from 3.3 kW to 80 kW for homes, offices and commercial fleet charging in AP & Telangana. OCPP 1.6J, IP67, RFID enabled."
+        ogImage={acChargerImg}
+      />
       <HeroBanner
         title="AC EV Chargers — From 3.3 kW to 80 kW for Homes & Fleets in AP & TG"
         subtitle="From compact home chargers to high-power commercial units — engineered for India."

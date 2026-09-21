@@ -2,6 +2,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/spider-ev", "destination": "/spiderev", "statusCode": 301 },
+    { "source": "/spider-vault", "destination": "/spidervault-bess-battery-energy-storage", "statusCode": 301 },
+    { "source": "/spidervault", "destination": "/spidervault-bess-battery-energy-storage", "statusCode": 301 },
     { "source": "/ac-ev-chargers", "destination": "/electric-vehicle-ev-ac-charger", "statusCode": 301 },
     { "source": "/dc-ev-chargers", "destination": "/electric-vehicle-ev-dc-charger", "statusCode": 301 },
     { "source": "/bess-battery-backup-for-ev-charging-stations", "destination": "/spidervault-bess-battery-energy-storage", "statusCode": 301 },
@@ -24,6 +27,12 @@
     { "source": "/charge-locator", "destination": "/ev-charging-station-locator", "statusCode": 301 }
   ],
   "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
     {
       "source": "/sitemap.xml",
       "headers": [
@@ -52,6 +61,7 @@
         { "key": "X-XSS-Protection", "value": "1; mode=block" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(self)" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" },
         { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
       ]
     }

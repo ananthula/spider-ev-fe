@@ -799,11 +799,12 @@ const ProductDetailPage = () => {
   const productSchema = getProductSchema(product, category, productId, productImg);
   const breadcrumbs = getBreadcrumbSchema([
     { name: "Home", url: "https://spiderenergy.in" },
+    { name: "SpiderEV", url: "/spiderev" },
     {
       name: category === "ac" ? "AC Chargers" : "DC Chargers",
       url: `https://spiderenergy.in/${category === "ac" ? "electric-vehicle-ev-ac-charger" : "electric-vehicle-ev-dc-charger"}`,
     },
-    { name: product.name },
+    { name: product.name, url: `/products/${category}/${productId}` },
   ]);
   const faqSchema = product.faqs && product.faqs.length > 0 ? getFAQSchema(product.faqs) : null;
 
@@ -822,7 +823,7 @@ const ProductDetailPage = () => {
         schemas={faqSchema ? [faqSchema] : []}
         title={pageTitle}
         description={pageDescription}
-        ogImage={productImg}
+        ogImage={`/og/products/${productId}.jpg`}
       />
       {/* Hero */}
       <section className="relative overflow-hidden py-16 sm:py-24" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -856,7 +857,7 @@ const ProductDetailPage = () => {
               className="flex justify-center"
             >
               <div className="bg-white/10 rounded-2xl p-10">
-                <img loading="lazy" src={productImg} alt={product.name} className="h-64 object-contain" />
+                <img loading="lazy" src={productImg} alt={`${product.name} ${product.power} ${category.toUpperCase()} EV charger by SpiderEV`} className="h-64 object-contain" />
               </div>
             </motion.div>
           </div>

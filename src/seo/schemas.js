@@ -16,18 +16,23 @@ export const organizationSchema = {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
       name: "Spider Energy",
-      url: BASE_URL,
+      legalName: "Spider Energy",
+      alternateName: ["SpiderEV", "Spider Vault", "Spider Green Energy Solutions"],
+      url: `${BASE_URL}/`,
       logo: {
         "@type": "ImageObject",
+        "@id": `${BASE_URL}/#logo`,
         url: `${BASE_URL}/spider-ev-logo.png`,
         width: 417,
         height: 188,
+        caption: "Spider Energy logo",
       },
+      image: { "@id": `${BASE_URL}/#logo` },
       description:
-        "India's trusted EV charging infrastructure company — manufacturing and deploying AC & DC chargers across homes, businesses, and highways.",
+        "Spider Energy manufactures and deploys EV charging infrastructure and battery energy storage across India, with a focus on Telangana and Andhra Pradesh. Its product lines are SpiderEV and SpiderVault.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "THub, Raidurgam",
+        streetAddress: "T-Hub, Raidurgam",
         addressLocality: "Hyderabad",
         addressRegion: "Telangana",
         postalCode: "500081",
@@ -38,6 +43,7 @@ export const organizationSchema = {
           "@type": "ContactPoint",
           telephone: "+91-9997776080",
           contactType: "sales",
+          email: "connect@spiderenergy.in",
           availableLanguage: ["English", "Hindi", "Telugu"],
           areaServed: "IN",
         },
@@ -50,6 +56,7 @@ export const organizationSchema = {
       areaServed: [
         { "@type": "State", name: "Telangana" },
         { "@type": "State", name: "Andhra Pradesh" },
+        { "@type": "Country", name: "India" },
       ],
       knowsAbout: [
         "Electric Vehicle Charging",
@@ -58,6 +65,12 @@ export const organizationSchema = {
         "EV Infrastructure",
         "AC Chargers",
         "DC Fast Chargers",
+        "OCPP charge point management systems",
+        "Battery energy storage systems",
+      ],
+      brand: [
+        { "@id": `${BASE_URL}/#brand-spiderev` },
+        { "@id": `${BASE_URL}/#brand-spidervault` },
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -102,12 +115,61 @@ export const organizationSchema = {
       },
     },
     {
+      "@type": "Brand",
+      "@id": `${BASE_URL}/#brand-spiderev`,
+      name: "SpiderEV",
+      url: `${BASE_URL}/spiderev`,
+      logo: `${BASE_URL}/spider-ev-logo.png`,
+      description:
+        "SpiderEV is Spider Energy's EV charging product line, covering AC and DC chargers, SpiderConnect CPMS, and the SpiderEV charging app.",
+      parentOrganization: { "@id": `${BASE_URL}/#organization` },
+    },
+    {
+      "@type": "Brand",
+      "@id": `${BASE_URL}/#brand-spidervault`,
+      name: "SpiderVault",
+      url: `${BASE_URL}/spidervault-bess-battery-energy-storage`,
+      description:
+        "SpiderVault is Spider Energy's battery energy storage line for homes, commercial buildings, industry, and EV charging stations.",
+      parentOrganization: { "@id": `${BASE_URL}/#organization` },
+    },
+    {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
       name: "Spider Energy",
       publisher: { "@id": `${BASE_URL}/#organization` },
       inLanguage: "en-IN",
+    },
+    {
+      "@type": ["LocalBusiness", "Electrician"],
+      "@id": `${BASE_URL}/#localbusiness`,
+      name: "Spider Energy",
+      url: `${BASE_URL}/`,
+      image: { "@id": `${BASE_URL}/#logo` },
+      telephone: "+91-9997776080",
+      email: "connect@spiderenergy.in",
+      priceRange: "₹₹",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "T-Hub, Raidurgam",
+        addressLocality: "Hyderabad",
+        addressRegion: "Telangana",
+        postalCode: "500081",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 17.4435,
+        longitude: 78.3772,
+      },
+      parentOrganization: { "@id": `${BASE_URL}/#organization` },
+      openingHoursSpecification: [{
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "09:00",
+        closes: "18:00",
+      }],
     },
   ],
 };
@@ -127,6 +189,7 @@ export function getProductSchema(product, category, productId, image) {
       ? "Electric Vehicle Chargers > AC Chargers"
       : "Electric Vehicle Chargers > DC Fast Chargers";
   const url = `${BASE_URL}/products/${category}/${productId}`;
+  const sku = `SE-${category.toUpperCase()}-${productId.replace(/^spider-/, "").toUpperCase()}-${product.power.replace(/[^0-9.]/g, "")}`;
 
   const additionalProperty = [
     { "@type": "PropertyValue", name: "Power Output", value: product.power },
@@ -204,11 +267,22 @@ export function getProductSchema(product, category, productId, image) {
     "@id": `${url}#product`,
     name: `${product.name} — ${product.power} ${typeLabel}`,
     description: product.tagline,
-    brand: { "@type": "Brand", name: "SpiderEV" },
+    sku,
+    mpn: sku,
+    brand: { "@id": `${BASE_URL}/#brand-spiderev` },
     manufacturer: { "@id": `${BASE_URL}/#organization` },
     category: categoryLabel,
     url,
     ...(image ? { image: absoluteUrl(image) } : {}),
+    offers: {
+      "@type": "Offer",
+      url,
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@id": `${BASE_URL}/#organization` },
+      areaServed: "IN",
+    },
     additionalProperty,
   };
 }
@@ -253,7 +327,7 @@ export function getBreadcrumbSchema(items) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      ...(item.url ? { item: item.url } : {}),
+      ...(item.url ? { item: absoluteUrl(item.url) } : {}),
     })),
   };
 }
@@ -305,6 +379,7 @@ export function getSoftwareAppSchema({
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": `${BASE_URL}${url}#app`,
     name,
     description,
     url: `${BASE_URL}${url}`,
@@ -315,6 +390,7 @@ export function getSoftwareAppSchema({
       price: "0",
       priceCurrency: "INR",
     },
+    brand: { "@id": `${BASE_URL}/#brand-spiderev` },
     provider: { "@id": `${BASE_URL}/#organization` },
   };
 }
@@ -331,7 +407,7 @@ export const localBusinessSchema = {
   email: "connect@spiderenergy.in",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "THub, Raidurgam",
+    streetAddress: "T-Hub, Raidurgam",
     addressLocality: "Hyderabad",
     addressRegion: "Telangana",
     postalCode: "500081",
@@ -339,8 +415,8 @@ export const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "17.4435",
-    longitude: "78.3772",
+    latitude: 17.4435,
+    longitude: 78.3772,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -353,11 +429,12 @@ export const localBusinessSchema = {
       "Saturday",
       "Sunday",
     ],
-    opens: "00:00",
-    closes: "23:59",
+    opens: "09:00",
+    closes: "18:00",
   },
-  priceRange: "$$",
+  priceRange: "₹₹",
   image: `${BASE_URL}/spider-ev-logo.png`,
+  parentOrganization: { "@id": `${BASE_URL}/#organization` },
   sameAs: [
     "https://www.instagram.com/spider.ev/",
     "https://in.linkedin.com/company/spider-green-energy-solutions",
@@ -469,5 +546,84 @@ export function getItemListSchema(items, listName) {
       name: item.name,
       url: `${BASE_URL}${item.url}`,
     })),
+  };
+}
+
+/** Generate a category page whose primary entity is the product ItemList. */
+export function getCollectionPageSchema({ name, description, url, items }) {
+  const itemList = getItemListSchema(items, name);
+  delete itemList["@context"];
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${BASE_URL}${url}#collection`,
+    name,
+    description,
+    url: `${BASE_URL}${url}`,
+    isPartOf: { "@id": `${BASE_URL}/#website` },
+    about: { "@id": `${BASE_URL}/#brand-spiderev` },
+    mainEntity: itemList,
+  };
+}
+
+/** Generate SpiderVault ProductGroup, Product variants, and installation Service. */
+export function getBessProductGroupSchema(products, imageById = {}) {
+  const url = `${BASE_URL}/spidervault-bess-battery-energy-storage`;
+  const variants = products.map((product) => ({
+    "@type": "Product",
+    "@id": `${url}#${product.id}`,
+    name: product.name,
+    sku: `SE-SV-${product.id.replace("spidervault-", "")}`,
+    isVariantOf: { "@id": `${url}#productgroup` },
+    brand: { "@id": `${BASE_URL}/#brand-spidervault` },
+    manufacturer: { "@id": `${BASE_URL}/#organization` },
+    category: "Battery Energy Storage Systems",
+    description: `${product.name}: ${product.tagline}. ${product.capacity} capacity, designed for ${product.bestFor}.`,
+    ...(imageById[product.id] ? { image: absoluteUrl(imageById[product.id]) } : {}),
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Capacity", value: product.capacity },
+      { "@type": "PropertyValue", name: "Rated Power", value: product.ratedPower },
+      { "@type": "PropertyValue", name: "Backup Time", value: product.backupTime },
+      { "@type": "PropertyValue", name: "Installation", value: product.installStyle },
+    ],
+    offers: {
+      "@type": "Offer",
+      url,
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@id": `${BASE_URL}/#organization` },
+    },
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProductGroup",
+        "@id": `${url}#productgroup`,
+        name: "SpiderVault Battery Energy Storage Systems",
+        brand: { "@id": `${BASE_URL}/#brand-spidervault` },
+        manufacturer: { "@id": `${BASE_URL}/#organization` },
+        description: "Solar-ready battery energy storage systems for homes, commercial sites, industry, and EV charging stations.",
+        productGroupID: "spidervault-bess",
+        variesBy: ["https://schema.org/size"],
+        hasVariant: variants.map((variant) => ({ "@id": variant["@id"] })),
+      },
+      ...variants,
+      {
+        "@type": "Service",
+        "@id": `${url}#install-service`,
+        name: "SpiderVault BESS Design and Installation",
+        serviceType: "Battery Energy Storage System installation",
+        provider: { "@id": `${BASE_URL}/#organization` },
+        brand: { "@id": `${BASE_URL}/#brand-spidervault` },
+        areaServed: [
+          { "@type": "State", name: "Telangana" },
+          { "@type": "State", name: "Andhra Pradesh" },
+        ],
+        url,
+      },
+    ],
   };
 }

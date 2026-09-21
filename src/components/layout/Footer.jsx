@@ -31,6 +31,8 @@ const solutions = [
 ];
 
 const companyLinks = [
+  { label: "SpiderEV", href: "/spiderev" },
+  { label: "SpiderVault", href: "/spidervault-bess-battery-energy-storage" },
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
@@ -66,8 +68,8 @@ const Footer = () => {
           <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
             <img loading="lazy" src={logo} alt="SpiderEV" className="h-12 w-auto mb-4 brightness-0 invert" />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              India's trusted EV charging infrastructure company — manufacturing and deploying
-              AC & DC chargers across homes, businesses, and highways.
+              Spider Energy builds SpiderEV charging infrastructure and SpiderVault battery
+              energy storage for homes, businesses, fleets, and highways.
             </p>
             <div className="flex gap-3">
               {/* Instagram */}

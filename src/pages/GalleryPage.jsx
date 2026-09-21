@@ -39,9 +39,13 @@ const GalleryPage = () => {
     <PageLayout>
       <Helmet>
         <title>SpiderEV Gallery | EV Charger Installations in India</title>
-        <meta name="description" content="Browse SpiderEV's gallery of EV charging installations, products, events and partnerships across Andhra Pradesh and Telangana." />
+        <meta name="description" content="See SpiderEV AC and DC charger installations, including home, commercial and 240 kW fleet charging projects across Telangana and Andhra Pradesh." />
       </Helmet>
-      <SEO breadcrumbs={galleryBreadcrumbs} />
+      <SEO
+        breadcrumbs={galleryBreadcrumbs}
+        title="SpiderEV Gallery | EV Charger Installations in India"
+        description="See SpiderEV AC and DC charger installations, including home, commercial and 240 kW fleet charging projects across Telangana and Andhra Pradesh."
+      />
       <section className="relative overflow-hidden py-16 sm:py-20" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative max-w-330 mx-auto px-4 sm:px-6 lg:px-10">

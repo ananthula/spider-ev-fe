@@ -9,6 +9,7 @@ import NotFound from "../pages/NotFound";
 const ACChargersPage = lazy(() => import("../pages/ACChargersPage"));
 const DCChargersPage = lazy(() => import("../pages/DCChargersPage"));
 const ProductDetailPage = lazy(() => import("../pages/ProductDetailPage"));
+const SpiderEVHubPage = lazy(() => import("../pages/SpiderEVHubPage"));
 
 const ParkAndChargePage = lazy(() => import("../pages/solutions/ParkAndChargePage"));
 const CommunityChargingPage = lazy(() => import("../pages/solutions/CommunityChargingPage"));
@@ -52,6 +53,7 @@ const AppRoutes = () => {
         <Route path="/electric-vehicle-ev-ac-charger" element={<ACChargersPage />} />
         <Route path="/electric-vehicle-ev-dc-charger" element={<DCChargersPage />} />
         <Route path="/products/:category/:productId" element={<ProductDetailPage />} />
+        <Route path="/spiderev" element={<SpiderEVHubPage />} />
 
         {/* ── Solutions (new SEO URLs) ── */}
         <Route path="/park-and-charge-electric-vehicle-ev-charging-station" element={<ParkAndChargePage />} />
@@ -72,6 +74,9 @@ const AppRoutes = () => {
 
         {/* ── Other (new SEO URLs) ── */}
         <Route path="/spidervault-bess-battery-energy-storage" element={<BESSPage />} />
+        <Route path="/spidervault" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
+        <Route path="/spider-vault" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
+        <Route path="/spider-ev" element={<Navigate to="/spiderev" replace />} />
         <Route path="/bess-battery-backup-for-ev-charging-stations" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
         <Route path="/ev-charging-station-locator" element={<ChargeLocatorPage />} />
         <Route path="/news" element={<NewsPage />} />
