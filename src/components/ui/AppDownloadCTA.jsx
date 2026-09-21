@@ -49,7 +49,7 @@ const AppDownloadCTA = () => (
           viewport={viewport}
           className="rounded-2xl overflow-hidden shadow-2xl"
         >
-          <img loading="lazy" src={appImg} alt="SpiderEV App" className="w-full h-52 sm:h-60 lg:h-72 object-cover" />
+          <img loading="lazy" decoding="async" width="2222" height="1250" src={appImg} alt="SpiderEV App" className="w-full h-52 sm:h-60 lg:h-72 object-cover" />
         </motion.div>
       </div>
     </div>

@@ -14,6 +14,8 @@ const chargerCards = [
       "Compatible with all EVs",
     ],
     imageUrl: acChargerImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
     href: "/electric-vehicle-ev-ac-charger",
     cta: "Explore AC Chargers",
     darkImage: false,
@@ -27,6 +29,8 @@ const chargerCards = [
       "Maximize ROI with every charge",
     ],
     imageUrl: dcChargerImg,
+    imageWidth: 1280,
+    imageHeight: 853,
     href: "/electric-vehicle-ev-dc-charger",
     cta: "Explore DC Chargers",
     darkImage: true,
@@ -77,8 +81,11 @@ const ChargersSection = () => {
                 <img
                   src={card.imageUrl}
                   alt={card.title}
+                  width={card.imageWidth}
+                  height={card.imageHeight}
                   className="w-full h-64 sm:h-72 lg:h-80 object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
                 {/* Gradient overlay for text legibility */}
                 <div className="absolute inset-0 bg-linear-to-b from-black/10 via-transparent to-black/40" />

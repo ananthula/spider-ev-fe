@@ -6,12 +6,12 @@ import flipkartLogo from "../../assets/brand-logos/flipkart.webp";
 import bpclLogo from "../../assets/brand-logos/BPCL.webp";
 
 const partnerBrands = [
-  { name: "Tata Motors", logo: tataMotorsLogo },
-  { name: "Indian Railway", logo: indianRailwayLogo },
-  { name: "Delhi Metro", logo: delhiMetroLogo },
-  { name: "Amazon", logo: amazonLogo },
-  { name: "Flipkart", logo: flipkartLogo },
-  { name: "BPCL", logo: bpclLogo },
+  { name: "Tata Motors", logo: tataMotorsLogo, width: 800, height: 600 },
+  { name: "Indian Railway", logo: indianRailwayLogo, width: 4964, height: 5000 },
+  { name: "Delhi Metro", logo: delhiMetroLogo, width: 3840, height: 1611 },
+  { name: "Amazon", logo: amazonLogo, width: 2048, height: 2048 },
+  { name: "Flipkart", logo: flipkartLogo, width: 2400, height: 633 },
+  { name: "BPCL", logo: bpclLogo, width: 3000, height: 2000 },
 ];
 
 const marqueeBrands = [...partnerBrands, ...partnerBrands];
@@ -35,6 +35,9 @@ const BrandsSection = () => {
                   src={brand.logo}
                   alt={brand.name}
                   loading="lazy"
+                  decoding="async"
+                  width={brand.width}
+                  height={brand.height}
                   className="w-full h-full object-contain"
                 />
               </div>

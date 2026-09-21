@@ -121,7 +121,7 @@ const HarGharPage = () => {
               className="flex justify-center"
             >
               <div className="bg-gray-50 rounded-2xl p-10">
-                <img loading="lazy" src={acImg} alt="SpiderEV Charger" className="h-64 object-contain" />
+                <img loading="lazy" decoding="async" width="1536" height="1024" src={acImg} alt="SpiderEV Charger" className="h-64 object-contain" />
               </div>
             </motion.div>
           </div>

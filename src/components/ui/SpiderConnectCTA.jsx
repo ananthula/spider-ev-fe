@@ -14,7 +14,7 @@ const SpiderConnectCTA = () => (
           viewport={viewport}
           className="rounded-2xl overflow-hidden shadow-lg"
         >
-          <img loading="lazy" src={spiderConnectImg} alt="Spider Connect Dashboard" className="w-full h-52 sm:h-60 lg:h-72 object-cover" />
+          <img loading="lazy" decoding="async" width="1536" height="1024" src={spiderConnectImg} alt="Spider Connect Dashboard" className="w-full h-52 sm:h-60 lg:h-72 object-cover" />
         </motion.div>
 
         <motion.div

@@ -100,7 +100,7 @@ const SpiderEVAppPage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-2xl"
             >
-              <img loading="lazy" src={appImg} alt="SpiderEV App" className="w-full h-[420px] object-cover" />
+              <img loading="lazy" decoding="async" width="2222" height="1250" src={appImg} alt="SpiderEV App" className="w-full h-[420px] object-cover" />
             </motion.div>
           </div>
         </div>

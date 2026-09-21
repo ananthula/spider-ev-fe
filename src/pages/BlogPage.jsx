@@ -8,6 +8,7 @@ import { getBlogSchema, getBreadcrumbSchema } from "../seo/schemas";
 import { fadeUp, staggerFast } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import allBlogPosts from "../data/blog-posts.json";
+import { getBlogImageDimensions } from "../utils/blogImageDimensions";
 
 // Filter published posts and sort by date descending
 const publishedPosts = allBlogPosts
@@ -28,6 +29,7 @@ const formatDate = (date) =>
 
 const BlogCard = ({ post }) => {
   const [imgError, setImgError] = useState(false);
+  const imageDimensions = getBlogImageDimensions(post.image);
 
   return (
   <motion.article
@@ -45,6 +47,9 @@ const BlogCard = ({ post }) => {
           src={post.image}
           alt={post.title}
           loading="lazy"
+          decoding="async"
+          width={imageDimensions.width}
+          height={imageDimensions.height}
           onError={() => setImgError(true)}
           className="w-full h-full object-cover"
         />

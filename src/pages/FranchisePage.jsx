@@ -93,6 +93,8 @@ const investmentModels = [
     tagline: "The perfect entry point into EV infrastructure",
     investment: "Starting ₹30 Lakhs*",
     image: acChargerImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
     specs: [
       { label: "Charger Options", value: "30, 60, 120 kW DC (Single/Dual Gun)" },
       { label: "Vehicle Type",   value: "4-wheeler passenger EVs (CCS2 compatible)" },
@@ -112,6 +114,8 @@ const investmentModels = [
     tagline: "High-throughput hub for serious investors",
     investment: "Starting ₹1 Crore*",
     image: dcChargerImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
     badge: "HIGH ROI",
     specs: [
       { label: "Charger Options", value: "240 kW & 360 kW DC" },
@@ -137,12 +141,12 @@ const webinarExpect = [
 ];
 
 const brandPartners = [
-  { src: tataLogo,    name: "Tata Motors" },
-  { src: railwayLogo, name: "Indian Railway" },
-  { src: metroLogo,   name: "Delhi Metro" },
-  { src: amazonLogo,  name: "Amazon" },
-  { src: flipkartLogo,name: "Flipkart" },
-  { src: bpclLogo,    name: "BPCL" },
+  { src: tataLogo, name: "Tata Motors", width: 800, height: 600 },
+  { src: railwayLogo, name: "Indian Railway", width: 4964, height: 5000 },
+  { src: metroLogo, name: "Delhi Metro", width: 3840, height: 1611 },
+  { src: amazonLogo, name: "Amazon", width: 2048, height: 2048 },
+  { src: flipkartLogo, name: "Flipkart", width: 2400, height: 633 },
+  { src: bpclLogo, name: "BPCL", width: 3000, height: 2000 },
 ];
 
 const faqItems = [
@@ -608,7 +612,7 @@ export default function FranchisePage() {
                 <div className="bg-gray-900 relative overflow-hidden">
                   {/* Charger image — faded into the dark header */}
                   <div className="relative h-52">
-                    <img loading="lazy" src={model.image} alt={model.name}
+                    <img loading="lazy" decoding="async" width={model.imageWidth} height={model.imageHeight} src={model.image} alt={model.name}
                       className="w-full h-full object-cover object-center"
                       style={{ filter: "brightness(0.45) saturate(0.8)" }} />
                     {/* Bottom gradient so text pops */}
@@ -682,7 +686,7 @@ export default function FranchisePage() {
             {/* Left — image */}
             <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={vp}
               className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative">
-              <img loading="lazy" src={webinarImg} alt="SpiderEV Franchise Webinar"
+              <img loading="lazy" decoding="async" width="1280" height="853" src={webinarImg} alt="SpiderEV Franchise Webinar"
                 className="w-full h-full object-cover object-center" />
               {/* Subtle overlay for polish */}
               <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-transparent" />
@@ -770,7 +774,7 @@ export default function FranchisePage() {
             {brandPartners.map((p) => (
               <motion.div key={p.name} variants={fadeUp}
                 whileHover={{ scale: 1.08, transition: { duration: 0.15 } }}>
-                <img loading="lazy" src={p.src} alt={p.name}
+                <img loading="lazy" decoding="async" width={p.width} height={p.height} src={p.src} alt={p.name}
                   className="h-9 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer" />
               </motion.div>
             ))}

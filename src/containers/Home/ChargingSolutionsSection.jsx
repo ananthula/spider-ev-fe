@@ -17,6 +17,8 @@ const chargingSlides = [
     description:
       "Turn your business into a go-to destination with reliable, easy-to-use charging stations that attract and retain EV drivers.",
     imageUrl: parkAndChargeImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
     href: "/park-and-charge-electric-vehicle-ev-charging-station",
   },
   {
@@ -24,6 +26,8 @@ const chargingSlides = [
     description:
       "Transform your neighborhood into a vibrant EV-friendly community with convenient, on-site charging.",
     imageUrl: communityChargingImg,
+    imageWidth: 1179,
+    imageHeight: 866,
     href: "/community-ev-charging-stations",
   },
   {
@@ -31,6 +35,8 @@ const chargingSlides = [
     description:
       "Deliver dependable service with our Charger Management System, ensuring effortless integration and seamless reliability.",
     imageUrl: publicChargingImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
     href: "/public-ev-charging-stations",
   },
   {
@@ -38,6 +44,8 @@ const chargingSlides = [
     description:
       "Support your commercial fleet with high-uptime charging infrastructure built for daily heavy usage.",
     imageUrl: fleetChargingImg,
+    imageWidth: 1024,
+    imageHeight: 1024,
     href: "/heavy-duty-ev-charging-station",
   },
   {
@@ -45,6 +53,8 @@ const chargingSlides = [
     description:
       "Add premium EV charging to malls, hotels, and campuses for longer stays and better customer experience.",
     imageUrl: destinationChargingImg,
+    imageWidth: 1024,
+    imageHeight: 1024,
     href: "/park-and-charge-electric-vehicle-ev-charging-station",
   },
   {
@@ -52,6 +62,8 @@ const chargingSlides = [
     description:
       "Keep long-distance drivers moving with strategically placed charging hubs on major highway routes.",
     imageUrl: highwayChargingImg,
+    imageWidth: 1024,
+    imageHeight: 1024,
     href: "/ev-charging-station-locator",
   },
   {
@@ -59,6 +71,8 @@ const chargingSlides = [
     description:
       "Enable employees and visitors to charge reliably at office campuses with smart energy management.",
     imageUrl: workplaceChargingImg,
+    imageWidth: 1024,
+    imageHeight: 1024,
     href: "/ev-charging-epc-services",
   },
 ];
@@ -189,8 +203,11 @@ const ChargingSolutionsSection = () => {
                   <img
                     src={slide.imageUrl}
                     alt={slide.title}
+                    width={slide.imageWidth}
+                    height={slide.imageHeight}
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
+                    decoding="async"
                   />
 
                   <div className="absolute inset-0 bg-black/45 group-hover:bg-black/40 transition-colors" />

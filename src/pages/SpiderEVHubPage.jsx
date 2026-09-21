@@ -20,24 +20,32 @@ const offerings = [
     description: "Home, workplace, and fleet chargers from 3.3 kW to 80 kW.",
     href: "/electric-vehicle-ev-ac-charger",
     image: acImage,
+    imageWidth: 1536,
+    imageHeight: 1024,
   },
   {
     name: "DC Fast Chargers",
     description: "Rapid charging systems from 3 kW to 240 kW for public networks and depots.",
     href: "/electric-vehicle-ev-dc-charger",
     image: dcImage,
+    imageWidth: 1536,
+    imageHeight: 1024,
   },
   {
     name: "SpiderConnect CPMS",
     description: "Monitor, control, price, and maintain OCPP charging networks from one platform.",
     href: "/cpms-ev-charging-point-management-system",
     image: connectImage,
+    imageWidth: 1536,
+    imageHeight: 1024,
   },
   {
     name: "SpiderEV App",
     description: "Find stations, start charging, pay digitally, and review charging sessions.",
     href: "/ev-charging-station-app",
     image: appImage,
+    imageWidth: 2222,
+    imageHeight: 1250,
   },
 ];
 
@@ -103,7 +111,7 @@ export default function SpiderEVHubPage() {
             {offerings.map((offering) => (
               <article key={offering.href} className="rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
                 <div className="h-52 bg-gray-50 flex items-center justify-center p-6">
-                  <img loading="lazy" src={offering.image} alt={`${offering.name} by SpiderEV`} className="h-full w-full object-contain" />
+                  <img loading="lazy" decoding="async" width={offering.imageWidth} height={offering.imageHeight} src={offering.image} alt={`${offering.name} by SpiderEV`} className="h-full w-full object-contain" />
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold text-gray-900">{offering.name}</h2>

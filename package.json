@@ -9,6 +9,7 @@
     "build:sitemap": "node scripts/generate-sitemap.mjs",
     "generate:og": "node scripts/generate-og-assets.mjs",
     "qa:seo:deploy": "node scripts/seo-deployment-qa.mjs",
+    "qa:images": "node scripts/audit-image-attributes.mjs",
     "build": "npm run build:blog && vite build && npm run build:sitemap && node scripts/prerender.mjs",
     "build:app": "vite build",
     "lint": "eslint .",

@@ -21,12 +21,12 @@ const stats = [
 ];
 
 const partners = [
-  { name: "Tata Motors", logo: tataMotorsLogo },
-  { name: "Indian Railways", logo: indianRailwayLogo },
-  { name: "Delhi Metro", logo: delhiMetroLogo },
-  { name: "Amazon", logo: amazonLogo },
-  { name: "Flipkart", logo: flipkartLogo },
-  { name: "BPCL", logo: bpclLogo },
+  { name: "Tata Motors", logo: tataMotorsLogo, width: 800, height: 600 },
+  { name: "Indian Railways", logo: indianRailwayLogo, width: 4964, height: 5000 },
+  { name: "Delhi Metro", logo: delhiMetroLogo, width: 3840, height: 1611 },
+  { name: "Amazon", logo: amazonLogo, width: 2048, height: 2048 },
+  { name: "Flipkart", logo: flipkartLogo, width: 2400, height: 633 },
+  { name: "BPCL", logo: bpclLogo, width: 3000, height: 2000 },
 ];
 
 const aboutBreadcrumbs = getBreadcrumbSchema([
@@ -170,6 +170,10 @@ const AboutUsPage = () => {
             className="bg-white rounded-2xl p-10 flex items-center justify-center shadow-sm"
           >
             <img
+              loading="lazy"
+              decoding="async"
+              width="417"
+              height="188"
               src={spiderEvLogo}
               alt="SpiderEV - EV Charger Manufacturer in Telangana and Andhra Pradesh"
               className="max-h-32 w-auto object-contain"
@@ -206,6 +210,10 @@ const AboutUsPage = () => {
                 className="bg-white border border-gray-100 rounded-xl p-5 w-[160px] h-[90px] flex items-center justify-center shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
               >
                 <img
+                  loading="lazy"
+                  decoding="async"
+                  width={p.width}
+                  height={p.height}
                   src={p.logo}
                   alt={p.name}
                   className="max-w-full max-h-full object-contain"

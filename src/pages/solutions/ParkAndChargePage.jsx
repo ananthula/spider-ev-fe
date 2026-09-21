@@ -77,7 +77,7 @@ const ParkAndChargePage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-lg"
             >
-              <img loading="lazy" src={parkImg} alt="Park & Charge" className="w-full h-80 object-cover" />
+              <img loading="lazy" decoding="async" width="1536" height="1024" src={parkImg} alt="Park & Charge" className="w-full h-80 object-cover" />
             </motion.div>
           </div>
         </div>

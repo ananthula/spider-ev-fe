@@ -80,7 +80,7 @@ const CommunityChargingPage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-lg"
             >
-              <img loading="lazy" src={communityImg} alt="Community Charging" className="w-full h-80 object-cover" />
+              <img loading="lazy" decoding="async" width="1179" height="866" src={communityImg} alt="Community Charging" className="w-full h-80 object-cover" />
             </motion.div>
             <motion.div
               variants={staggerContainer}

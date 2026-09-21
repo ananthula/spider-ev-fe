@@ -87,7 +87,7 @@ const PublicChargingPage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-lg"
             >
-              <img loading="lazy" src={publicImg} alt="Public Charging" className="w-full h-80 object-cover" />
+              <img loading="lazy" decoding="async" width="1536" height="1024" src={publicImg} alt="Public Charging" className="w-full h-80 object-cover" />
             </motion.div>
           </div>
         </div>
@@ -139,7 +139,7 @@ const PublicChargingPage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-lg"
             >
-              <img loading="lazy" src={publicImg} alt="Highway Charging" className="w-full h-80 object-cover" />
+              <img loading="lazy" decoding="async" width="1536" height="1024" src={publicImg} alt="Highway Charging" className="w-full h-80 object-cover" />
             </motion.div>
             <motion.div
               variants={staggerContainer}

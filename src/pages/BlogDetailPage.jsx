@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import PageLayout from "../components/layout/PageLayout";
 import SEO from "../components/SEO";
+import { getBlogImageDimensions } from "../utils/blogImageDimensions";
 import { getArticleSchema, getFAQSchema, getBreadcrumbSchema } from "../seo/schemas";
 import { fadeUp, viewport } from "../utils/animationConfig";
 import blogPosts from "../data/blog-posts.json";
@@ -56,6 +57,8 @@ const BlogDetailPage = () => {
   }, [slug, postMeta, navigate]);
 
   if (!postMeta) return null;
+
+  const imageDimensions = getBlogImageDimensions(postMeta.image);
 
   // Tags for this post (from frontmatter) — show top 5
   const tags = (postMeta.tags || []).slice(0, 5);
@@ -139,6 +142,10 @@ const BlogDetailPage = () => {
           <img
             src={postMeta.image}
             alt={`${postMeta.title} — SpiderEV`}
+            width={imageDimensions.width}
+            height={imageDimensions.height}
+            loading="eager"
+            decoding="async"
             fetchPriority="high"
             className="w-full h-auto object-contain"
           />

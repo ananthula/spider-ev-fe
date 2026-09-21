@@ -13,6 +13,8 @@ const products = [
     power: "3 kW",
     bestFor: "1 AC + Regular Appliances",
     img: img3kw,
+    width: 721,
+    height: 721,
   },
   {
     name: "SpiderVault 5.0",
@@ -20,6 +22,8 @@ const products = [
     power: "5.5 kW",
     bestFor: "2 ACs + All Home Appliances",
     img: img5kw,
+    width: 580,
+    height: 580,
   },
   {
     name: "SpiderVault 12.0",
@@ -27,6 +31,8 @@ const products = [
     power: "12 kW",
     bestFor: "Large Homes & Residences",
     img: img12kw,
+    width: 604,
+    height: 809,
   },
   {
     name: "SpiderVault 20.0",
@@ -34,6 +40,8 @@ const products = [
     power: "20 kW",
     bestFor: "Commercial & Industrial Loads",
     img: img20kw,
+    width: 804,
+    height: 804,
   },
 ];
 
@@ -101,8 +109,11 @@ const BessSection = () => {
                 <img
                   src={product.img}
                   alt={product.name}
+                  width={product.width}
+                  height={product.height}
                   className="h-full w-auto object-contain drop-shadow-md"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 

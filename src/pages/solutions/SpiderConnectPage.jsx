@@ -88,7 +88,7 @@ const SpiderConnectPage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-xl"
             >
-              <img loading="lazy" src={connectImg} alt="Spider Connect Dashboard" className="w-full h-80 object-cover" />
+              <img loading="lazy" decoding="async" width="1536" height="1024" src={connectImg} alt="Spider Connect Dashboard" className="w-full h-80 object-cover" />
             </motion.div>
           </div>
         </div>

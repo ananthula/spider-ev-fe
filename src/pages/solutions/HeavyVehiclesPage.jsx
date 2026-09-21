@@ -83,7 +83,7 @@ const HeavyVehiclesPage = () => {
               viewport={viewport}
               className="rounded-2xl overflow-hidden shadow-lg"
             >
-              <img loading="lazy" src={fleetImg} alt="Fleet Charging" className="w-full h-80 object-cover" />
+              <img loading="lazy" decoding="async" width="1024" height="1024" src={fleetImg} alt="Fleet Charging" className="w-full h-80 object-cover" />
             </motion.div>
           </div>
         </div>
@@ -151,7 +151,7 @@ const HeavyVehiclesPage = () => {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex gap-6 items-start"
               >
-                <img loading="lazy" src={dcImg} alt={p.name} className="h-24 object-contain flex-shrink-0" />
+                <img loading="lazy" decoding="async" width="1536" height="1024" src={dcImg} alt={p.name} className="h-24 object-contain flex-shrink-0" />
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h3 className="text-xl font-bold text-gray-900">{p.name}</h3>

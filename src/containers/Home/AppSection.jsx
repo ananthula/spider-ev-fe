@@ -10,6 +10,8 @@ const platformCards = [
     description:
       "Keep your chargers at your command. Easily monitor, schedule, and adjust power usage remotely from any device.",
     imageUrl: spiderConnectImg,
+    imageWidth: 1536,
+    imageHeight: 1024,
     href: "/cpms-ev-charging-point-management-system",
   },
   {
@@ -17,6 +19,8 @@ const platformCards = [
     description:
       "Charging your EV is as easy as Scan, Charge, Pay-a seamless experience that lets you power up quickly and pay effortlessly.",
     imageUrl: spiderAppImg,
+    imageWidth: 2222,
+    imageHeight: 1250,
     href: "/ev-charging-station-app",
   },
 ];
@@ -40,6 +44,9 @@ const AppSection = () => {
                     src={card.imageUrl}
                     alt={card.title}
                     loading="lazy"
+                    decoding="async"
+                    width={card.imageWidth}
+                    height={card.imageHeight}
                     className="w-full h-full object-cover"
                   />
                 </div>
