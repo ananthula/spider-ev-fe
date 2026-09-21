@@ -7,7 +7,7 @@ modifiedDate: "2026-07-29"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "18 min read"
-image: "/blog/bess-vs-inverter-indian-homes-businesses.webp"
+image: "/blog/locally-manufactured-battery-storage-systems-south-india.webp"
 tags: ["locally manufactured battery storage systems in South India","battery storage manufacturing India","BESS South India","Telangana battery manufacturing","Andhra Pradesh battery storage","Indian-condition battery packs","BESS supply chain","local EV charging support"]
 published: true
 publishDate: "2026-07-29"

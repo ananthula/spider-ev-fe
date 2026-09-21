@@ -7,7 +7,7 @@ modifiedDate: "2026-08-19"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "9 min read"
-image: "/blog/charging-convenience-matters-more-than-range-india.webp"
+image: "/blog/setting-up-ev-charging-at-corporate-offices-complete-guide.webp"
 tags: ["corporate EV charging","workplace charging","IT park EV","office chargers","commercial EV setup","Hyderabad EV","Telangana charging","load management","employee amenity","ESG"]
 published: true
 publishDate: "2026-08-19"
@@ -148,4 +148,3 @@ TGSPDCL caters to commercial and EV category connections. Workplaces already exi
 SpiderEV offers commercial AC and mixed AC/DC charging solutions for workplace and campus use, featuring load management and management platform options. Technical support includes help with site evaluation and planning for modular expansion. Corporates and facility teams in Telangana & Andhra Pradesh can request for a campus discussion. The [Spider Energy homepage](https://spiderenergy.in/) details the available configurations and EPC support.
 
 Teams at corporate facilities and IT-park who want to put in workplace EV charging can request a site-specific capacity and cost assessment. Work with the technical team to chart out charger numbers, load requirements and a modular deployment path for Hyderabad and other campuses in Telangana.
-

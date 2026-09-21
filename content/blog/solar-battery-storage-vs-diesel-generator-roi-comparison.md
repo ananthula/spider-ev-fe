@@ -7,7 +7,7 @@ modifiedDate: "2026-07-09"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "19 min read"
-image: "/blog/bess-vs-generator-india-homes-businesses.webp"
+image: "/blog/solar-battery-storage-vs-diesel-generator-roi-comparison.webp"
 tags: ["solar battery storage vs diesel generator ROI","BESS ROI","diesel generator ROI","solar plus storage payback","backup power comparison","battery storage vs generator","LFP storage","grid backup India"]
 published: true
 publishDate: "2026-07-09"

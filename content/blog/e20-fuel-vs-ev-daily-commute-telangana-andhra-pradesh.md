@@ -7,7 +7,7 @@ modifiedDate: "2026-07-23"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "15 min read"
-image: "/blog/why-south-india-ev-growth-hub.webp"
+image: "/blog/e20-fuel-vs-ev-daily-commute-telangana-andhra-pradesh.webp"
 tags: ["E20 fuel vs EV for daily commute in Telangana & AP","E20 petrol mileage","EV running cost India","daily commute savings","Telangana EV cost","Andhra Pradesh EV cost","home charging savings","E20 vs electric car","fuel cost comparison 2026"]
 published: true
 publishDate: "2026-07-23"

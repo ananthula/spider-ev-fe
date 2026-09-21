@@ -7,7 +7,7 @@ modifiedDate: "2026-08-10"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "9 min read"
-image: "/blog/complete-guide-battery-energy-storage-systems-bess-homes.webp"
+image: "/blog/choosing-the-right-battery-capacity-businesses.webp"
 tags: ["battery sizing","right battery capacity","commercial BESS","C-rate","kWh vs kW","peak shaving sizing","industrial battery","MSME energy storage","load data analysis","Telangana commercial power"]
 published: true
 publishDate: "2026-08-10"
@@ -151,4 +151,3 @@ The battery can’t handle the peak.” There is a little demand showing on the 
 SpiderVault systems are modular and are designed for commercial and industrial applications in Telangana and Andhra Pradesh. Technical evaluation starts from site load data to match power rating and energy capacity to the actual duty cycle rather than to a generic catalogue size. Interval data from companies can be used for an initial sizing study.  SpiderVault BESS provides configuration information to help you make informed commercial sizing decisions.
 
 For businesses looking at battery capacity, a confidential review of load data can be requested, resulting in a recommendation for power and energy that is right-sized against current tariffs. Schedule a sizing session with the tech team. Review capital efficiency and measurable savings.
-

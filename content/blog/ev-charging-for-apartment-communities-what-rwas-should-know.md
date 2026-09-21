@@ -7,7 +7,7 @@ modifiedDate: "2026-08-19"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "10 min read"
-image: "/blog/ev-ready-homes-india-smart-charging-bess-2026.webp"
+image: "/blog/ev-charging-for-apartment-communities-what-rwas-should-know.webp"
 tags: ["EV charging apartments","RWA guidelines","basement parking EV","society charging","residential EV","Model Building Bye-Laws","private charger","community charging","load management","Telangana apartments"]
 published: true
 publishDate: "2026-08-19"
@@ -151,4 +151,3 @@ Dynamic load management avoids the situation where several chargers together exc
 SpiderEV provides residential and community AC charging solutions designed for apartment installations, with options for private wall-boxes and shared clusters. Technical support includes load-assessment guidance and integration with metering and management platforms. RWAs and residents in Telangana and Andhra Pradesh can request a site discussion. [Spider Energy homepage](https://spiderenergy.in/) and related residential charging resources outline available configurations.
 
 RWAs and apartment communities that want a clear, compliant path to EV charging can request a practical assessment of parking layout, electrical capacity and policy options. Contact the team to discuss private and shared models that protect both resident rights and building infrastructure.
-

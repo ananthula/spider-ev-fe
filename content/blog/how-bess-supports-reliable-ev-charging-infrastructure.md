@@ -7,7 +7,7 @@ modifiedDate: "2026-08-15"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "9 min read"
-image: "/blog/future-ev-charging-infrastructure-india-trends-roi-growth.webp"
+image: "/blog/how-bess-supports-reliable-ev-charging-infrastructure.webp"
 tags: ["BESS for EV charging","EV charging infrastructure","demand charges","reliable charging","commercial EV","fleet charging","solar BESS EV","Telangana EV","Andhra Pradesh charging","peak shaving chargers"]
 published: true
 publishDate: "2026-08-15"
@@ -147,4 +147,3 @@ The top chemistry for stationary commercial applications supporting EV charging 
 SpiderVault battery systems are compatible with SpiderEV charging hardware and third-party OCPP chargers across the states of Telangana and Andhra Pradesh. The technical assessment includes an analysis of the charging load, so that the power and energy ratings are appropriate for the expected simultaneous demand. Businesses can request a site assessment to see simulated demand-charge reduction and increased uptime. [SpiderVault BESS](https://spiderenergy.in/spidervault-bess-battery-energy-storage) and[ SpiderEV charging solutions](https://spiderenergy.in/) offer configuration details for integrated deployments.
 
 Businesses planning or expanding their EV charging infrastructure can request a confidential site review that quantifies their demand-charge exposure, uptime risk and optimal BESS capacity for their charger mix. Contact the technical team for a model of an integrated charging plus storage solution.
-

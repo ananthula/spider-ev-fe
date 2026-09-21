@@ -7,7 +7,7 @@ modifiedDate: "2026-08-05"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "12 min read"
-image: "/blog/hotels-ev-charging-infrastructure-india.webp"
+image: "/blog/why-commercial-buildings-need-battery-storage-without-solar.webp"
 tags: ["commercial BESS","benefits of BESS","BESS cost","commercial buildings India","peak demand shaving","HT tariff","demand charge management","BESS without solar","Telangana energy","Andhra Pradesh commercial power"]
 published: true
 publishDate: "2026-08-05"
@@ -127,4 +127,3 @@ Installations shall conform to relevant Indian Standards for electrical safety, 
 SpiderVault offers modular battery energy storage systems for commercial backup, peak demand management and integration with existing electrical infrastructure across Telangana and Andhra Pradesh. These systems are capable of operating independently of solar, but are also designed for future renewable integration. Commercial property owners can request a site-feasibility assessment including load analysis, tariff modelling and interconnection guidance [Commercial and industrial options.](https://spiderenergy.in/spidervault-bess-battery-energy-storage)
 
 Commercial property owners looking at battery energy storage for tariff control and resilience can get a confidential site assessment which will model actual load data against current HT tariffs. Call the tech team to schedule a feasibility review on the peak demand reduction and backup continuity.
-

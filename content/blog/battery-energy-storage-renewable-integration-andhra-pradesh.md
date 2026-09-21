@@ -7,7 +7,7 @@ modifiedDate: "2026-07-12"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "18 min read"
-image: "/blog/future-ev-charging-infrastructure-india-trends-roi-growth.webp"
+image: "/blog/battery-energy-storage-renewable-integration-andhra-pradesh.webp"
 tags: ["battery energy storage for renewable integration in Andhra Pradesh","BESS Andhra Pradesh","renewable integration AP","solar plus storage Andhra Pradesh","grid flexibility","energy storage projects AP","BESS grid stability","hybrid renewable projects","storage for solar and wind"]
 published: true
 publishDate: "2026-07-12"

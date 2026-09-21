@@ -7,7 +7,7 @@ modifiedDate: "2026-07-19"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "17 min read"
-image: "/blog/ev-charging-franchise-investment-guide.jpg"
+image: "/blog/ev-franchise-support-south-india.webp"
 tags: ["EV franchise support in South India","EV charging franchise Telangana","EV charging franchise Andhra Pradesh","SpiderEV franchise","EV charging business support","EV charger ROI calculator","fleet charging franchise","public charging partner model"]
 published: true
 publishDate: "2026-07-19"

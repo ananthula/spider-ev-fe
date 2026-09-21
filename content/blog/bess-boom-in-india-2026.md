@@ -7,7 +7,7 @@ modifiedDate: "2026-07-04"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "17 min read"
-image: "/blog/why-future-homes-will-store-energy.webp"
+image: "/blog/bess-boom-in-india-2026.webp"
 tags: ["BESS boom in India 2026","battery energy storage system India","BESS projects India","grid-scale storage India","solar plus storage India","peak shaving","frequency support","storage policy India"]
 published: true
 publishDate: "2026-07-04"

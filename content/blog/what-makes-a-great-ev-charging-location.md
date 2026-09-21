@@ -7,7 +7,7 @@ modifiedDate: "2026-08-22"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "11 min read"
-image: "/blog/what-landowners-need-to-know-about-ev-infrastructure-india.webp"
+image: "/blog/what-makes-a-great-ev-charging-location.webp"
 tags: ["EV charging location","site selection India","public charging station setup","DISCOM connection","PM E-Drive","highway charging hub","destination charging","utilisation","CCS2","Tata Power"]
 published: true
 publishDate: "2026-08-22"
@@ -150,4 +150,3 @@ PM E-Drive includes support for public charging infrastructure, with the highest
 Spider EV helps operators and site hosts manage outbound and inbound voice campaigns to alert drivers, fleet managers and retail partners to new hub openings or bay availability. Spider EV is available to investors building utilisation, not just hardware, for high-volume customer communication around charging sites.
 
 Even investors who have chosen the right land still need drivers to find the bays and bring them back. If your rollout involves launch outreach, fleet onboarding calls,[ or host-property ](https://spiderenergy.in/blog/property-owners-prepare-ev-adoption-india)coordination at scale, contact the Spider EV team to talk about AI voice and omnichannel support around new charging locations.
-

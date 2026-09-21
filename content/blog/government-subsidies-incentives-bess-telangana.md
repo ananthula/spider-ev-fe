@@ -7,7 +7,7 @@ modifiedDate: "2026-07-08"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "18 min read"
-image: "/blog/energy-independence-premium-lifestyle-feature-india.webp"
+image: "/blog/government-subsidies-incentives-bess-telangana.webp"
 tags: ["battery energy storage incentives Telangana","Telangana BESS subsidy","battery storage subsidy Telangana","BESS project incentives","stamp duty reimbursement","Net SGST reimbursement","storage as a service","TGDISCOM BESS","battery manufacturing incentives Telangana"]
 published: true
 publishDate: "2026-07-08"

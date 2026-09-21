@@ -7,7 +7,7 @@ modifiedDate: "2026-07-18"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "13 min read"
-image: "/blog/how-ev-chargers-work.jpg"
+image: "/blog/subsidized-home-ev-charger-vijayawada-visakhapatnam.webp"
 tags: ["subsidized home EV charger in Vijayawada & Visakhapatnam","home EV charger subsidy Andhra Pradesh","Vijayawada EV charger installation","Visakhapatnam EV charger installation","AP EV charging subsidy","public charging station subsidy","PM E-DRIVE EVPCS","charging infrastructure Andhra Pradesh"]
 published: true
 publishDate: "2026-07-18"

@@ -7,7 +7,7 @@ modifiedDate: "2026-08-17"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "9 min read"
-image: "/blog/charging-infrastructure-trends-2026-india.webp"
+image: "/blog/battery-energy-storage-for-industries-which-businesses-benefit.webp"
 tags: ["battery energy storage for industries","industrial BESS","manufacturing peak shaving","process industries","cold storage backup","factory energy costs","demand charge reduction","Telangana industry","Andhra Pradesh manufacturing","diesel displacement"]
 published: true
 publishDate: "2026-08-17"

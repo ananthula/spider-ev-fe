@@ -7,7 +7,7 @@ modifiedDate: "2026-07-15"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "16 min read"
-image: "/blog/ev-ready-homes-india-whole-energy-decision-2026.webp"
+image: "/blog/which-evs-qualify-for-har-ghar-ev-charger-installation.webp"
 tags: ["which EVs qualify for Har Ghar EV charger installation","home EV charger compatibility","Type 2 EV charging","3.3kW home charger","AC home charging","SpiderEV Har Ghar Charger","EV home installation","Indian EV charger compatibility"]
 published: true
 publishDate: "2026-07-15"

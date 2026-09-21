@@ -7,7 +7,7 @@ modifiedDate: "2026-07-22"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "15 min read"
-image: "/blog/charging-convenience-matters-more-than-range-india.webp"
+image: "/blog/ev-vs-petrol-cost-comparison-india-2026.webp"
 tags: ["EV vs petrol cost comparison India 2026","EV running cost India","petrol car cost per km","EV savings India","petrol price 2026","home charging savings","EV ROI India","running cost comparison","fuel price impact"]
 published: true
 publishDate: "2026-07-22"

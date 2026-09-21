@@ -7,7 +7,7 @@ modifiedDate: "2026-08-05"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "12 min read"
-image: "/blog/ev-charging-station-roi-india.webp"
+image: "/blog/how-battery-energy-storage-reduces-demand-charges-businesses.webp"
 tags: ["demand charge reduction","peak shaving","HT demand charges","industrial BESS","MSME energy costs","peak demand management","battery storage savings","Telangana industry tariff","Andhra Pradesh MSME power","LFP peak shaving"]
 published: true
 publishDate: "2026-08-05"
@@ -145,4 +145,3 @@ The basis is interval load data for at least twelve months. The power rating is 
 SpiderVault systems are for commercial and industrial peak management and backup applications all thru Telangana and Andhra Pradesh. Technical evaluation involves site specific load analysis and tariff modelling. Facility managers can request a pre-assessment with their interval data.[ SpiderVault BESS](https://spiderenergy.in/spidervault-bess-battery-energy-storage) offers configuration information for industrial and MSME use cases.
 
 Industries and MSMEs wanting to reduce demand charges can seek the help of for a confidential review of load-data that compares actual peaks with existing HT or LT tariffs. Contact the technical team to schedule a feasibility talk focused on measurable monthly savings.
-

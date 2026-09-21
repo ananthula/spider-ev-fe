@@ -7,7 +7,7 @@ modifiedDate: "2026-07-11"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "15 min read"
-image: "/blog/charging-infrastructure-trends-2026-india.webp"
+image: "/blog/energy-storage-trends-india-2026.webp"
 tags: ["energy storage trends in India 2026","BESS India","battery energy storage system India","storage market India","grid-scale storage","solar plus storage","peak shaving","ancillary services","storage policy India"]
 published: true
 publishDate: "2026-07-11"

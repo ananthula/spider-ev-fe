@@ -7,7 +7,7 @@ modifiedDate: "2026-07-15"
 author: "Spider Energy Team"
 category: "EV Charging"
 readTime: "17 min read"
-image: "/blog/india-ev-charging-infrastructure-2026.jpg"
+image: "/blog/pm-e-drive-scheme-2026-ev-charger-subsidies-home-benefits-apply-before-deadline.webp"
 tags: ["PM E-DRIVE Scheme 2026","EV charger subsidy India","PM E-DRIVE EV PCS","public charging subsidy","Unified Bharat E-Charge","home charging benefits","charging infrastructure subsidy","EV PCS application","PM E-DRIVE deadline"]
 published: true
 publishDate: "2026-07-15"

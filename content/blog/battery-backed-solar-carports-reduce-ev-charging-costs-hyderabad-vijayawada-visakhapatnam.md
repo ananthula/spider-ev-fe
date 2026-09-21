@@ -7,7 +7,7 @@ modifiedDate: "2026-07-31"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "18 min read"
-image: "/blog/highway-ev-charging-investment-india.webp"
+image: "/blog/battery-backed-solar-carports-reduce-ev-charging-costs-hyderabad-vijayawada-visakhapatnam.webp"
 tags: ["battery-backed solar carports for EV charging in Hyderabad, Vijayawada, and Visakhapatnam","solar carport EV charging","BESS for EV charging","solar plus storage charging","Hyderabad EV charging cost","Vijayawada EV charging cost","Visakhapatnam EV charging cost","solar carport battery storage","EV charging savings India"]
 published: true
 publishDate: "2026-07-31"

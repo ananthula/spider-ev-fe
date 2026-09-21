@@ -7,7 +7,7 @@ modifiedDate: "2026-07-05"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "19 min read"
-image: "/blog/solar-storage-explained-homeowners.webp"
+image: "/blog/home-battery-storage-for-solar-telangana.webp"
 tags: ["home battery storage for solar Telangana","solar battery storage Telangana","home BESS","rooftop solar plus storage","LFP battery backup","Telangana net metering","PM Surya Ghar","solar backup system","whole-home backup"]
 published: true
 publishDate: "2026-07-05"

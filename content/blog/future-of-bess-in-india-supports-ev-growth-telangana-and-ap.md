@@ -7,7 +7,7 @@ modifiedDate: "2026-07-28"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "17 min read"
-image: "/blog/complete-guide-battery-energy-storage-systems-bess-homes.webp"
+image: "/blog/future-of-bess-in-india-supports-ev-growth-telangana-and-ap.webp"
 tags: ["future of BESS in India","BESS India 2026","EV growth Telangana","EV growth Andhra Pradesh","battery storage for EV charging","solar carport BESS","fast charging infrastructure","grid flexibility India","energy storage policy India"]
 published: true
 publishDate: "2026-07-28"

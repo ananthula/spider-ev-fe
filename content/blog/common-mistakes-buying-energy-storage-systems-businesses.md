@@ -7,7 +7,7 @@ modifiedDate: "2026-08-12"
 author: "Spider Energy Team"
 category: "Energy Storage"
 readTime: "10 min read"
-image: "/blog/property-owners-prepare-ev-adoption-india.webp"
+image: "/blog/common-mistakes-buying-energy-storage-systems-businesses.webp"
 tags: ["buying energy storage","BESS mistakes","commercial battery procurement","sizing errors","interval data","LFP chemistry","safety standards","TCO underestimation","modular design","pumped storage disadvantages"]
 published: true
 publishDate: "2026-08-12"
@@ -136,4 +136,3 @@ The EMS manages the charging and discharging of the battery. An able system opti
 SpiderVault systems are based on a modular architecture and LFP chemistry for commercial and industrial applications across Telangana and Andhra Pradesh. Technical evaluation begins with site load data so that power and energy ratings are representative of actual duty cycle. Standard safety, integration and performance parameters are dealt with. Companies can also request a structured assessment that brings to the surface sizing, TCO and use-case considerations before any commitment.[ SpiderVault BESS](https://spiderenergy.in/spidervault-bess-battery-energy-storage) delivers configuration details relevant to disciplined procurement.
 
 Companies looking to procure energy storage can get a confidential pre-procurement review that validates sizing assumptions, total cost of ownership, and use-case definition against real load data. Speak with the tech team to schedule a conversation to prevent the most costly mistakes.
-
