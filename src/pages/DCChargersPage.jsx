@@ -47,6 +47,11 @@ const faqItems = [
 
 const ProductCard = ({ product }) => {
   const img = cardImages[product.id] ?? dcChargerImg;
+  const dimensions = product.id === "spider-surge"
+    ? { width: 1024, height: 1536 }
+    : cardImages[product.id]
+      ? { width: 853, height: 1280 }
+      : { width: 1536, height: 1024 };
   return (
     <motion.div
       variants={fadeUp}
@@ -54,7 +59,7 @@ const ProductCard = ({ product }) => {
       className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col"
     >
       <div className="bg-gray-50 p-5 sm:p-8 flex items-center justify-center h-40 sm:h-52">
-        <img loading="lazy" src={img} alt={`${product.name} ${product.power} DC EV charger by SpiderEV`} className="h-full object-contain" />
+        <img loading="lazy" decoding="async" width={dimensions.width} height={dimensions.height} src={img} alt={`${product.name} ${product.power} DC EV charger by SpiderEV`} className="h-full w-auto object-contain" />
       </div>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-4">
@@ -144,7 +149,7 @@ const DCChargersPage = () => {
               className="flex justify-center"
             >
               <div className="bg-gray-50 rounded-2xl p-10">
-                <img loading="lazy" src={dcChargerImg} alt="DC Charger" className="h-56 object-contain" />
+                <img loading="lazy" decoding="async" width="1536" height="1024" src={dcChargerImg} alt="DC Charger" className="h-56 w-auto object-contain" />
               </div>
             </motion.div>
             <motion.div

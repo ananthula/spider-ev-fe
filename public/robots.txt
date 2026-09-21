@@ -1,6 +1,7 @@
 # robots.txt for spiderenergy.in
 # Spider Energy — SpiderEV (EV Charging) & SpiderVault (BESS)
-# Last updated: 2026-08-29
+# Last updated: 2026-09-21
+# AI-readable site summary: https://spiderenergy.in/llms.txt
 
 # ── Default: allow all standard crawlers ──
 User-agent: *

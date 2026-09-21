@@ -137,7 +137,7 @@ function absoluteImageUrl(image) {
   return `${BASE_URL}${image.startsWith("/") ? image : `/${image}`}`;
 }
 
-function buildMeta({ path, title, description, ogImage, ogType }) {
+function buildMeta({ path, title, description, ogImage, ogType, lcpImage }) {
   const url = `${BASE_URL}${path}`;
   const image = ogImage ? absoluteImageUrl(ogImage) : OG_IMAGE;
   const type = ogType || "website";
@@ -158,8 +158,9 @@ function buildMeta({ path, title, description, ogImage, ogType }) {
     `  <meta name="twitter:title" content="${e(title)}" />`,
     `  <meta name="twitter:description" content="${e(description)}" />`,
     `  <meta name="twitter:image" content="${image}" />`,
+    lcpImage ? `  <link rel="preload" as="image" href="${absoluteImageUrl(lcpImage)}" fetchpriority="high" />` : null,
     `  <link rel="canonical" href="${url}" />`,
-  ].join("\n");
+  ].filter(Boolean).join("\n");
 }
 
 function buildJsonLd(route) {
@@ -1088,7 +1089,11 @@ const template = readFileSync(join(distDir, "index.html"), "utf-8");
 let count = 0;
 for (const route of routes) {
   const productMatch = route.path.match(/^\/products\/(ac|dc)\/([^/]+)$/);
-  if (productMatch && !route.ogImage) route.ogImage = `/og/products/${productMatch[2]}.jpg`;
+  if (productMatch) {
+    if (!route.ogImage) route.ogImage = `/og/products/${productMatch[2]}.jpg`;
+    route.lcpImage = productImage(productMatch[1], productMatch[2]);
+  }
+  if (route.path === "/") route.lcpImage = findBuiltAsset("heroImage1");
   if (route.path === "/spiderev" && !route.ogImage) route.ogImage = productImage("dc", "spider-fast");
   if (route.path === "/spidervault-bess-battery-energy-storage" && !route.ogImage) route.ogImage = "/og/products/spidervault-12.jpg";
   const meta = buildMeta(route);

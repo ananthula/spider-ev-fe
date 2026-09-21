@@ -66,11 +66,24 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-10 pb-12 border-b border-white/10">
           {/* Brand column */}
           <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
-            <img loading="lazy" src={logo} alt="SpiderEV" className="h-12 w-auto mb-4 brightness-0 invert" />
+            <img
+              loading="lazy"
+              decoding="async"
+              width="417"
+              height="188"
+              src={logo}
+              alt="SpiderEV"
+              className="h-12 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Spider Energy builds SpiderEV charging infrastructure and SpiderVault battery
               energy storage for homes, businesses, fleets, and highways.
             </p>
+            <address className="not-italic text-white/60 text-sm leading-relaxed mb-6 space-y-1">
+              <p>T-Hub, Raidurgam, Hyderabad, Telangana 500081</p>
+              <p><a href="tel:+919997776080" className="hover:text-white transition-colors">+91-9997776080</a></p>
+              <p><a href="mailto:connect@spiderenergy.in" className="hover:text-white transition-colors">connect@spiderenergy.in</a></p>
+            </address>
             <div className="flex gap-3">
               {/* Instagram */}
               <a href="https://www.instagram.com/spider.ev/" target="_blank" rel="noopener noreferrer"
@@ -110,6 +123,7 @@ const Footer = () => {
           <span>© {new Date().getFullYear()} SpiderEV. All rights reserved.</span>
           <div className="flex flex-wrap gap-6 justify-center">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <a href="/llms.txt" className="hover:text-white transition-colors">AI &amp; Crawler Information</a>
           </div>
         </div>
       </div>

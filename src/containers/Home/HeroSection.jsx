@@ -86,6 +86,10 @@ const HeroSection = () => {
               <img
                 src={activeSlide.image}
                 alt="Spider Energy EV charging infrastructure"
+                width="1280"
+                height="853"
+                loading={currentSlide === 0 ? "eager" : "lazy"}
+                decoding="async"
                 fetchPriority={currentSlide === 0 ? "high" : "auto"}
                 className="w-full aspect-[4/3] object-cover rounded-3xl"
               />

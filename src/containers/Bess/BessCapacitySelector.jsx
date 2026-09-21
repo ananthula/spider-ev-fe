@@ -18,6 +18,16 @@ const productImages = {
   "spidervault-120": spiderpower20,
 };
 
+const productImageDimensions = {
+  "spidervault-3": { width: 721, height: 721 },
+  "spidervault-5": { width: 580, height: 580 },
+  "spidervault-12": { width: 604, height: 809 },
+  "spidervault-20": { width: 804, height: 804 },
+  "spidervault-30": { width: 804, height: 804 },
+  "spidervault-60": { width: 804, height: 804 },
+  "spidervault-120": { width: 804, height: 804 },
+};
+
 // Pre-select lights + fridge + tv so a product is shown on load
 const DEFAULT_SELECTED = ["lights", "fridge", "tv"];
 
@@ -220,6 +230,10 @@ const BessCapacitySelector = ({ onProductSelect }) => {
                   <img
                     src={productImages[product.id]}
                     alt={product.name}
+                    loading="lazy"
+                    decoding="async"
+                    width={productImageDimensions[product.id].width}
+                    height={productImageDimensions[product.id].height}
                     className="relative w-full h-full object-contain pb-1"
                     style={{
                       filter:

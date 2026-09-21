@@ -97,8 +97,12 @@ async function checkDiscoveryFiles() {
     request("/sitemap.xml"),
   ]);
   if (!robots.ok) fail(`robots.txt returned ${robots.status}`);
-  else if (!(await robots.text()).includes("Sitemap:")) fail("robots.txt does not declare the sitemap");
-  else pass("robots.txt is reachable and declares the sitemap");
+  else {
+    const robotsText = await robots.text();
+    if (!robotsText.includes("Sitemap:")) fail("robots.txt does not declare the sitemap");
+    else if (!robotsText.includes("https://spiderenergy.in/llms.txt")) fail("robots.txt does not advertise llms.txt");
+    else pass("robots.txt declares the sitemap and llms.txt");
+  }
 
   if (!llms.ok) fail(`llms.txt returned ${llms.status}`);
   else if (!/SpiderEV[\s\S]+SpiderVault/.test(await llms.text())) fail("llms.txt is missing the brand hierarchy");
@@ -227,6 +231,8 @@ async function checkRedirectsAndHeaders() {
   if (!csp || !csp.includes("default-src 'self'")) fail("Content-Security-Policy header is missing or incomplete");
   else pass("Content-Security-Policy is active");
   const html = await home.text();
+  if (!/<link\s+rel="preload"\s+as="image"[^>]+fetchpriority="high"/i.test(html)) fail("Homepage is missing a high-priority LCP image preload");
+  else pass("homepage preloads its LCP image at high priority");
   const asset = extract(html, /(?:src|href)="(\/assets\/[^"]+\.(?:js|css))"/i);
   if (!asset) fail("Could not discover a hashed build asset for cache validation");
   else {

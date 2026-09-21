@@ -20,6 +20,12 @@ const productImages = {
   "spider-surge": surgeDcImg,
 };
 
+const productImageDimensions = {
+  "spider-spark": { width: 853, height: 1280 },
+  "spider-ultra": { width: 853, height: 1280 },
+  "spider-surge": { width: 1024, height: 1536 },
+};
+
 const productData = {
   ac: {
     "spider-mini": {
@@ -857,7 +863,16 @@ const ProductDetailPage = () => {
               className="flex justify-center"
             >
               <div className="bg-white/10 rounded-2xl p-10">
-                <img loading="lazy" src={productImg} alt={`${product.name} ${product.power} ${category.toUpperCase()} EV charger by SpiderEV`} className="h-64 object-contain" />
+                <img
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  width={productImageDimensions[productId]?.width ?? 1536}
+                  height={productImageDimensions[productId]?.height ?? 1024}
+                  src={productImg}
+                  alt={`${product.name} ${product.power} ${category.toUpperCase()} EV charger by SpiderEV`}
+                  className="h-64 w-auto object-contain"
+                />
               </div>
             </motion.div>
           </div>

@@ -214,7 +214,7 @@ const Navbar = () => {
         <div className="absolute top-0 left-0 w-full z-40">
           <div className="bg-white mx-auto px-4 sm:px-6 lg:px-10 py-2 sm:py-3 flex items-center justify-between">
             <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="SpiderEV Logo" className="h-10 sm:h-12 w-auto" />
+              <img width="417" height="188" decoding="async" src={logo} alt="SpiderEV Logo" className="h-10 sm:h-12 w-auto" />
             </Link>
             <NavItems fontSize="text-sm" />
             <HamburgerBtn open={mobileOpen} onClick={() => setMobileOpen((v) => !v)} />
@@ -234,7 +234,7 @@ const Navbar = () => {
           >
             <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-lg border border-gray-100 px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
               <Link to="/" className="flex-shrink-0">
-                <img src={logo} alt="SpiderEV Logo" className="h-8 sm:h-9 w-auto" />
+                <img width="417" height="188" decoding="async" src={logo} alt="SpiderEV Logo" className="h-8 sm:h-9 w-auto" />
               </Link>
               <NavItems fontSize="text-xs" />
               <HamburgerBtn open={mobileOpen} onClick={() => setMobileOpen((v) => !v)} />
