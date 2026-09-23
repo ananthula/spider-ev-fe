@@ -9,6 +9,7 @@
     { "source": "/dc-ev-chargers", "destination": "/electric-vehicle-ev-dc-charger", "statusCode": 301 },
     { "source": "/bess-battery-backup-for-ev-charging-stations", "destination": "/spidervault-bess-battery-energy-storage", "statusCode": 301 },
     { "source": "/partner-withus", "destination": "/partner-with-us", "statusCode": 301 },
+    { "source": "/policies", "destination": "/privacy-policy", "statusCode": 301 },
     { "source": "/cpms-charge-point-management-system", "destination": "/cpms-ev-charging-point-management-system", "statusCode": 301 },
     { "source": "/products/ac-chargers", "destination": "/electric-vehicle-ev-ac-charger", "statusCode": 301 },
     { "source": "/products/dc-chargers", "destination": "/electric-vehicle-ev-dc-charger", "statusCode": 301 },

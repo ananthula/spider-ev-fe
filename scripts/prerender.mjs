@@ -1115,6 +1115,7 @@ const redirects = [
   { from: "/dc-ev-chargers", to: `${BASE_URL}/electric-vehicle-ev-dc-charger` },
   { from: "/bess-battery-backup-for-ev-charging-stations", to: `${BASE_URL}/spidervault-bess-battery-energy-storage` },
   { from: "/partner-withus", to: `${BASE_URL}/partner-with-us` },
+  { from: "/policies", to: `${BASE_URL}/privacy-policy` },
   { from: "/cpms-charge-point-management-system", to: `${BASE_URL}/cpms-ev-charging-point-management-system` },
   { from: "/products/ac-chargers", to: `${BASE_URL}/electric-vehicle-ev-ac-charger` },
   { from: "/products/dc-chargers", to: `${BASE_URL}/electric-vehicle-ev-dc-charger` },

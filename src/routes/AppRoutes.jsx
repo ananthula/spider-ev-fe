@@ -91,6 +91,7 @@ const AppRoutes = () => {
 
         {/* ── Legal ── */}
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/policies" element={<Navigate to="/privacy-policy" replace />} />
 
         {/* ── Legacy redirects (old URLs → new SEO URLs) ── */}
         <Route path="/products/ac-chargers" element={<Navigate to="/electric-vehicle-ev-ac-charger" replace />} />
