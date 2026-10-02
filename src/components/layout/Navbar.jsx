@@ -30,7 +30,7 @@ const navDropdowns = {
 const directLinks = [
   { label: "SpiderAtHome", href: "/har-ghar" },
   { label: "Franchise", href: "/ev-charging-station-franchise" },
-  { label: "SpiderVault", href: "/spidervault-bess-battery-energy-storage" },
+  { label: "SpiderVault", href: "/spidervault" },
   { label: "ROI", href: "/ev-charging-station-roi-calculator" },
   { label: "Stations", href: "/ev-charging-station-locator" },
   // { label: "News", href: "/news" },

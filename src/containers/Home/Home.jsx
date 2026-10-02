@@ -7,6 +7,7 @@ import ChargingSolutionsSection from "./ChargingSolutionsSection";
 import BrandsSection from "./BrandsSection";
 import AppSection from "./AppSection";
 import BessSection from "./BessSection";
+import CitiesSection from "./CitiesSection";
 import Footer from "../../components/layout/Footer";
 import WhatsAppFloat from "../../components/ui/WhatsAppFloat";
 
@@ -21,6 +22,7 @@ const Home = () => {
       <BrandsSection />
       <AppSection />
       <BessSection />
+      <CitiesSection />
       <Footer />
       <WhatsAppFloat />
     </PageContainer>

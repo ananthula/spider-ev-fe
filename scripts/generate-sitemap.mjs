@@ -27,6 +27,7 @@ const staticRoutes = [
 
   // Products: AC Chargers
   { path: "/spiderev", priority: "0.9", changefreq: "monthly" },
+  { path: "/spidervault", priority: "0.9", changefreq: "monthly" },
   { path: "/electric-vehicle-ev-ac-charger", priority: "0.9", changefreq: "monthly" },
   { path: "/products/ac/spider-mini", priority: "0.8", changefreq: "monthly" },
   { path: "/products/ac/spider-lite", priority: "0.8", changefreq: "monthly" },
@@ -66,6 +67,16 @@ const staticRoutes = [
   { path: "/har-ghar", priority: "0.7", changefreq: "monthly" },
   { path: "/partner-with-us", priority: "0.7", changefreq: "monthly" },
 
+  // Selective city pages with confirmed regional sales coverage
+  { path: "/ev-chargers-hyderabad", priority: "0.8", changefreq: "monthly" },
+  { path: "/ev-chargers-vijayawada", priority: "0.8", changefreq: "monthly" },
+  { path: "/ev-chargers-visakhapatnam", priority: "0.8", changefreq: "monthly" },
+
+  // Answer-ready guides
+  { path: "/guides/ac-vs-dc-ev-charger-india", priority: "0.8", changefreq: "monthly" },
+  { path: "/guides/home-ev-charger-buying-guide-telangana-andhra", priority: "0.8", changefreq: "monthly" },
+  { path: "/guides/bess-for-ev-charging-stations", priority: "0.8", changefreq: "monthly" },
+
   // Content
   { path: "/news", priority: "0.6", changefreq: "weekly" },
   { path: "/blog", priority: "0.6", changefreq: "weekly" },
@@ -78,11 +89,16 @@ const staticRoutes = [
 // ─── Blog Posts ─────────────────────────────────────────────────────────────
 
 let blogRoutes = [];
+const consolidatedBlogSlugs = new Set([
+  "ac-vs-dc-ev-charging",
+  "best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026",
+  "how-bess-supports-reliable-ev-charging-infrastructure",
+]);
 
 if (existsSync(BLOG_DATA)) {
   const blogPosts = JSON.parse(readFileSync(BLOG_DATA, "utf-8"));
   blogRoutes = blogPosts
-    .filter((post) => post.published)
+    .filter((post) => post.published && !consolidatedBlogSlugs.has(post.slug))
     .map((post) => ({
       path: `/blog/${post.slug}`,
       priority: "0.6",

@@ -49,9 +49,9 @@ const vp = { once: true, amount: 0.15 };
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const networkStats = [
-  { num: "500+",        label: "Charging Points Across India" },
-  { num: "24×7",       label: "Support with 98% Network Uptime" },
-  { num: "Solar+BESS", label: "Options for High-End Sites" },
+  { num: "1", label: "Share your city, site and available electrical load" },
+  { num: "2", label: "Map the charger mix and SpiderConnect requirements" },
+  { num: "3", label: "Review a site-specific investment and commissioning plan" },
 ];
 
 const whyCards = [
@@ -62,23 +62,23 @@ const whyCards = [
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
-    title: "24×7 Support & 98% Uptime",
-    desc: "Round-the-clock technical support with remote monitoring via Spider Connect CPMS ensures your station stays revenue-generating at all times.",
+    title: "SpiderConnect CPMS",
+    desc: "Plan charger monitoring, sessions and site operations through SpiderConnect. Confirm the support package for your site with sales.",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>,
-    title: "Live Revenue Dashboard",
-    desc: "Track sessions, revenue, and uptime in real time from our Spider Connect CMS — complete visibility into your investment performance.",
+    title: "Site-Specific Planning",
+    desc: "Start with the address, available load, vehicle mix and expected traffic before selecting charger power or modelling returns.",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
-    title: "Brand & Marketing Support",
-    desc: "Leverage SpiderEV's brand presence, app listings, Google Maps integration, and national marketing campaigns from day one.",
+    title: "Training and Support",
+    desc: "Hardware, CPMS access, training and commissioning support depend on the agreed package and are confirmed with the sales team.",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
-    title: "Predictable Long-Term ROI",
-    desc: "Our revenue-sharing model and India's growing EV adoption deliver predictable, compounding returns across a 3–5 year investment horizon.",
+    title: "ROI Model by Site",
+    desc: "Use the ROI calculator as a starting point, then review site traffic, tariff, charger mix and operating assumptions with the team.",
   },
   {
     icon: <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
@@ -91,7 +91,7 @@ const investmentModels = [
   {
     name: "Fast Charging Station",
     tagline: "The perfect entry point into EV infrastructure",
-    investment: "Starting ₹30 Lakhs*",
+    investment: "Custom site model",
     image: acChargerImg,
     imageWidth: 1536,
     imageHeight: 1024,
@@ -112,11 +112,10 @@ const investmentModels = [
   {
     name: "Super Charging Station",
     tagline: "High-throughput hub for serious investors",
-    investment: "Starting ₹1 Crore*",
+    investment: "Custom site model",
     image: dcChargerImg,
     imageWidth: 1536,
     imageHeight: 1024,
-    badge: "HIGH ROI",
     specs: [
       { label: "Charger Options", value: "240 kW & 360 kW DC" },
       { label: "Scalability",     value: "Up to 1.2 MW with multi-gun setup" },
@@ -155,7 +154,7 @@ const faqItems = [
   { question: "What support does SpiderEV provide to franchise partners?",
     answer: "All hardware is developed in-house. SpiderEV also offers ongoing technical support, SpiderConnect software for remote monitoring and takes care of DISCOM liaison and electrical approvals during the onboarding process." },
   { question: "How long does it take to break even on an EV charging franchise?",
-    answer: "How long it takes to pay back depends on charger type and traffic at the location. Public DC fast-charging stations along heavily travelled corridors sometimes fail even faster than residential AC installations. Model your specific site with the ROI Calculator." },
+    answer: "Payback depends on the site, charger type, traffic, tariff and operating costs. Use the ROI calculator as a starting point, then review the assumptions with Spider Energy for the specific location." },
   { question: "Do I need prior experience to run an EV charging franchise?",
     answer: "No. Franchise package includes training and continual support. SpiderEV will help with DISCOM approvals, installation, and daily operations via the SpiderConnect platform." },
 ];
@@ -170,7 +169,7 @@ const STATES = [
 
 const franchiseSchema = getServiceSchema({
   name: "EV Charging Station Franchise",
-  description: "Start your EV charging franchise in Andhra Pradesh and Telangana with dealership support, profitable franchise setup plans and trusted franchise company guidance.",
+  description: "Partner with Spider Energy for SpiderEV charging franchises in Telangana and Andhra Pradesh, with hardware, CPMS and site-specific planning.",
   url: "/ev-charging-station-franchise",
   serviceType: "EV Charging Franchise Opportunity",
 });
@@ -280,7 +279,7 @@ const FranchiseForm = () => {
           <CheckIcon cls="w-8 h-8 text-secondary" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-1">Thank you!</h3>
-        <p className="text-gray-400 text-sm leading-relaxed">Submission received.<br />Our franchise team will reach you within 24 hours.</p>
+        <p className="text-gray-400 text-sm leading-relaxed">Submission received.<br />Our franchise team will review your site details.</p>
       </motion.div>
     );
   }
@@ -418,8 +417,8 @@ export default function FranchisePage() {
   return (
     <PageLayout>
       <Helmet>
-        <title>EV Charging Station Franchise in Telangana & Andhra Pradesh</title>
-        <meta name="description" content="Start your EV Charging Franchise in Andhra Pradesh and Telangana with Dealership Support, Profitable Franchise Setup Plans and Trusted Franchise Company Guidance." />
+        <title>EV Charging Station Franchise | Spider Energy</title>
+        <meta name="description" content="Partner with Spider Energy for SpiderEV charging franchises in Telangana & Andhra Pradesh. Hardware, CPMS and playbooks. Enquire: +91-9997776080." />
         <meta name="keywords" content="EV charging franchise Telangana, EV franchise investment India, EV charger dealership AP, SpiderEV franchise cost, charging station franchise Hyderabad, EV business opportunity Andhra Pradesh" />
       </Helmet>
       <SEO schema={franchiseSchema} schemas={[franchiseFAQSchema]} breadcrumbs={franchiseBreadcrumbs} />
@@ -438,10 +437,10 @@ export default function FranchisePage() {
           {/* Left text */}
           <motion.div variants={stagger} initial="hidden" animate="visible" className="pt-2 lg:pt-6">
             <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl lg:text-[58px] font-extrabold text-white leading-[1.08] mb-5 tracking-tight">
-              Start Your EV Charging Franchise in Telangana & AP
+              SpiderEV Charging Franchise with Spider Energy
             </motion.h1>
             <motion.p variants={fadeUp} className="text-white/55 text-lg leading-relaxed mb-9 max-w-md">
-              Be a franchise partner with SpiderEV — India's growing EV charging network. Starting at just <span className="text-white font-semibold">₹30 Lakhs*</span>
+              Spider Energy franchises SpiderEV charging sites with hardware, SpiderConnect CPMS access and commissioning support. Share your city and available load for a custom model.
             </motion.p>
             <motion.a variants={fadeUp} href="#register-form"
               className="inline-flex items-center gap-2.5 bg-secondary text-white px-8 py-4 rounded-2xl font-bold text-[15px] hover:bg-secondary/90 transition-all hover:gap-3.5 mb-16">
@@ -528,7 +527,7 @@ export default function FranchisePage() {
             </motion.div>
             <motion.div variants={fadeRight}>
               <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-5">
-                Our Franchise Model is a turnkey investment opportunity that plugs you directly into India's growing EV charging network — complete with tech, operations, and marketing support for long-term ROI.
+                The franchise process starts with your site, available electrical load and intended vehicle mix. Spider Energy then maps suitable hardware, SpiderConnect CPMS and a site-specific operating model.
               </p>
               {/* Watch video CTA — matches ChargeZone */}
               <a href="#register-form"
@@ -591,13 +590,13 @@ export default function FranchisePage() {
         <div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10">
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={vp} className="text-center mb-14">
-            <motion.span variants={fadeUp} className="text-secondary font-bold text-xs uppercase tracking-widest">Investment Plans</motion.span>
+            <motion.span variants={fadeUp} className="text-secondary font-bold text-xs uppercase tracking-widest">Site Plans</motion.span>
             <motion.h2 variants={fadeUp} className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
-              Choose Your Investment Plan.<br className="hidden sm:block" />
+              Choose the Right Site Configuration.<br className="hidden sm:block" />
               We'll Power the Rest.
             </motion.h2>
             <motion.p variants={fadeUp} className="mt-5 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Whether you're entering the EV space for the first time or expanding a larger energy portfolio, SpiderEV offers a scalable, high-ROI franchise model built for the future.
+              Share your city, site address and available load so the charger mix and investment model can be prepared for the location.
             </motion.p>
           </motion.div>
 
@@ -670,7 +669,7 @@ export default function FranchisePage() {
               </motion.div>
             ))}
           </motion.div>
-          <p className="text-center text-gray-300 text-xs mt-6">* Investment amounts are indicative and may vary by site, power load, and location.</p>
+          <p className="text-center text-gray-400 text-xs mt-6">Investment and package details are prepared for the site, charger mix, available load and location.</p>
         </div>
       </section>
 
@@ -759,6 +758,8 @@ export default function FranchisePage() {
           </motion.div>
         </div>
       </section>
+
+      <section className="bg-white py-14"><div className="max-w-5xl mx-auto px-4"><h2 className="text-3xl font-bold text-center">Plan your franchise site</h2><div className="flex flex-wrap justify-center gap-3 mt-7"><Link to="/ev-charging-station-roi-calculator" className="bg-primary text-white px-5 py-3 rounded-xl font-semibold">ROI calculator</Link><Link to="/partner-with-us" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">Partner with us</Link><Link to="/electric-vehicle-ev-dc-charger" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">View DC chargers</Link><Link to="/contact-us" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">Contact sales</Link></div></div></section>
 
       {/* ═══════════════════════════════════════════
           BRAND PARTNERS — logo row

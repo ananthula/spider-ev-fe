@@ -81,8 +81,7 @@ const BessHero = () => {
                 transition={{ delay: 0.25, duration: 0.7 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
               >
-                SpiderVault — Battery Energy Storage System (BESS){" "}
-                <span className="text-secondary">for EV Stations & Industry</span>
+                SpiderVault - Battery Energy Storage System (BESS)
               </motion.h1>
 
               <motion.p

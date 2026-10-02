@@ -7,11 +7,11 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Spider Energy | EV Charger Manufacturer in Telangana & AP</title>
-        <meta name="description" content="Spider Energy manufactures BIS-certified EV charging infrastructure (SpiderEV) and battery energy storage systems (SpiderVault) for homes, businesses, and highways in Telangana & Andhra Pradesh." />
+        <meta name="description" content="Spider Energy builds SpiderEV chargers and SpiderVault BESS from Hyderabad for Telangana, Andhra Pradesh and India. AC, DC, CPMS and franchise." />
       </Helmet>
       <SEO
         title="Spider Energy | EV Charger Manufacturer in Telangana & AP"
-        description="Spider Energy manufactures BIS-certified EV charging infrastructure (SpiderEV) and battery energy storage systems (SpiderVault) for homes, businesses, and highways in Telangana & Andhra Pradesh."
+        description="Spider Energy builds SpiderEV chargers and SpiderVault BESS from Hyderabad for Telangana, Andhra Pradesh and India. AC, DC, CPMS and franchise."
       />
       <Home />
     </>

@@ -120,19 +120,19 @@ const DCChargersPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>DC Fast EV Charging Stations in Telangana & Andhra Pradesh</title>
-        <meta name="description" content="Explore top DC Fast Electric Vehicle Chargers in Andhra Pradesh (AP) & Telangana (TG). Spider Energy Provides Reliable and Smart EV Charging Solutions for Vehicles." />
+        <title>DC Fast EV Chargers 30-240 kW | SpiderEV</title>
+        <meta name="description" content="SpiderEV DC fast chargers from entry 30 kW to 240 kW ultra-rapid for public networks and fleets in AP & Telangana. CCS2 & CHAdeMO." />
       </Helmet>
       <SEO
         schema={dcCollectionSchema}
         schemas={[dcFAQSchema]}
         breadcrumbs={dcBreadcrumbs}
-        title="DC Fast EV Charging Stations in Telangana & Andhra Pradesh"
-        description="Explore SpiderEV DC fast chargers from 3 kW to 240 kW for public stations, highways and fleets across Telangana and Andhra Pradesh."
+        title="DC Fast EV Chargers 30-240 kW | SpiderEV"
+        description="SpiderEV DC fast chargers from entry 30 kW to 240 kW ultra-rapid for public networks and fleets in AP & Telangana. CCS2 & CHAdeMO."
         ogImage={dcChargerImg}
       />
       <HeroBanner
-        title="DC Fast EV Charging Stations in Telangana & Andhra Pradesh"
+        title="DC Fast EV Chargers - 30 kW to 240 kW for Public Networks"
         subtitle="Deliver exceptional power and energy efficiency — rapid charging for personal EVs and heavy-duty vehicles."
         bgImage={dcChargerImg}
       />
@@ -162,17 +162,17 @@ const DCChargersPage = () => {
                 Fast Charging
               </motion.span>
               <motion.h2 variants={fadeUp} className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-                Attain Charging Control: Take Command of Your Charging Experience
+                Highway, public and fleet charging
               </motion.h2>
               <motion.p variants={fadeUp} className="mt-5 text-gray-600 text-lg leading-relaxed">
-                Experience unmatched speed and reliability with SpiderEV DC fast chargers. From compact
-                15 kW units to high-power 240 kW systems, our DC charger portfolio covers every commercial
-                and fleet charging need across India's highways, parking lots, and depots.
+                Spider Fast at 30 kW is the starting point for malls and neighbourhood hubs. Spider Ultra, Surge and Hulk serve corridors and depots where shorter charging stops matter. Spider Base is the dedicated 3 kW option for supported two-wheeler charging use cases.
               </motion.p>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <section className="pb-16 bg-white"><div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10"><div className="rounded-2xl bg-gray-50 p-7"><h2 className="text-2xl font-bold">Pair DC charging with SpiderVault</h2><p className="mt-3 text-gray-600">If sanctioned load is tight, assess battery storage before selecting charging guns alone. SpiderVault can be evaluated for peak buffering, solar shifting and uptime based on the site's actual load and tariff.</p><div className="flex flex-wrap gap-3 mt-5"><Link to="/spidervault" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">See SpiderVault</Link><Link to="/guides/bess-for-ev-charging-stations" className="bg-primary text-white px-5 py-3 rounded-xl font-semibold">BESS for stations guide</Link><Link to="/heavy-duty-ev-charging-station" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">Heavy-duty charging</Link></div></div></div></section>
 
       {/* Product Grid */}
       <section className="pb-16 sm:pb-20 bg-white">

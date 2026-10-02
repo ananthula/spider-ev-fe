@@ -128,7 +128,7 @@ export const organizationSchema = {
       "@type": "Brand",
       "@id": `${BASE_URL}/#brand-spidervault`,
       name: "SpiderVault",
-      url: `${BASE_URL}/spidervault-bess-battery-energy-storage`,
+      url: `${BASE_URL}/spidervault`,
       description:
         "SpiderVault is Spider Energy's battery energy storage line for homes, commercial buildings, industry, and EV charging stations.",
       parentOrganization: { "@id": `${BASE_URL}/#organization` },

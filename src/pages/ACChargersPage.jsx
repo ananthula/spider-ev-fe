@@ -100,19 +100,19 @@ const ACChargersPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>AC EV Chargers in Telangana & Andhra Pradesh | SpiderEV</title>
-        <meta name="description" content="SpiderEV BIS-certified AC EV chargers from 3.3 kW to 80 kW for homes, offices and commercial fleet charging in AP & Telangana. OCPP 1.6J, IP67, RFID enabled." />
+        <title>AC EV Chargers 3.3-80 kW | SpiderEV Telangana & AP</title>
+        <meta name="description" content="SpiderEV BIS-oriented AC EV chargers from 3.3 kW to 80 kW for homes, offices and fleets in Andhra Pradesh & Telangana. OCPP 1.6J, IP67." />
       </Helmet>
       <SEO
         schema={acCollectionSchema}
         schemas={[acFAQSchema]}
         breadcrumbs={acBreadcrumbs}
-        title="AC EV Chargers in Telangana & Andhra Pradesh | SpiderEV"
-        description="SpiderEV BIS-certified AC EV chargers from 3.3 kW to 80 kW for homes, offices and commercial fleet charging in AP & Telangana. OCPP 1.6J, IP67, RFID enabled."
+        title="AC EV Chargers 3.3-80 kW | SpiderEV Telangana & AP"
+        description="SpiderEV BIS-oriented AC EV chargers from 3.3 kW to 80 kW for homes, offices and fleets in Andhra Pradesh & Telangana. OCPP 1.6J, IP67."
         ogImage={acChargerImg}
       />
       <HeroBanner
-        title="AC EV Chargers — From 3.3 kW to 80 kW for Homes & Fleets in AP & TG"
+        title="AC EV Chargers - 3.3 kW to 80 kW for Homes & Fleets"
         subtitle="From compact home chargers to high-power commercial units — engineered for India."
         bgImage={acChargerImg}
       />
@@ -131,13 +131,10 @@ const ACChargersPage = () => {
                 Home & Commercial
               </motion.span>
               <motion.h2 variants={fadeUp} className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-                Attain Charging Control: Take Command of Your Charging Experience
+                Home, workplace and fleet charging
               </motion.h2>
               <motion.p variants={fadeUp} className="mt-5 text-gray-600 text-lg leading-relaxed">
-                Experience unmatched convenience and control with SpiderEV chargers. Whether you opt for
-                home installation or prefer to carry one in your EV, the choice is yours. Our AC charger
-                lineup is designed to fit every need — from compact 2-wheeler chargers to powerful
-                commercial-grade units.
+                SpiderEV AC chargers start at 3.3 kW for apartment parking and climb to 80 kW dual-gun units for busy depots. The listed connected models use OCPP 1.6J so SpiderConnect can manage them on the same network. Compare Mini, Lite and Smart for homes; Blaze, Strike and Dash serve workplace and fleet use cases.
               </motion.p>
             </motion.div>
             <motion.div
@@ -154,6 +151,8 @@ const ACChargersPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="pb-16 bg-white"><div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10 flex flex-wrap gap-3"><Link to="/spiderev" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">About SpiderEV</Link><Link to="/guides/home-ev-charger-buying-guide-telangana-andhra" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">Home charger buying guide</Link><Link to="/contact-us" className="bg-primary text-white px-5 py-3 rounded-xl font-semibold">Request quote</Link></div></section>
 
       {/* Product Grid */}
       <section className="pb-16 sm:pb-20 bg-white">

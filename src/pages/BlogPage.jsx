@@ -11,8 +11,13 @@ import allBlogPosts from "../data/blog-posts.json";
 import { getBlogImageDimensions } from "../utils/blogImageDimensions";
 
 // Filter published posts and sort by date descending
+const consolidatedSlugs = new Set([
+  "ac-vs-dc-ev-charging",
+  "best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026",
+  "how-bess-supports-reliable-ev-charging-infrastructure",
+]);
 const publishedPosts = allBlogPosts
-  .filter((post) => post.published)
+  .filter((post) => post.published && !consolidatedSlugs.has(post.slug))
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 
 const BASE_URL = "https://spiderenergy.in";
@@ -134,6 +139,8 @@ const BlogPage = () => {
           </motion.p>
         </div>
       </section>
+
+      <section className="py-12 bg-white"><div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10"><h2 className="text-3xl font-bold text-gray-900">Practical guides</h2><div className="grid md:grid-cols-3 gap-5 mt-7">{[["AC vs DC EV Chargers in India", "/guides/ac-vs-dc-ev-charger-india"], ["Home EV Charger Guide for TG & AP", "/guides/home-ev-charger-buying-guide-telangana-andhra"], ["BESS for EV Charging Stations", "/guides/bess-for-ev-charging-stations"]].map(([label, href]) => <Link key={href} to={href} className="border border-gray-100 rounded-2xl p-6 font-bold text-lg hover:border-primary hover:text-primary">{label} →</Link>)}</div></div></section>
 
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10">

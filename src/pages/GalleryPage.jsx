@@ -38,13 +38,13 @@ const GalleryPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>SpiderEV Gallery | EV Charger Installations in India</title>
-        <meta name="description" content="See SpiderEV AC and DC charger installations, including home, commercial and 240 kW fleet charging projects across Telangana and Andhra Pradesh." />
+        <title>Project Gallery | SpiderEV & SpiderVault Installations</title>
+        <meta name="description" content="Photos of SpiderEV charger and SpiderVault installations across Telangana and Andhra Pradesh. Homes, fleets and public sites." />
       </Helmet>
       <SEO
         breadcrumbs={galleryBreadcrumbs}
-        title="SpiderEV Gallery | EV Charger Installations in India"
-        description="See SpiderEV AC and DC charger installations, including home, commercial and 240 kW fleet charging projects across Telangana and Andhra Pradesh."
+        title="Project Gallery | SpiderEV & SpiderVault Installations"
+        description="Photos of SpiderEV charger and SpiderVault installations across Telangana and Andhra Pradesh. Homes, fleets and public sites."
       />
       <section className="relative overflow-hidden py-16 sm:py-20" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-primary/80" />
@@ -55,7 +55,7 @@ const GalleryPage = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="text-4xl sm:text-5xl font-bold text-white"
           >
-            SpiderEV Gallery — EV Charger Installations Across Telangana & Andhra Pradesh
+            Installation Gallery
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }}

@@ -30,7 +30,7 @@ const BessIntro = () => {
               <span className="text-primary">Inverter + Battery</span> + Solar.
             </motion.h2>
             <motion.p variants={fadeUp} className="mt-5 text-gray-600 text-lg leading-relaxed">
-              SpiderVault replaces three separate devices — inverter, battery, and solar charger — with one
+              SpiderVault is Spider Energy&apos;s battery energy storage line. It replaces three separate devices — inverter, battery, and solar charger — with one
               sleek, intelligent unit. Power your ACs, geysers, and every appliance through any outage,
               automatically, silently, and instantly.
             </motion.p>

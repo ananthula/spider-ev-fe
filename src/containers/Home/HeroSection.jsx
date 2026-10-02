@@ -11,14 +11,16 @@ const AUTO_SLIDE_INTERVAL_MS = 8000;
 
 const heroSlides = [
   {
-    preTitle: "Spider Energy",
-    accent: "EV Charging",
-    title: "AND ENERGY STORAGE",
-    subtitlePrefix: "SpiderEV chargers and",
-    subtitleAccent: "SpiderVault BESS",
-    subtitleSuffix: "for homes, businesses, fleets, and highways",
-    cta: "Partner With Us",
-    ctaHref: "/partner-with-us",
+    preTitle: "Headquartered at T-Hub, Raidurgam, Hyderabad",
+    accent: "Spider Energy",
+    title: "EV Charging & Storage from Hyderabad",
+    subtitlePrefix: "SpiderEV covers chargers, CPMS and the driver app.",
+    subtitleAccent: "SpiderVault",
+    subtitleSuffix: "covers battery energy storage for homes and charging sites.",
+    cta: "Explore SpiderEV",
+    ctaHref: "/spiderev",
+    secondaryCta: "Explore SpiderVault",
+    secondaryCtaHref: "/spidervault",
     image: heroImage1,
   },
   {
@@ -117,7 +119,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Main Heading */}
-            <motion.h1
+            {currentSlide === 0 ? <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -126,7 +128,14 @@ const HeroSection = () => {
               <span className="text-secondary">{activeSlide.accent}</span>
               <br />
               <span className="text-white">{activeSlide.title}</span>
-            </motion.h1>
+            </motion.h1> : <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold italic text-white leading-[1.2]"
+            >
+              <span className="text-secondary">{activeSlide.accent}</span><br /><span className="text-white">{activeSlide.title}</span>
+            </motion.h2>}
 
             {/* Description */}
             <motion.p
@@ -144,7 +153,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-8"
+              className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-end"
             >
               <Link
                 to={activeSlide.ctaHref}
@@ -152,6 +161,7 @@ const HeroSection = () => {
               >
                 {activeSlide.cta}
               </Link>
+              {activeSlide.secondaryCta && <Link to={activeSlide.secondaryCtaHref} className="inline-block border-2 border-white text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-white/10 transition-colors">{activeSlide.secondaryCta}</Link>}
             </motion.div>
           </motion.div>
         </div>

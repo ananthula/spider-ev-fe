@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import PageLayout from "../components/layout/PageLayout";
 import SEO from "../components/SEO";
@@ -51,15 +52,15 @@ const BESSPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>SpiderVault BESS — Battery Energy Storage | AP & TG</title>
-        <meta name="description" content="SpiderVault BESS by Spider Energy provides battery energy storage for EV stations, solar projects & industrial backup in Andhra Pradesh & Telangana." />
+        <title>SpiderVault BESS | Battery Storage by Spider Energy</title>
+        <meta name="description" content="SpiderVault BESS models 3.0, 5.0 and 12.0 for homes, industry and EV stations in AP & Telangana. Solar hybrid inverter + battery + BMS." />
       </Helmet>
       <SEO
         schema={bessSchema}
         schemas={[bessFAQSchema]}
         breadcrumbs={bessBreadcrumbs}
-        title="SpiderVault BESS — Battery Energy Storage | AP & TG"
-        description="SpiderVault BESS by Spider Energy provides battery energy storage for EV stations, solar projects & industrial backup in Andhra Pradesh & Telangana."
+        title="SpiderVault BESS | Battery Storage by Spider Energy"
+        description="SpiderVault BESS models 3.0, 5.0 and 12.0 for homes, industry and EV stations in AP & Telangana. Solar hybrid inverter + battery + BMS."
         ogImage="/og/products/spidervault-12.jpg"
       />
       <BessHero />
@@ -70,6 +71,7 @@ const BESSPage = () => {
       <BessProductTabs onProductSelect={handleProductSelect} />
       <BessSpecsTabs activeProduct={activeSpecProduct} onTabChange={setActiveSpecProduct} />
       <BessComparison />
+      <section className="py-12 bg-white"><div className="max-w-5xl mx-auto px-4 flex flex-wrap gap-3"><Link to="/spidervault" className="bg-primary text-white px-5 py-3 rounded-xl font-semibold">View SpiderVault hub</Link><Link to="/guides/bess-for-ev-charging-stations" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">BESS for EV stations guide</Link><Link to="/electric-vehicle-ev-dc-charger" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">See DC chargers</Link></div></section>
       <BessFeatures />
       <BessAppSection />
       <BessFAQ />

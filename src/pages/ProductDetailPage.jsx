@@ -1005,6 +1005,10 @@ const ProductDetailPage = () => {
         </section>
       )}
 
+      {category === "dc" && (
+        <section className="py-14 bg-white"><div className="max-w-5xl mx-auto px-4"><div className="rounded-2xl border border-gray-100 p-7 shadow-sm"><h2 className="text-2xl font-bold text-gray-900">Pair {product.name} with SpiderVault</h2><p className="mt-3 text-gray-600">For highway, fleet and public sites with constrained grid capacity or daytime solar, assess battery storage alongside the charger. Final sizing depends on the site load, sessions and tariff.</p><div className="flex flex-wrap gap-3 mt-5"><Link to="/spidervault" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">See SpiderVault</Link><Link to="/guides/bess-for-ev-charging-stations" className="bg-primary text-white px-5 py-3 rounded-xl font-semibold">Read the BESS guide</Link></div></div></div></section>
+      )}
+
       {/* Back link */}
       <motion.section
         variants={fadeUp}

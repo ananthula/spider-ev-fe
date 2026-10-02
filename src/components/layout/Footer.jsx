@@ -32,12 +32,18 @@ const solutions = [
 
 const companyLinks = [
   { label: "SpiderEV", href: "/spiderev" },
-  { label: "SpiderVault", href: "/spidervault-bess-battery-energy-storage" },
+  { label: "SpiderVault", href: "/spidervault" },
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
   { label: "News", href: "/news" },
   { label: "Gallery", href: "/gallery" },
+  { label: "AC vs DC Guide", href: "/guides/ac-vs-dc-ev-charger-india" },
+  { label: "Home Charger Guide", href: "/guides/home-ev-charger-buying-guide-telangana-andhra" },
+  { label: "BESS for EV Stations", href: "/guides/bess-for-ev-charging-stations" },
+  { label: "EV Chargers Hyderabad", href: "/ev-chargers-hyderabad" },
+  { label: "EV Chargers Vijayawada", href: "/ev-chargers-vijayawada" },
+  { label: "EV Chargers Visakhapatnam", href: "/ev-chargers-visakhapatnam" },
 ];
 
 const FooterColumn = ({ title, links }) => (
