@@ -27,7 +27,6 @@ const staticRoutes = [
 
   // Products: AC Chargers
   { path: "/spiderev", priority: "0.9", changefreq: "monthly" },
-  { path: "/spidervault", priority: "0.9", changefreq: "monthly" },
   { path: "/electric-vehicle-ev-ac-charger", priority: "0.9", changefreq: "monthly" },
   { path: "/products/ac/spider-mini", priority: "0.8", changefreq: "monthly" },
   { path: "/products/ac/spider-lite", priority: "0.8", changefreq: "monthly" },
@@ -61,7 +60,6 @@ const staticRoutes = [
 
   // Standalone
   { path: "/ev-charging-station-franchise", priority: "0.8", changefreq: "monthly" },
-  { path: "/spidervault-bess-battery-energy-storage", priority: "0.8", changefreq: "monthly" },
   { path: "/ev-charging-station-roi-calculator", priority: "0.7", changefreq: "monthly" },
   { path: "/ev-charging-station-locator", priority: "0.7", changefreq: "weekly" },
   { path: "/har-ghar", priority: "0.7", changefreq: "monthly" },
@@ -75,7 +73,6 @@ const staticRoutes = [
   // Answer-ready guides
   { path: "/guides/ac-vs-dc-ev-charger-india", priority: "0.8", changefreq: "monthly" },
   { path: "/guides/home-ev-charger-buying-guide-telangana-andhra", priority: "0.8", changefreq: "monthly" },
-  { path: "/guides/bess-for-ev-charging-stations", priority: "0.8", changefreq: "monthly" },
 
   // Content
   { path: "/news", priority: "0.6", changefreq: "weekly" },
@@ -92,7 +89,6 @@ let blogRoutes = [];
 const consolidatedBlogSlugs = new Set([
   "ac-vs-dc-ev-charging",
   "best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026",
-  "how-bess-supports-reliable-ev-charging-infrastructure",
 ]);
 
 if (existsSync(BLOG_DATA)) {

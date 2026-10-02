@@ -11,19 +11,19 @@ const cities = {
   hyderabad: {
     name: "Hyderabad",
     title: "EV Chargers in Hyderabad | Spider Energy (SpiderEV)",
-    description: "Spider Energy supplies SpiderEV AC & DC chargers and SpiderVault BESS in Hyderabad, Telangana. Installation, franchise and CPMS support. Call +91-9997776080.",
+    description: "Spider Energy supplies SpiderEV AC & DC chargers in Hyderabad, Telangana. Installation, franchise and CPMS support. Call +91-9997776080.",
     proof: "Spider Energy operates from T-Hub, Raidurgam, Hyderabad, and supplies SpiderEV chargers across Telangana.",
   },
   vijayawada: {
     name: "Vijayawada",
     title: "EV Chargers in Vijayawada | Spider Energy (SpiderEV)",
-    description: "Spider Energy supplies SpiderEV AC & DC chargers and SpiderVault BESS in Vijayawada, Andhra Pradesh. Installation, franchise and CPMS support. Call +91-9997776080.",
+    description: "Spider Energy supplies SpiderEV AC & DC chargers in Vijayawada, Andhra Pradesh. Installation, franchise and CPMS support. Call +91-9997776080.",
     proof: "Spider Energy serves Vijayawada from its T-Hub headquarters in Hyderabad, with sales coverage across Andhra Pradesh.",
   },
   visakhapatnam: {
     name: "Visakhapatnam",
     title: "EV Chargers in Visakhapatnam | Spider Energy (SpiderEV)",
-    description: "Spider Energy supplies SpiderEV AC & DC chargers and SpiderVault BESS in Visakhapatnam, Andhra Pradesh. Installation, franchise and CPMS support. Call +91-9997776080.",
+    description: "Spider Energy supplies SpiderEV AC & DC chargers in Visakhapatnam, Andhra Pradesh. Installation, franchise and CPMS support. Call +91-9997776080.",
     proof: "Spider Energy serves Visakhapatnam from its T-Hub headquarters in Hyderabad, with sales coverage across Andhra Pradesh.",
   },
 };
@@ -36,7 +36,7 @@ export default function CityPage({ city }) {
   const faqs = [
     { question: `Which home EV chargers are available in ${data.name}?`, answer: "Spider Mini and Spider Lite provide 3.3 kW charging. Spider Smart provides 7.4 kW charging. The suitable model depends on the vehicle, parking supply and available electrical load." },
     { question: "Do SpiderEV chargers support OCPP?", answer: "SpiderEV's listed connected chargers use OCPP 1.6J and can be managed through SpiderConnect CPMS." },
-    { question: `How do I plan an EV charging site in ${data.name}?`, answer: "Start with the site address, available power, vehicle mix and expected dwell time. Spider Energy can then recommend AC or DC hardware and whether CPMS or battery storage should be considered. Timelines depend on the site and approvals." },
+    { question: `How do I plan an EV charging site in ${data.name}?`, answer: "Start with the site address, available power, vehicle mix and expected dwell time. Spider Energy can then recommend AC or DC hardware and the appropriate CPMS setup. Timelines depend on the site and approvals." },
   ];
   const schema = getServiceSchema({ name: `EV charger supply and installation in ${data.name}`, description: data.description, url: path, serviceType: "EV charger supply and installation" });
   const breadcrumbs = getBreadcrumbSchema([{ name: "Home", url: "/" }, { name: `EV Chargers in ${data.name}`, url: path }]);

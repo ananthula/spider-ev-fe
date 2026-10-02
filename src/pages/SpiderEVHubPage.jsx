@@ -51,8 +51,8 @@ const offerings = [
 
 const faqItems = [
   {
-    question: "What is the difference between Spider Energy, SpiderEV and SpiderVault?",
-    answer: "Spider Energy is the parent company. SpiderEV is its EV charging line, including AC and DC chargers, SpiderConnect CPMS, and the SpiderEV app. SpiderVault is its battery energy storage line.",
+    question: "What does the SpiderEV product line include?",
+    answer: "SpiderEV includes AC and DC chargers, SpiderConnect CPMS, and the SpiderEV app for drivers and charging-station operators.",
   },
   {
     question: "What products are included in SpiderEV?",
@@ -155,7 +155,7 @@ export default function SpiderEVHubPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
           {[['Homeowners','Compare Mini, Lite and Smart for overnight charging.','/guides/home-ev-charger-buying-guide-telangana-andhra'],['Fleets','Match charger power to vehicle mix and dwell time.','/electric-vehicle-ev-dc-charger'],['Charge point operators','Connect multiple chargers through SpiderConnect CPMS.','/cpms-ev-charging-point-management-system'],['Franchise partners','Plan hardware, CPMS and site requirements with Spider Energy.','/ev-charging-station-franchise']].map(([title, text, href]) => <Link key={title} to={href} className="rounded-2xl border border-gray-100 p-5 hover:border-primary"><h3 className="font-bold text-lg">{title}</h3><p className="mt-2 text-gray-600 text-sm">{text}</p></Link>)}
         </div>
-        <div className="rounded-2xl bg-primary text-white p-8 mt-12"><h2 className="text-3xl font-bold">Talk to sales</h2><p className="mt-3 text-white/80">Spider Energy, T-Hub, Raidurgam, Hyderabad · +91-9997776080</p><div className="flex flex-wrap gap-3 mt-6"><Link to="/contact-us" className="bg-white text-primary px-5 py-3 rounded-xl font-semibold">Get a quote</Link><Link to="/spidervault" className="border border-white px-5 py-3 rounded-xl font-semibold">See SpiderVault</Link><Link to="/guides/ac-vs-dc-ev-charger-india" className="border border-white px-5 py-3 rounded-xl font-semibold">AC vs DC guide</Link></div></div>
+        <div className="rounded-2xl bg-primary text-white p-8 mt-12"><h2 className="text-3xl font-bold">Talk to sales</h2><p className="mt-3 text-white/80">Spider Energy, T-Hub, Raidurgam, Hyderabad · +91-9997776080</p><div className="flex flex-wrap gap-3 mt-6"><Link to="/contact-us" className="bg-white text-primary px-5 py-3 rounded-xl font-semibold">Get a quote</Link><Link to="/guides/ac-vs-dc-ev-charger-india" className="border border-white px-5 py-3 rounded-xl font-semibold">AC vs DC guide</Link></div></div>
       </div></section>
 
       <section className="py-16 sm:py-20 bg-gray-50">

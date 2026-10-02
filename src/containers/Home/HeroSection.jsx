@@ -13,14 +13,12 @@ const heroSlides = [
   {
     preTitle: "Headquartered at T-Hub, Raidurgam, Hyderabad",
     accent: "Spider Energy",
-    title: "EV Charging & Storage from Hyderabad",
-    subtitlePrefix: "SpiderEV covers chargers, CPMS and the driver app.",
-    subtitleAccent: "SpiderVault",
-    subtitleSuffix: "covers battery energy storage for homes and charging sites.",
+    title: "EV Charging from Hyderabad",
+    subtitlePrefix: "Connected chargers,",
+    subtitleAccent: "CPMS",
+    subtitleSuffix: "and the SpiderEV driver app.",
     cta: "Explore SpiderEV",
     ctaHref: "/spiderev",
-    secondaryCta: "Explore SpiderVault",
-    secondaryCtaHref: "/spidervault",
     image: heroImage1,
   },
   {

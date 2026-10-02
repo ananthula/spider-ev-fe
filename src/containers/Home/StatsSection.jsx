@@ -65,10 +65,9 @@ const StatsSection = () => {
               BIS-certified, OCPP compliant and designed for Indian grid conditions and weather.
             </p>
             <p>
-              We have two lines of products. <strong>SpiderEV</strong> offers the full range of charging hardware –
-              AC and DC chargers for homes, apartments, commercial fleets and highway corridors – as well as SpiderConnect,
-              our charge point management software. Our battery energy storage line is <strong>SpiderVault</strong>,
-              made to go with EV stations, solar installations and standalone home or commercial backup.
+              <strong>SpiderEV</strong> offers the full range of charging hardware – AC and DC chargers for homes,
+              apartments, commercial fleets and highway corridors – as well as SpiderConnect, our charge point
+              management software, and the SpiderEV driver app.
             </p>
             <p>
               Businesses have two options to get in: a direct EV charging franchise with support from our dealerships

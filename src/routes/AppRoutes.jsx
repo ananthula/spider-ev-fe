@@ -10,7 +10,6 @@ const ACChargersPage = lazy(() => import("../pages/ACChargersPage"));
 const DCChargersPage = lazy(() => import("../pages/DCChargersPage"));
 const ProductDetailPage = lazy(() => import("../pages/ProductDetailPage"));
 const SpiderEVHubPage = lazy(() => import("../pages/SpiderEVHubPage"));
-const SpiderVaultHubPage = lazy(() => import("../pages/SpiderVaultHubPage"));
 const CityPage = lazy(() => import("../pages/CityPage"));
 const GuidePage = lazy(() => import("../pages/GuidePage"));
 
@@ -28,7 +27,6 @@ const ContactUsPage = lazy(() => import("../pages/ContactUsPage"));
 const FranchisePage = lazy(() => import("../pages/FranchisePage"));
 const ROIPage = lazy(() => import("../pages/ROIPage"));
 
-const BESSPage = lazy(() => import("../pages/BESSPage"));
 const HarGharPage = lazy(() => import("../pages/HarGharPage"));
 const ChargeLocatorPage = lazy(() => import("../pages/ChargeLocatorPage"));
 const NewsPage = lazy(() => import("../pages/NewsPage"));
@@ -76,11 +74,7 @@ const AppRoutes = () => {
         <Route path="/ev-charging-station-roi-calculator" element={<ROIPage />} />
 
         {/* ── Other (new SEO URLs) ── */}
-        <Route path="/spidervault-bess-battery-energy-storage" element={<BESSPage />} />
-        <Route path="/spidervault" element={<SpiderVaultHubPage />} />
-        <Route path="/spider-vault" element={<Navigate to="/spidervault" replace />} />
         <Route path="/spider-ev" element={<Navigate to="/spiderev" replace />} />
-        <Route path="/bess-battery-backup-for-ev-charging-stations" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
         <Route path="/ev-charging-station-locator" element={<ChargeLocatorPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/ev-chargers-hyderabad" element={<CityPage city="hyderabad" />} />
@@ -88,7 +82,6 @@ const AppRoutes = () => {
         <Route path="/ev-chargers-visakhapatnam" element={<CityPage city="visakhapatnam" />} />
         <Route path="/guides/ac-vs-dc-ev-charger-india" element={<GuidePage slug="ac-vs-dc-ev-charger-india" />} />
         <Route path="/guides/home-ev-charger-buying-guide-telangana-andhra" element={<GuidePage slug="home-ev-charger-buying-guide-telangana-andhra" />} />
-        <Route path="/guides/bess-for-ev-charging-stations" element={<GuidePage slug="bess-for-ev-charging-stations" />} />
 
         {/* ── Unchanged routes ── */}
         <Route path="/har-ghar" element={<HarGharPage />} />
@@ -116,7 +109,6 @@ const AppRoutes = () => {
         <Route path="/company/contact" element={<Navigate to="/contact-us" replace />} />
         <Route path="/franchise" element={<Navigate to="/ev-charging-station-franchise" replace />} />
         <Route path="/roi" element={<Navigate to="/ev-charging-station-roi-calculator" replace />} />
-        <Route path="/bess" element={<Navigate to="/spidervault-bess-battery-energy-storage" replace />} />
         <Route path="/charge-locator" element={<Navigate to="/ev-charging-station-locator" replace />} />
 
         {/* 404 */}

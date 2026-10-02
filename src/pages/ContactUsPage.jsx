@@ -27,7 +27,7 @@ const ContactUsPage = () => {
     <PageLayout>
       <Helmet>
         <title>Contact SpiderEV | EV Charging Experts in AP & TG</title>
-        <meta name="description" content="Contact Spider Energy for EV charger installation, franchise enquiries, CPMS support or SpiderVault BESS consultation in Andhra Pradesh & Telangana." />
+        <meta name="description" content="Contact Spider Energy for EV charger installation, franchise enquiries and CPMS support in Andhra Pradesh and Telangana." />
       </Helmet>
       <SEO breadcrumbs={contactBreadcrumbs} />
       {/* Hero */}

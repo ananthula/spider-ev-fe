@@ -17,7 +17,7 @@ export const organizationSchema = {
       "@id": `${BASE_URL}/#organization`,
       name: "Spider Energy",
       legalName: "Spider Energy",
-      alternateName: ["SpiderEV", "Spider Vault", "Spider Green Energy Solutions"],
+      alternateName: ["SpiderEV", "Spider Green Energy Solutions"],
       url: `${BASE_URL}/`,
       logo: {
         "@type": "ImageObject",
@@ -29,7 +29,7 @@ export const organizationSchema = {
       },
       image: { "@id": `${BASE_URL}/#logo` },
       description:
-        "Spider Energy manufactures and deploys EV charging infrastructure and battery energy storage across India, with a focus on Telangana and Andhra Pradesh. Its product lines are SpiderEV and SpiderVault.",
+        "Spider Energy manufactures and deploys connected EV charging infrastructure across India, with a focus on Telangana and Andhra Pradesh.",
       address: {
         "@type": "PostalAddress",
         streetAddress: "T-Hub, Raidurgam",
@@ -66,12 +66,8 @@ export const organizationSchema = {
         "AC Chargers",
         "DC Fast Chargers",
         "OCPP charge point management systems",
-        "Battery energy storage systems",
       ],
-      brand: [
-        { "@id": `${BASE_URL}/#brand-spiderev` },
-        { "@id": `${BASE_URL}/#brand-spidervault` },
-      ],
+      brand: [{ "@id": `${BASE_URL}/#brand-spiderev` }],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "EV Charging Products & Solutions",
@@ -122,15 +118,6 @@ export const organizationSchema = {
       logo: `${BASE_URL}/spider-ev-logo.png`,
       description:
         "SpiderEV is Spider Energy's EV charging product line, covering AC and DC chargers, SpiderConnect CPMS, and the SpiderEV charging app.",
-      parentOrganization: { "@id": `${BASE_URL}/#organization` },
-    },
-    {
-      "@type": "Brand",
-      "@id": `${BASE_URL}/#brand-spidervault`,
-      name: "SpiderVault",
-      url: `${BASE_URL}/spidervault`,
-      description:
-        "SpiderVault is Spider Energy's battery energy storage line for homes, commercial buildings, industry, and EV charging stations.",
       parentOrganization: { "@id": `${BASE_URL}/#organization` },
     },
     {
@@ -563,67 +550,5 @@ export function getCollectionPageSchema({ name, description, url, items }) {
     isPartOf: { "@id": `${BASE_URL}/#website` },
     about: { "@id": `${BASE_URL}/#brand-spiderev` },
     mainEntity: itemList,
-  };
-}
-
-/** Generate SpiderVault ProductGroup, Product variants, and installation Service. */
-export function getBessProductGroupSchema(products, imageById = {}) {
-  const url = `${BASE_URL}/spidervault-bess-battery-energy-storage`;
-  const variants = products.map((product) => ({
-    "@type": "Product",
-    "@id": `${url}#${product.id}`,
-    name: product.name,
-    sku: `SE-SV-${product.id.replace("spidervault-", "")}`,
-    isVariantOf: { "@id": `${url}#productgroup` },
-    brand: { "@id": `${BASE_URL}/#brand-spidervault` },
-    manufacturer: { "@id": `${BASE_URL}/#organization` },
-    category: "Battery Energy Storage Systems",
-    description: `${product.name}: ${product.tagline}. ${product.capacity} capacity, designed for ${product.bestFor}.`,
-    ...(imageById[product.id] ? { image: absoluteUrl(imageById[product.id]) } : {}),
-    additionalProperty: [
-      { "@type": "PropertyValue", name: "Capacity", value: product.capacity },
-      { "@type": "PropertyValue", name: "Rated Power", value: product.ratedPower },
-      { "@type": "PropertyValue", name: "Backup Time", value: product.backupTime },
-      { "@type": "PropertyValue", name: "Installation", value: product.installStyle },
-    ],
-    offers: {
-      "@type": "Offer",
-      url,
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@id": `${BASE_URL}/#organization` },
-    },
-  }));
-
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProductGroup",
-        "@id": `${url}#productgroup`,
-        name: "SpiderVault Battery Energy Storage Systems",
-        brand: { "@id": `${BASE_URL}/#brand-spidervault` },
-        manufacturer: { "@id": `${BASE_URL}/#organization` },
-        description: "Solar-ready battery energy storage systems for homes, commercial sites, industry, and EV charging stations.",
-        productGroupID: "spidervault-bess",
-        variesBy: ["https://schema.org/size"],
-        hasVariant: variants.map((variant) => ({ "@id": variant["@id"] })),
-      },
-      ...variants,
-      {
-        "@type": "Service",
-        "@id": `${url}#install-service`,
-        name: "SpiderVault BESS Design and Installation",
-        serviceType: "Battery Energy Storage System installation",
-        provider: { "@id": `${BASE_URL}/#organization` },
-        brand: { "@id": `${BASE_URL}/#brand-spidervault` },
-        areaServed: [
-          { "@type": "State", name: "Telangana" },
-          { "@type": "State", name: "Andhra Pradesh" },
-        ],
-        url,
-      },
-    ],
   };
 }

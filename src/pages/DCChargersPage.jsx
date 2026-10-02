@@ -172,7 +172,6 @@ const DCChargersPage = () => {
         </div>
       </section>
 
-      <section className="pb-16 bg-white"><div className="max-w-330 mx-auto px-4 sm:px-6 lg:px-10"><div className="rounded-2xl bg-gray-50 p-7"><h2 className="text-2xl font-bold">Pair DC charging with SpiderVault</h2><p className="mt-3 text-gray-600">If sanctioned load is tight, assess battery storage before selecting charging guns alone. SpiderVault can be evaluated for peak buffering, solar shifting and uptime based on the site's actual load and tariff.</p><div className="flex flex-wrap gap-3 mt-5"><Link to="/spidervault" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">See SpiderVault</Link><Link to="/guides/bess-for-ev-charging-stations" className="bg-primary text-white px-5 py-3 rounded-xl font-semibold">BESS for stations guide</Link><Link to="/heavy-duty-ev-charging-station" className="border border-primary text-primary px-5 py-3 rounded-xl font-semibold">Heavy-duty charging</Link></div></div></div></section>
 
       {/* Product Grid */}
       <section className="pb-16 sm:pb-20 bg-white">

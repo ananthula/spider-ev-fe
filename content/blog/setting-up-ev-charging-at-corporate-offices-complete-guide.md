@@ -77,7 +77,7 @@ Workplace charging is already available in several campuses in IT hubs like Gach
 
 ## **Optional Enhancements**
 
-Generation from solar carports or rooftop can offset a large percentage of charging energy . Battery storage can also help manage peak demand and resilience during grid events. They are not needed for the first installation but they do improve long term economics and ESG metrics.
+Generation from solar carports or rooftops can offset a large percentage of charging energy. Managed charging can also reduce peak demand by scheduling sessions around building load.
 
 [Ministry of Power](https://powermin.gov.in) guidelines confirm that EV charging is a de-licensed activity and that existing connections may be used where capacity allows. [Central Electricity Authority](https://cea.nic.in) safety regulations govern installation standards.[ ](https://www.niti.gov.in)[NITI Aayog](https://www.niti.gov.in) electric-mobility documents emphasise workplace charging as a key enabler of adoption.
 

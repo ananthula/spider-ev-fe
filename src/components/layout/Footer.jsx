@@ -32,7 +32,6 @@ const solutions = [
 
 const companyLinks = [
   { label: "SpiderEV", href: "/spiderev" },
-  { label: "SpiderVault", href: "/spidervault" },
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
@@ -40,7 +39,6 @@ const companyLinks = [
   { label: "Gallery", href: "/gallery" },
   { label: "AC vs DC Guide", href: "/guides/ac-vs-dc-ev-charger-india" },
   { label: "Home Charger Guide", href: "/guides/home-ev-charger-buying-guide-telangana-andhra" },
-  { label: "BESS for EV Stations", href: "/guides/bess-for-ev-charging-stations" },
   { label: "EV Chargers Hyderabad", href: "/ev-chargers-hyderabad" },
   { label: "EV Chargers Vijayawada", href: "/ev-chargers-vijayawada" },
   { label: "EV Chargers Visakhapatnam", href: "/ev-chargers-visakhapatnam" },
@@ -82,8 +80,8 @@ const Footer = () => {
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Spider Energy builds SpiderEV charging infrastructure and SpiderVault battery
-              energy storage for homes, businesses, fleets, and highways.
+              Spider Energy builds connected EV charging infrastructure for homes,
+              businesses, fleets, and highways.
             </p>
             <address className="not-italic text-white/60 text-sm leading-relaxed mb-6 space-y-1">
               <p>T-Hub, Raidurgam, Hyderabad, Telangana 500081</p>

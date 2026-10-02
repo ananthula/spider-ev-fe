@@ -120,7 +120,7 @@ const investmentModels = [
       { label: "Charger Options", value: "240 kW & 360 kW DC" },
       { label: "Scalability",     value: "Up to 1.2 MW with multi-gun setup" },
       { label: "Vehicles",        value: "4-wheelers, e-buses & electric trucks" },
-      { label: "Power Setup",     value: "Grid + Solar + BESS integration" },
+      { label: "Power Setup",     value: "Grid capacity and electrical installation" },
       { label: "Ideal For",       value: "Highways, transport hubs, city centres" },
     ],
     support: [

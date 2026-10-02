@@ -91,7 +91,7 @@ Capital per AC point is lower than for public DC. The investor is not betting on
 - [ ] Lower typical capex for AC workplace, apartment and home systems.
 - [ ] Energy purchased at the host tariff rather than public retail rates.
 - [ ] Direct link to operating-cost savings and ESG reporting.
-- [ ] Easier to pair with load management and battery storage for peak control.
+- [ ] Easier to pair with managed charging and site-level load controls.
 
 **Public charging is not “worse.”** It is a different underwriting problem. Private charging is not “smaller forever.” Fleet and campus electrification is one of the fastest-growing demand pools in India.
 
@@ -152,7 +152,7 @@ In Hyderabad and the wider Telangana IT and industrial belt, charging in private
 
 Investors who start with utilisation and site control, then choose public or private, outperform those who start with a franchise brochure or a sustainability slide. The hardware is similar. The cash-flow engine is not.
 
-[India Energy Storage Alliance](https://indiaesa.info/) and[ ](https://about.bnef.com/)[ BloombergNEF](https://about.bnef.com/) cost trends both point to cheaper hardware over time. Cheaper hardware does not rescue a low-utilisation public site. It does improve private AC paybacks and makes hybrid solar-plus-storage overlays more realistic.
+[BloombergNEF](https://about.bnef.com/) cost trends point to cheaper charging hardware over time. Cheaper hardware does not rescue a low-utilisation public site, but it can improve private AC paybacks.
 
 ### **Table 2: Generic Power Backup vs Future-Ready Strategic Energy Architecture Matrix**
 

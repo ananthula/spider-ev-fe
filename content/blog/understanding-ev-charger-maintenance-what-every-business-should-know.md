@@ -146,7 +146,7 @@ Owners of chargers who assign these rows to a named person keep chargers online.
 
 Remote monitoring is not a substitute for physical inspection. It tells you where to send the technician. A charger that can't report is already a maintenance failure.
 
-[India Energy Storage Alliance](https://indiaesa.info/) ecosystem work and[ ](https://www.niti.gov.in/)[NITI Aayog](https://www.niti.gov.in/) mobility planning both treat charging reliability as infrastructure, not a consumer gadget. Businesses should adopt the same standard.
+[NITI Aayog](https://www.niti.gov.in/) mobility planning treats charging reliability as infrastructure, not a consumer gadget. Businesses should adopt the same standard.
 
 ### **Table 2: Generic Power Backup vs Future-Ready Strategic Energy Architecture Matrix**
 

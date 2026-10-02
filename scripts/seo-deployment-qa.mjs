@@ -27,11 +27,8 @@ const productRoutes = [
   ...["spider-mini", "spider-lite", "spider-smart", "spider-blaze", "spider-strike", "spider-dash"].map((id) => `/products/ac/${id}`),
   ...["spider-base", "spider-fast", "spider-spark", "spider-falcon", "spider-ultra", "spider-surge", "spider-hulk"].map((id) => `/products/dc/${id}`),
 ];
-const vaultIds = ["spidervault-3", "spidervault-5", "spidervault-12", "spidervault-20", "spidervault-30", "spidervault-60", "spidervault-120"];
 const redirectExpectations = {
   "/spider-ev": "/spiderev",
-  "/spider-vault": "/spidervault-bess-battery-energy-storage",
-  "/spidervault": "/spidervault-bess-battery-energy-storage",
 };
 
 function pass(message) {
@@ -105,8 +102,8 @@ async function checkDiscoveryFiles() {
   }
 
   if (!llms.ok) fail(`llms.txt returned ${llms.status}`);
-  else if (!/SpiderEV[\s\S]+SpiderVault/.test(await llms.text())) fail("llms.txt is missing the brand hierarchy");
-  else pass("llms.txt exposes SpiderEV and SpiderVault");
+  else if (!(await llms.text()).includes("SpiderEV")) fail("llms.txt is missing the SpiderEV brand");
+  else pass("llms.txt exposes SpiderEV");
 
   if (!sitemap.ok) {
     fail(`sitemap.xml returned ${sitemap.status}`);
@@ -176,26 +173,10 @@ async function checkStructuredData() {
   if (ogImages.size !== productRoutes.length) fail(`Expected ${productRoutes.length} unique charger OG images; found ${ogImages.size}`);
   else pass("all 13 charger routes have unique OG images and linked Product schemas");
 
-  const response = await request("/spidervault-bess-battery-energy-storage");
-  if (!response.ok) {
-    fail(`/spidervault-bess-battery-energy-storage returned ${response.status} during structured-data validation`);
-    return;
-  }
-  let schemas = [];
-  try {
-    schemas = jsonLd(await response.text());
-  } catch (error) {
-    fail(`/spidervault-bess-battery-energy-storage contains invalid JSON-LD: ${error.message}`);
-    return;
-  }
-  const groupGraph = schemas.find((schema) => schema["@graph"]?.some((node) => node["@type"] === "ProductGroup"))?.["@graph"] || [];
-  const variants = groupGraph.filter((node) => node["@type"] === "Product");
-  if (variants.length !== 7) fail(`Expected 7 SpiderVault variants; found ${variants.length}`);
-  else pass("SpiderVault ProductGroup exposes all 7 current variants");
 }
 
 async function checkOgAssets() {
-  const ids = [...productRoutes.map((path) => path.split("/").pop()), ...vaultIds];
+  const ids = productRoutes.map((path) => path.split("/").pop());
   let validAssets = 0;
   for (const id of ids) {
     const response = await request(`/og/products/${id}.jpg`);
@@ -214,7 +195,7 @@ async function checkOgAssets() {
     }
     validAssets += 1;
   }
-  if (validAssets === ids.length) pass("20 product/model OG assets are reachable at 1200x630");
+  if (validAssets === ids.length) pass("13 product/model OG assets are reachable at 1200x630");
 }
 
 async function checkRedirectsAndHeaders() {

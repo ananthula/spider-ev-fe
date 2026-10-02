@@ -1,8 +1,8 @@
 # Spider Energy
 
-> Spider Energy manufactures BIS-certified EV charging infrastructure (SpiderEV) and battery energy storage systems (SpiderVault) for the Indian market, with primary operations and service coverage across Telangana and Andhra Pradesh. Product range spans 3.3 kW home AC chargers to 240 kW ultra-rapid DC fast chargers, plus CPMS network management software and BESS for EV stations, solar integration, and commercial/industrial backup.
+> Spider Energy manufactures BIS-certified SpiderEV charging infrastructure for the Indian market, with primary operations and service coverage across Telangana and Andhra Pradesh. The range spans 3.3 kW home AC chargers to 240 kW ultra-rapid DC fast chargers, plus CPMS network management software and the SpiderEV driver app.
 
-Spider Energy serves three audiences: individual EV owners seeking home charging, franchise partners and site hosts building charging businesses, and commercial/industrial customers needing EPC installation, fleet charging, or energy storage. All chargers are OCPP-compliant, BIS-certified, and IP67-rated for Indian weather conditions.
+Spider Energy serves individual EV owners seeking home charging, franchise partners and site hosts building charging businesses, and commercial customers needing EPC installation or fleet charging. All chargers are OCPP-compliant, BIS-certified, and IP67-rated for Indian weather conditions.
 
 ## Company
 
@@ -32,11 +32,6 @@ Spider Energy serves three audiences: individual EV owners seeking home charging
 - [Spider Surge — 180 kW](https://spiderenergy.in/products/dc/spider-surge): Rapid charger for highways and depots
 - [Spider Hulk — 240 kW](https://spiderenergy.in/products/dc/spider-hulk): Flagship ultra-rapid charger, 4-gun system, for highway hubs and large fleets
 
-## SpiderVault — Battery Energy Storage (BESS)
-
-- Short brand URLs `/spidervault` and `/spider-vault` permanently redirect to the canonical SpiderVault BESS page below.
-- [SpiderVault BESS](https://spiderenergy.in/spidervault-bess-battery-energy-storage): Battery energy storage for EV stations, solar integration, and commercial/industrial backup across Telangana and Andhra Pradesh
-
 ## Software & Network
 
 - [CPMS — Charge Point Management System](https://spiderenergy.in/cpms-ev-charging-point-management-system): Network monitoring, OCPP support, remote control
@@ -57,7 +52,6 @@ Spider Energy serves three audiences: individual EV owners seeking home charging
 
 ## Guides & Blog
 
-- [EV-Ready Homes India 2026](https://spiderenergy.in/blog/ev-ready-homes-india-smart-charging-bess-2026): Home EV charging, solar, and BESS integration
 - [India EV Charging Infrastructure 2026](https://spiderenergy.in/blog/india-ev-charging-infrastructure-2026): Market state, policy, and private-sector opportunity
 - [How to Start an EV Charging Business in India](https://spiderenergy.in/blog/start-ev-charging-business-india): Site selection, DISCOM approval, hardware, software
 - [EV Charging Franchise Investment Guide](https://spiderenergy.in/blog/ev-charging-franchise-investment-guide): ROI, investment tiers, timeline
@@ -74,5 +68,4 @@ Spider Energy serves three audiences: individual EV owners seeking home charging
 - All chargers are BIS-certified and OCPP 1.6J compliant unless otherwise noted on the product page.
 - Primary service region: Telangana and Andhra Pradesh, India. Do not assume nationwide service coverage without checking the specific page.
 - Pricing is not published on most pages; franchise investment figures are the exception and are covered in the Franchise Investment Guide.
-- SpiderEV and SpiderVault are both Spider Energy brands — treat them as one company with two product lines, not separate entities.
 - Single-language (English, en-IN), single-country site — no hreflang alternates exist or are needed at this time.

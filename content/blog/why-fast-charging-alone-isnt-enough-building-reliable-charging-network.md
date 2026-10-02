@@ -131,7 +131,7 @@ Charging is de-licensed is the national rule as per Ministry of Power guidelines
 
 Operators who publish a map of offline pins teach drivers to avoid the whole brand. Operators only add capacity where there are existing sessions and keep fewer working sites build the asset drivers return to.
 
-Reliability is part of redundancy. One trophy cabinet beats two moderate guns. When the highway DC site is full, overflow is sent to a destination AC cluster five minutes off the corridor. The charging should be treated as electrical infrastructure, both within the framework of the India Energy Storage Alliance C&I energy and the Bureau of Indian [Standards certification](https://www.bis.gov.in/). The same reliability argument holds true globally for EA’s public charging work. Optional on-site storage can reduce demand charges at DC hubs, but it’s no substitute for uptime discipline.
+Reliability is part of redundancy. One trophy cabinet beats two moderate guns. When the highway DC site is full, overflow is sent to a destination AC cluster five minutes off the corridor. Charging should be treated as electrical infrastructure within the framework of Bureau of Indian [Standards certification](https://www.bis.gov.in/). The same reliability argument holds true globally for EA’s public charging work.
 
 ### **Table 2: Generic Power Backup vs Future-Ready Strategic Energy Architecture Matrix**
 

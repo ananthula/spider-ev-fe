@@ -38,13 +38,13 @@ const GalleryPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>Project Gallery | SpiderEV & SpiderVault Installations</title>
-        <meta name="description" content="Photos of SpiderEV charger and SpiderVault installations across Telangana and Andhra Pradesh. Homes, fleets and public sites." />
+        <title>Project Gallery | SpiderEV Installations</title>
+        <meta name="description" content="Photos of SpiderEV charger installations across Telangana and Andhra Pradesh. Homes, fleets and public sites." />
       </Helmet>
       <SEO
         breadcrumbs={galleryBreadcrumbs}
-        title="Project Gallery | SpiderEV & SpiderVault Installations"
-        description="Photos of SpiderEV charger and SpiderVault installations across Telangana and Andhra Pradesh. Homes, fleets and public sites."
+        title="Project Gallery | SpiderEV Installations"
+        description="Photos of SpiderEV charger installations across Telangana and Andhra Pradesh. Homes, fleets and public sites."
       />
       <section className="relative overflow-hidden py-16 sm:py-20" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-primary/80" />

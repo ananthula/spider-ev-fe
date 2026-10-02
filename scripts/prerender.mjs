@@ -19,7 +19,6 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import { bessProducts } from "../src/data/bessProducts.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, "..", "dist");
@@ -60,29 +59,23 @@ const ORG_JSONLD = JSON.stringify({
       "@id": `${BASE_URL}/#organization`,
       "name": "Spider Energy",
       "legalName": "Spider Energy",
-      "alternateName": ["SpiderEV", "Spider Vault", "Spider Green Energy Solutions"],
+      "alternateName": ["SpiderEV", "Spider Green Energy Solutions"],
       "url": `${BASE_URL}/`,
       "logo": { "@type": "ImageObject", "@id": `${BASE_URL}/#logo`, "url": `${BASE_URL}/spider-ev-logo.png`, "width": 417, "height": 188, "caption": "Spider Energy logo" },
       "image": { "@id": `${BASE_URL}/#logo` },
-      "description": "Spider Energy manufactures and deploys EV charging infrastructure and battery energy storage across India, with a focus on Telangana and Andhra Pradesh. Its product lines are SpiderEV and SpiderVault.",
+      "description": "Spider Energy manufactures and deploys connected EV charging infrastructure across India, with a focus on Telangana and Andhra Pradesh.",
       "address": { "@type": "PostalAddress", "streetAddress": "T-Hub, Raidurgam", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "postalCode": "500081", "addressCountry": "IN" },
       "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9997776080", "contactType": "sales", "email": "connect@spiderenergy.in", "availableLanguage": ["English", "Hindi", "Telugu"], "areaServed": "IN" }],
       "email": "connect@spiderenergy.in",
       "sameAs": ["https://www.instagram.com/spider.ev/", "https://in.linkedin.com/company/spider-green-energy-solutions"],
       "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }, { "@type": "Country", "name": "India" }],
-      "brand": [{ "@id": `${BASE_URL}/#brand-spiderev` }, { "@id": `${BASE_URL}/#brand-spidervault` }],
-      "knowsAbout": ["EV charging stations", "AC EV chargers", "DC fast chargers", "OCPP CPMS", "Battery energy storage systems"]
+      "brand": [{ "@id": `${BASE_URL}/#brand-spiderev` }],
+      "knowsAbout": ["EV charging stations", "AC EV chargers", "DC fast chargers", "OCPP CPMS"]
     },
     {
       "@type": "Brand", "@id": `${BASE_URL}/#brand-spiderev`, "name": "SpiderEV",
       "url": `${BASE_URL}/spiderev`, "logo": `${BASE_URL}/spider-ev-logo.png`,
       "description": "SpiderEV is Spider Energy's EV charging product line, covering AC and DC chargers, SpiderConnect CPMS, and the SpiderEV charging app.",
-      "parentOrganization": { "@id": `${BASE_URL}/#organization` }
-    },
-    {
-      "@type": "Brand", "@id": `${BASE_URL}/#brand-spidervault`, "name": "SpiderVault",
-      "url": `${BASE_URL}/spidervault`,
-      "description": "SpiderVault is Spider Energy's battery energy storage line for homes, commercial buildings, industry, and EV charging stations.",
       "parentOrganization": { "@id": `${BASE_URL}/#organization` }
     },
     {
@@ -185,9 +178,6 @@ function buildJsonLd(route) {
   if (route.path === "/electric-vehicle-ev-ac-charger" || route.path === "/electric-vehicle-ev-dc-charger") {
     scripts += `\n  <script type="application/ld+json">${JSON.stringify(buildCollectionSchema(route.path))}</script>`;
   }
-  if (route.path === "/spidervault-bess-battery-energy-storage") {
-    scripts += `\n  <script type="application/ld+json">${JSON.stringify(buildBessProductGroupSchema())}</script>`;
-  }
 
   return scripts;
 }
@@ -225,39 +215,6 @@ function buildCollectionSchema(path) {
   };
 }
 
-function buildBessProductGroupSchema() {
-  const url = `${BASE_URL}/spidervault-bess-battery-energy-storage`;
-  const imagePrefixes = {
-    "spidervault-3": "spiderpower-3.0",
-    "spidervault-5": "spiderpower-5.0",
-    "spidervault-12": "spiderpower-12.0",
-    "spidervault-20": "spiderpower-20.0-2",
-    "spidervault-30": "spiderpower-20.0-2",
-    "spidervault-60": "spiderpower-20.0-2",
-    "spidervault-120": "spiderpower-20.0-2",
-  };
-  const variants = bessProducts.map((product) => ({
-    "@type": "Product", "@id": `${url}#${product.id}`, "name": product.name,
-    "sku": `SE-SV-${product.id.replace("spidervault-", "")}`,
-    "isVariantOf": { "@id": `${url}#productgroup` }, "brand": { "@id": `${BASE_URL}/#brand-spidervault` },
-    "manufacturer": { "@id": `${BASE_URL}/#organization` }, "category": "Battery Energy Storage Systems",
-    "description": `${product.name}: ${product.tagline}. ${product.capacity} capacity, designed for ${product.bestFor}.`,
-    "image": findBuiltAsset(imagePrefixes[product.id]) || OG_IMAGE,
-    "additionalProperty": [
-      { "@type": "PropertyValue", "name": "Capacity", "value": product.capacity },
-      { "@type": "PropertyValue", "name": "Rated Power", "value": product.ratedPower },
-      { "@type": "PropertyValue", "name": "Backup Time", "value": product.backupTime },
-      { "@type": "PropertyValue", "name": "Installation", "value": product.installStyle },
-    ],
-    "offers": { "@type": "Offer", "url": url, "priceCurrency": "INR", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": { "@id": `${BASE_URL}/#organization` } },
-  }));
-  return { "@context": "https://schema.org", "@graph": [
-    { "@type": "ProductGroup", "@id": `${url}#productgroup`, "name": "SpiderVault Battery Energy Storage Systems", "brand": { "@id": `${BASE_URL}/#brand-spidervault` }, "manufacturer": { "@id": `${BASE_URL}/#organization` }, "description": "Solar-ready battery energy storage systems for homes, commercial sites, industry, and EV charging stations.", "productGroupID": "spidervault-bess", "variesBy": ["https://schema.org/size"], "hasVariant": variants.map((variant) => ({ "@id": variant["@id"] })) },
-    ...variants,
-    { "@type": "Service", "@id": `${url}#install-service`, "name": "SpiderVault BESS Design and Installation", "serviceType": "Battery Energy Storage System installation", "provider": { "@id": `${BASE_URL}/#organization` }, "brand": { "@id": `${BASE_URL}/#brand-spidervault` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }], "url": url },
-  ] };
-}
-
 // Internal navigation links injected into pre-rendered HTML for crawlers
 const NAV_LINKS = [
   { href: "/spiderev", text: "SpiderEV" },
@@ -293,7 +250,6 @@ const NAV_LINKS = [
   // Standalone
   { href: "/ev-charging-station-franchise", text: "Franchise" },
   { href: "/ev-charging-station-roi-calculator", text: "ROI Calculator" },
-  { href: "/spidervault", text: "SpiderVault" },
   { href: "/ev-charging-station-locator", text: "Station Locator" },
   { href: "/har-ghar", text: "Har Ghar Charger" },
   { href: "/partner-with-us", text: "Partner With Us" },
@@ -440,24 +396,7 @@ const SERVICE_PAGE_FAQS = {
     { question: "Can I earn money from my home EV charger?", answer: "Yes. Through the SpiderEV app, you can share your home charger with nearby EV owners when you're not using it and earn per-session revenue with automatic billing." },
     { question: "What home charger models are available under this initiative?", answer: "The program primarily uses Spider Mini (3.3 kW) and Spider Lite (3.3 kW) AC chargers — compact, affordable single-phase chargers that work with any standard home electrical connection." },
   ],
-  "/spidervault-bess-battery-energy-storage": [
-    { question: "What is SpiderVault and how is it different from a regular inverter?", answer: "SpiderVault is an all-in-one Solar Hybrid Inverter + Battery + BMS. Unlike regular inverters that simply switch between grid and battery, SpiderVault integrates solar charging, a 5th Gen battery management system, and AI cloud monitoring — all automatically managed from one unit." },
-    { question: "How long does SpiderVault back up my home?", answer: "It depends on your load. SpiderVault 3.0 backs up 1 AC + geyser + regular appliances for up to 6 hours. SpiderVault 5.0 runs 2 ACs + all home appliances for up to 8 hours. SpiderVault 12.0 handles large homes for up to 12 hours." },
-    { question: "Can it connect to my existing solar panels?", answer: "Yes. All SpiderVault models have a built-in MPPT solar charger that directly connects to your rooftop solar system. It stores excess energy during the day for use at night or on cloudy days — no extra inverter or equipment needed." },
-  ],
 };
-
-// FAQ data for the ev-ready-homes blog post
-const EV_READY_HOMES_FAQS = [
-  { question: "What does an EV-ready home mean in India?", answer: "An EV-ready home is one that can support electric vehicle charging without it being a daily compromise. It means the home has the electrical planning, load support, space and energy logic to support charging in a safe and convenient manner. In 2026, the concept goes beyond placing a charger in the parking lot. It includes whether the house or flat can handle power load, whether it can charge at the right tariff times, and whether it can later integrate with solar or storage." },
-  { question: "Why is BESS becoming important for EV charging?", answer: "Battery Energy Storage Systems (BESS) are becoming important since charging is no longer simply plug-and-play. As electricity pricing becomes more time-sensitive and households want more control over when they use grid power, storage is the missing layer. A BESS can store solar energy, off-peak grid power, or excess power for later use — enabling smarter charging, backup and daily life from the same property." },
-  { question: "Why are apartments a bigger challenge than independent homes?", answer: "Apartments add friction because charging is not simply a technical problem but also a governance and space problem. Residents often need to obtain permission, plan the load, get cabling approval, and align parking. Shared meters, basements and common areas can make things feel a lot slower and more emotional than they need to be." },
-  { question: "How do time-of-day tariffs change the EV decision?", answer: "Time-of-day tariffs influence the EV decision as charging is now tied to cost timing instead of just energy consumption. Users will naturally seek off-peak windows if electricity is more expensive at certain times. Planning is now part of the EV decision, not just the purchase." },
-  { question: "Why is Telangana such a strong market for SpiderEV?", answer: "Telangana is strong for SpiderEV because the state has the policy language, infrastructure intent and urban demand profile that make EV charging a relevant topic. The Telangana Electric Vehicle & Energy Storage Policy 2020-2030 offers incentives for charging infrastructure. Hyderabad and its premium residential and commercial areas give the story a strong lifestyle angle." },
-  { question: "What is the advantage of combining solar + storage + EV charging?", answer: "Control is the greatest advantage. Solar alone provides daytime generation. EV charging has to be flexible. Storage bridges the gap between them. Solar + storage + EV charging means you can use energy from the day later, charge on your own schedule, and reduce reliance on grid timing." },
-  { question: "Is public EV charging still growing in India?", answer: "Yes. India's public charging points could rise to around 375,000 by 2030 from about 75,000 at the end of 2024 according to IEA projections. Charging is becoming a routine part of infrastructure planning." },
-  { question: "How does SpiderEnergy avoid sounding too technical in content?", answer: "The brand focuses on energy in daily life: silence, continuity, convenience, confidence and future-readiness. For SpiderEV, that means charging as a lifestyle layer. For SpiderVault, that means backup as invisible support, not a mechanical drag." },
-];
 
 // ─── Route definitions ───────────────────────────────────────────────────────
 
@@ -466,10 +405,10 @@ const routes = [
   {
     path: "/",
     title: "Spider Energy | EV Charger Manufacturer in Telangana & AP",
-    description: "Spider Energy builds SpiderEV chargers and SpiderVault BESS from Hyderabad for Telangana, Andhra Pradesh and India. AC, DC, CPMS and franchise.",
+    description: "Spider Energy builds SpiderEV chargers in Hyderabad for Telangana, Andhra Pradesh and India. Explore AC, DC, CPMS and franchise solutions.",
     keywords: "EV charger manufacturer Telangana, EV charging station AP, electric vehicle charger India, AC DC charger Hyderabad, SpiderEV India",
-    subtopics: ["Spider Energy — EV Charging and Battery Energy Storage", "AC & DC EV Chargers for Every Need — Home to Highway", "SpiderEV — Connected EV Charging Infrastructure", "SpiderVault — Battery Energy Storage for Modern India", "EV Charging Franchise Opportunities in Telangana & AP", "Why Choose Spider Energy — BIS Certified, Locally Manufactured"],
-    bodyText: "Spider Energy is developing and installing EV charging infrastructure in Telangana and Andhra Pradesh, ranging from 3.3 kW home AC chargers to 240 kW ultra-rapid DC fast chargers. All our chargers are BIS-certified, OCPP compliant and designed for Indian grid conditions and weather. We have two lines of products. SpiderEV offers the full range of charging hardware – AC and DC chargers for homes, apartments, commercial fleets and highway corridors – as well as SpiderConnect, our charge point management software. Our battery energy storage line is SpiderVault, made to go with EV stations, solar installations and standalone home or commercial backup. Businesses have two options to get in: a direct EV charging franchise with support from our dealerships and guidance on how to set up, or a partner model for site hosts, fleet operators and fuel station owners who want to add EV charging without managing the operation themselves. Homeowners can avail affordable home charging through our Har Ghar Charger initiative and earn from your own station. Everything that we make is made in India. This is important in two ways: you'll get local support faster if something needs servicing, and you won't have to pay the overhead costs of imported hardware. If you're considering EV charging infrastructure in Telangana or Andhra Pradesh – whether for your home, your business or as an investment – start with what you're trying to solve, and we'll point you to the right product line.",
+    subtopics: ["Spider Energy — Connected EV Charging Infrastructure", "AC & DC EV Chargers for Every Need — Home to Highway", "SpiderEV — Connected EV Charging Infrastructure", "EV Charging Franchise Opportunities in Telangana & AP", "Why Choose Spider Energy — BIS Certified, Locally Manufactured"],
+    bodyText: "Spider Energy is developing and installing EV charging infrastructure in Telangana and Andhra Pradesh, ranging from 3.3 kW home AC chargers to 240 kW ultra-rapid DC fast chargers. All our chargers are BIS-certified, OCPP compliant and designed for Indian grid conditions and weather. SpiderEV offers the full range of charging hardware for homes, apartments, commercial fleets and highway corridors, together with SpiderConnect charge point management software and the SpiderEV driver app. Businesses can join through a direct EV charging franchise or a partner model for site hosts, fleet operators and fuel station owners. Homeowners can access affordable home charging through our Har Ghar Charger initiative.",
     schemas: [
       {
         "@context": "https://schema.org",
@@ -492,7 +431,7 @@ const routes = [
     description: "SpiderEV is Spider Energy's EV charging line: BIS-ready AC & DC chargers, SpiderConnect CPMS and the SpiderEV App for Telangana, AP and India.",
     keywords: "SpiderEV, AC EV chargers, DC fast chargers, SpiderConnect CPMS, SpiderEV app, EV charging India",
     subtopics: ["SpiderEV — EV Charging Hardware, Software & Driver App", "AC EV Chargers for Homes, Workplaces & Fleets", "DC Fast Chargers for Public Networks & Depots", "SpiderConnect Charge Point Management System", "SpiderEV Driver App"],
-    bodyText: "SpiderEV is Spider Energy's connected EV charging product line. It includes AC chargers from 3.3 kW to 80 kW, DC fast chargers from 3 kW to 240 kW, SpiderConnect software for monitoring and operating charging networks, and the SpiderEV app for station discovery, charging sessions, and digital payments. Spider Energy is the parent company. SpiderVault is its separate battery energy storage product line.",
+    bodyText: "SpiderEV is Spider Energy's connected EV charging product line. It includes AC chargers from 3.3 kW to 80 kW, DC fast chargers from 3 kW to 240 kW, SpiderConnect software for monitoring and operating charging networks, and the SpiderEV app for station discovery, charging sessions, and digital payments.",
     schemas: [
       { "@context": "https://schema.org", "@type": "CollectionPage", "@id": `${BASE_URL}/spiderev#collection`, "name": "SpiderEV Charging Products and Software", "url": `${BASE_URL}/spiderev`, "isPartOf": { "@id": `${BASE_URL}/#website` }, "about": { "@id": `${BASE_URL}/#brand-spiderev` }, "mainEntity": { "@type": "ItemList", "numberOfItems": 4, "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "AC EV Chargers", "url": `${BASE_URL}/electric-vehicle-ev-ac-charger` },
@@ -501,7 +440,7 @@ const routes = [
         { "@type": "ListItem", "position": 4, "name": "SpiderEV App", "url": `${BASE_URL}/ev-charging-station-app` }
       ] } },
       { "@context": "https://schema.org", "@type": "FAQPage", "@id": `${BASE_URL}/spiderev#faq`, "mainEntity": [
-        { "@type": "Question", "name": "What is the difference between Spider Energy, SpiderEV and SpiderVault?", "acceptedAnswer": { "@type": "Answer", "text": "Spider Energy is the parent company. SpiderEV is its EV charging line, including AC and DC chargers, SpiderConnect CPMS, and the SpiderEV app. SpiderVault is its battery energy storage line." } },
+        { "@type": "Question", "name": "What does the SpiderEV product line include?", "acceptedAnswer": { "@type": "Answer", "text": "SpiderEV includes AC and DC chargers, SpiderConnect CPMS, and the SpiderEV app for drivers and charging-station operators." } },
         { "@type": "Question", "name": "What products are included in SpiderEV?", "acceptedAnswer": { "@type": "Answer", "text": "SpiderEV includes home and commercial AC chargers, DC fast chargers for public and fleet use, SpiderConnect charging management software, and the SpiderEV driver app." } },
         { "@type": "Question", "name": "Where does Spider Energy operate?", "acceptedAnswer": { "@type": "Answer", "text": "Spider Energy is based at T-Hub, Raidurgam, Hyderabad, with primary service coverage across Telangana and Andhra Pradesh." } }
       ] }
@@ -844,11 +783,11 @@ const routes = [
   // Company
   {
     path: "/about-us",
-    title: "About Spider Energy | EV Charging & BESS from Hyderabad",
-    description: "Learn how Spider Energy builds SpiderEV chargers and SpiderVault storage for Telangana and Andhra Pradesh. Office: T-Hub, Raidurgam, Hyderabad.",
+    title: "About Spider Energy | EV Charging from Hyderabad",
+    description: "Learn how Spider Energy builds SpiderEV chargers for Telangana and Andhra Pradesh. Office: T-Hub, Raidurgam, Hyderabad.",
     keywords: "EV charger manufacturer Telangana, electric vehicle manufacturer AP, BIS certified charger India, SpiderEV company Hyderabad, EVSE manufacturer India",
-    subtopics: ["About Spider Energy — EV Charger Manufacturer in Telangana & Andhra Pradesh", "Our Mission — Making EV Charging Accessible Across India", "Manufacturing Capabilities — BIS-Certified AC & DC EV Chargers", "SpiderEV & SpiderVault — Our Two Product Brands Explained", "Our Presence in Telangana & Andhra Pradesh", "Certifications & Compliance — BIS, OCPP, IP67, IS 17017"],
-    bodyText: "Spider Energy was started on a simple premise. India's transition to EVs needs charging infrastructure made for Indian conditions, not repurposed from elsewhere. That means locally built and serviced chargers rated for monsoon humidity and grid voltage fluctuation, not imported. We build everything in-house — from 3.3 kW AC chargers for homes to 80 kW dual-gun commercial chargers, and from 30 kW to our flagship 240 kW DC fast chargers for highways and fleet depots. Each unit is BIS certified and OCPP 1.6J enabled, and the latest models are OCPP 2.0 compatible. Our product line is split into two lines. SpiderEV is the charging hardware and network software, the chargers themselves plus SpiderConnect, our charge point management platform. SpiderVault is our battery energy storage line, designed to be used in conjunction with EV stations to reduce peak demands, or deployed independently for home and commercial backup power. We are located in Hyderabad, Telangana and we provide services across Telangana and Andhra Pradesh. That's an intentional regional focus — we'd rather have fast, accountable support in two states, than thin coverage across the country. As demand increases, we expand that reach through our franchise and partner network without diluting service quality. We don't take certification lightly. BIS certification means our hardware meets India's electrical safety standards. OCPP compliance means our chargers are interoperable with the wider EV charging ecosystem, not just our own network. The hardware is IP67 protected, which means it can withstand the Indian outdoor environment — heat, dust and monsoon exposure — without any drop in performance.",
+    subtopics: ["About Spider Energy — EV Charger Manufacturer in Telangana & Andhra Pradesh", "Our Mission — Making EV Charging Accessible Across India", "Manufacturing Capabilities — BIS-Certified AC & DC EV Chargers", "SpiderEV — Connected Charging Hardware and Software", "Our Presence in Telangana & Andhra Pradesh", "Certifications & Compliance — BIS, OCPP, IP67, IS 17017"],
+    bodyText: "Spider Energy was started on a simple premise. India's transition to EVs needs charging infrastructure made for Indian conditions, not repurposed from elsewhere. We build everything in-house — from 3.3 kW AC chargers for homes to 80 kW dual-gun commercial chargers, and from 30 kW to our flagship 240 kW DC fast chargers for highways and fleet depots. SpiderEV combines the charging hardware with SpiderConnect, our charge point management platform, and the SpiderEV driver app. We are located in Hyderabad and provide services across Telangana and Andhra Pradesh, backed by local installation and maintenance support.",
     schemas: [
       { "@context": "https://schema.org", "@type": "Organization", "name": "Spider Energy", "url": BASE_URL, "logo": `${BASE_URL}/spider-ev-logo.png`, "address": { "@type": "PostalAddress", "streetAddress": "T-Hub, Raidurgam", "addressLocality": "Hyderabad", "addressRegion": "Telangana", "postalCode": "500081", "addressCountry": "IN" }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
     ],
@@ -856,9 +795,9 @@ const routes = [
   {
     path: "/contact-us",
     title: "Contact SpiderEV — EV Charging Experts in AP & TG India",
-    description: "Contact Spider Energy for EV charger installation, franchise enquiries, CPMS support or SpiderVault BESS consultation in Andhra Pradesh & Telangana.",
+    description: "Contact Spider Energy for EV charger installation, franchise enquiries and CPMS support in Andhra Pradesh and Telangana.",
     keywords: "contact Spider Energy, SpiderEV phone number, EV charger enquiry Hyderabad, EV charging support AP, franchise contact, CPMS support",
-    subtopics: ["Contact Spider Energy — EV Charging Experts in Telangana & Andhra Pradesh", "Spider Energy Office Location — Hyderabad, Telangana", "Contact Us for EV Charger Installation in AP & Telangana", "Franchise & Partnership Enquiries — Spider Energy India", "SpiderVault BESS & Technical Support Contact"],
+    subtopics: ["Contact Spider Energy — EV Charging Experts in Telangana & Andhra Pradesh", "Spider Energy Office Location — Hyderabad, Telangana", "Contact Us for EV Charger Installation in AP & Telangana", "Franchise & Partnership Enquiries — Spider Energy India", "SpiderEV Technical Support"],
     bodyText: "Reach Spider Energy for sales enquiries, installation support, franchise information, or technical assistance. Our team is available Monday through Sunday to help you with all your EV charging needs. Office: T-Hub, Raidurgam, Hyderabad, Telangana 500081. Phone: +91-9997776080. Email: connect@spiderenergy.in. We respond to all enquiries within 24 hours. Whether you are a homeowner looking for a home charger, a business wanting workplace charging, a fleet operator needing depot solutions, or an entrepreneur exploring franchise opportunities — our team will guide you through product selection, site assessment, installation planning, and after-sales support across Andhra Pradesh and Telangana.",
   },
 
@@ -885,18 +824,6 @@ const routes = [
     schema: { "@context": "https://schema.org", "@type": "WebApplication", "name": "EV Charging Station ROI Calculator", "description": "Calculate EV charging station profits in Telangana & AP. Free ROI calculator for accurate investment planning.", "url": `${BASE_URL}/ev-charging-station-roi-calculator`, "applicationCategory": "FinanceApplication", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" } },
   },
   {
-    path: "/spidervault-bess-battery-energy-storage",
-    title: "SpiderVault BESS | Battery Storage by Spider Energy",
-    description: "SpiderVault BESS models 3.0, 5.0 and 12.0 for homes, industry and EV stations in AP & Telangana. Solar hybrid inverter + battery + BMS.",
-    keywords: "SpiderVault BESS, battery energy storage, EV station battery backup, solar storage India, hybrid inverter, home battery backup Hyderabad, grid independence",
-    subtopics: ["SpiderVault — Battery Energy Storage System (BESS) for EV Stations & Industry", "What Is SpiderVault BESS? — Battery Energy Storage for Modern India", "BESS for EV Charging Stations — Cut Peak Demand Charges", "Solar + SpiderVault — Store Solar Energy for Night-Time EV Charging", "SpiderVault for Homes, Villas & Commercial Buildings in AP & TG", "Grid Independence — How SpiderVault Ensures Uninterrupted Charging", "Technical Specifications & Sizing Guide for SpiderVault BESS"],
-    bodyText: "SpiderVault is Spider Energy's battery energy storage line. Its packaged systems combine a solar hybrid inverter, battery and BMS. SpiderVault 3.0, 5.0 and 12.0 cover progressively larger residential and small commercial loads. For EV charging stations, storage can be assessed for peak management, solar shifting and continuity. Savings and final capacity are site-specific and require an engineering and tariff review.",
-    schemas: [
-      { "@context": "https://schema.org", "@type": "Service", "name": "BESS — Battery Energy Storage for EV Charging Stations", "description": "Smart EV charging energy storage solutions with solar powered station setups, renewable charging and battery backup systems in Andhra Pradesh and Telangana.", "url": `${BASE_URL}/spidervault-bess-battery-energy-storage`, "serviceType": "Battery Energy Storage System (BESS)", "provider": { "@id": `${BASE_URL}/#organization` }, "areaServed": [{ "@type": "State", "name": "Telangana" }, { "@type": "State", "name": "Andhra Pradesh" }] },
-      { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": SERVICE_PAGE_FAQS["/spidervault-bess-battery-energy-storage"].map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })) },
-    ],
-  },
-  {
     path: "/ev-charging-station-locator",
     title: "EV Charging Station Locator in Andhra Pradesh & Telangana",
     description: "Find Nearby EV Fast Charging Stations in Andhra Pradesh and Telangana using a Smart EV Charge Zone Locator and Real-time EV Charging Locator Tools.",
@@ -920,13 +847,13 @@ const routes = [
     title: "EV Charging Blog — Tips, Guides & Industry News | SpiderEV",
     description: "Read the latest EV charging guides, industry news and business insights from SpiderEV — your expert resource for electric vehicle charging in India.",
     keywords: "EV charging blog, electric vehicle guides India, EV business blog, OCPP guide, AC vs DC charging, EV charging investment guide",
-    subtopics: ["SpiderEV Blog — EV Charging Guides, News & Insights for India", "Latest EV Charging Guides & How-To Articles", "EV Charging Industry News — India, AP & Telangana", "Franchise & Business Insights for EV Charging Entrepreneurs", "SpiderVault BESS — Energy Storage Guides & Updates"],
-    bodyText: "The SpiderEV blog covers everything about electric vehicle charging in India — from choosing the right charger for your home to starting an EV charging business, understanding OCPP protocols, and industry analysis. Featured topics include: How EV Chargers Work — understanding AC, DC, and ultra-rapid charging technology; AC vs DC Charging — speed, cost, and use case comparison; Starting an EV Charging Business — step-by-step guide with ROI calculations; EV Charging Franchise Investment — costs, returns, and how to get started; What is OCPP — the open protocol that enables charger interoperability; EV-Ready Homes — smart charging, solar, and BESS integration for Indian homes. New articles published weekly by the Spider Energy team.",
+    subtopics: ["SpiderEV Blog — EV Charging Guides, News & Insights for India", "Latest EV Charging Guides & How-To Articles", "EV Charging Industry News — India, AP & Telangana", "Franchise & Business Insights for EV Charging Entrepreneurs"],
+    bodyText: "The SpiderEV blog covers electric vehicle charging in India — from choosing the right charger for your home to starting an EV charging business, understanding OCPP protocols, and following industry developments. New articles are published by the Spider Energy team.",
   },
   {
     path: "/gallery",
-    title: "Project Gallery | SpiderEV & SpiderVault Installations",
-    description: "Photos of SpiderEV charger and SpiderVault installations across Telangana and Andhra Pradesh. Homes, fleets and public sites.",
+    title: "Project Gallery | SpiderEV Installations",
+    description: "Photos of SpiderEV charger installations across Telangana and Andhra Pradesh. Homes, fleets and public sites.",
     keywords: "SpiderEV gallery, EV charger installation photos, charging station images, SpiderEV events, EV infrastructure India photos",
     subtopics: ["SpiderEV Gallery — EV Charger Installations Across Telangana & Andhra Pradesh", "EV Charger Installations Across Telangana & Andhra Pradesh", "SpiderEV Product Range — AC & DC Chargers in Action", "Franchise Launches & Partnership Events — Spider Energy India"],
     bodyText: "Browse our gallery showcasing SpiderEV charger installations at malls, corporate offices, highways, and residential communities across Telangana and Andhra Pradesh. See our product range from the compact Spider Mini home charger to the powerful Spider Hulk 240 kW heavy-duty charger in real-world deployments. Also featuring event coverage from industry conferences, partner meets, and product launch events. SpiderEV's installations across Hyderabad – home, commercial and public charging locations. Franchise Launch Events in Telangana and Andhra Pradesh. SpiderEV product range in the field – AC & DC chargers deployed across our service area.",
@@ -952,16 +879,6 @@ const routes = [
     bodyText: "Partner with Spider Energy to deploy EV charging at your location. Whether you own a fuel station, parking lot, commercial complex, or fleet depot, we have partnership models that generate passive revenue from your existing real estate. Partnership options include: Site Owner — provide space and earn revenue share on every charging session with zero CAPEX; Fleet Partner — dedicated depot charging for your electric fleet with priority access and preferential rates; Fuel Station Partner — add EV charging alongside existing fuel pumps to future-proof your business; Real Estate Developer — integrate EV charging into new residential and commercial projects; Franchise Partner — own and operate a SpiderEV branded charging station with full support. SpiderEV handles hardware, installation, software, maintenance, and customer management. You provide the location. We provide the technology. Revenue starts from day one. Apply now to get a free site assessment and partnership proposal.",
   },
 
-  {
-    path: "/spidervault",
-    title: "SpiderVault | BESS by Spider Energy (3.0 / 5.0 / 12.0)",
-    description: "SpiderVault battery energy storage from Spider Energy. Models 3.0, 5.0 and 12.0 for homes, businesses and EV charging stations in AP & Telangana.",
-    keywords: "SpiderVault, SpiderVault BESS, battery energy storage EV charging",
-    subtopics: ["SpiderVault - Battery Energy Storage by Spider Energy", "Model comparison: 3.0 vs 5.0 vs 12.0", "For EV charging stations", "For homes and villas in AP & TG", "How SpiderVault pairs with SpiderEV DC hubs"],
-    bodyText: "SpiderVault is Spider Energy's battery energy storage line. Each packaged unit combines a solar hybrid inverter, battery pack and BMS. SpiderVault 3.0, 5.0 and 12.0 cover progressively larger residential and small commercial loads. Storage can also be assessed alongside SpiderEV DC charging sites for peak management, solar shifting and continuity. Final capacity and savings are site-specific.",
-    schema: { "@context": "https://schema.org", "@type": "ProductGroup", "@id": `${BASE_URL}/spidervault#productgroup`, "name": "SpiderVault Battery Energy Storage", "brand": { "@id": `${BASE_URL}/#brand-spidervault` }, "manufacturer": { "@id": `${BASE_URL}/#organization` } },
-    ogImage: "/og/products/spidervault-12.jpg",
-  },
   ...[
     ["hyderabad", "Hyderabad", "Telangana", "Spider Energy operates from T-Hub, Raidurgam, Hyderabad, and supplies SpiderEV chargers across Telangana."],
     ["vijayawada", "Vijayawada", "Andhra Pradesh", "Spider Energy serves Vijayawada from its T-Hub headquarters in Hyderabad, with sales coverage across Andhra Pradesh."],
@@ -969,7 +886,7 @@ const routes = [
   ].map(([slug, city, state, proof]) => ({
     path: `/ev-chargers-${slug}`,
     title: `EV Chargers in ${city} | Spider Energy (SpiderEV)`,
-    description: `Spider Energy supplies SpiderEV AC & DC chargers and SpiderVault BESS in ${city}, ${state}. Installation, franchise and CPMS support. Call +91-9997776080.`,
+    description: `Spider Energy supplies SpiderEV AC & DC chargers in ${city}, ${state}. Installation, franchise and CPMS support. Call +91-9997776080.`,
     keywords: `EV charger ${city}, EV charging station manufacturer ${city}, SpiderEV ${city}`,
     subtopics: [`EV Chargers & Charging Stations in ${city}`, `Home AC options in ${city}`, "Public & fleet DC options", `Service and sales contact for ${city}`, "Frequently asked questions"],
     bodyText: `${proof} Charger selection starts with the available load, vehicle mix and dwell time. Spider Mini, Lite and Smart cover home AC requirements, while the SpiderEV DC range serves public and fleet sites. Timelines depend on the site and approvals.`,
@@ -978,13 +895,12 @@ const routes = [
   ...[
     ["ac-vs-dc-ev-charger-india", "AC vs DC EV Chargers in India - Which Do You Need?", "Clear AC vs DC EV charging guide for India. Power ranges, connectors, home vs public use, and which SpiderEV models fit each job.", "AC vs DC EV Chargers in India - A Practical Guide", "AC chargers feed the vehicle's onboard charger. DC chargers bypass it and send power directly to the battery. If vehicles sit for hours, AC is usually the practical choice; if drivers stop briefly, consider DC."],
     ["home-ev-charger-buying-guide-telangana-andhra", "Home EV Charger Guide for Telangana & Andhra Pradesh", "How to choose a home EV charger in TG & AP: 3.3 vs 7.4 kW, single-phase limits, apartment parking, and SpiderEV Mini, Lite and Smart.", "Buying a Home EV Charger in Telangana & Andhra Pradesh", "Start with the supply available at the parking bay, the vehicle's AC input limit and the distance driven each day. Confirm parking, cable route, earthing and property requirements before installation."],
-    ["bess-for-ev-charging-stations", "BESS for EV Charging Stations | SpiderVault Guide", "Why EV stations add battery storage: peak demand, solar shift, uptime. How SpiderVault pairs with SpiderEV DC chargers in AP & Telangana.", "Battery Energy Storage for EV Charging Stations", "Battery storage can buffer part of a DC site's peak demand, shift solar energy to later sessions and support continuity. The correct size depends on chargers, traffic, tariff and grid capacity."],
   ].map(([slug, title, description, heading, bodyText]) => ({
     path: `/guides/${slug}`,
     title,
     description,
     keywords: heading,
-    subtopics: [heading, "Practical decision factors", "SpiderEV and SpiderVault options", "Frequently asked questions"],
+    subtopics: [heading, "Practical decision factors", "SpiderEV options", "Frequently asked questions"],
     bodyText,
     ogType: "article",
     schema: { "@context": "https://schema.org", "@type": "Article", "headline": heading, "description": description, "mainEntityOfPage": `${BASE_URL}/guides/${slug}`, "author": { "@type": "Organization", "name": "Spider Energy" }, "publisher": { "@id": `${BASE_URL}/#organization` }, "inLanguage": "en-IN" },
@@ -1004,7 +920,6 @@ const routes = [
 // ─── Blog post keywords (derived from slug + category for SEO) ──────────────
 
 const BLOG_KEYWORDS = {
-  "ev-ready-homes-india-smart-charging-bess-2026": "EV ready homes India, smart charging home, BESS home India, solar EV charging, home energy storage, SpiderVault, EV charging 2026",
   "how-ev-chargers-work": "how EV chargers work, AC vs DC charging explained, EV charger technology, Level 1 Level 2 Level 3, EVSE India, charging connector types",
   "start-ev-charging-business-india": "start EV charging business India, EV station business plan, DISCOM approval EV charger, EV charging revenue model, charging station startup",
   "ac-vs-dc-ev-charging": "AC vs DC EV charging, fast charging vs slow charging, CCS2 vs Type 2, which EV charger to buy, charging speed comparison India",
@@ -1019,7 +934,7 @@ const BLOG_DATA_PATH = join(ROOT, "src", "data", "blog-posts.json");
 const BLOG_CONTENT_DIR = join(ROOT, "src", "data", "blog-content");
 if (existsSync(BLOG_DATA_PATH)) {
   const blogPosts = JSON.parse(readFileSync(BLOG_DATA_PATH, "utf-8"));
-  const consolidatedBlogSlugs = new Set(["ac-vs-dc-ev-charging", "best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026", "how-bess-supports-reliable-ev-charging-infrastructure"]);
+  const consolidatedBlogSlugs = new Set(["ac-vs-dc-ev-charging", "best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026"]);
   const publishedBlogPosts = blogPosts.filter((post) => post.published && !consolidatedBlogSlugs.has(post.slug));
   const blogRoute = routes.find((route) => route.path === "/blog");
   if (blogRoute) {
@@ -1096,15 +1011,6 @@ if (existsSync(BLOG_DATA_PATH)) {
       },
     ];
 
-    // Add FAQPage schema for blog posts with FAQ sections
-    if (post.slug === "ev-ready-homes-india-smart-charging-bess-2026") {
-      blogSchemas.push({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": EV_READY_HOMES_FAQS.map(f => ({ "@type": "Question", "name": f.question, "acceptedAnswer": { "@type": "Answer", "text": f.answer } })),
-      });
-    }
-
     routes.push({
       path: `/blog/${post.slug}`,
       title: post.title,
@@ -1134,7 +1040,6 @@ for (const route of routes) {
   }
   if (route.path === "/") route.lcpImage = findBuiltAsset("heroImage1");
   if (route.path === "/spiderev" && !route.ogImage) route.ogImage = productImage("dc", "spider-fast");
-  if (route.path === "/spidervault-bess-battery-energy-storage" && !route.ogImage) route.ogImage = "/og/products/spidervault-12.jpg";
   const meta = buildMeta(route);
   const jsonLd = buildJsonLd(route);
   const noscrollContent = buildNoscrollContent(route);
@@ -1148,13 +1053,10 @@ for (const route of routes) {
 
 const redirects = [
   { from: "/spider-ev", to: `${BASE_URL}/spiderev` },
-  { from: "/spider-vault", to: `${BASE_URL}/spidervault` },
   { from: "/blog/ac-vs-dc-ev-charging", to: `${BASE_URL}/guides/ac-vs-dc-ev-charger-india` },
   { from: "/blog/best-home-ev-chargers-popular-models-telangana-andhra-pradesh-2026", to: `${BASE_URL}/guides/home-ev-charger-buying-guide-telangana-andhra` },
-  { from: "/blog/how-bess-supports-reliable-ev-charging-infrastructure", to: `${BASE_URL}/guides/bess-for-ev-charging-stations` },
   { from: "/ac-ev-chargers", to: `${BASE_URL}/electric-vehicle-ev-ac-charger` },
   { from: "/dc-ev-chargers", to: `${BASE_URL}/electric-vehicle-ev-dc-charger` },
-  { from: "/bess-battery-backup-for-ev-charging-stations", to: `${BASE_URL}/spidervault-bess-battery-energy-storage` },
   { from: "/partner-withus", to: `${BASE_URL}/partner-with-us` },
   { from: "/policies", to: `${BASE_URL}/privacy-policy` },
   { from: "/cpms-charge-point-management-system", to: `${BASE_URL}/cpms-ev-charging-point-management-system` },
@@ -1171,7 +1073,6 @@ const redirects = [
   { from: "/company/contact", to: `${BASE_URL}/contact-us` },
   { from: "/franchise", to: `${BASE_URL}/ev-charging-station-franchise` },
   { from: "/roi", to: `${BASE_URL}/ev-charging-station-roi-calculator` },
-  { from: "/bess", to: `${BASE_URL}/spidervault-bess-battery-energy-storage` },
   { from: "/charge-locator", to: `${BASE_URL}/ev-charging-station-locator` },
 ];
 

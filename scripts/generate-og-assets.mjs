@@ -28,13 +28,6 @@ const products = [
   { id: "spider-ultra", line: "SPIDEREV  /  DC FAST CHARGER", name: "Spider Ultra", spec: "120 kW", detail: "High-speed fleet charging", image: "src/assets/chargers/ultra.webp" },
   { id: "spider-surge", line: "SPIDEREV  /  DC FAST CHARGER", name: "Spider Surge", spec: "180 kW", detail: "Rapid highway charging", image: "src/assets/chargers/surge.webp" },
   { id: "spider-hulk", line: "SPIDEREV  /  DC FAST CHARGER", name: "Spider Hulk", spec: "240 kW", detail: "Ultra-rapid heavy-duty charging", image: "src/assets/home/DcCharger.webp" },
-  { id: "spidervault-3", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 3.0", spec: "3 kWh", detail: "Residential energy storage", image: "src/assets/bess/spiderpower-3.0.webp" },
-  { id: "spidervault-5", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 5.0", spec: "5 kWh", detail: "Residential energy storage", image: "src/assets/bess/spiderpower-5.0.webp" },
-  { id: "spidervault-12", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 12.0", spec: "12 kWh", detail: "Premium home energy storage", image: "src/assets/bess/spiderpower-12.0.webp" },
-  { id: "spidervault-20", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 20.0", spec: "20 kWh", detail: "Commercial energy storage", image: "src/assets/bess/spiderpower-20.0-2.webp" },
-  { id: "spidervault-30", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 30.0", spec: "30 kWh", detail: "Commercial energy storage", image: "src/assets/bess/spiderpower-20.0-2.webp" },
-  { id: "spidervault-60", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 60.0", spec: "60 kWh", detail: "Industrial energy storage", image: "src/assets/bess/spiderpower-20.0-2.webp" },
-  { id: "spidervault-120", line: "SPIDERVAULT  /  BESS", name: "SpiderVault 120.0", spec: "120 kWh", detail: "Industrial energy storage", image: "src/assets/bess/spiderpower-20.0-2.webp" },
 ];
 
 mkdirSync(OUTPUT_DIR, { recursive: true });

@@ -5,8 +5,7 @@ import HeroBanner from "../components/ui/HeroBanner";
 import { fadeUp, fadeLeft, fadeRight, scaleUp, staggerContainer, staggerFast, viewport } from "../utils/animationConfig";
 import heroBg from "../assets/home/hero-bg.webp";
 import SEO from "../components/SEO";
-import Accordion from "../components/ui/Accordion";
-import { getBreadcrumbSchema, getFAQSchema } from "../seo/schemas";
+import { getBreadcrumbSchema } from "../seo/schemas";
 import spiderEvLogo from "../assets/home/spider-ev-logo.webp";
 import tataMotorsLogo from "../assets/brand-logos/Tata-Motors.webp";
 import indianRailwayLogo from "../assets/brand-logos/Indian-Railway.webp";
@@ -34,17 +33,16 @@ const aboutBreadcrumbs = getBreadcrumbSchema([
   { name: "Home", url: "https://spiderenergy.in" },
   { name: "About Us" },
 ]);
-const brandFaq = [{ question: "What is the difference between Spider Energy, SpiderEV and SpiderVault?", answer: "Spider Energy is the parent company. SpiderEV is its EV charging line for chargers, SpiderConnect CPMS and the driver app. SpiderVault is its battery energy storage line." }];
 
 const AboutUsPage = () => {
   return (
     <PageLayout>
       <Helmet>
-        <title>About Spider Energy | EV Charging & BESS from Hyderabad</title>
-        <meta name="description" content="Learn how Spider Energy builds SpiderEV chargers and SpiderVault storage for Telangana and Andhra Pradesh. Office: T-Hub, Raidurgam, Hyderabad." />
+        <title>About Spider Energy | EV Charging from Hyderabad</title>
+        <meta name="description" content="Learn how Spider Energy builds SpiderEV chargers for Telangana and Andhra Pradesh. Office: T-Hub, Raidurgam, Hyderabad." />
         <meta name="keywords" content="EV charger manufacturer Telangana, electric vehicle manufacturer AP, BIS certified charger India, SpiderEV company Hyderabad, EVSE manufacturer India" />
       </Helmet>
-      <SEO schemas={[getFAQSchema(brandFaq)]} breadcrumbs={aboutBreadcrumbs} title="About Spider Energy | EV Charging & BESS from Hyderabad" description="Learn how Spider Energy builds SpiderEV chargers and SpiderVault storage for Telangana and Andhra Pradesh. Office: T-Hub, Raidurgam, Hyderabad." />
+      <SEO breadcrumbs={aboutBreadcrumbs} title="About Spider Energy | EV Charging from Hyderabad" description="Learn how Spider Energy builds SpiderEV chargers for Telangana and Andhra Pradesh. Office: T-Hub, Raidurgam, Hyderabad." />
       <HeroBanner
         title="About Spider Energy"
         bgImage={heroBg}
@@ -97,13 +95,10 @@ const AboutUsPage = () => {
             {/* Section 3: Product Brands */}
             <motion.div variants={fadeUp} className="mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                SpiderEV & SpiderVault — Our Two Product Brands Explained
+                SpiderEV — Connected Charging Hardware and Software
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Our product line is split into two lines. SpiderEV is the charging hardware and network software, the chargers themselves plus SpiderConnect, our charge point management platform. SpiderConnect enables real-time monitoring, remote diagnostics, and seamless payment integration, giving charge point operators complete control over their charging infrastructure.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                SpiderVault is our battery energy storage line, designed to be used in conjunction with EV stations to reduce peak demands, or deployed independently for home and commercial backup power. This dual-brand approach allows us to address both immediate charging needs and long-term energy management solutions for our customers.
+                SpiderEV brings together our charging hardware and network software: AC and DC chargers plus SpiderConnect, our charge point management platform. SpiderConnect enables real-time monitoring, remote diagnostics, and seamless payment integration, giving charge point operators complete control over their charging infrastructure.
               </p>
             </motion.div>
 
@@ -135,8 +130,6 @@ const AboutUsPage = () => {
           </motion.div>
         </div>
       </section>
-
-      <section className="py-16 bg-white"><div className="max-w-3xl mx-auto px-4"><h2 className="text-3xl font-bold text-center mb-8">Our brands</h2><Accordion items={brandFaq} /></div></section>
 
       {/* Stats */}
       <section className="relative overflow-hidden py-16" style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>

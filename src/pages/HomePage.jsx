@@ -7,11 +7,11 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Spider Energy | EV Charger Manufacturer in Telangana & AP</title>
-        <meta name="description" content="Spider Energy builds SpiderEV chargers and SpiderVault BESS from Hyderabad for Telangana, Andhra Pradesh and India. AC, DC, CPMS and franchise." />
+        <meta name="description" content="Spider Energy builds SpiderEV chargers in Hyderabad for Telangana, Andhra Pradesh and India. Explore AC, DC, CPMS and franchise solutions." />
       </Helmet>
       <SEO
         title="Spider Energy | EV Charger Manufacturer in Telangana & AP"
-        description="Spider Energy builds SpiderEV chargers and SpiderVault BESS from Hyderabad for Telangana, Andhra Pradesh and India. AC, DC, CPMS and franchise."
+        description="Spider Energy builds SpiderEV chargers in Hyderabad for Telangana, Andhra Pradesh and India. Explore AC, DC, CPMS and franchise solutions."
       />
       <Home />
     </>

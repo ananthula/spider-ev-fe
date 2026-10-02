@@ -38,20 +38,6 @@ const guides = {
     links: [["Get a Mini quote", "/products/ac/spider-mini"], ["Compare Smart", "/products/ac/spider-smart"], ["Contact installation team", "/contact-us"]],
     faqs: [{ question: "Is 3.3 kW enough for daily home charging?", answer: "It can be when daily driving is moderate and the vehicle remains parked overnight. Confirm against the vehicle battery, daily kilometres and available charging window." }, { question: "Can I install a charger in apartment parking?", answer: "It depends on the parking allocation, electrical capacity, cable route and society or property requirements. Review these before installation." }],
   },
-  "bess-for-ev-charging-stations": {
-    title: "BESS for EV Charging Stations | SpiderVault Guide",
-    description: "Why EV stations add battery storage: peak demand, solar shift, uptime. How SpiderVault pairs with SpiderEV DC chargers in AP & Telangana.",
-    h1: "Battery Energy Storage for EV Charging Stations",
-    intro: "A DC charging site can create a sharp power spike even when its average daily use is modest. Battery energy storage can buffer part of that demand, shift solar energy to later sessions and support site continuity. The correct size depends on the chargers, traffic pattern, tariff and grid connection.",
-    sections: [
-      ["The peak-demand problem on DC sites", "A site with 60 kW, 120 kW or higher-power chargers can exceed the practical grid capacity when several vehicles charge together. A BESS can be designed to supplement the grid during those peaks, but the result is site-specific and should be modelled from interval load data and the applicable tariff."],
-      ["Solar by day, charging later", "Solar generation and charging demand do not always occur at the same time. Storage can retain part of the daytime solar output for evening sessions instead of exporting or curtailing it, subject to the site's design and controls."],
-      ["A qualitative sizing sketch", "List charger power and gun count, expected simultaneous sessions, dwell time, existing site load, sanctioned demand, solar profile and tariff. That defines the power rating and usable energy window to evaluate. Detailed sizing belongs in a site model, not a generic savings claim."],
-      ["SpiderVault roles on a station site", "SpiderVault combines an inverter, battery pack and BMS. Residential 3.0, 5.0 and 12.0 models serve smaller loads; larger commercial systems are assessed for station applications. Pairing with SpiderEV DC chargers requires an engineering review of load, controls and connection capacity."],
-    ],
-    links: [["Talk about SpiderVault sizing", "/contact-us"], ["See SpiderVault", "/spidervault"], ["See DC chargers", "/electric-vehicle-ev-dc-charger"]],
-    faqs: [{ question: "Does every DC charging station need BESS?", answer: "No. It is most relevant when grid capacity, demand peaks, solar use or continuity requirements justify it." }, { question: "How large should the battery be?", answer: "Sizing depends on charger power, simultaneous sessions, dwell time, the existing load, tariff and solar generation. It requires a site-specific model." }],
-  },
 };
 
 export default function GuidePage({ slug }) {
