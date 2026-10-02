@@ -89,7 +89,7 @@ const ROIPage = () => {
       </Helmet>
       <SEO breadcrumbs={getBreadcrumbSchema([{name: "Home", url: "https://spiderenergy.in/"}, {name: "ROI Calculator"}])} />
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-12">
         {/* Header */}
         <motion.div
           variants={staggerContainer}
