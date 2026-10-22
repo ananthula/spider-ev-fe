@@ -57,6 +57,18 @@ function extract(html, expression) {
   return html.match(expression)?.[1]?.trim() || null;
 }
 
+function visibleWordCount(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, " ")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
 function jsonLd(html) {
   const blocks = [...html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
   return blocks.map((match) => JSON.parse(match[1]));
@@ -128,6 +140,7 @@ async function checkPage(path) {
   const canonical = extract(html, /<link\s+rel="canonical"\s+href="([^"]+)"/i);
   const ogImage = extract(html, /<meta\s+property="og:image"\s+content="([^"]+)"/i);
   const h1 = extract(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i);
+  const rootContent = extract(html, /<div\s+id="root">([\s\S]*?)<\/div>/i);
   let schemas = [];
   try {
     schemas = jsonLd(html);
@@ -137,6 +150,8 @@ async function checkPage(path) {
   if (!title) fail(`${path} is missing a title`);
   if (!description) fail(`${path} is missing a meta description`);
   if (!h1) fail(`${path} is missing an H1 in prerendered content`);
+  if (!rootContent || !/<h1[^>]*>[\s\S]*?<\/h1>/i.test(rootContent)) fail(`${path} does not expose its H1 in #root prerendered content`);
+  if (visibleWordCount(rootContent || "") < 50) fail(`${path} has fewer than 50 prerendered visible words`);
   if (canonical !== canonicalFor(path)) fail(`${path} canonical is ${canonical || "missing"}`);
   if (!ogImage) fail(`${path} is missing og:image`);
   if (schemas.length === 0) fail(`${path} is missing JSON-LD`);

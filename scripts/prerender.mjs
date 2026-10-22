@@ -5,7 +5,7 @@
  *  - Injects the correct <title>, <meta name="description">, Open Graph tags,
  *    and <link rel="canonical"> into dist/index.html
  *  - Injects JSON-LD structured data (Organization + page-specific schemas)
- *  - Injects enriched no-JavaScript fallback content (H1, H2s, body text, nav)
+ *  - Injects enriched initial fallback content (H1, H2s, body text, nav)
  *  - Writes the result to dist/<route>/index.html
  *
  * This ensures crawlers that don't run JavaScript (social media bots, Bing,
@@ -327,7 +327,11 @@ function buildNoscrollContent(route) {
 function inject(template, meta, jsonLd, noscrollContent) {
   // A legitimate no-JavaScript fallback avoids hidden crawler-only content.
   // JavaScript users receive the React-rendered page in #root.
-  const fallbackContent = `<noscript><main>${noscrollContent}</main></noscript>`;
+  // Keep the fallback in #root instead of <noscript>. A number of SEO crawlers
+  // inspect the initial DOM but skip <noscript>, which makes valid prerendered
+  // pages look like they have no H1 or body copy. createRoot() replaces this
+  // initial markup as soon as the React app loads.
+  const fallbackContent = `<main>${noscrollContent}</main>`;
 
   return template
     .replace(/<title>[^<]*<\/title>/, "")
@@ -340,7 +344,7 @@ function inject(template, meta, jsonLd, noscrollContent) {
     .replace("</head>", `${meta}\n${jsonLd}\n</head>`)
     .replace(
       /<div id="root">[\s\S]*?(?=<!-- Google Analytics)/,
-      `<div id="root"></div>${fallbackContent}\n    `,
+      `<div id="root">${fallbackContent}</div>\n    `,
     );
 }
 
