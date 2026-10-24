@@ -64,3 +64,4 @@ Allow: /
 
 # ── Sitemap ──
 Sitemap: https://spiderenergy.in/sitemap.xml
+Sitemap: https://spiderenergy.in/news-sitemap.xml

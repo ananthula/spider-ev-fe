@@ -120,7 +120,7 @@ This is the part people skip because they want a clean tag line. The real world 
 
 Even if you don’t drive a tonne, don’t have convenient charging, or aren’t ready to pay a premium for an EV, E20 still makes sense. If you don’t use your vehicle much, the absolute fuel savings from an EV per month is smaller. So the upfront price difference is more important.[ E20 isn’t “better” than EV in that lane](https://www.acma.in/uploads/otherdocmanager/IS_17943_2022_E20_Fuel_Mixture.pdf). It’s just easier for a low-mileage owner who isn’t ready to integrate EV charging into their everyday lives.
 
-It's also worth noting that E20 is designed for use in suitably compatible vehicles. This is clearly stated in the official standard and in government notes. If you already have a car that can take E20 and you’re not a frequent driver, it can still be rational to keep the current vehicle. But if you make the same trip every day, and have[ access to cheap charging](https://spiderenergy.in/blog/charging-infrastructure-trends-2026-india), the EV’s running-cost advantage is tough to ignore.
+It's also worth noting that E20 is designed for use in suitably compatible vehicles. This is clearly stated in the official standard and in government notes. If you already have a car that can take E20 and you’re not a frequent driver, it can still be rational to keep the current vehicle. But if you make the same trip every day, and have[ access to cheap charging](https://spiderenergy.in/blog/india-ev-charging-infrastructure-2026), the EV’s running-cost advantage is tough to ignore.
 
 ### **Table 5: Which option fits which buyer**
 
@@ -138,9 +138,9 @@ The line is simple. E20 can be a reasonable stay-put choice. EV is the stronger 
 
 The physics does not change with the state. It alters the path charging.
 
-Andhra Pradesh’s APSPDCL has a live Tariff Order 2026-27 page, and in the 2026 note on tariff redesign, CEA explicitly includes Andhra Pradesh and Telangana in the discussion on standardised two-part tariffs. So the real cost to the EV owner depends on[ where and how the car is charged](https://spiderenergy.in/blog/charging-convenience-matters-more-than-range-india). If you charge at home on a low domestic tariff the case for an EV is strong. If you pay premium rates elsewhere the savings are smaller.
+Andhra Pradesh’s APSPDCL has a live Tariff Order 2026-27 page, and in the 2026 note on tariff redesign, CEA explicitly includes Andhra Pradesh and Telangana in the discussion on standardised two-part tariffs. So the real cost to the EV owner depends on[ where and how the car is charged](https://spiderenergy.in/blog/india-ev-charging-infrastructure-2026). If you charge at home on a low domestic tariff the case for an EV is strong. If you pay premium rates elsewhere the savings are smaller.
 
-So the local decision is not really "E20 vs EV" in the abstract. It’s E20 versus EV with home charging. That is the pertinent comparison for most day-to-day commuters. The real winner is the[ lower running cost of the EV](https://spiderenergy.in/blog/ev-charging-station-roi-india), assuming the home-charging setup is clean. E20 still has the convenience advantage if charging access is poor.
+So the local decision is not really "E20 vs EV" in the abstract. It’s E20 versus EV with home charging. That is the pertinent comparison for most day-to-day commuters. The real winner is the[ lower running cost of the EV](https://spiderenergy.in/ev-charging-station-roi-calculator), assuming the home-charging setup is clean. E20 still has the convenience advantage if charging access is poor.
 
 ## **Verdict**
 

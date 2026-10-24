@@ -1084,6 +1084,14 @@ const redirects = [
   { from: "/franchise", to: `${BASE_URL}/ev-charging-station-franchise` },
   { from: "/roi", to: `${BASE_URL}/ev-charging-station-roi-calculator` },
   { from: "/charge-locator", to: `${BASE_URL}/ev-charging-station-locator` },
+  { from: "/blog/highway-ev-charging-investment-india", to: `${BASE_URL}/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network` },
+  { from: "/blog/charging-infrastructure-trends-2026-india", to: `${BASE_URL}/blog/india-ev-charging-infrastructure-2026` },
+  { from: "/blog/future-ev-charging-networks-india-what-matters", to: `${BASE_URL}/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network` },
+  { from: "/blog/property-owners-prepare-ev-adoption-india", to: `${BASE_URL}/partner-with-us` },
+  { from: "/blog/ev-charging-station-roi-india", to: `${BASE_URL}/ev-charging-station-roi-calculator` },
+  { from: "/blog/charging-convenience-matters-more-than-range-india", to: `${BASE_URL}/blog/india-ev-charging-infrastructure-2026` },
+  { from: "/blog/time-based-electricity-pricing-ev-owners-india", to: `${BASE_URL}/products/ac/spider-smart` },
+  { from: "/blog/ev-ready-homes-india-whole-energy-decision-2026", to: `${BASE_URL}/guides/home-ev-charger-buying-guide-telangana-andhra` },
 ];
 
 for (const { from, to } of redirects) {

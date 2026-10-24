@@ -14,6 +14,8 @@
  * Env:
  *   WORDPRESS_API_URL      Base WP REST URL (default: https://cms.spiderenergy.in/wp-json/wp/v2)
  *   WORDPRESS_CMS_ENABLED  Set to "false" to force markdown fallback
+ *   WORDPRESS_CMS_REQUIRED  Set to "true" in production to fail when CMS is unavailable
+ *   WORDPRESS_BLOG_CATEGORY_SLUG  Optional WordPress category slug to ingest
  *
  * Run: node scripts/build-blog.mjs
  */
@@ -65,7 +67,11 @@ loadEnvFiles();
 const DEFAULT_WP_API = "https://cms.spiderenergy.in/wp-json/wp/v2";
 const WP_API_URL = (process.env.WORDPRESS_API_URL || DEFAULT_WP_API).replace(/\/$/, "");
 const CMS_ENABLED = process.env.WORDPRESS_CMS_ENABLED !== "false";
+const CMS_REQUIRED = process.env.WORDPRESS_CMS_REQUIRED === "true";
+const BLOG_CATEGORY_SLUG = (process.env.WORDPRESS_BLOG_CATEGORY_SLUG || "").trim().toLowerCase();
 const FETCH_TIMEOUT_MS = 12_000;
+const DISALLOWED_STORAGE_TERMS =
+  /\b(?:bess|battery energy storage|energy storage system|battery storage|spidervault|spider vault|grid storage)\b/i;
 
 // ─── Shared helpers ──────────────────────────────────────────────────────────
 
@@ -96,6 +102,20 @@ function estimateReadTime(html = "") {
 function normalizeDate(dateStr = "") {
   if (!dateStr) return "";
   return dateStr.slice(0, 10);
+}
+
+function isAllowedWordPressPost(meta) {
+  const searchable = [
+    meta.title,
+    meta.slug,
+    meta.category,
+    ...(meta.tags || []),
+  ].join(" ");
+  const hasAllowedCategory =
+    !BLOG_CATEGORY_SLUG ||
+    (meta.categorySlugs || []).some((slug) => slug.toLowerCase() === BLOG_CATEGORY_SLUG);
+
+  return hasAllowedCategory && !DISALLOWED_STORAGE_TERMS.test(searchable);
 }
 
 function normalizeDescription(description = "", maxLength = 160) {
@@ -131,7 +151,9 @@ function writePosts(posts, sourceLabel) {
   resetContentOutDir();
 
   const sorted = [...posts].sort(
-    (a, b) => new Date(b.meta.date) - new Date(a.meta.date)
+    (a, b) =>
+      new Date(b.meta.publishedAt || b.meta.date) -
+      new Date(a.meta.publishedAt || a.meta.date)
   );
 
   for (const { meta, html } of sorted) {
@@ -181,8 +203,11 @@ function mapWordPressPost(post) {
     "";
 
   const terms = embedded["wp:term"] || [];
-  const categories = (terms[0] || []).map((t) => t.name).filter(Boolean);
-  const tags = (terms[1] || []).map((t) => t.name).filter(Boolean);
+  const categoryTerms = terms.flat().filter((term) => term.taxonomy === "category");
+  const tagTerms = terms.flat().filter((term) => term.taxonomy === "post_tag");
+  const categories = categoryTerms.map((term) => term.name).filter(Boolean);
+  const categorySlugs = categoryTerms.map((term) => term.slug).filter(Boolean);
+  const tags = tagTerms.map((term) => term.name).filter(Boolean);
 
   const html = normalizeArticleHtml(post.content?.rendered || "");
   const title = stripHtml(post.title?.rendered || "");
@@ -199,9 +224,11 @@ function mapWordPressPost(post) {
     slug,
     description,
     date: normalizeDate(post.date),
+    publishedAt: post.date_gmt || post.date || "",
     modifiedDate: normalizeDate(post.modified || post.date),
     author,
     category: categories[0] || "General",
+    categorySlugs,
     readTime: estimateReadTime(html),
     image: featured,
     tags,
@@ -214,6 +241,11 @@ function mapWordPressPost(post) {
 
 async function loadFromWordPress() {
   if (!CMS_ENABLED) {
+    if (CMS_REQUIRED) {
+      throw new Error(
+        "WORDPRESS_CMS_REQUIRED=true cannot be used with WORDPRESS_CMS_ENABLED=false"
+      );
+    }
     console.log("WordPress CMS disabled via WORDPRESS_CMS_ENABLED=false");
     return null;
   }
@@ -232,9 +264,15 @@ async function loadFromWordPress() {
       page += 1;
     }
 
-    const mapped = all.map(mapWordPressPost).filter(Boolean);
+    const mapped = all
+      .map(mapWordPressPost)
+      .filter(Boolean)
+      .filter(({ meta }) => isAllowedWordPressPost(meta));
 
     if (mapped.length === 0) {
+      if (CMS_REQUIRED) {
+        throw new Error("CMS returned no eligible published EV blog posts");
+      }
       console.warn(
         "  ⚠ CMS reachable but returned 0 published posts — falling back to markdown"
       );
@@ -244,6 +282,9 @@ async function loadFromWordPress() {
     console.log(`  ✓ Fetched ${mapped.length} post(s) from WordPress`);
     return mapped;
   } catch (err) {
+    if (CMS_REQUIRED) {
+      throw new Error("WordPress CMS is required but unavailable: " + err.message);
+    }
     console.warn(`  ⚠ WordPress CMS unavailable: ${err.message}`);
     console.warn("  → Falling back to local markdown in content/blog/");
     return null;

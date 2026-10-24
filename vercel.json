@@ -23,7 +23,18 @@
     { "source": "/company/contact", "destination": "/contact-us", "statusCode": 301 },
     { "source": "/franchise", "destination": "/ev-charging-station-franchise", "statusCode": 301 },
     { "source": "/roi", "destination": "/ev-charging-station-roi-calculator", "statusCode": 301 },
-    { "source": "/charge-locator", "destination": "/ev-charging-station-locator", "statusCode": 301 }
+    { "source": "/charge-locator", "destination": "/ev-charging-station-locator", "statusCode": 301 },
+    { "source": "/blog/highway-ev-charging-investment-india", "destination": "/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network", "statusCode": 301 },
+    { "source": "/blog/charging-infrastructure-trends-2026-india", "destination": "/blog/india-ev-charging-infrastructure-2026", "statusCode": 301 },
+    { "source": "/blog/future-ev-charging-networks-india-what-matters", "destination": "/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network", "statusCode": 301 },
+    { "source": "/blog/property-owners-prepare-ev-adoption-india", "destination": "/partner-with-us", "statusCode": 301 },
+    { "source": "/blog/ev-charging-station-roi-india", "destination": "/ev-charging-station-roi-calculator", "statusCode": 301 },
+    { "source": "/blog/charging-convenience-matters-more-than-range-india", "destination": "/blog/india-ev-charging-infrastructure-2026", "statusCode": 301 },
+    { "source": "/blog/time-based-electricity-pricing-ev-owners-india", "destination": "/products/ac/spider-smart", "statusCode": 301 },
+    { "source": "/blog/ev-ready-homes-india-whole-energy-decision-2026", "destination": "/guides/home-ev-charger-buying-guide-telangana-andhra", "statusCode": 301 }
+  ],
+  "rewrites": [
+    { "source": "/news-sitemap.xml", "destination": "/api/news-sitemap" }
   ],
   "headers": [
     {
@@ -37,6 +48,13 @@
       "headers": [
         { "key": "Content-Type", "value": "application/xml" },
         { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
+      ]
+    },
+    {
+      "source": "/news-sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-store" }
       ]
     },
     {

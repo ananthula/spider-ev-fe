@@ -153,7 +153,7 @@ The unvarnished truth is that if you drive enough, the petrol bill is a tax on d
 
 ### **1) Is an EV cheaper than a petrol car in India in 2026?**
 
-Usually yes for running cost for regular drivers. The current Delhi petrol benchmark price is ₹102.12/litre (PPAC). Based on the model assumptions in this article, a petrol car that travels 15 km/litre costs ₹6.81/km, while an EV that travels 0.17 kWh/km and costs ₹8.5/kWh costs ₹1.45/km. That ₹5.36/km gap is big enough to matter once you start driving the vehicle regularly. The exact answer depends on city fuel prices, [the electricity tariff ](https://spiderenergy.in/blog/time-based-electricity-pricing-ev-owners-india)and your mileage but the direction is unambiguous. The more you use the car, the more the EV generally wins.
+Usually yes for running cost for regular drivers. The current Delhi petrol benchmark price is ₹102.12/litre (PPAC). Based on the model assumptions in this article, a petrol car that travels 15 km/litre costs ₹6.81/km, while an EV that travels 0.17 kWh/km and costs ₹8.5/kWh costs ₹1.45/km. That ₹5.36/km gap is big enough to matter once you start driving the vehicle regularly. The exact answer depends on city fuel prices, [the electricity tariff ](https://spiderenergy.in/products/ac/spider-smart)and your mileage but the direction is unambiguous. The more you use the car, the more the EV generally wins.
 
 ### **2) How much do I save each month if I drive 1,000 km?**
 
