@@ -19,7 +19,7 @@ sourceSheetRow: 26
 
 # **How EV Charging Can Increase Footfall for Shopping Centres**
 
-For a family in an electric SUV from Gachibowli, the weekend doesn't start with a query about which mall has the latest store. They want to know what destination can they park, plug in, eat and shop at without a[ second stop at a highway charger](https://spiderenergy.in/blog/highway-ev-charging-investment-india). If one Hyderabad center has live charger availability and the other does not, the first center wins the trip before a single retail banner is seen. Here’s how ev charging can boost footfall for shopping centers: it steals a planning decision that used to belong only to cinema listings and food-court reputation.
+For a family in an electric SUV from Gachibowli, the weekend doesn't start with a query about which mall has the latest store. They want to know what destination can they park, plug in, eat and shop at without a[ second stop at a highway charger](https://spiderenergy.in/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network). If one Hyderabad center has live charger availability and the other does not, the first center wins the trip before a single retail banner is seen. Here’s how ev charging can boost footfall for shopping centers: it steals a planning decision that used to belong only to cinema listings and food-court reputation.
 
 Time is already sold in shopping centers. Parking, air conditioning, entertainment and dining are there to keep people on the site long enough to spend. EV charging is the same concept with a battery attached. The driver has a good reason to stay. They have a real reason to have them at the mall.
 
@@ -76,7 +76,7 @@ A typical three-hour 7 kW AC session might use about 20 kWh. Driver pays a few h
 
 Dwell is the larger number. Destination charging gives the visitor a reason to complete a food-court meal, browse a second floor or add a cinema. Retail studies of EV chargers at stores and malls report longer stays and incremental spend when the charger is a short walk from shopping and dining. Exact lifts depend on format and implementation. Treat vendor claims of “50 extra minutes” as directional and measure your own baseline: arrival time, first dwell, categories visited, and ticket size for charger users versus general parkers.
 
-Adding experiences already increases dwell by 25-35 percent, a mall entertainment strategy. Charging is a more muted cousin to that strategy. This is not a theme park. It is the [infrastructure that makes the current experience easier ](https://spiderenergy.in/blog/charging-infrastructure-trends-2026-india)to choose.
+Adding experiences already increases dwell by 25-35 percent, a mall entertainment strategy. Charging is a more muted cousin to that strategy. This is not a theme park. It is the [infrastructure that makes the current experience easier ](https://spiderenergy.in/blog/india-ev-charging-infrastructure-2026)to choose.
 
 ## **How Mall Owners Should Design the Amenity**
 
@@ -151,7 +151,7 @@ Most public mall chargers in India are paid through operator apps. A minority of
 
 ### **Q: What does charging usually cost at a Hyderabad mall?**
 
-Public sessions commonly fall around ₹8–14 per kWh on AC and ₹15–22 per kWh on DC, [depending on the network and site](https://spiderenergy.in/blog/future-ev-charging-networks-india-what-matters). Parking charges may apply separately.
+Public sessions commonly fall around ₹8–14 per kWh on AC and ₹15–22 per kWh on DC, [depending on the network and site](https://spiderenergy.in/blog/why-fast-charging-alone-isnt-enough-building-reliable-charging-network). Parking charges may apply separately.
 
 ### **Q: Should a mall install AC or DC chargers?**
 

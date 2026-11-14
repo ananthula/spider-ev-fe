@@ -113,11 +113,11 @@ At a **₹3 lakh** EV price premium, the break-even distance is about **53,477 k
 | **₹3 lakh** | **53,476.68 km** | **52,435.49 km** |
 | **₹5 lakh** | **89,127.79 km** | **87,392.48 km** |
 
-For a commuter doing **30 km/day**, you are covering about **10,800 km/year**. That means a ₹3 lakh premium can be recovered in roughly five years or a bit less, depending on[ actual charging cost ](https://spiderenergy.in/blog/ev-charging-station-roi-india)and driving pattern. For **40–50 km/day**, the payback gets faster. This is why the switch becomes financially serious once daily usage is high enough.
+For a commuter doing **30 km/day**, you are covering about **10,800 km/year**. That means a ₹3 lakh premium can be recovered in roughly five years or a bit less, depending on[ actual charging cost ](https://spiderenergy.in/ev-charging-station-roi-calculator)and driving pattern. For **40–50 km/day**, the payback gets faster. This is why the switch becomes financially serious once daily usage is high enough.
 
 ## **Why AP commuters should care about charging cost, not just fuel price**
 
-Andhra Pradesh’s APSPDCL has a live **Tariff Order FY 2026-27** page, which is important because[ EV charging economics](https://spiderenergy.in/blog/future-ev-charging-networks-india-what-matters) are tariff-sensitive. If you charge at home, your cost is tied to your domestic slab and connection type. If you charge at a commercial or public point, your economics change. That is why the comparison above uses a conservative home-charging assumption instead of pretending every AP driver pays the same rate.
+Andhra Pradesh’s APSPDCL has a live **Tariff Order FY 2026-27** page, which is important because[ EV charging economics](https://spiderenergy.in/blog/india-ev-charging-infrastructure-2026) are tariff-sensitive. If you charge at home, your cost is tied to your domestic slab and connection type. If you charge at a commercial or public point, your economics change. That is why the comparison above uses a conservative home-charging assumption instead of pretending every AP driver pays the same rate.
 
 The practical consequence is this: the EV case is strongest when you can charge cheaply and predictably. Home charging gives the most control. Public charging can still work, but if you rely on expensive charging all the time, the savings shrink. The EV still usually beats E20 on efficiency and maintenance, but the running-cost advantage depends on your charging behavior.
 

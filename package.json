@@ -10,7 +10,8 @@
     "generate:og": "node scripts/generate-og-assets.mjs",
     "qa:seo:deploy": "node scripts/seo-deployment-qa.mjs",
     "qa:images": "node scripts/audit-image-attributes.mjs",
-    "build": "npm run build:blog && vite build && npm run build:sitemap && node scripts/prerender.mjs",
+    "qa:links": "node scripts/validate-internal-links.mjs",
+    "build": "npm run build:blog && vite build && npm run build:sitemap && node scripts/prerender.mjs && npm run qa:links",
     "build:app": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

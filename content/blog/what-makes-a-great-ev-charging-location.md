@@ -149,4 +149,4 @@ PM E-Drive includes support for public charging infrastructure, with the highest
 
 Spider EV helps operators and site hosts manage outbound and inbound voice campaigns to alert drivers, fleet managers and retail partners to new hub openings or bay availability. Spider EV is available to investors building utilisation, not just hardware, for high-volume customer communication around charging sites.
 
-Even investors who have chosen the right land still need drivers to find the bays and bring them back. If your rollout involves launch outreach, fleet onboarding calls,[ or host-property ](https://spiderenergy.in/blog/property-owners-prepare-ev-adoption-india)coordination at scale, contact the Spider EV team to talk about AI voice and omnichannel support around new charging locations.
+Even investors who have chosen the right land still need drivers to find the bays and bring them back. If your rollout involves launch outreach, fleet onboarding calls,[ or host-property ](https://spiderenergy.in/partner-with-us)coordination at scale, contact the Spider EV team to talk about AI voice and omnichannel support around new charging locations.
