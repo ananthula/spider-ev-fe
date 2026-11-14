@@ -4,7 +4,7 @@
  * Builds blog JSON consumed by the React app, sitemap, and prerender scripts.
  *
  * Source priority:
- *   1. WordPress CMS (cms.spiderenergy.in) when reachable and returning posts
+ *   1. WordPress.com CMS when reachable and returning posts
  *   2. Local markdown in content/blog/ when CMS is down, disabled, or empty
  *
  * Outputs:
@@ -12,7 +12,7 @@
  *   - src/data/blog-content/<slug>.json (per-post { meta, html } for detail page)
  *
  * Env:
- *   WORDPRESS_API_URL      Base WP REST URL (default: https://cms.spiderenergy.in/wp-json/wp/v2)
+ *   WORDPRESS_API_URL      Base WP REST URL (default: https://public-api.wordpress.com/wp/v2/sites/spiderenergy1.wordpress.com)
  *   WORDPRESS_CMS_ENABLED  Set to "false" to force markdown fallback
  *   WORDPRESS_CMS_REQUIRED  Set to "true" in production to fail when CMS is unavailable
  *   WORDPRESS_BLOG_CATEGORY_SLUG  Optional WordPress category slug to ingest
@@ -64,7 +64,8 @@ function loadEnvFiles() {
 
 loadEnvFiles();
 
-const DEFAULT_WP_API = "https://cms.spiderenergy.in/wp-json/wp/v2";
+const DEFAULT_WP_API =
+  "https://public-api.wordpress.com/wp/v2/sites/spiderenergy1.wordpress.com";
 const WP_API_URL = (process.env.WORDPRESS_API_URL || DEFAULT_WP_API).replace(/\/$/, "");
 const CMS_ENABLED = process.env.WORDPRESS_CMS_ENABLED !== "false";
 const CMS_REQUIRED = process.env.WORDPRESS_CMS_REQUIRED === "true";

@@ -1,7 +1,8 @@
 import process from "node:process";
 
 const BASE_URL = "https://spiderenergy.in";
-const DEFAULT_WORDPRESS_API_URL = "https://cms.spiderenergy.in/wp-json/wp/v2";
+const DEFAULT_WORDPRESS_API_URL =
+  "https://public-api.wordpress.com/wp/v2/sites/spiderenergy1.wordpress.com";
 const NEWS_WINDOW_MS = 48 * 60 * 60 * 1000;
 const BLOG_CATEGORY_SLUG = (process.env.WORDPRESS_BLOG_CATEGORY_SLUG || "")
   .trim()

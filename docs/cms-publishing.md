@@ -1,6 +1,6 @@
 # CMS publishing and blog URL workflow
 
-Marketing can publish EV articles from the existing WordPress CMS. The
+Marketing can publish EV articles from the existing WordPress.com CMS. The
 frontend build imports published WordPress posts, generates their article
 content and metadata, adds each /blog/<slug> route to the sitemap, and
 pre-renders the route for crawlers.
@@ -10,7 +10,7 @@ pre-renders the route for crawlers.
 Set these variables in the Vercel project for the production environment:
 
 ~~~text
-WORDPRESS_API_URL=https://cms.spiderenergy.in/wp-json/wp/v2
+WORDPRESS_API_URL=https://public-api.wordpress.com/wp/v2/sites/spiderenergy1.wordpress.com
 WORDPRESS_CMS_ENABLED=true
 WORDPRESS_CMS_REQUIRED=true
 ~~~
