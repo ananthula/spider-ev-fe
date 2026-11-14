@@ -1,13 +1,13 @@
 name: Rebuild site from WordPress
 
 # Calls the Vercel deploy hook so the live site rebuilds with the latest posts.
-# The hook URL lives in the GitHub secret VERCEL_DEPLOY_HOOK_URL
-# (repo Settings > Secrets and variables > Actions). Never paste the URL into code.
+# The hook URL is hardcoded below. This repo is public, so anyone who finds the
+# URL can trigger a rebuild. Fine for testing; regenerate it before launch.
 
 on:
   schedule:
-    # Every 30 minutes. GitHub can delay scheduled runs by a few minutes.
-    - cron: "*/30 * * * *"
+    # Once a day at 00:30 UTC = 6:00 AM IST. GitHub can delay scheduled runs by a few minutes.
+    - cron: "30 0 * * *"
   workflow_dispatch: # also allows a manual run from the Actions tab
 
 permissions: {}
@@ -17,11 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Vercel deploy hook
-        env:
-          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
-        run: |
-          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
-            echo "Secret VERCEL_DEPLOY_HOOK_URL is not set. Add it under Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-          curl -fsSL -X POST "$VERCEL_DEPLOY_HOOK_URL"
+        run: curl -fsSL -X POST "https://api.vercel.com/v1/integrations/deploy/prj_5YI3ZTnprlZ9HsLtRrfHbeA4TFHW/PTvpZQan3u"
