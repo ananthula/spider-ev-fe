@@ -4,8 +4,8 @@
  * Builds blog JSON consumed by the React app, sitemap, and prerender scripts.
  *
  * Source priority:
- *   1. WordPress.com CMS when reachable and returning posts
- *   2. Local markdown in content/blog/ when CMS is down, disabled, or empty
+ *   1. WordPress.com CMS when reachable; CMS posts override local posts by slug
+ *   2. Local markdown in content/blog/ remains as the archive and fallback
  *
  * Outputs:
  *   - src/data/blog-posts.json         (metadata array for listing page + sitemap)
@@ -271,13 +271,10 @@ async function loadFromWordPress() {
       .filter(({ meta }) => isAllowedWordPressPost(meta));
 
     if (mapped.length === 0) {
-      if (CMS_REQUIRED) {
-        throw new Error("CMS returned no eligible published EV blog posts");
-      }
       console.warn(
-        "  ⚠ CMS reachable but returned 0 published posts — falling back to markdown"
+        "  ⚠ CMS reachable but returned 0 eligible published posts — retaining local archive"
       );
-      return null;
+      return [];
     }
 
     console.log(`  ✓ Fetched ${mapped.length} post(s) from WordPress`);
@@ -380,13 +377,26 @@ function preserveLocalStructure(cmsPosts, markdownPosts) {
   });
 }
 
+function mergePosts(cmsPosts, markdownPosts) {
+  const cmsWithLocalStructure = preserveLocalStructure(cmsPosts, markdownPosts);
+  const cmsSlugs = new Set(cmsWithLocalStructure.map((post) => post.meta.slug));
+  const localOnlyPosts = markdownPosts.filter((post) => !cmsSlugs.has(post.meta.slug));
+
+  return [...cmsWithLocalStructure, ...localOnlyPosts];
+}
+
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
   const fromCms = await loadFromWordPress();
   const fromMarkdown = loadFromMarkdown();
-  const posts = fromCms ? preserveLocalStructure(fromCms, fromMarkdown) : fromMarkdown;
-  const sourceLabel = fromCms ? "WordPress CMS" : "markdown";
+  const posts = fromCms === null ? fromMarkdown : mergePosts(fromCms, fromMarkdown);
+  const sourceLabel =
+    fromCms === null
+      ? "markdown"
+      : fromCms.length > 0
+        ? "WordPress CMS + local archive"
+        : "local archive (WordPress feed empty)";
 
   if (posts.length === 0) {
     resetContentOutDir();

@@ -3,7 +3,9 @@
 Marketing can publish EV articles from the existing WordPress.com CMS. The
 frontend build imports published WordPress posts, generates their article
 content and metadata, adds each /blog/<slug> route to the sitemap, and
-pre-renders the route for crawlers.
+pre-renders the route for crawlers. WordPress posts override local archive
+posts with the same slug; local-only posts remain available until the
+marketing migration is complete.
 
 ## Required deployment configuration
 
@@ -16,7 +18,9 @@ WORDPRESS_CMS_REQUIRED=true
 ~~~
 
 WORDPRESS_CMS_REQUIRED=true prevents a CMS outage from silently publishing
-an old local copy of the blog. The build also excludes posts whose title,
+an old local copy of the blog. An empty WordPress feed retains the local
+archive so removing test posts does not remove the existing blog. The build
+also excludes posts whose title,
 slug, category or tags contain the configured storage/BESS terms. Marketing
 should continue publishing EV-only posts as agreed.
 
